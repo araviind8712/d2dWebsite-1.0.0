@@ -1,0 +1,67 @@
+[
+    {
+        "bioinformaticsAnalytics":{
+            "topic":"Bioinformatics Analytics",
+            "desc1":["We offer a full range of bioinformatics services, including genome assembly, functional annotation, variant calling, transcriptomics, epigenomics, single-cell analysis, and pipeline development. Our expertise transforms complex biological data into actionable insights, customized to support your unique research needs."],
+            "image":"assets/images/bioInfo.png",
+            "solutionsOffered":[
+                {
+                    "topic":"GENOMICS",
+                    "description":[
+                        "Genomics involves a range of advanced techniques to explore and analyze genetic data. We provide accurate genome assembly using technologies like short reads (Illumina), long reads (PacBio, ONT), Hi-C, or hybrid approaches, complemented by high-quality functional annotation of genes, regulatory elements, and repeat sequences.",
+                        "Our targeted sequencing solutions include exome sequencing for identifying variants linked to genetic disorders, along with custom gene panels designed for specific research or clinical needs.",
+                        "Variant calling detects SNPs, indels, CNVs, and SVs using platforms like Illumina, PacBio, and ONT, while comparative genomics enables cross-species genome analyses to uncover conserved features."
+                    ]
+
+                },
+                {
+                    "topic":"METAGENOMICS",
+                    "description":[
+                        "Analysis of DNA methylation and histone modifications. Integration of epigenetic and genomic data for regulatory mechanism insights."
+                    ]
+                },
+                {
+                    "topic":"EPIGENOMICS",
+                    "description":[
+                        "Amplicon sequencing (e.g., 16S, ITS) for microbial community profiling. Shotgun sequencing for functional analysis and novel discovery."
+                    ]
+                },
+                {
+                    "topic":"TRANSCRIPTOMICS",
+                    "description":[
+                        "Bulk RNA-Seq for gene expression profiling and differential analysis. Single-cell RNA-Seq for cellular heterogeneity and dynamic process insightsa"
+                    ]
+                }
+            ]
+        },
+        "bioinformaticsEngineering":{
+            "topic":"Bioinformatics Engineering",
+            "desc1":[
+                "We specialize in providing advanced bioinformatics engineering solutions, including cloud tool deployment, custom pipeline development, and scalable data analysis frameworks.",
+                "Our services encompass automated workflow development using Nextflow and Snakemake, containerization with Docker and Singularity, and efficient data management. We help turn complex biological data into actionable insights with tailored solutions that accelerate research in genomics, precision medicine, and more."
+            ],
+            "image":"assets/images/bioEng.png",
+            "solutionsOffered":[
+                {
+                    "topic":"Pipeline Development",
+                    "description":[
+                        "Custom-designed pipelines to streamline data analysis, ensuring efficiency and accuracy tailored to your specific research needs."
+                    ]
+
+                },
+                {
+                    "topic":"Cloud Computing",
+                    "description":[
+                        "Setup, deployment, and management of bioinformatics tools on cloud platforms, enabling scalable, accessible, and secure data analysis solutions."
+                    ]
+                },
+                {
+                    "topic":"Workflow Automation",
+                    "description":[
+                        "Improve efficiency and reproducibility by automating data processing workflows, allowing for consistent and scalable results."
+                    ]
+                }
+            ]
+        }
+    }
+]
