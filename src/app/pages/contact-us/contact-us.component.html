@@ -1,0 +1,63 @@
+<mat-dialog-content class="mat-typography" style="overflow-y: auto; scroll-behavior:smooth;">
+    <div class="row py-4 px-3">
+        <div class="col-6">
+            <h1 mat-dialog-title class="pb-2">Partner with Us!</h1>
+            <h6 style="font-weight: 300;" class="px-4">Explore exciting collaboration and partnership opportunities.</h6>
+            <div class="contact-info p-4">
+                <div class="row pl-3">
+                    <i class="far fa-envelope pr-3 h5"></i>
+                    <p>{{gmail}}</p>
+                </div>
+                <div class="row pl-3">
+                    <i class="fas fa-phone pr-3 h5"></i>
+                    <p>+1 (555) 000-0000</p>
+                </div>
+                <div class="row pl-3">
+                    <i class="fas fa-map-marker-alt pl-1 pr-3 h5"></i>
+                    <p>123 Sample St, Sydney NSW 2000 AU</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-wrapper">
+                <form [formGroup]="contactForm" (ngSubmit)="save()">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" formControlName="name" class="form-control" placeholder="John Doe" />
+                        <div *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched" style="color: red;">
+                            Name can't be Empty
+                        </div>
+                        <div *ngIf="contactForm.get('name')?.hasError('pattern') && contactForm.get('name')?.touched" style="color: red;">
+                            Invalid Name
+                        </div>
+                        <div *ngIf="contactForm.value.name.trim()==='' && contactForm.value.name!=='' && contactForm.get('name')?.touched" style="color: red;">
+                            Invalid Name
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" formControlName="email" class="form-control" placeholder="johndoe@gmail.com" />
+                        <div *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched" style="color: red;">
+                            Email can't be empty
+                        </div>
+                        <div *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched" style="color: red;">
+                            Invalid Email
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Tell us about what you would like to discuss</label>
+                        <textarea id="comments" formControlName="comments" class="form-control" placeholder="John Doe"></textarea>
+                        <div *ngIf="contactForm.get('comments')?.invalid && contactForm.get('comments')?.touched" style="color: red;">
+                            Reason required
+                        </div>
+                        <div *ngIf="contactForm.value.comments.trim()==='' && contactForm.value.comments!=='' && contactForm.get('name')?.touched" style="color: red;">
+                            Invalid comments
+                        </div>
+                    </div>
+                    <button type="submit" [disabled]="(contactForm.invalid || contactForm.value.name.trim()==='' || contactForm.value.comments.trim()==='') && contactForm.touched" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>

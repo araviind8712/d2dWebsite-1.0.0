@@ -4,13 +4,14 @@
     font-family: cursive;
 }
 
-.navbar-nav .nav-item .nav-link {
+.active {
+    color: black; 
     font-weight: bold;
-    color: black;
 }
 
-.navbar-nav .nav-item .dropdown-toggle {
+.navbar-nav .nav-item .dropdown-toggle .nav-link {
     color: gray;
+    cursor: pointer;
 }
 
 .btn-contact {
@@ -31,4 +32,22 @@
 
 .navbar-brand {
     margin-right: 20px;
+}
+
+.dropdown-menu-custom {
+    position: absolute;
+    top: 60px; /* Adjust this value to match your navbar height */
+    z-index: 1000;
+}
+
+.icon-container {
+    background: white;
+    color: rgb(251, 79, 35); 
+    padding: 2px 2px 2px 2px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+    margin-left: 3px;
 }

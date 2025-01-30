@@ -10,11 +10,11 @@
     </div>
 </div>
 
-<div class="container-fluid" style="background-color: #FBFBFB;">
+<div class="container-fluid" style="background-color: #EEEEEE ;">
     <div class="py-0 px-4">
-        <h2 class="py-5 px-3">Solutions Offered</h2>
+        <h2 class="pt-5 pb-4 px-3">Solutions Offered</h2>
 
-        <div class="row px-3">
+        <div class="row px-3 pt-1">
             <div class="col-12 col-md-6 pb-4" *ngFor="let sol of serviceData.solutionsOffered; let i = index">
                 <h5>{{sol.topic | uppercase}}</h5>
                 <div *ngFor="let des of sol.description">
@@ -24,20 +24,9 @@
         </div>
     </div>
 </div>
-<div style="height: 100px; background-color: white;"></div>
 
-<div class="container-fluid" style="background-color: #FBFBFB;">
-    <div class="py-0 px-4">
-        <h1 class="py-5 px-1 h1" style="font-weight: 900; font-size:xxx-small; text-align: center;">Fueling Innovation
-            through Collaborative Bioinformatics</h1>
-    </div>
-    <div style="margin-left: 30%; margin-right: 6%; text-align: left;" class="pb-4">
-        <p class="pb-3">We are eager to
-            collaborate with researchers, institutions, and organizations dedicated to advancing science. Together, we can
-            drive breakthroughs, uncover transformative discoveries, and make a lasting impact in the life sciences.
-        </p>
-        <div class="pb-5">
-            <a href="#" class="btn btn-light" style="border: 2px solid black; border-radius: 20px;">Get in touch</a>
-        </div>
-    </div>
+<div style="background-color: white;" class="pt-5 py-0">
+    <h2 class="py-3 px-5">Other Services</h2>
+    <app-service-menu [currentService]="serviceName.toString()" bgColor="background-color:white;"></app-service-menu>
 </div>
+

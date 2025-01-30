@@ -1,0 +1,23 @@
+<div class="container-fluid pt-3">
+    <div class="row pl-4 pr-4" align="center">
+        <div class="col-12 col-md-4 pb-4 shadow-sm cursor-pointer hover-effect" *ngFor="let service of currentServiceMenu;" (click)="redirect(service.image)">
+            <img [src]="service.image" height="250px" width="380px">
+            <div *ngIf="currentServiceMenu.length==5">
+                <h4 align="left" class="px-2 pt-3">{{service.topic}}
+                    <span class="icon-container" style="background-color: #EEEEEE;">
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="background-color: #EEEEEE;"></i>
+                    </span>
+                </h4>
+            </div>
+            <div *ngIf="currentServiceMenu.length!=5">
+                <h4 align="left" class="px-2 pt-3">{{service.topic}}
+                    <span class="icon-container" style="background-color: white;">
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="background-color: white;"></i>
+                    </span>
+                </h4>
+            </div>
+            
+            <p align="left" class="px-2 pt-1">{{service.description}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.mat-dialog-content {
+    max-height: 80vh;  /* Max height for the dialog */
+    overflow-y: auto;  /* Allow scrolling if content overflows */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-wrapper {
+    max-height: 60vh;  /* Max height for the form area */
+    overflow-y: auto;  /* Enable scrolling within the form */
+    padding-right: 10px;  /* Optional, to ensure scrollbar doesn't overlap content */
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group div {
+    margin-top: 5px;
+    color: red;
+  }
+  
+  .form-group input, .form-group textarea {
+    height: 40px; /* Set a consistent height for form fields */
+  }
+  
