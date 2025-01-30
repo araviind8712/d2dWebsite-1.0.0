@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
-import { StorageService } from '../../shared/services/storage.service';
 
 
 
@@ -17,7 +16,7 @@ import { StorageService } from '../../shared/services/storage.service';
 export class ServicesComponent implements OnInit{
   serviceName: "bioInfo" | "bioEng" | "bioInfoTraining" | "statisticalTesting" | "seqTech" ="bioInfo";
   serviceData:any;
-  constructor(public route:ActivatedRoute, public dialog:MatDialog, public storageService:StorageService){
+  constructor(public route:ActivatedRoute, public dialog:MatDialog){
    
   }
   ngOnInit(): void {
@@ -25,7 +24,6 @@ export class ServicesComponent implements OnInit{
       this.serviceName=params['service'];
     })
     this.serviceData=serviceData[0][this.serviceName];
-    this.storageService.setLocalStorage('page',JSON.stringify('service'))
   }
 
   openDialog(): void {

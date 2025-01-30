@@ -41,6 +41,6 @@ export class ServiceMenuComponent implements OnInit{
 
   redirect(image:string){
     var page=image.split('/')[2].split('.')[0];
-    window.location.href='http://localhost:4200/services/'+page;
+    window.location.href='/services/'+page+'/?page=service';
   }
 }

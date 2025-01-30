@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ServicesComponent } from '../services/services.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import serviceMenu from '../../../assets/serviceMenu.json'
-import { StorageService } from '../../shared/services/storage.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -20,14 +20,20 @@ export class NavbarComponent implements OnInit{
   isHome = false;
   isCompany = false;
 
-  constructor(private dialog: MatDialog,public storageService: StorageService) { 
+  constructor(private dialog: MatDialog, private route:ActivatedRoute) { 
     this.serviceMenu = serviceMenu;
   }
 
   ngOnInit(): void {
+    this.route.queryParamMap.subscribe((data)=>{
+      let page = data.get('page') ??'home';
+      this.isHome = page === "home";
+      this.isServiceVisible = page === 'service';
+      this.isCompany = page === 'company';
+    })
     try {
-      const page = this.storageService.getLocalStorage('page');
-      this.isHome = page === 'home';
+      let page = 'home';
+      this.isHome = page === "home";
       this.isServiceVisible = page === 'service';
       this.isCompany = page === 'company';
     } catch (e) {
@@ -52,25 +58,22 @@ export class NavbarComponent implements OnInit{
   }
 
   service(): void {
-    this.storageService.setLocalStorage('page', 'service');
     this.isServiceVisible = true;
     this.isCompany = false;
     this.isHome = false;
   }
 
   company(): void {
-    this.storageService.setLocalStorage('page', 'company');
     this.isServiceVisible = false;
     this.isCompany = true;
     this.isHome = false;
   }
 
   home(): void {
-    this.storageService.setLocalStorage('page', 'home');
     this.isServiceVisible = false; // Fixed issue here
     this.isCompany = false;
     this.isHome = true;
-    window.location.replace('/home');
+    window.location.replace('/home?page=home');
   }
 
   redirect(image: string): void {
@@ -78,7 +81,7 @@ export class NavbarComponent implements OnInit{
       const segments = image.split('/');
       if (segments.length > 2) {
         const page = segments[2].split('.')[0];
-        window.location.href = `http://localhost:4200/services/${page}`;
+        window.location.href = `/services/${page}?page=service`;
       }
     } catch (e) {
       console.error('Invalid image path:', image);

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { StorageService } from './shared/services/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +6,9 @@ import { StorageService } from './shared/services/storage.service';
   standalone: false,
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'd2dWebsite';
 
-  constructor(public storageService:StorageService){}
-
-  ngOnInit(): void {
-    this.storageService.setLocalStorage('page','');
-  }
+ 
 
 }
