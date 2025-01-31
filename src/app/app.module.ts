@@ -36,7 +36,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatInputModule,
     FormsModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     provideClientHydration(withEventReplay())

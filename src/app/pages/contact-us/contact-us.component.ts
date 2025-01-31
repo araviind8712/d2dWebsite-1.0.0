@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { EmailService } from '../../../shared/email.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -14,8 +15,10 @@ export class ContactUsComponent {
   gmail='dnatodiscovery@gmail.com';
   contactForm: FormGroup;
   snackbar:MatSnackBar;
-  constructor(public dialogRef: MatDialogRef<ContactUsComponent>,snackbar:MatSnackBar) {
+  service: EmailService;
+  constructor(public dialogRef: MatDialogRef<ContactUsComponent>,snackbar:MatSnackBar,service:EmailService) {
     this.snackbar=snackbar;
+    this.service=service;
     this.contactForm=new FormGroup(
       {
         name : new FormControl('',[Validators.required,Validators.pattern('^[A-Za-z ]+$')]),
@@ -25,12 +28,19 @@ export class ContactUsComponent {
     )
   }
 
-  save(){
+  async save(){
     if(this.contactForm.invalid){
       return;
     }
     else{
-      console.log(this.contactForm.value);
+      var details=this.contactForm.value;
+      var formData={
+        user_name:details.name,
+        user_email:details.email,
+        message:details.comments
+      };
+      var msg = await this.service.sendEmail(formData);
+      this.closeDialog();
     }
   }
 
