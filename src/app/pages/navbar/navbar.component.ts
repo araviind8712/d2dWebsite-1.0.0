@@ -19,6 +19,8 @@ export class NavbarComponent implements OnInit{
   isServiceVisible = false;
   isHome = false;
   isCompany = false;
+  serviceVisible = false;
+  pageName:any;
 
   constructor(private dialog: MatDialog, private route:ActivatedRoute) { 
     this.serviceMenu = serviceMenu;
@@ -26,6 +28,7 @@ export class NavbarComponent implements OnInit{
 
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((data)=>{
+      this.pageName = data.get('page') ??'home';
       let page = data.get('page') ??'home';
       this.isHome = page === "home";
       this.isServiceVisible = page === 'service';
@@ -57,8 +60,9 @@ export class NavbarComponent implements OnInit{
     });
   }
 
-  service(): void {
+  service(service:boolean): void {
     this.isServiceVisible = true;
+    this.serviceVisible = !service;
     this.isCompany = false;
     this.isHome = false;
   }

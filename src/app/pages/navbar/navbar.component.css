@@ -5,21 +5,13 @@
 }
 
 .active {
-    color: black; 
+    color: black;
     font-weight: bold;
 }
 
 .navbar-nav .nav-item .dropdown-toggle .nav-link {
     color: gray;
     cursor: pointer;
-}
-
-.btn-contact {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
 }
 
 .navbar {
@@ -36,18 +28,93 @@
 
 .dropdown-menu-custom {
     position: absolute;
-    top: 60px; /* Adjust this value to match your navbar height */
+    top: 60px;
+    /* Adjust this value to match your navbar height */
     z-index: 1000;
 }
 
 .icon-container {
     background: white;
-    color: rgb(251, 79, 35); 
+    color: rgb(251, 79, 35);
     padding: 2px 2px 2px 2px;
     border-radius: 4px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px; 
+    font-size: 16px;
     margin-left: 3px;
+}
+
+.nav-bar {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Transparent black background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+ul li a {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+
+}
+
+h6 {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    display: flex;
+    text-transform: uppercase;
+    color: #747B80;
+
+}
+
+
+
+.btn-contact-black {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align:middle;
+    padding: 16px 24px;
+    gap: 10px;
+    width: 165px;
+    height: 52px;
+    background: #121314;
+    border-radius: 200px;
+    color: #FBFBFB;
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+
+.btn-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align:middle;
+    padding: 16px 24px;
+    gap: 10px;
+    width: 165px;
+    height: 52px;
+    background: #FBFBFB;
+    border-radius: 200px;
+    color: #121314;
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
 }
