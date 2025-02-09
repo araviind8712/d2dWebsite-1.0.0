@@ -1,18 +1,18 @@
 <div class="container-fluid">
-    <div class="row" align="center">
-        <div class="col-12 col-md-4 cursor-pointer" *ngFor="let service of currentServiceMenu;" (click)="redirect(service.image)" style="padding: 0; box-shadow: none; border: none; cursor: pointer;">
+    <div class="row justify-content-center" align="center">
+        <div class="col-12 col-md-4 cursor-pointer" *ngFor="let service of currentServiceMenu;" (click)="redirect(service.image)" style="padding: 0; box-shadow: none; border: none; cursor: pointer;padding-bottom: 48px;">
             <img [src]="service.image" height="320" width="427px" style="padding-right: 32px; padding-bottom: 24px;">
             <div *ngIf="currentServiceMenu.length==5">
                 <h4 align="left" style="padding-right: 32px; padding-bottom: 8px;">{{service.topic}}
-                    <span class="icon-container" style="background-color: #EEEEEE;">
-                        <img src="assets/icons/right-arrow.svg">
+                    <span class="icon-container" style="background-color: transparent;">
+                        <img src="assets/icons/right-arrow.svg" width="32px" height="32px">
                     </span>
                 </h4>
             </div>
             <div *ngIf="currentServiceMenu.length!=5">
                 <h4 align="left" style="padding-right: 32px; padding-bottom: 8px;">{{service.topic}}
-                    <span class="icon-container" style="background-color: white;">
-                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg">
+                    <span class="icon-container" style="background-color: transparent;">
+                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="32px" height="32px">
                     </span>
                 </h4>
             </div>
