@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         <label for="comments">Tell us about what you would like to discuss</label>
-                        <textarea id="comments" formControlName="comments" class="form-control" placeholder="John Doe"></textarea>
+                        <textarea id="comments" formControlName="comments" class="form-control" placeholder="John Doe" min="3"></textarea>
                         <div *ngIf="contactForm.get('comments')?.invalid && contactForm.get('comments')?.touched" style="color: red;">
                             Reason required
                         </div>

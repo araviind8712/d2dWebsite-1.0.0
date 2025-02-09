@@ -2,3 +2,56 @@
     font-weight: bold;
     color: black;
 }
+
+.section1 {
+    padding: 80px 48px;
+    background-color: #FFFFFF;
+}
+
+.section2 {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 80px;
+    padding-bottom: 32px;
+    background-color: #FBFBFB;
+}
+
+h2 {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 51px;
+    line-height: 61px;
+    display: flex;
+    align-items: center;
+    color: #121314;
+}
+
+p {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+    color: #121314;
+}
+
+h5 {
+    font-family: 'NimbusSanL';
+    color: #121314;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+
+}
+
+.des {
+    font-family: 'NimbusSanL';
+    color: #747B80;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+
+}

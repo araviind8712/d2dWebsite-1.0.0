@@ -1,23 +1,23 @@
-<div class="container-fluid pt-3">
-    <div class="row pl-4 pr-4" align="center">
-        <div class="col-12 col-md-4 pb-4 shadow-sm cursor-pointer hover-effect" *ngFor="let service of currentServiceMenu;" (click)="redirect(service.image)">
-            <img [src]="service.image" height="250px" width="380px">
+<div class="container-fluid">
+    <div class="row" align="center">
+        <div class="col-12 col-md-4 cursor-pointer" *ngFor="let service of currentServiceMenu;" (click)="redirect(service.image)" style="padding: 0; box-shadow: none; border: none; cursor: pointer;">
+            <img [src]="service.image" height="320" width="427px" style="padding-right: 32px; padding-bottom: 24px;">
             <div *ngIf="currentServiceMenu.length==5">
-                <h4 align="left" class="px-2 pt-3">{{service.topic}}
+                <h4 align="left" style="padding-right: 32px; padding-bottom: 8px;">{{service.topic}}
                     <span class="icon-container" style="background-color: #EEEEEE;">
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="background-color: #EEEEEE;"></i>
+                        <img src="assets/icons/right-arrow.svg">
                     </span>
                 </h4>
             </div>
             <div *ngIf="currentServiceMenu.length!=5">
-                <h4 align="left" class="px-2 pt-3">{{service.topic}}
+                <h4 align="left" style="padding-right: 32px; padding-bottom: 8px;">{{service.topic}}
                     <span class="icon-container" style="background-color: white;">
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="background-color: white;"></i>
+                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg">
                     </span>
                 </h4>
             </div>
             
-            <p align="left" class="px-2 pt-1">{{service.description}}</p>
+            <p align="left" style="padding-right: 32px;">{{service.description}}</p>
         </div>
     </div>
 </div>

@@ -1,32 +1,48 @@
-<div class="container-fluid px-5 pt-5 pb-0">
-    <div class="pb-3">
-        <h2 class="pb-4">{{serviceData.topic}}</h2>
-        <div *ngFor="let desc of serviceData.desc1" class="pt-2">
-            <p align="left" style="margin-left: 24%; margin-right: 2%; text-align: left;">{{desc}}</p>
-        </div>
-        <div class="pt-5 pl-2 pb-3">
-            <img [src]="serviceData.image" alt="image" height="350px" width="700px">
-        </div>
+<div class="container-fluid section1">
+    <h2 style="padding-bottom: 48px;">{{serviceData.topic}}</h2>
+    <div *ngFor="let desc of serviceData.desc1">
+        <p align="left" style="margin-left: 459px;text-align: left;">{{desc}}</p>
+    </div>
+    <div style="padding-top: 80px; padding-bottom: 8px;">
+        <img [src]="serviceData.image" alt="image" height="520px" width="885px">
     </div>
 </div>
 
-<div class="container-fluid" style="background-color: #EEEEEE ;">
-    <div class="py-0 px-4">
-        <h2 class="pt-5 pb-4 px-3">Solutions Offered</h2>
+<div class="container-fluid section2" *ngIf="serviceName==='bioInfo'">
+    <h2 style="margin-bottom: 80px;">Solutions Offered</h2>
+    <div style="display: flex; width: 100%;">
+        <div style="width: 50%;">
+            <h5 style="padding-bottom: 8px;">{{ serviceData.solutionsOffered[0].topic | uppercase }}</h5>
+            <div *ngFor="let des of serviceData.solutionsOffered[0].description">
+                <p class="des">{{ des }}</p>
+            </div>
+        </div>
 
-        <div class="row px-3 pt-1">
-            <div class="col-12 col-md-6 pb-4" *ngFor="let sol of serviceData.solutionsOffered; let i = index">
-                <h5>{{sol.topic | uppercase}}</h5>
+        <div style="width: 50%; margin-left: 32px;">
+            <div *ngFor="let sol of serviceData.solutionsOffered.slice(1)"
+                [ngStyle]="{'padding-bottom': sol.topic !== 'TRANSCRIPTOMICS' ? '48px' : '0px'}">
+                <h5 style="padding-bottom: 8px;">{{ sol.topic | uppercase }}</h5>
                 <div *ngFor="let des of sol.description">
-                    <p class="p-0">{{des}}</p>
+                    <p class="des">{{ des }}</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div style="background-color: white;" class="pt-5 py-0">
-    <h2 class="py-3 px-5">Other Services</h2>
-    <app-service-menu [currentService]="serviceName.toString()" bgColor="background-color:white;"></app-service-menu>
+<div class="container-fluid section2" *ngIf="serviceName!=='bioInfo'">
+    <h2 style="margin-bottom: 80px;">Solutions Offered</h2>
+    <div class="row">
+        <div class="col-12 col-md-6" *ngFor="let sol of serviceData.solutionsOffered; let i = index" style="padding-bottom: 48px;">
+            <h5 style="padding-bottom: 8px;">{{sol.topic | uppercase}}</h5>
+            <div *ngFor="let des of sol.description">
+                <p class="des">{{des}}</p>
+            </div>
+        </div>
+    </div>
 </div>
 
+<div style="background-color: #FFFFFF; padding-top:80px;padding-left:48px;padding-right: 16px;padding-bottom: 80px;">
+    <h2 style="padding-bottom: 80px;">Other Services</h2>
+    <app-service-menu [currentService]="serviceName.toString()" bgColor="background-color:white;"></app-service-menu>
+</div>
