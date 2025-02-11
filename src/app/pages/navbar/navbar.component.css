@@ -29,7 +29,6 @@
 .dropdown-menu-custom {
     position: absolute;
     top: 60px;
-    /* Adjust this value to match your navbar height */
     z-index: 1000;
 }
 
@@ -46,13 +45,24 @@
 }
 
 .nav-bar {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Transparent black background */
-    position: fixed;
-    top: 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 48px;
+    gap: 16px;
+    position: absolute;
     width: 100%;
-    padding: 10px 0;
-    z-index: 1000;
+    height: 88px;
+    left: 0px;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(5.1px);
+    flex: none;
+    order: 8;
+    flex-grow: 0;
+    z-index: 8;
+
 }
 
 ul li a {
@@ -83,7 +93,7 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    vertical-align:middle;
+    vertical-align: middle;
     padding: 16px 24px;
     gap: 10px;
     width: 165px;
@@ -104,17 +114,31 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    vertical-align:middle;
     padding: 16px 24px;
     gap: 10px;
-    width: 165px;
+    width: 161px;
     height: 52px;
     background: #FBFBFB;
     border-radius: 200px;
-    color: #121314;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.btn-contact span {
+    width: 113px;
+    height: 15px;
     font-family: 'NimbusSanL';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 21px;
     line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #121314;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
