@@ -54,7 +54,7 @@ export class NavbarComponent implements OnInit{
     this.dialog.open(ContactUsComponent, {
       width: '100vw',
       maxWidth: '100vw',
-      height: 'auto',
+      maxHeight: 'fit-content',
       position: { bottom: '0px' },
       panelClass: 'custom-dialog'
     });

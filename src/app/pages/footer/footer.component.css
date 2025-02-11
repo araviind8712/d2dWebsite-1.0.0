@@ -2,31 +2,70 @@ body {
     background-color: #0a1a1a;
     color: #d8e0e0;
 }
+
 .footer {
     padding: 40px 0;
-    background-color: #011F23;
+    background-color: #012323;
 }
+
 .footer-logo {
+    font-family: 'NimbusSanL';
     font-size: 24px;
     font-weight: bold;
 }
+
 .social-icons a {
+    font-family: 'NimbusSanL';
     color: #d8e0e0;
     font-size: 20px;
     margin-right: 15px;
 }
+
 .footer-links a {
-    color: #d8e0e0;
+    font-family: 'NimbusSanL';
+    color: #FBFBFB;
     text-decoration: none;
     display: block;
     margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FBFBFB;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+
 }
+
 .footer-links a:hover {
+    font-family: 'NimbusSanL';
     text-decoration: underline;
 }
+
 .footer-bottom {
+    font-family: 'NimbusSanL';
     text-align: center;
     padding-top: 10px;
     border-top: 1px solid #d8e0e0;
-    color: #d8e0e0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #BFC0C0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+h5 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
 }

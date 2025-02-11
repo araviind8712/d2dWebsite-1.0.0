@@ -1,26 +1,138 @@
 .mat-dialog-content {
-    max-height: 80vh;  /* Max height for the dialog */
-    overflow-y: auto;  /* Allow scrolling if content overflows */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-wrapper {
-    max-height: 60vh;  /* Max height for the form area */
-    overflow-y: auto;  /* Enable scrolling within the form */
-    padding-right: 10px;  /* Optional, to ensure scrollbar doesn't overlap content */
-  }
-  
-  .form-group {
-    margin-bottom: 1rem;
-  }
-  
-  .form-group div {
-    margin-top: 5px;
-    color: red;
-  }
-  
-  .form-group input, .form-group textarea {
-    height: 40px; /* Set a consistent height for form fields */
-  }
-  
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: fit-content !important;
+
+}
+
+.form-wrapper {
+  max-height: fit-content;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  padding-left: 5px;
+}
+
+.form-group div {
+  margin-top: 5px;
+  color: red;
+}
+
+.form-group input,
+.form-group textarea {
+  height: 40px;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  height: 47px;
+  border: 1px solid #BFC0C0;
+  border-radius: 300px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+textarea {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 12px;
+  gap: 8px;
+  border: 1px solid #BFC0C0;
+  border-radius: 16px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 10px;
+  width: 114px;
+  height: 52px;
+  background: #121314;
+  color: #FBFBFB;
+  border-radius: 200px;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  border: 0px;
+}
+
+button:disabled {
+  background: #000000;
+  border-radius: 200px;
+  border: 0px;
+}
+
+button:hover {
+  background: #000000;
+  border-radius: 200px;
+  border: 0px;
+}
+
+label {
+  font-family: 'NimbusSanL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #121314;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.title {
+  font-family: 'NimbusSanL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 51px;
+  line-height: 61px;
+  color: #121314;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.subTitle {
+  font-family: 'NimbusSanL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 29px;
+  color: #121314;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+p {
+  font-family: 'NimbusSanL';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #121314;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-left: 16px;
+}

@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, QueryList, ViewChildren } from '@angular/core';
+import { log } from 'console';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +10,16 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  @ViewChildren('section') sections!: QueryList<ElementRef<HTMLDivElement>>;
+  
+  currentIndex: number = 1;
+
+  scrollToIndex(index: number) {
+    const element = document.querySelector(`[data-index="${index}"]`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
 
 }
