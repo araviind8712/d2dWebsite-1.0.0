@@ -4,13 +4,8 @@
     font-family: cursive;
 }
 
-.active {
-    color: black;
-    font-weight: bold;
-}
-
 .navbar-nav .nav-item .dropdown-toggle .nav-link {
-    color: gray;
+    color: #BFC0C0;
     cursor: pointer;
 }
 
@@ -44,11 +39,28 @@
     margin-left: 3px;
 }
 
+.nav-bar-black {
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 42px;
+    gap: 16px;
+    width: 100%;
+    height: 88px;
+    left: 0px;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(5.1px);
+
+}
+
+
 .nav-bar {
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 48px;
+    padding: 12px 32px;
     gap: 16px;
     position: absolute;
     width: 100%;
@@ -65,16 +77,17 @@
 
 }
 
-ul li a {
+.nav-bar ul li a {
     font-family: 'NimbusSanL';
     font-style: normal;
+    color: #BFC0C0;
     font-weight: 400;
     font-size: 16px;
     line-height: 29px;
 
 }
 
-h6 {
+.nav-bar h6 {
     font-family: 'NimbusSanL';
     font-style: normal;
     font-weight: 400;
@@ -141,4 +154,139 @@ h6 {
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+.btn-contact-black span {
+    width: 113px;
+    height: 15px;
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FBFBFB;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+.serviceNavBar-black {
+    box-sizing: border-box;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 48px;
+    padding-left: 15px;
+    padding-right: 100px;
+    z-index: 0;
+    gap: 16px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 192px;
+    left: 0px;
+    top: 90px;
+    background: rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20.1px);
+    color: #747B80;
+}
+
+.serviceItems-black {
+    flex: 1 1 calc(33.33% - 16px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.serviceItems-black h4 {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nav-bar .navbar-light .navbar-nav .nav-link.active {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    color: #FBFBFB;
+}
+
+.nav-bar .navbar-light .navbar-nav .nav-link:hover {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    color: #FBFBFB;
+}
+
+
+.serviceNavBar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 48px;
+    padding-right: 300px;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 1440px;
+    height: 192px;
+    left: 0px;
+    top: 90px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(5.1px);
+}
+
+.serviceItems {
+    flex: 1 1 calc(33.33% - 16px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.serviceItems h4 {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.nav-bar-black .navbar-light .navbar-nav .nav-link.active {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    color: #121314;
+}
+
+.nav-bar-black .navbar-light .navbar-nav .nav-link:hover {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    color: #121314;
 }
