@@ -12,12 +12,13 @@ export class EmailService {
 
   private userID = 'UHJnWEUpvTMZEmvsj';
   private serviceID = 'service_gcgkh4c';
-  private templateID = 'template_h69oey8'; 
+  private templateID1 = 'template_h69oey8';
+  private templateID2 = 'template_9hmn628';
 
-  sendEmail(formData: any):string {
-    var res='none';
+  sendEmail(formData: any): string {
+    var res = 'none';
     emailjs
-      .send(this.serviceID, this.templateID, formData, this.userID)
+      .send(this.serviceID, this.templateID1, formData, this.userID)
       .then(
         (response) => {
           console.log('Email sent successfully:', response);
@@ -29,6 +30,16 @@ export class EmailService {
           alert('Unable to raise the querry!!! Please Try again');
         }
       );
-      return res;
+    emailjs
+      .send(this.serviceID, this.templateID2, formData, this.userID)
+      .then(
+        (response) => {
+          console.log('Email sent successfully:', response);
+        },
+        (error) => {
+          console.error('Error sending email:', error);
+        }
+      );
+    return res;
   }
 }
