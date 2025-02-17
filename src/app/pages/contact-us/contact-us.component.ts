@@ -7,12 +7,11 @@ import { EmailService } from '../../../shared/email.service';
 @Component({
   selector: 'app-contact-us',
   standalone: false,
-  
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })
 export class ContactUsComponent {
-  gmail='dnatodiscovery@gmail.com';
+  gmail='dna2discovery@outlook.com';
   contactForm: FormGroup;
   snackbar:MatSnackBar;
   service: EmailService;

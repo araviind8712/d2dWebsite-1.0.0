@@ -19,31 +19,23 @@ export class NavbarComponent implements OnInit{
   isServiceVisible = false;
   isHome = false;
   isCompany = false;
+  isCompDropdown = false;
   serviceVisible = false;
   pageName:any;
 
   constructor(private dialog: MatDialog, private route:ActivatedRoute) { 
     this.serviceMenu = serviceMenu;
+    
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.route.queryParamMap.subscribe((data)=>{
-      this.pageName = data.get('page') ??'home';
-      let page = data.get('page') ??'home';
-      this.isHome = page === "home";
-      this.isServiceVisible = page === 'service';
-      this.isCompany = page === 'company';
+      this.pageName =data.get('page');
+      this.isHome = data.get('page') === "home";
+      this.isServiceVisible = data.get('page') === 'service';
+      console.log(this.isServiceVisible);
+      this.isCompany = data.get('page') === 'company';
     })
-    try {
-      let page = 'home';
-      this.isHome = page === "home";
-      this.isServiceVisible = page === 'service';
-      this.isCompany = page === 'company';
-    } catch (e) {
-      this.isHome = false;
-      this.isServiceVisible = false;
-      this.isCompany = false;
-    }
   }
 
   toggleSecondaryNavbar(): void {
@@ -65,6 +57,7 @@ export class NavbarComponent implements OnInit{
     this.serviceVisible = !service;
     this.isCompany = false;
     this.isHome = false;
+    this.isCompDropdown=false;
   }
 
   company(): void {

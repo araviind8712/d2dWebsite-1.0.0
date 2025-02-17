@@ -1,7 +1,7 @@
 <div #mainDiv class="container-fluid w-100 p-0" style="margin-top: 0;">
     <div #section [attr.data-index]="1">
         <img src="assets/images/edited_image.png" height="700px" width="100%">
-    </div >
+    </div>
     <div class="col-md-12 section1" [attr.data-index]="2">
         <p align="center" style="padding-bottom: 24px; margin-bottom: 0px;">Who we are</p>
         <h3 align="center">Where Biology Meets Technology: Empowering Breakthroughs with
@@ -42,14 +42,14 @@
     <div #section class="col-12 section4" [attr.data-index]="6">
         <p align="left" style="margin-bottom: 0px; margin-left: 0px; padding-bottom: 16px;">Testimonials</p>
         <h2 align="left" style="margin-bottom: 0px; margin-left: 0px; padding-bottom: 80px;">What Our Clients Say</h2>
-        <div class="row" >
+        <div class="row">
             <div class="col-md-5" style="margin-left: 21px;">
                 <div class="row">
                     <img src="assets/images/quotes.png" height="26px" width="45px" style="margin-right: 20px;">
                     <h3>We Trust Them</h3>
                 </div>
             </div>
-            <div  style="margin-left: 460px;margin-right: 20px;margin-bottom: 0px;">
+            <div style="margin-left: 32%;margin-right: 20px;margin-bottom: 0px;">
                 <p>Partnering with [Your Company Name] has transformed the way we analyze and interpret our data. Their
                     expertise in bioinformatics allowed us to accelerate our research timelines and gain deeper insights
                     into our genomic datasets. The team’s ability to deliver accurate, reliable solutions while staying
@@ -57,6 +57,21 @@
                     projects!</p>
                 <br>
                 <p id="sub"><span class="head">Dr. Sarah,</span> Chief Research Officer, Genemo</p>
+            </div>
+        </div>
+    </div>
+    <div class="section5">
+        <p class="fsr-51" style="display: flex; justify-content: space-between; align-items: baseline; position: relative; width: 100%;">
+            Check out our other Resources
+            <a href="resources?pages=resources" style="cursor: pointer;text-decoration: none;"><span style="font-style: normal; font-weight: 400; font-size: 21px; line-height: 29px; display: flex; align-items:baseline; color: #121314;">
+                View All  &nbsp; <i class="bi bi-arrow-right"></i>
+            </span></a>
+        </p>
+
+        <div class="row mt-80" style="margin-bottom: 80px;">
+            <div class="col-md-4 col-12" *ngFor="let resource of resources">
+                <app-resource-card [title]="resource.title" [description]="resource.description"
+                    [image]="resource.image" [postedOn]="resource.postedOn" [type]="resource.type"></app-resource-card>
             </div>
         </div>
     </div>

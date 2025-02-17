@@ -1,0 +1,21 @@
+.footer{
+    background-color: #012323;
+    margin-bottom: 0!important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    padding: 0;
+}
+
+.no-underline{
+    text-decoration:none;
+}
+
+.link-underline{
+        text-decoration: none; 
+}
+
+.link-underline:hover{
+    text-decoration: underline;
+    text-decoration-color: whitesmoke!important;
+}
+      

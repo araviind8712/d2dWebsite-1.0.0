@@ -8,14 +8,14 @@
                     <img src="assets/icons/email.svg" width="20px" height="20px">
                     <p>{{gmail}}</p>
                 </div>
-                <div class="row pl-3" style="margin-bottom: 16px;">
+                <!-- <div class="row pl-3" style="margin-bottom: 16px;">
                     <img src="assets/icons/phone.svg" width="22px" height="22px">
                     <p>+1 (555) 000-0000</p>
                 </div>
                 <div class="row pl-3" style="margin-bottom: 16px;">
                     <img src="assets/icons/location.svg" width="24px" height="24px">
                     <p>123 Sample St, Sydney NSW 2000 AU</p>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         <label for="comments">Tell us about what you would like to discuss</label>
-                        <textarea id="comments" formControlName="comments" class="form-control" placeholder="John Doe" style="height: 110px;"></textarea>
+                        <textarea id="comments" formControlName="comments" class="form-control" placeholder="Write here..." style="height: 110px;"></textarea>
                         <div *ngIf="contactForm.get('comments')?.invalid && contactForm.get('comments')?.touched" style="color: red;">
                             Reason required
                         </div>

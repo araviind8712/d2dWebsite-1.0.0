@@ -26,7 +26,12 @@
   font-weight: bold;
   font-style: italic;
 }
-html, body { height: 100%; }
+
+html,
+body {
+  height: 100%;
+}
+
 /* Apply the font globally */
 body {
   margin: 0;
@@ -35,35 +40,224 @@ body {
 
 
 .custom-dialog .mat-dialog-container {
-    padding: 0; 
-    border-radius: 0; 
-    width: 100vw; 
-    max-width: 100vw; 
-    position:relative;
-    height: auto; 
-    max-height: fit-content !important;
-  }
-  
-  .custom-dialog {
-    animation: slideUp 0.3s ease-out; 
-    max-height: fit-content;
-  }
-  
-  @keyframes slideUp {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  ::ng-deep .mat-dialog-container {
-    border-radius: 0 !important;
+  padding: 0;
+  border-radius: 0;
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  height: auto;
+  max-height: fit-content !important;
+}
+
+.custom-dialog {
+  animation: slideUp 0.3s ease-out;
+  max-height: fit-content;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
   }
 
-  .mat-mdc-dialog-surface {
-    border-radius: 0px !important;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
+
+::ng-deep .mat-dialog-container {
+  border-radius: 0 !important;
+}
+
+.mat-mdc-dialog-surface {
+  border-radius: 0px !important;
+}
+
+/* Font Sizes Begin*/
+.fsr-51 {
+  font-family: 'NimbusSanL' !important;
+  font-size: 51px !important;
+}
+
+.fsr-21 {
+  font-family: 'NimbusSanL' !important;
+  font-size: 21px !important;
+}
+
+.fsb-16 {
+  font-family: 'NimbusSanL' !important;
+  font-size: 16px !important;
+  font-weight: 400;
+}
+
+.fsb-21 {
+  font-family: 'NimbusSanL' !important;
+  font-size: 21px !important;
+  font-weight: 400;
+}
+
+.fsr-16 {
+  font-family: 'NimbusSanL' !important;
+  font-size: 16px !important;
+}
+
+.fsr-12 {
+  font-family: 'NimbusSanL' !important;
+  font-size: 12px !important;
+}
+
+.fsr-28 {
+  font-family: 'NimbusSanL' !important;
+  font-size: 28px !important;
+}
+
+.fsr-67 {
+  font-family: 'NimbusSanL' !important;
+  font-size: 67px !important;
+}
+
+.fsb-120 {
+  font-family: 'NimbusSanL' !important;
+  font-size: 120px !important;
+  font-weight: 400;
+}
+
+
+.p-48 {
+  padding: 0 48px;
+}
+
+.p-80 {
+  padding: 80px 0;
+}
+
+.mt-80 {
+  margin-top: 80px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mt-48 {
+  margin-top: 48px !important;
+}
+
+/* Margin End */
+
+/* Color Begin*/
+.color-grey {
+  color: #BFC0C0;
+}
+
+.color-blue {
+  color: #3892FA;
+}
+
+.color-lightgrey {
+  color: #747B80;
+}
+
+.color-lightwhite {
+  color: #fbfbfb;
+}
+
+.bg-lightwhite {
+  background-color: #fbfbfb;
+}
+
+/* Color End */
+
+/* Line Height Begin */
+.lh-29 {
+  line-height: 29px !important;
+}
+
+/* Line Height Ends */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'NimbusSanRegular', sans-serif !important;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.image-view {
+  width: 100%;
+  height: 50%;
+}
+
+.btn-responsive {
+  width: auto;
+}
+
+.multi-line {
+  white-space: pre-wrap;
+  /* Preserves new lines, allows wrapping */
+  word-wrap: break-word;
+  /* Ensures long words break */
+  overflow-wrap: break-word;
+  /* Alternative to break long words */
+  max-width: 100%;
+}
+
+/* Link transition Begins */
+
+.link-text {
+  text-decoration: none;
+  background-image: linear-gradient(black, black);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
+  color: black;
+}
+
+.link-text:hover {
+  background-size: 100% 1px;
+}
+
+
+
+.fade-effect {
+  transition: all 0.3s ease-in-out;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.fade-effect:hover {
+  transform: scale(1.01);
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); */
+}
+
+
+@media only screen and (max-width: 768px) {
+  .btn-responsive {
+    width: 100%;
+  }
+
+  .p-48 {
+    padding: 0 16px !important;
+  }
+
+  .fsr-21 {
+    font-size: 16px !important;
+  }
+
+  .fsr-51 {
+    font-size: 38px !important;
+  }
+
+  .fsr-67 {
+    font-size: 51px !important;
+  }
+
+  .fsb-120 {
+    font-size: 67px !important;
+  }
+
+}

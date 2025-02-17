@@ -4,10 +4,7 @@
     font-family: cursive;
 }
 
-.navbar-nav .nav-item .dropdown-toggle .nav-link {
-    color: #BFC0C0;
-    cursor: pointer;
-}
+
 
 .navbar {
     justify-content: flex-end;
@@ -43,16 +40,11 @@
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 42px;
     gap: 16px;
     width: 100%;
     height: 88px;
     left: 0px;
     top: 0px;
-    background: rgba(255, 255, 255, 0.02);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(5.1px);
-
 }
 
 
@@ -60,21 +52,16 @@
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 32px;
     gap: 16px;
     position: absolute;
     width: 100%;
     height: 88px;
     left: 0px;
     top: 0px;
-    background: rgba(255, 255, 255, 0.02);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(5.1px);
     flex: none;
     order: 8;
     flex-grow: 0;
     z-index: 8;
-
 }
 
 .nav-bar ul li a {
@@ -84,8 +71,21 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 29px;
-
+    justify-content: start;
+    cursor: pointer;
 }
+
+.nav-bar-black ul li a {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    color: #747B80;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    justify-content: start;
+    cursor: pointer;
+}
+
 
 .nav-bar h6 {
     font-family: 'NimbusSanL';
@@ -96,7 +96,17 @@
     display: flex;
     text-transform: uppercase;
     color: #747B80;
+}
 
+.nav-bar-black h6 {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    display: flex;
+    text-transform: uppercase;
+    color: #747B80;
 }
 
 
@@ -156,6 +166,30 @@
     flex-grow: 0;
 }
 
+.nav-bar-black .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    background-color: #FBFBFB;
+    border: 1px solid #faf5f5;;
+    backdrop-filter: blur(20.1px);
+}
+
+.nav-bar .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255,0.07);
+    backdrop-filter: blur(20.1px);
+    text-decoration: none;
+}
+
+
 .btn-contact-black span {
     width: 113px;
     height: 15px;
@@ -176,24 +210,25 @@
 
 .serviceNavBar-black {
     box-sizing: border-box;
-    margin-left: 0px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 32px 48px;
-    padding-left: 15px;
-    padding-right: 100px;
-    z-index: 0;
     gap: 16px;
     flex-wrap: wrap;
-    width: 100%;
+    width: 1440px;
     height: 192px;
     left: 0px;
     top: 90px;
-    background: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    padding-right: 15%;
+    background: rgba(255, 255, 255, 0.01);
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
     color: #747B80;
+    padding-right: 15%;
+   
 }
 
 .serviceItems-black {
@@ -235,21 +270,22 @@
 
 .serviceNavBar {
     box-sizing: border-box;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 32px 48px;
-    padding-right: 300px;
     gap: 16px;
     flex-wrap: wrap;
-    position: absolute;
     width: 1440px;
     height: 192px;
     left: 0px;
     top: 90px;
-    background: rgba(255, 255, 255, 0.02);
+    width: 100%;
+    padding-right: 15%;
+    background: rgba(255, 255, 255, 0.01);
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(5.1px);
+    backdrop-filter: blur(20.1px);
 }
 
 .serviceItems {

@@ -1,0 +1,90 @@
+<div class="p-48">
+    <section class="mt-80">
+        <p class="fsr-21 color-grey">Dec 20,2024</p>
+        <p class="fsr-51">RNA-Seq Analysis and Gene Regulation</p>
+    </section>
+    <div class="row mt-80">
+        <img src="/assets/img/res1.png" alt="" class="col-md-8 col-12">
+    </div>
+    <div class="d-flex flex-column mt-80 ">
+        <div class="row my-4">
+                <p class="text-uppercase col-md-4 col-12 fsb-21">Objective</p>
+                <p class="col-md-8 col-12 fsr-21">To analyze RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns and provide comprehensive bioinformatics training to the client, including tools and scripting techniques.</p>
+        </div>
+        <div class="row my-4">
+            <p class="text-uppercase col-md-4 col-12 fsb-21">KEY ACTIVITIES</p>
+            <div class="col-md-8 col-12 fsr-21">
+                <p>
+                    To analyze RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns and provide comprehensive bioinformatics training to the client, including tools and scripting techniques.
+                </p>
+                    <ol>
+                        <li class="fsb-21">
+                            RNA-Seq Analysis and Gene Regulation Study
+                            <ul class="fsr-21 my-5">
+                                <li>Conducted a detailed RNA-Seq analysis to investigate gene expression levels and regulatory mechanisms.</li>
+                                <li>Processed raw sequencing data through alignment, quantification, and differential expression analysis.</li>
+                                <li>Used advanced analytical approaches to explore gene regulation pathways, identifying key regulatory elements that influence gene expression.</li>
+                            </ul>
+                        </li>
+                        <li class="fsb-21">
+                            Automated Snakemake Pipeline Development
+                            <ul class="fsr-21 my-5">
+                                <li>Designed and implemented an automated Snakemake pipeline to streamline RNA-Seq data analysis.</li>
+                                <li>Ensured reproducible and efficient data processing, from raw data to final results, reducing manual intervention and minimizing errors.</li>
+                            </ul>
+                        </li>
+                        <li class="fsb-21">
+                                Tutorial and Training Services
+                                <div class="fsr-21 my-5">
+                                    <p>We provided comprehensive training to equip the client with essential bioinformatics skills:</p>
+
+                                    <ul>
+                                        <li>Scripting
+                                            <ul>
+                                                <li>Delivered hands-on training in scripting techniques to automate data analysis tasks and customize workflows.</li>
+                                            </ul>
+                                    </ul>
+                                    <ul>
+                                        <li>Documentation
+                                            <ul>
+                                                <li>Guided the client in creating detailed, reproducible, and shareable workflows using Jupyter Notebooks.</li>
+                                            </ul>
+                                        </ul>
+                                        <ul>
+                                            <li>SLURM and Bash Scripting
+                                                <ul>
+                                                    <li>Taught the client how to write and optimize SLURM scripts for job scheduling and Bash scripts for command-line tasks.</li>
+                                                    <li>Enhanced the client’s ability to manage computational resources efficiently in high-performance computing (HPC) environments.</li>
+                                                </ul>
+                                            </ul>
+                                        </div>
+                        </li>
+                    </ol>
+            </div>
+            <div class="row my-4">
+                <p class="text-uppercase col-md-4 col-12 fsb-21">OUTCOMES</p>
+                <div class="col-md-8 col-12 fsr-21">
+                    <pre class="fsr-21 multi-line">This project not only provided high-quality analytical results but also empowered the client with valuable skills and knowledge to independently handle future bioinformatics challenges.</pre>
+                    <p>
+                        Through this project, DNA2Discovery highlighted its commitment to delivering:
+                    </p>
+                        <ul>
+                            <li>Technical excellence in bioinformatics solutions.</li>
+                            <li>Educational support to ensure long-term client success in research endeavors.</li>
+                        </ul>
+                       <p>
+                           We take pride in blending expertise with education, helping our clients achieve their scientific goals while gaining confidence in bioinformatics practices.  
+                       </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <p class="fsr-51 mt-80">Check out our other Resources</p>
+        <div class="row mt-80">
+            <div class="col-md-4 col-12 h-100" *ngFor="let resource of resources">
+                <app-resource-card [title]="resource.title" [description]="resource.description" [image]="resource.image" [postedOn]="resource.postedOn" [type]="resource.type"></app-resource-card>
+            </div>
+        </div>
+    </section>
+</div>

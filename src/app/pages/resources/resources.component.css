@@ -1,0 +1,13 @@
+.nav-resource{
+    width:20%;
+}
+
+.nav-active{
+    color: brown;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-resource{
+        width: 100%;
+    }
+  }
