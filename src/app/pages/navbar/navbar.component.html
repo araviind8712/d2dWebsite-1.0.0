@@ -32,10 +32,6 @@
                         <img src="assets/icons/dropdown-white.svg" width="13px" height="7px">
                     </span>
                     </a>
-                    <div class="dropdown-content" *ngIf="isCompDropdown">
-                        <a href="/aboutus?page=aboutus" style="text-decoration: none; padding: 5px 22px; border-bottom: 1px solid rgba(255, 255, 255,0.1);">About Us</a>
-                        <a href="/resources?pages=resources" style="text-decoration: none; padding: 5px 22px;">Resouces</a>
-                    </div>
                 </li>
                 <li class="nav-item">
                     <a (click)="openDialog()" class="btn btn-contact"><span>Get in touch</span></a>
@@ -55,6 +51,22 @@
         </div>
     </nav>
 
+    <nav class="row companyNavBar" *ngIf="isCompDropdown" style="background-color: inherit;display: flex; flex-direction: row">
+        <div style="cursor: pointer;" class="col-md-3 serviceItems" (click)="company('aboutus')">
+            <h6 style=" color: #BFC0C0;">About Us
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
+        </div>
+        <div style="cursor: pointer;" class="col-md-3 serviceItems" (click)="company('resources')">
+            <h6 style=" color: #BFC0C0;">Resources
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
+        </div>
+    </nav>
 </div>
 
 <div class="nav-bar-black" *ngIf="pageName!=='home'">
@@ -91,12 +103,7 @@
                             style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
                             <img src="assets/icons/dropdown-black.svg" width="13px" height="7px">
                         </span>
-                    </a>
-                    <div class="dropdown-content" *ngIf="isCompDropdown">
-                        <a href="/aboutus?page=aboutus" style="text-decoration: none; padding: 5px 22px; border-bottom: 1px solid #faf5f5;" >About Us</a>
-                        <a href="/resources?pages=resources" style="text-decoration: none; padding: 5px 22px; border-bottom: 1px solid #faf5f5;">Resources</a>
-                    </div>
-                    
+                    </a>                    
                 </li>
                 <li class="nav-item">
                     <a (click)="openDialog()" class="btn btn-contact-black"><span>Get in touch</span></a>
@@ -111,6 +118,23 @@
         <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
             class="serviceItems-black">
             <h6>{{menu.topic}}
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
+        </div>
+    </nav>
+
+    <nav class="row companyNavBar-black" *ngIf="isCompDropdown" style="background-color: inherit;display: flex; flex-direction: row">
+        <div style="cursor: pointer;" (click)="company('aboutus')"  class="col-md-3 serviceItems-black">
+            <h6>About Us
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
+        </div>
+        <div style="cursor: pointer;" (click)="company('resources')" class="col-md-3 serviceItems-black" >
+            <h6>Resources
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>

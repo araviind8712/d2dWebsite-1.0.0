@@ -3,7 +3,11 @@
 }
 
 .nav-active{
-    color: brown;
+    color: #FB4F23;
+}
+
+a{
+    color: black;
 }
 
 @media only screen and (max-width: 600px) {

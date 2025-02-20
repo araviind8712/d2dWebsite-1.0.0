@@ -60,10 +60,11 @@ export class NavbarComponent implements OnInit{
     this.isCompDropdown=false;
   }
 
-  company(): void {
+  company(route:any): void {
     this.isServiceVisible = false;
     this.isCompany = true;
     this.isHome = false;
+    window.location.replace('/'+route+'?page='+route);
   }
 
   home(): void {
@@ -84,4 +85,5 @@ export class NavbarComponent implements OnInit{
       console.error('Invalid image path:', image);
     }
   }
+
 }
