@@ -27,6 +27,13 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'NimbusSanLB';
+  src: url('/assets/fonts/NimbusSanL-Bol.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 html,
 body {
   height: 100%;
@@ -86,13 +93,13 @@ body {
 }
 
 .fsb-16 {
-  font-family: 'NimbusSanL' !important;
+  font-family: 'NimbusSanLB' !important;
   font-size: 16px !important;
   font-weight: 400;
 }
 
 .fsb-21 {
-  font-family: 'NimbusSanL' !important;
+  font-family: 'NimbusSanLB' !important;
   font-size: 21px !important;
   font-weight: 400;
 }
@@ -118,7 +125,7 @@ body {
 }
 
 .fsb-120 {
-  font-family: 'NimbusSanL' !important;
+  font-family: 'NimbusSanLB' !important;
   font-size: 120px !important;
   font-weight: 400;
 }
@@ -148,19 +155,19 @@ body {
 
 /* Color Begin*/
 .color-grey {
-  color: #BFC0C0;
+  color: #BFC0C0!important;
 }
 
 .color-blue {
-  color: #3892FA;
+  color: #3892FA!important;
 }
 
 .color-lightgrey {
-  color: #747B80;
+  color: #747B80!important;
 }
 
 .color-lightwhite {
-  color: #fbfbfb;
+  color: #fbfbfb!important;
 }
 
 .bg-lightwhite {
@@ -209,13 +216,13 @@ body {
 /* Link transition Begins */
 
 .link-text {
-  text-decoration: none;
+  text-decoration: none!important;
   background-image: linear-gradient(black, black);
   background-size: 0% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out;
-  color: black;
+  color: black!important;
 }
 
 .link-text:hover {
@@ -232,6 +239,14 @@ body {
 .fade-effect:hover {
   transform: scale(1.01);
   /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); */
+}
+
+.fit-content{
+  width: fit-content!important;
+}
+
+a {
+  text-underline-offset: 3px!important; /* Moves the underline 1px away from the text */
 }
 
 
