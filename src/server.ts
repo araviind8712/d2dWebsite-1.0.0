@@ -60,6 +60,12 @@ if (isMainModule(import.meta.url)) {
   });
 }
 
+export function getPrerenderParams() {
+  return [
+    { route: '/resources/1' },
+  ];
+}
+
 /**
  * The request handler used by the Angular CLI (dev-server and during build).
  */
