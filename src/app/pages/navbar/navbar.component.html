@@ -43,7 +43,7 @@
     <nav class="serviceNavBar" *ngIf="serviceVisible" style="background-color: inherit;">
         <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
             class="serviceItems">
-            <h6 style=" color: #BFC0C0;">{{menu.topic}}
+            <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">{{menu.topic}}</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>
@@ -53,14 +53,14 @@
 
     <nav class="row companyNavBar" *ngIf="isCompDropdown" style="background-color: inherit;display: flex; flex-direction: row">
         <div style="cursor: pointer;" class="col-md-3 serviceItems" (click)="company('aboutus')">
-            <h6 style=" color: #BFC0C0;">About Us
+            <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">About Us</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>
             </h6>
         </div>
         <div style="cursor: pointer;" class="col-md-3 serviceItems" (click)="company('resources')">
-            <h6 style=" color: #BFC0C0;">Resources
+            <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">Resources</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>
@@ -117,7 +117,7 @@
     <nav class="serviceNavBar-black" *ngIf="serviceVisible" style="background: inherit;">
         <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
             class="serviceItems-black">
-            <h6>{{menu.topic}}
+            <h6><a class="link-underline" style="color: #747B80 !important;">{{menu.topic}}</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>
@@ -127,14 +127,14 @@
 
     <nav class="row companyNavBar-black" *ngIf="isCompDropdown" style="background-color: inherit;display: flex; flex-direction: row">
         <div style="cursor: pointer;" (click)="company('aboutus')"  class="col-md-3 serviceItems-black">
-            <h6>About Us
+            <h6><a class="link-underline" style="color: #747B80 !important;">About Us</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>
             </h6>
         </div>
         <div style="cursor: pointer;" (click)="company('resources')" class="col-md-3 serviceItems-black" >
-            <h6>Resources
+            <h6><a class="link-underline" style="color: #747B80 !important;">Resources</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>
