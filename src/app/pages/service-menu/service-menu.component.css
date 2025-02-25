@@ -4,6 +4,7 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
+  margin: 0px;
   line-height: 29px;
   color: #747B80;
 }
@@ -12,8 +13,48 @@ h4{
   font-family: 'NimbusSanL';
   color: #121314;
   font-style: normal;
+  margin: 0px;
 font-weight: 400;
 font-size: 28px;
 line-height: 39px;
+}
 
+.pr32{
+  padding-right: 32px !important;
+}
+
+.pb48{
+  padding-bottom: 48px !important;
+}
+
+.img32{
+  height: 32px;
+  width: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .pr32{
+    padding-right: 0px !important;
+  }
+
+  h4{
+    font-size: 21px;
+    line-height: 29.4px;
+  }
+
+  p{
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+
+  .pb48{
+    padding-bottom: 32px !important;
+  }
+
+  .img32{
+    height: 24px;
+    width: 24px;
+  }
+  
+  
 }

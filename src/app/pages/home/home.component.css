@@ -1,104 +1,33 @@
-.section1 {
+.section1,
+.section2,
+.section3,
+.section4,
+.section5 {
     padding: 80px 48px;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.pic{
+    height: 100vh;
+}
+
+.section1 {
     background-color: #FFFFFF;
 }
 
 .section2 {
-    padding-top: 80px;
-    padding-left: 48px;
+    background-color: #FBFBFB;
     padding-right: 16px;
-    padding-bottom: 38px;
-    width: 100%;
-    height: 100%;
-    background-color: #FBFBFB;
 }
 
-.section2 p {
+.section2 h2,.section2 p{
     padding-right: 32px;
-    margin-bottom: 0px;
-    padding-bottom: 16px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    font-family: 'NimbusSanL';
-    color: #747B80;
-
 }
 
-.section2 h2 {
-    font-family: 'NimbusSanL';
-    padding-right: 32px;
-    padding-top: 0px;
-    padding-bottom: 80px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 51px;
-    line-height: 61px;
-    color: #121314;
-
-}
-
-
-.section3 {
-    padding: 80px 48px;
-    width: 100%;
-    height: 100%;
-
-}
-
-.section3 p {
-    font-style: normal;
-    margin-bottom: 0px;
-    padding-bottom: 16px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    font-family: 'NimbusSanL';
-    color: #747B80;
-
-}
-
-.section3 h2 {
-    font-family: 'NimbusSanL';
-    padding-bottom: 40px;
-    margin-bottom: 0PX;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 51px;
-    line-height: 61px;
-    color: #121314;
-
-}
-
-.section4 {
-    padding: 80px 48px;
-    width: 100%;
-    height: 100%;
-    background-color: #FBFBFB;
-}
-
-h2 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 51px;
-    line-height: 61px;
-    font-family: 'NimbusSanL';
-    color: #121314;
-}
-
-p {
-    font-family: 'NimbusSanL';
-    color: #747B80;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 29px;
-    font-style: normal;
-
-}
-
+.section3 p,
+.section2 p,
 .section1 p {
     font-style: normal;
     font-weight: 700;
@@ -106,11 +35,24 @@ p {
     line-height: 22px;
     font-family: 'NimbusSanL';
     color: #747B80;
-    padding-bottom: 24px;
-
+    margin-bottom: 0px;
+    padding-bottom: 16px;
 }
 
-.section1 h3 {
+.section3 h2,
+.section2 h2 {
+    font-family: 'NimbusSanL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 51px;
+    line-height: 61px;
+    color: #121314;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+}
+
+.section1 h3,
+.section4 h3 {
     font-style: normal;
     font-weight: 400;
     font-size: 38px;
@@ -118,8 +60,12 @@ p {
     text-align: center;
     font-family: 'NimbusSanL';
     color: #121314;
-    padding-left: 114px;
-    padding-right: 114px;
+    padding: 0 114px 16px;
+    margin: 0px;
+}
+
+.section4 {
+    background-color: #FBFBFB;
 }
 
 .subsec31 h5 {
@@ -131,7 +77,7 @@ p {
     font-size: 28px;
     line-height: 39px;
     color: #FB4F23;
-
+    margin: 0px;
 }
 
 .subsec31 h4 {
@@ -142,39 +88,23 @@ p {
     font-size: 28px;
     line-height: 39px;
     color: #121314;
-
+    margin: 0px;
 }
 
-.subsec31 p {
+.subsec31 p,
+.section4 p {
     font-family: 'NimbusSanL';
     font-style: normal;
     font-weight: 400;
     font-size: 21px;
     line-height: 29px;
     color: #747B80;
-}
-
-.section4 h3 {
-    font-family: 'NimbusSanL';
     padding-bottom: 16px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 38px;
-    line-height: 46px;
-    color: #121314;
+    margin: 0px;
+
 }
 
-.section4 p {
-    font-family: 'NimbusSanL';
-    padding-bottom: 16px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 29px;
-    color: #121314;
-}
-
-.head{
+.head {
     font-family: 'NimbusSanL';
     margin-bottom: 0;
     font-style: normal;
@@ -184,7 +114,7 @@ p {
     color: #121314;
 }
 
-#sub{
+#sub {
     font-family: 'NimbusSanL';
     margin-bottom: 0;
     font-style: normal;
@@ -194,7 +124,62 @@ p {
     color: #747B80;
 }
 
-.section5 {
-    padding: 80px 48px;
-    width: 100%;
+
+@media only screen and (max-width: 768px) {
+    .section1,
+    .section2,
+    .section3,
+    .section4,
+    .section5 {
+        padding: 64px 16px;
+    }
+
+    .section2 {
+        padding-right: 16px;
+        padding-bottom: 38px;
+    }
+
+    .section3 p,
+    .section2 p,
+    .section1 p {
+        line-height: 16.8px;
+        margin-bottom: 0px;
+        padding-bottom: 12px;
+    }
+
+    .section3 h2,
+    .section2 h2 {
+        font-size: 38px;
+        line-height: 45.6px;
+        padding-bottom: 40px;
+    }
+
+    .section1 h3,
+    .section4 h3 {
+        font-size: 28px;
+        line-height: 39.2px;
+    }
+
+    .subsec31 h5 {
+        font-size: 28px;
+        line-height: 39.2px;
+        color: #FB4F23;
+    }
+
+    .subsec31 h4 {
+        padding-bottom: 8px;
+        font-size: 21px;
+        line-height: 29.4px;
+    }
+
+    .subsec31 p,
+    .section4 p {
+        font-size: 16px;
+        line-height: 22.4px;
+        padding-bottom: 40px;
+    }
+
+    .section2 h2,.section2 p{
+        padding-right: 0px;
+    }
 }
