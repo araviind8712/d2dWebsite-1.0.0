@@ -34,6 +34,7 @@ p {
     font-size: 21px;
     line-height: 29px;
     color: #121314;
+    margin: 0;
 }
 
 h5 {
@@ -54,22 +55,107 @@ h5 {
     line-height: 29px;
 }
 
+.per32 {
+    margin-left: 32%;
+}
+
+.pb-48 {
+    padding-bottom: 48px;
+}
+
+.pt-80 {
+    padding-top: 80px;
+}
+
+.pic {
+    height: 520px;
+    width: 66%;
+}
+
+.pb-80 {
+    margin-bottom: 80px;
+}
+
+.menu {
+    padding-left: 48px;
+    padding-right: 16px;
+    padding-bottom: 38px;
+}
+.ml-32{
+    margin-left: 32px;;
+}
+.width-50{
+    width: 50%;
+}
+.soln{
+    display: flex; width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
-    p{
+    p {
         font-size: 16px;
         line-height: 22.4px;
     }
 
-    h5{
+    h5 {
         font-size: 16px;
         line-height: 29.4px;
     }
-    h2{
-        font-size: 51px;
-        line-height: 61.2px;
+
+    h2 {
+        font-size: 38px;
+        line-height: 45.6px;
     }
-    .des{
+
+    .des {
         font-size: 16px;
         line-height: 22.4px;
+    }
+
+    .section1,
+    .section2 {
+        padding: 64px 16px;
+    }
+
+    .per32 {
+        margin-left: 0px;
+    }
+
+    .pb-48 {
+        padding-bottom: 32px;
+    }
+
+    .pt-80 {
+        padding-top: 48px;
+    }
+
+    .pic {
+        height: 240px;
+        width: 100%;
+    }
+
+    .pb-80 {
+        margin-bottom: 48px;
+    }
+
+    .menu {
+        padding-left: 16px;
+    }
+    .ml-32{
+        margin-left: 0px;;
+    }
+    .width-50{
+        width: 100%;
+    }
+    .soln{
+        display: flex; width: 100%;
+        flex-direction: column;
+    }
+    #first{
+        padding-bottom: 48px;
+    }
+
+    .section2{
+        padding-bottom: 32px;
     }
 }

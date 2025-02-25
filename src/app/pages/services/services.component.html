@@ -1,27 +1,27 @@
 <div class="container-fluid section1">
-    <h2 style="padding-bottom: 48px;">{{serviceData.topic}}</h2>
+    <h2 class="pb-48">{{serviceData.topic}}</h2>
     <div *ngFor="let desc of serviceData.desc1">
-        <p align="left" style="margin-left: 32%;text-align: left;">{{desc}}</p>
+        <p align="left" style="text-align: left;" class="per32">{{desc}}</p>
     </div>
-    <div style="padding-top: 80px; padding-bottom: 8px;">
-        <img [src]="serviceData.image" alt="image" height="520px" width="66%">
+    <div style="padding-bottom: 8px;" class="pt-80">
+        <img [src]="serviceData.image" alt="image" class="pic">
     </div>
 </div>
 
 <div class="container-fluid section2" *ngIf="serviceName==='bioInfo'">
-    <h2 style="margin-bottom: 80px;">Solutions Offered</h2>
-    <div style="display: flex; width: 100%;">
-        <div style="width: 50%;">
+    <h2 class="pb-80">Solutions Offered</h2>
+    <div class="soln">
+        <div class="width-50" id="first">
             <h5 style="padding-bottom: 8px;">{{ serviceData.solutionsOffered[0].topic | uppercase }}</h5>
             <div *ngFor="let des of serviceData.solutionsOffered[0].description">
                 <p class="des">{{ des }}</p>
             </div>
         </div>
 
-        <div style="width: 50%; margin-left: 32px;">
+        <div class="width-50 ml-32">
             <div *ngFor="let sol of serviceData.solutionsOffered.slice(1)"
                 [ngStyle]="{'padding-bottom': sol.topic !== 'TRANSCRIPTOMICS' ? '48px' : '0px'}">
-                <h5 style="padding-bottom: 8px;">{{ sol.topic | uppercase }}</h5>
+                <h5 style="padding-bottom: 8px;margin: 0px;">{{ sol.topic | uppercase }}</h5>
                 <div *ngFor="let des of sol.description">
                     <p class="des">{{ des }}</p>
                 </div>
@@ -33,7 +33,7 @@
 <div class="container-fluid section2" *ngIf="serviceName!=='bioInfo'">
     <h2 style="margin-bottom: 80px;">Solutions Offered</h2>
     <div class="row">
-        <div class="col-12 col-md-6" *ngFor="let sol of serviceData.solutionsOffered; let i = index" style="padding-bottom: 48px;">
+        <div class="col-12 col-md-6 col-sm-12" *ngFor="let sol of serviceData.solutionsOffered; let i = index" style="padding-bottom: 48px;">
             <h5 style="padding-bottom: 8px;">{{sol.topic | uppercase}}</h5>
             <div *ngFor="let des of sol.description">
                 <p class="des">{{des}}</p>
@@ -42,7 +42,7 @@
     </div>
 </div>
 
-<div style="background-color: #FFFFFF; padding-top:80px;padding-left:48px;padding-right: 16px;padding-bottom: 38px;">
-    <h2 style="padding-bottom: 80px;">Other Services</h2>
+<div style="background-color: #FFFFFF;" class="pt-80 menu">
+    <h2 class="pb-80">Other Services</h2>
     <app-service-menu [currentService]="serviceName.toString()" bgColor="background-color:white;"></app-service-menu>
 </div>
