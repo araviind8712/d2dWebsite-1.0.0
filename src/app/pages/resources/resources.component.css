@@ -10,8 +10,10 @@ a{
     color: black;
 }
 
+
 @media only screen and (max-width: 600px) {
     .nav-resource{
         width: 100%;
     }
   }
+
