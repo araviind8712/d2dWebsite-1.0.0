@@ -158,6 +158,10 @@
 
     .section1 h3,
     .section4 h3 {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        width: 90vw;
         font-size: 28px;
         line-height: 39.2px;
     }

@@ -73,7 +73,8 @@ h5 {
 }
 
 .pb-80 {
-    margin-bottom: 80px;
+    padding-bottom: 80px;
+    margin: 0px;
 }
 
 .menu {
@@ -89,6 +90,12 @@ h5 {
 }
 .soln{
     display: flex; width: 100%;
+}
+.padding-default {
+    padding-bottom: 48px;
+}
+.padding-none {
+    padding-bottom: 0px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -135,7 +142,8 @@ h5 {
     }
 
     .pb-80 {
-        margin-bottom: 48px;
+        padding-bottom: 48px !important;
+        margin: 0px;
     }
 
     .menu {
@@ -155,6 +163,15 @@ h5 {
         padding-bottom: 48px;
     }
 
+    .section2{
+        padding-bottom: 32px;
+    }
+    .padding-default {
+        padding-bottom: 32px;
+    }
+    .padding-none {
+        padding-bottom: 0px;
+    }
     .section2{
         padding-bottom: 32px;
     }

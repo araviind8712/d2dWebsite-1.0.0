@@ -1,10 +1,10 @@
-<mat-dialog-content class="mat-typography" style="overflow-y: auto; scroll-behavior:smooth; background-color: #FFFFFF; max-height: fit-content;">
+<mat-dialog-content class="mat-typography" style="overflow-y: auto; scroll-behavior:smooth; background-color: #FFFFFF; max-height: 100vh">
     <div class="row py-4 px-3">
-        <div class="col-6">
-            <h1 mat-dialog-title class="pb-2 title">Partner with Us!</h1>
-            <h6 style="font-weight: 300;" class="px-4 subTitle">Explore exciting collaboration and partnership opportunities.</h6>
-            <div class="contact-info p-4" style="margin-top: 32px;">
-                <div class="row pl-3" style="margin-bottom: 16px;">
+        <div class="col-md-6 col-sm-12">
+            <h1 mat-dialog-title class="pb-2 px-0 title">Partner with Us!</h1>
+            <h6 style="font-weight: 300;" class="px-0 subTitle">Explore exciting collaboration and partnership opportunities.</h6>
+            <div class="contact-info py-4 px-0 mt-32">
+                <div class="row pl-3 mb-16">
                     <img src="assets/icons/email.svg" width="20px" height="20px">
                     <p>{{gmail}}</p>
                 </div>
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
             <div class="form-wrapper">
                 <form [formGroup]="contactForm" (ngSubmit)="save()">
                     <div class="form-group">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         <label for="comments">Tell us about what you would like to discuss</label>
-                        <textarea id="comments" formControlName="comments" class="form-control" placeholder="Write here..." style="height: 110px;"></textarea>
+                        <textarea id="comments" formControlName="comments" class="form-control" placeholder="Write here..."></textarea>
                         <div *ngIf="contactForm.get('comments')?.invalid && contactForm.get('comments')?.touched" style="color: red;">
                             Reason required
                         </div>

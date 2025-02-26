@@ -41,7 +41,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    width: 100%;
+    width: 100vw;
     height: 88px;
     left: 0px;
     top: 0px;
@@ -54,7 +54,7 @@
     align-items: center;
     gap: 16px;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 88px;
     left: 0px;
     top: 0px;
@@ -217,11 +217,10 @@
     padding: 32px 48px;
     gap: 16px;
     flex-wrap: wrap;
-    width: 1440px;
     height: 192px;
     left: 0px;
     top: 90px;
-    width: 100%;
+    width: 100vw;
     padding-right: 15%;
     background: rgba(255, 255, 255, 0.01);
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
@@ -244,7 +243,7 @@
     width: 1440px;
     left: 0px;
     top: 90px;
-    width: 100%;
+    width: 100vw;
     padding-right: 15%;
     background: rgba(255, 255, 255, 0.01);
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
@@ -305,7 +304,7 @@
     height: 192px;
     left: 0px;
     top: 90px;
-    width: 100%;
+    width: 100vw;
     padding-right: 15%;
     background: rgba(255, 255, 255, 0.01);
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
@@ -315,6 +314,8 @@
 .companyNavBar {
     box-sizing: border-box;
     margin-top: 0px;
+    margin-right: 0px;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -323,7 +324,7 @@
     flex-wrap: wrap;
     left: 0px;
     top: 90px;
-    width: 100%;
+    width: 100vw;
     padding-right: 15%;
     background: rgba(255, 255, 255, 0.01);
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
@@ -367,4 +368,26 @@
     font-size: 16px;
     line-height: 29px;
     color: #121314;
+}
+
+@media only screen and (max-width: 1024px) {
+    .serviceItems {
+        flex-direction: row !important;
+        height: max-content;
+    }
+    .serviceNavBar-black  {
+        flex-direction: row !important;
+        height: max-content;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .serviceNavBar-black  {
+        flex-direction: row !important;
+        height: max-content;
+    }
+    .serviceNavBar {
+        flex-direction: row !important;
+        height: max-content;
+    }
 }
