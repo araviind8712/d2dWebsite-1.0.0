@@ -54,6 +54,7 @@ textarea {
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+  height: 110px !important
 }
 
 button {
@@ -135,4 +136,26 @@ p {
   order: 1;
   flex-grow: 0;
   margin-left: 16px;
+}
+
+.mb-16{
+  margin-bottom: 16px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .mt-32{
+    margin-top: 0px;
+  }
+  .mb-16{
+    margin-bottom: 0px;
+  }
+  button{
+    width: 100%;
+    margin-top: 24px;
+  }
+  textarea{
+    height: 200px !important;
+  }
 }

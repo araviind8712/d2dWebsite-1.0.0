@@ -1,8 +1,11 @@
 <div class="container-fluid section1">
     <h2 class="pb-48">{{serviceData.topic}}</h2>
-    <div *ngFor="let desc of serviceData.desc1">
-        <p align="left" style="text-align: left;" class="per32">{{desc}}</p>
-    </div>
+    <div *ngFor="let desc of serviceData.desc1; let i = index">
+        <p align="left" style="text-align: left;" class="per32" 
+           [ngStyle]="{'padding-bottom': i !== (serviceData.desc1.length - 1) ? '16px' : '0px'}">
+          {{ desc }}
+        </p>
+      </div>
     <div style="padding-bottom: 8px;" class="pt-80">
         <img [src]="serviceData.image" alt="image" class="pic">
     </div>
@@ -12,7 +15,7 @@
     <h2 class="pb-80">Solutions Offered</h2>
     <div class="soln">
         <div class="width-50" id="first">
-            <h5 style="padding-bottom: 8px;">{{ serviceData.solutionsOffered[0].topic | uppercase }}</h5>
+            <h5 style="padding-bottom: 8px;margin: 0px;">{{ serviceData.solutionsOffered[0].topic | uppercase }}</h5>
             <div *ngFor="let des of serviceData.solutionsOffered[0].description">
                 <p class="des">{{ des }}</p>
             </div>
@@ -20,21 +23,22 @@
 
         <div class="width-50 ml-32">
             <div *ngFor="let sol of serviceData.solutionsOffered.slice(1)"
-                [ngStyle]="{'padding-bottom': sol.topic !== 'TRANSCRIPTOMICS' ? '48px' : '0px'}">
-                <h5 style="padding-bottom: 8px;margin: 0px;">{{ sol.topic | uppercase }}</h5>
+                [ngClass]="{'padding-default': sol.topic !== 'TRANSCRIPTOMICS', 'padding-none': sol.topic === 'TRANSCRIPTOMICS'}">
+                <h5 style="padding-bottom: 8px; margin: 0px;">{{ sol.topic | uppercase }}</h5>
                 <div *ngFor="let des of sol.description">
-                    <p class="des">{{ des }}</p>
+                    <p class="des" >{{ des }}</p>
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
 
 <div class="container-fluid section2" *ngIf="serviceName!=='bioInfo'">
-    <h2 style="margin-bottom: 80px;">Solutions Offered</h2>
+    <h2 class="pb-80">Solutions Offered</h2>
     <div class="row">
-        <div class="col-12 col-md-6 col-sm-12" *ngFor="let sol of serviceData.solutionsOffered; let i = index" style="padding-bottom: 48px;">
-            <h5 style="padding-bottom: 8px;">{{sol.topic | uppercase}}</h5>
+        <div class="col-12 col-md-6 col-sm-12 padding-default" *ngFor="let sol of serviceData.solutionsOffered; let i = index">
+            <h5 style="padding-bottom: 8px;margin: 0px">{{sol.topic | uppercase}}</h5>
             <div *ngFor="let des of sol.description">
                 <p class="des">{{des}}</p>
             </div>
