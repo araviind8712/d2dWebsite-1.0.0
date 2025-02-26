@@ -20,6 +20,7 @@ import { ResourceDetailComponent } from './pages/resource-detail/resource-detail
 import { ResourceCardComponent } from '../shared/resource-card/resource-card.component';
 import { GetintouchComponent } from '../shared/getintouch/getintouch.component';
 import { FooterComponent } from '../shared/footer/footer.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FooterComponent } from '../shared/footer/footer.component';
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     provideClientHydration(withEventReplay())

@@ -74,7 +74,7 @@
             </span></a>
         </p>
         <div class="row mt-48">
-            <div class="col-md-4 col-12 h-100" *ngFor="let resource of resources">
+            <div class="col-md-4 col-12 h-100 wipe-up" *ngFor="let resource of resources">
                 <app-resource-card [title]="resource.title" [description]="resource.description" [image]="resource.image" [postedOn]="resource.postedOn" [type]="resource.type"></app-resource-card>
             </div>
         </div>
