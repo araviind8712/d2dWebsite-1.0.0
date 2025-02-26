@@ -174,7 +174,8 @@
     text-align: center;
     z-index: 1;
     background-color: #FBFBFB;
-    border: 1px solid #faf5f5;;
+    border: 1px solid #faf5f5;
+    ;
     backdrop-filter: blur(20.1px);
 }
 
@@ -184,7 +185,7 @@
     position: absolute;
     justify-content: center;
     text-align: center;
-    background-color: rgba(255, 255, 255,0.07);
+    background-color: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(20.1px);
     text-decoration: none;
 }
@@ -226,7 +227,7 @@
     backdrop-filter: blur(20.1px);
     color: #747B80;
     padding-right: 12%;
-   
+
 }
 
 
@@ -248,7 +249,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
     color: #747B80;
-    padding-right: 15%; 
+    padding-right: 15%;
 }
 
 
@@ -256,7 +257,7 @@
 .serviceItems-black {
     flex: 1 1 calc(33.33% - 16px);
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
 }
 
 .serviceItems-black h4 {
@@ -266,8 +267,8 @@
     font-size: 16px;
     line-height: 29px;
     display: flex;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
     text-transform: uppercase;
 }
 
@@ -333,7 +334,7 @@
 .serviceItems {
     flex: 1 1 calc(33.33% - 16px);
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
 }
 
 .serviceItems h4 {
@@ -344,7 +345,7 @@
     line-height: 29px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     flex: none;
     order: 0;
@@ -369,24 +370,45 @@
     color: #121314;
 }
 
+.pl-9 {
+    padding-left: 9.5px;
+}
+
 @media only screen and (max-width: 1024px) {
     .serviceItems {
         flex-direction: row !important;
         height: max-content;
     }
-    .serviceNavBar-black  {
+
+    .serviceNavBar-black {
         flex-direction: row !important;
         height: max-content;
+    }
+
+    .pl-9 {
+        padding-left: 2px;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .serviceNavBar-black  {
+    .serviceNavBar-black {
         flex-direction: row !important;
         height: max-content;
     }
+
     .serviceNavBar {
         flex-direction: row !important;
         height: max-content;
+    }
+
+    .pl-9 {
+        padding-left: 2px;
+    }
+
+    .submenu {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 65%;
+        text-overflow: ellipsis;
     }
 }
