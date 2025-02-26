@@ -43,7 +43,8 @@
     <nav class="serviceNavBar" *ngIf="serviceVisible" style="background-color: inherit;">
         <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
             class="serviceItems">
-            <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">{{menu.topic}}</a>
+            <h6 style=" color: #BFC0C0; display: flex;align-items: center;">
+                <a class="link-underline" [title]="menu.topic" style="color: #BFC0C0;" class="submenu">{{menu.topic}}</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>
@@ -100,7 +101,7 @@
                         style="margin-right: 18px; display: flex; align-items: center;">
                         COMPANY
                         <span
-                            style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
+                            style="display: flex; align-items: center; justify-content: center; background-color: transparent;" class="pl-9">
                             <img src="assets/icons/dropdown-black.svg" width="13px" height="7px">
                         </span>
                     </a>                    
