@@ -304,6 +304,21 @@ a {
   }
 }
 
+@keyframes blurReveal {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.text-blur-reveal {
+  opacity: 0;
+  animation: blurReveal 1.5s ease-in-out forwards;
+}
 /* Animation Ends */
 
 
