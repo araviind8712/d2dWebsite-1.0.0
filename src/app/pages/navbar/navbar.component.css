@@ -411,6 +411,9 @@
     width: 13px;
     height: 7px;
 }
+.mt-48{
+    margin-top: 0px !important;
+}
 
 @media only screen and (max-width: 1024px) {
     .serviceItems {
