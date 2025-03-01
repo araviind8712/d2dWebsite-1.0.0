@@ -1,0 +1,27 @@
+[
+    {
+        "image":"assets/images/bioInfo.png",
+        "topic":"Bioinformatics Analytics",
+        "description":"Turning complex biological data into clear, actionable insights with customized analysis solutions."
+    },
+    {
+        "image":"assets/images/bioEng.png",
+        "topic":"Bioinformatics Engineering",
+        "description":"Designing scalable workflows and custom pipelines to streamline research efficiency."
+    },
+    {
+        "image":"assets/images/bioInfoTraining.png",
+        "topic":"Bioinformatics Training",
+        "description":"Empowering researchers with practical skills in cutting-edge bioinformatics tools and techniques."
+    },
+    {
+        "image":"assets/images/statisticalTesting.png",
+        "topic":"Statistical Testing & Data Interpretation",
+        "description":"Providing advanced analyses and intuitive visualizations for impactful insights."
+    },
+    {
+        "image":"assets/images/seqTech.png",
+        "topic":"Sequencing Technology Expertise",
+        "description":"Expert advice on selecting and optimizing sequencing platforms to achieve your research objectives."
+    }
+]

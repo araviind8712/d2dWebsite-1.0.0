@@ -1,0 +1,136 @@
+[
+    {
+        "bioInfo":{
+            "topic":"Bioinformatics Analytics",
+            "desc1":["We offer a full range of bioinformatics services, including genome assembly, functional annotation, variant calling, transcriptomics, epigenomics, single-cell analysis, and pipeline development. Our expertise transforms complex biological data into actionable insights, customized to support your unique research needs."],
+            "image":"assets/images/bioInfo.png",
+            "solutionsOffered":[
+                {
+                    "topic":"GENOMICS",
+                    "description":[
+                        "Genomics involves a range of advanced techniques to explore and analyze genetic data. We provide accurate genome assembly using technologies like short reads (Illumina), long reads (PacBio, ONT), Hi-C, or hybrid approaches, complemented by high-quality functional annotation of genes, regulatory elements, and repeat sequences.",
+                        "Our targeted sequencing solutions include exome sequencing for identifying variants linked to genetic disorders, along with custom gene panels designed for specific research or clinical needs.",
+                        "Variant calling detects SNPs, indels, CNVs, and SVs using platforms like Illumina, PacBio, and ONT, while comparative genomics enables cross-species genome analyses to uncover conserved features."
+                    ]
+
+                },
+                {
+                    "topic":"METAGENOMICS",
+                    "description":[
+                        "Analysis of DNA methylation and histone modifications. Integration of epigenetic and genomic data for regulatory mechanism insights."
+                    ]
+                },
+                {
+                    "topic":"EPIGENOMICS",
+                    "description":[
+                        "Amplicon sequencing (e.g., 16S, ITS) for microbial community profiling. Shotgun sequencing for functional analysis and novel discovery."
+                    ]
+                },
+                {
+                    "topic":"TRANSCRIPTOMICS",
+                    "description":[
+                        "Bulk RNA-Seq for gene expression profiling and differential analysis. Single-cell RNA-Seq for cellular heterogeneity and dynamic process insightsa"
+                    ]
+                }
+            ]
+        },
+        "bioEng":{
+            "topic":"Bioinformatics Engineering",
+            "desc1":[
+                "We specialize in providing advanced bioinformatics engineering solutions, including cloud tool deployment, custom pipeline development, and scalable data analysis frameworks.",
+                "Our services encompass automated workflow development using Nextflow and Snakemake, containerization with Docker and Singularity, and efficient data management. We help turn complex biological data into actionable insights with tailored solutions that accelerate research in genomics, precision medicine, and more."
+            ],
+            "image":"assets/images/bioEng.png",
+            "solutionsOffered":[
+                {
+                    "topic":"Pipeline Development",
+                    "description":[
+                        "Custom-designed pipelines to streamline data analysis, ensuring efficiency and accuracy tailored to your specific research needs."
+                    ]
+
+                },
+                {
+                    "topic":"Cloud Computing",
+                    "description":[
+                        "Setup, deployment, and management of bioinformatics tools on cloud platforms, enabling scalable, accessible, and secure data analysis solutions."
+                    ]
+                },
+                {
+                    "topic":"Workflow Automation",
+                    "description":[
+                        "Improve efficiency and reproducibility by automating data processing workflows, allowing for consistent and scalable results."
+                    ]
+                }
+            ]
+        },
+        "bioInfoTraining":{
+            "topic":"Bioinformatics Training",
+            "desc1":[
+                "We offer comprehensive bioinformatics training designed to empower researchers and professionals with the skills needed to analyze and interpret complex biological data. Our courses cover key topics such as data analysis workflows, sequencing technologies, statistical methods, and bioinformatics tools.",
+                "Whether you're new to the field or looking to enhance your expertise, our hands-on training programs provide practical knowledge tailored to your specific needs, helping you stay ahead in the rapidly evolving bioinformatics landscape."
+            ],
+            "image":"assets/images/bioInfoTraining.png",
+            "solutionsOffered":[
+                {
+                    "topic":"Workshops & Seminars",
+                    "description":[
+                        "Engage in hands-on training sessions covering both essential and advanced bioinformatics techniques, designed to enhance your practical skills."
+                    ]
+
+                },
+                {
+                    "topic":"Customized Programs",
+                    "description":[
+                        "Tailored training programs to meet the unique needs of your team or research group, ensuring relevant and focused learning experiences."
+                    ]
+                }
+            ]
+        },
+        "statisticalTesting":{
+            "topic":"Statistical Testing and Data Interpretation",
+            "desc1":[
+                "We provide expert statistical testing and data interpretation services to extract meaningful insights from complex biological data. Our solutions include hypothesis testing, regression analysis, differential expression analysis, and data visualization.",
+                "We help translate raw data into actionable conclusions, supporting informed decision-making in areas such as genomics, transcriptomics, and clinical research. Tailored to your research needs, our approach ensures robust, reliable, and reproducible results."
+            ],
+            "image":"assets/images/statisticalTesting.png",
+            "solutionsOffered":[
+                {
+                    "topic":"Advanced Analytics",
+                    "description":[
+                        "Perform in-depth statistical analyses to validate hypotheses, identify patterns, and derive actionable insights from complex biological data."
+                    ]
+
+                },
+                {
+                    "topic":"VISUALIZATIONS",
+                    "description":[
+                       "Create intuitive visualizations and interactive dashboards to effectively communicate your data, facilitating better understanding and decision-making."
+                    ]
+                }
+            ]
+        },
+        "seqTech":{
+            "topic":"Sequencing Technology Expertise",
+            "desc1":[
+                "We offer specialized expertise in a wide range of next-generation sequencing (NGS), single-cell RNA sequencing, Hicand long-read sequencing. Our services encompass library preparation, sequencing protocol optimization, and data analysis, ensuring high-quality, reproducible results.",
+                "We help you leverage the latest advancements in sequencing technology to gain deeper insights into biological systems tailored to your specific research goals."
+            ],
+            "image":"assets/images/seqTech.png",
+            "solutionsOffered":[
+                {
+                    "topic":"Mastering Sequencing Technologies",
+                    "description":[
+                        "Expert guidance on a wide range of sequencing technologies, including Illumina, Hic, Oxford Nanopore (ONT), and PacBio, to help you achieve the best results for your research."
+                    ]
+
+                },
+                {
+                    "topic":"Guided Selection",
+                    "description":[
+                        "Personalized assistance in selecting the most suitable sequencing technology based on your specific research goals and data requirements."
+                    ]
+                }
+            ]
+        }
+    }
+]

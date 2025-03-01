@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/d2dWebsite-1.0.0/aboutus": {},
+    "/d2dWebsite-1.0.0/home": {},
+    "/d2dWebsite-1.0.0/resource": {},
+    "/d2dWebsite-1.0.0/resources": {},
+    "/d2dWebsite-1.0.0/services": {}
+  }
+}
