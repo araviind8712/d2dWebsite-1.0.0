@@ -71,7 +71,7 @@ export class NavbarComponent implements OnInit{
     this.isServiceVisible = false; // Fixed issue here
     this.isCompany = false;
     this.isHome = true;
-    window.location.replace('/d2dWebsite-1.0.0/home?page=home');
+    window.location.href = '/d2dWebsite-1.0.0/home?page=home';
   }
 
   redirect(image: string): void {
