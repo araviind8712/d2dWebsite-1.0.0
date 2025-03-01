@@ -7,11 +7,10 @@ import { ResourceDetailComponent } from './pages/resource-detail/resource-detail
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home?page=home', pathMatch: 'full' },
-  { path: 'services/:service', component: ServicesComponent },
+  { path: 'services', component: ServicesComponent},
   { path: 'home', component: HomeComponent },
   { path: 'resources', component: ResourcesComponent },
-  { path: 'resources/:id', component: ResourceDetailComponent },
+  { path: 'resource', component: ResourceDetailComponent },
   { path: 'aboutus', component: AboutusComponent },
 
 ];

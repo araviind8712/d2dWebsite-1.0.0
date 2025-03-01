@@ -15,13 +15,14 @@ import { ContactUsComponent } from '../contact-us/contact-us.component';
 })
 export class ServicesComponent implements OnInit{
   serviceName: "bioInfo" | "bioEng" | "bioInfoTraining" | "statisticalTesting" | "seqTech" ="bioInfo";
+  defaultServiceName: "bioInfo" | "bioEng" | "bioInfoTraining" | "statisticalTesting" | "seqTech" ="bioInfo";
   serviceData:any;
   constructor(public route:ActivatedRoute, public dialog:MatDialog){
    
   }
   ngOnInit(): void {
-    this.route.params.subscribe((params)=>{
-      this.serviceName=params['service'];
+    this.route.queryParams.subscribe((data)=>{
+      this.serviceName = data['service'];
     })
     this.serviceData=serviceData[0][this.serviceName];
   }

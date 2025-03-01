@@ -4,6 +4,30 @@
     font-family: cursive;
 }
 
+.nav-bar .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-bar .navbar-light .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); 
+}
+
+.nav-bar .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-bar .navbar-light .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); 
+}
+
+.nav-bar-black .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-bar-black .navbar-light .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.5); 
+}
+
 
 
 .navbar {
@@ -226,7 +250,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
     color: #747B80;
-    padding-right: 12%;
+    padding-right: 15%;
 
 }
 
@@ -352,6 +376,10 @@
     flex-grow: 0;
 }
 
+.mr-16{
+    margin-right: 16px;
+}
+
 .nav-bar-black .navbar-light .navbar-nav .nav-link.active {
     font-family: 'NimbusSanL';
     font-style: normal;
@@ -368,6 +396,23 @@
     font-size: 16px;
     line-height: 29px;
     color: #121314;
+}
+
+
+.mobile-nav {
+    display: none;
+}
+
+.mr-18{
+    margin-right: 18px;
+}
+
+.dropdown-icon{
+    width: 13px;
+    height: 7px;
+}
+.mt-48{
+    margin-top: 0px !important;
 }
 
 .pl-9 {
@@ -391,6 +436,11 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+    .navbar{
+        justify-content: space-between !important;
+    }
+
     .serviceNavBar-black {
         flex-direction: row !important;
         height: max-content;
@@ -401,6 +451,104 @@
         height: max-content;
     }
 
+    h6 {
+        text-align: start;
+    }
+
+    .serviceNavBar {
+        padding-left: 16px;
+        padding-right: 16px;
+        display: none;
+    }
+
+    .serviceNavBar-black {
+        padding-left: 16px;
+        padding-right: 16px;
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+        list-style: none;
+        padding-left: 0px;
+        width: 90vw;
+    }
+
+    .navbar-nav {
+        align-items: self-start;
+    }
+    .nav-bar ul li a {
+        width: 90vw;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .nav-bar-black ul li a {
+        width: 90vw;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .nav-bar .navbar-light .navbar-nav .nav-link.active {
+        font-size: 21px;
+    }
+    .nav-bar .navbar-light .navbar-nav .nav-link:hover {
+        font-size: 21px;
+    }
+    .nav-bar-black .navbar-light .navbar-nav .nav-link.active {
+        font-size: 21px;
+    }
+    .nav-bar-black .navbar-light .navbar-nav .nav-link:hover {
+        font-size: 21px;
+    }
+    .mr-16{
+        margin-right: 0px;
+    }
+
+    .mr-18{
+        margin-right: 0px;
+    }
+
+    .pt-48{
+        padding-top: 48px;
+    }
+
+    .px-21{
+        padding-top: 20.5px;
+        padding-bottom: 20.5px;
+    }
+
+    .px-19{
+        padding-top: 18.5px;
+        padding-bottom: 18.5px;
+    }
+
+    .dropdown-icon{
+        width: 23px;
+        height: 13px;
+    }
+
+    .mt-48{
+        margin-top: 48px !important;
+    }
+    .mb-8{
+        margin-bottom: 8px;
+    }
+    .companyNavBar{
+        display: none !important;
+    }
+    .companyNavBar-black{
+        display: none !important;
     .pl-9 {
         padding-left: 2px;
     }
