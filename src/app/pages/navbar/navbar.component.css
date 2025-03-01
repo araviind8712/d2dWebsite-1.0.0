@@ -246,7 +246,6 @@
     left: 0px;
     top: 90px;
     width: 100vw;
-    padding-right: 15%;
     background: rgba(255, 255, 255, 0.01);
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
@@ -282,7 +281,7 @@
 .serviceItems-black {
     flex: 1 1 calc(33.33% - 16px);
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
 }
 
 .serviceItems-black h4 {
@@ -292,8 +291,8 @@
     font-size: 16px;
     line-height: 29px;
     display: flex;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
     text-transform: uppercase;
 }
 
@@ -330,7 +329,7 @@
     left: 0px;
     top: 90px;
     width: 100vw;
-    padding-right: 15%;
+    padding-right: 12%;
     background: rgba(255, 255, 255, 0.01);
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
@@ -359,7 +358,7 @@
 .serviceItems {
     flex: 1 1 calc(33.33% - 16px);
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
 }
 
 .serviceItems h4 {
@@ -370,7 +369,7 @@
     line-height: 29px;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     flex: none;
     order: 0;
@@ -399,6 +398,7 @@
     color: #121314;
 }
 
+
 .mobile-nav {
     display: none;
 }
@@ -415,6 +415,10 @@
     margin-top: 0px !important;
 }
 
+.pl-9 {
+    padding-left: 9.5px;
+}
+
 @media only screen and (max-width: 1024px) {
     .serviceItems {
         flex-direction: row !important;
@@ -425,13 +429,17 @@
         flex-direction: row !important;
         height: max-content;
     }
+
+    .pl-9 {
+        padding-left: 2px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+
     .navbar{
         justify-content: space-between !important;
     }
-
 
     .serviceNavBar-black {
         flex-direction: row !important;
@@ -541,5 +549,14 @@
     }
     .companyNavBar-black{
         display: none !important;
+    .pl-9 {
+        padding-left: 2px;
+    }
+
+    .submenu {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 65%;
+        text-overflow: ellipsis;
     }
 }
