@@ -23,12 +23,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/d2d-website",
+            "outputPath": "dist/d2dWebsite-1.0.0",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
+            "deployUrl": "./",
+            "baseHref":"/d2dWebsite-1.0.0/",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {

@@ -21,7 +21,7 @@ export class ContactUsComponent {
     this.contactForm=new FormGroup(
       {
         name : new FormControl('',[Validators.required,Validators.pattern('^[A-Za-z ]+$')]),
-        email: new FormControl('',[Validators.required,Validators.email]),
+        email: new FormControl('',[Validators.required,Validators.email,Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")]),
         comments: new FormControl('',[Validators.required])
       }
     )

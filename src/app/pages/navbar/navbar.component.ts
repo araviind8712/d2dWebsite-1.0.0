@@ -64,14 +64,14 @@ export class NavbarComponent implements OnInit{
     this.isServiceVisible = false;
     this.isCompany = true;
     this.isHome = false;
-    window.location.replace('/'+route+'?page='+route);
+    window.location.replace('/d2dWebsite-1.0.0/'+route+'?page='+route);
   }
 
   home(): void {
     this.isServiceVisible = false; // Fixed issue here
     this.isCompany = false;
     this.isHome = true;
-    window.location.replace('/home?page=home');
+    window.location.replace('/d2dWebsite-1.0.0/home?page=home');
   }
 
   redirect(image: string): void {
@@ -79,7 +79,7 @@ export class NavbarComponent implements OnInit{
       const segments = image.split('/');
       if (segments.length > 2) {
         const page = segments[2].split('.')[0];
-        window.location.href = `/services/${page}?page=service`;
+        window.location.href = `/d2dWebsite-1.0.0/services?service=${page}&page=service`;
       }
     } catch (e) {
       console.error('Invalid image path:', image);

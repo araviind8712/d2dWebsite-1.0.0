@@ -41,6 +41,6 @@ export class ServiceMenuComponent implements OnInit{
 
   redirect(image:string){
     var page=image.split('/')[2].split('.')[0];
-    window.location.href='/services/'+page+'/?page=service';
+    window.location.href='/d2dWebsite-1.0.0/services?service='+page+'&page=service';
   }
 }
