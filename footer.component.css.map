@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/shared/footer/footer.component.css"],
+  "sourcesContent": [".footer{\r\n    background-color: #012323;\r\n    margin-bottom: 0!important;\r\n    margin-left: 0!important;\r\n    margin-right: 0!important;\r\n    padding: 0;\r\n}\r\n\r\n.no-underline{\r\n    text-decoration:none;\r\n}\r\n\r\n.link-underline{\r\n        text-decoration: none; \r\n}\r\n\r\n.link-underline:hover{\r\n    text-decoration: underline;\r\n    text-decoration-color: whitesmoke!important;\r\n}\r\n      "],
+  "mappings": ";AAAA,CAAC;AACG,oBAAkB;AAClB,iBAAe;AACf,eAAa;AACb,gBAAc;AACd,WAAS;AACb;AAEA,CAAC;AACG,mBAAgB;AACpB;AAEA,CAAC;AACO,mBAAiB;AACzB;AAEA,CAJC,cAIc;AACX,mBAAiB;AACjB,yBAAuB;AAC3B;",
+  "names": []
+}

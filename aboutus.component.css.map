@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/aboutus/aboutus.component.css"],
+  "sourcesContent": ["@media (max-width: 768px) {\r\n.aboutus-gallery .col-8:nth-child(odd){\r\n    margin-left:auto;\r\n}\r\n}"],
+  "mappings": ";AAAA,OAAO,CAAC,SAAS,EAAE;AACnB,GAAC,gBAAgB,CAAC,KAAK;AACnB,iBAAY;AAChB;AACA;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/shared/getintouch/getintouch.component.css"],
+  "sourcesContent": [".marquee {\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    width: 100%;\r\n    /* position: relative; */\r\n  }\r\n\r\n.marquee p{\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    will-change: transform;\r\n    /* position: absolute; */\r\n    animation: marqueeAnimation 20s linear infinite;\r\n  }\r\n\r\n  @keyframes marqueeAnimation {\r\n    from {\r\n      transform: translateX(100vw);\r\n    }\r\n    to {\r\n      transform: translateX(-100%);\r\n    }\r\n  }"],
+  "mappings": ";AAAA,CAAC;AACG,eAAa;AACb,YAAU;AACV,SAAO;AAET;AAEF,CAPC,QAOQ;AACL,WAAS;AACT,eAAa;AACb,eAAa;AAEb,aAAW,iBAAiB,IAAI,OAAO;AACzC;AAEA,WAHa;AAIX;AACE,eAAW,WAAW;AACxB;AACA;AACE,eAAW,WAAW;AACxB;AACF;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/shared/resource-card/resource-card.component.css"],
+  "sourcesContent": [".image-container{\r\n    width: 100%;\r\n}"],
+  "mappings": ";AAAA,CAAC;AACG,SAAO;AACX;",
+  "names": []
+}

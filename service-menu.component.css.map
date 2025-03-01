@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/service-menu/service-menu.component.css"],
+  "sourcesContent": ["\r\np {\r\n  font-family: 'NimbusSanL';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  font-size: 21px;\r\n  margin: 0px;\r\n  line-height: 29px;\r\n  color: #747B80;\r\n}\r\n\r\nh4{\r\n  font-family: 'NimbusSanL';\r\n  color: #121314;\r\n  font-style: normal;\r\n  margin: 0px;\r\nfont-weight: 400;\r\nfont-size: 28px;\r\nline-height: 39px;\r\n}\r\n\r\n.pr32{\r\n  padding-right: 32px !important;\r\n}\r\n\r\n.pb48{\r\n  padding-bottom: 48px !important;\r\n}\r\n\r\n.img32{\r\n  height: 32px;\r\n  width: 32px;\r\n}\r\n\r\n@media only screen and (max-width: 768px) {\r\n  .pr32{\r\n    padding-right: 0px !important;\r\n  }\r\n\r\n  h4{\r\n    font-size: 21px;\r\n    line-height: 29.4px;\r\n  }\r\n\r\n  p{\r\n    font-size: 16px;\r\n    line-height: 22.4px;\r\n  }\r\n\r\n  .pb48{\r\n    padding-bottom: 32px !important;\r\n  }\r\n\r\n  .img32{\r\n    height: 24px;\r\n    width: 24px;\r\n  }\r\n  \r\n  \r\n}\r\n"],
+  "mappings": ";AACA;AACE,eAAa;AACb,cAAY;AACZ,eAAa;AACb,aAAW;AACX,UAAQ;AACR,eAAa;AACb,SAAO;AACT;AAEA;AACE,eAAa;AACb,SAAO;AACP,cAAY;AACZ,UAAQ;AACV,eAAa;AACb,aAAW;AACX,eAAa;AACb;AAEA,CAAC;AACC,iBAAe;AACjB;AAEA,CAAC;AACC,kBAAgB;AAClB;AAEA,CAAC;AACC,UAAQ;AACR,SAAO;AACT;AAEA,OAAO,KAAK,OAAO,IAAI,CAAC,SAAS,EAAE;AACjC,GAdD;AAeG,mBAAe;AACjB;AAEA;AACE,eAAW;AACX,iBAAa;AACf;AAEA;AACE,eAAW;AACX,iBAAa;AACf;AAEA,GAxBD;AAyBG,oBAAgB;AAClB;AAEA,GAxBD;AAyBG,YAAQ;AACR,WAAO;AACT;AAGF;",
+  "names": []
+}
