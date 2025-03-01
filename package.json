@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "build.bat",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:d2dWebsite": "node dist/d2d-website/server/server.mjs"
