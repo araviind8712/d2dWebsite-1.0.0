@@ -15,6 +15,7 @@
     object-fit: cover; 
 }
 
+
 .section1 {
     background-color: #FFFFFF;
 }
@@ -126,6 +127,10 @@
     color: #747B80;
 }
 
+.pb-48{
+    padding-bottom: 48px;
+}
+
 @media only screen and (max-width: 768px) {
     .section1,
     .section2,
@@ -186,5 +191,9 @@
 
     .section2 h2,.section2 p{
         padding-right: 0px;
+    }
+
+    .pb-48{
+        padding-bottom: 16px !important;
     }
 }

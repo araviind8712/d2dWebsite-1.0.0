@@ -55,7 +55,7 @@
                             Invalid comments
                         </div>
                     </div>
-                    <button type="submit" [disabled]="(contactForm.invalid || contactForm.value.name.trim()==='' || contactForm.value.comments.trim()==='') && contactForm.touched" class="btn btn-primary">Submit</button>
+                    <button type="submit" [disabled]="(contactForm.invalid || contactForm.value.name.trim()==='' || contactForm.value.comments.trim()==='')" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
