@@ -62589,31 +62589,39 @@ var ResourceCardComponent = class _ResourceCardComponent {
 })();
 
 // src/app/pages/home/home.component.ts
-var _c06 = ["section"];
+var _c06 = ["videoPlayer"];
+var _c15 = ["section"];
 function HomeComponent_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 27)(1, "p");
-    \u0275\u0275text(2, "Loading");
+    \u0275\u0275elementStart(0, "div", 28)(1, "p");
+    \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate1("Loading ", ctx_r1.loadProgress, "%");
+  }
 }
-function HomeComponent_div_65_Template(rf, ctx) {
+function HomeComponent_div_66_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 28);
-    \u0275\u0275element(1, "app-resource-card", 29);
+    \u0275\u0275elementStart(0, "div", 29);
+    \u0275\u0275element(1, "app-resource-card", 30);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const resource_r2 = ctx.$implicit;
+    const resource_r3 = ctx.$implicit;
     \u0275\u0275advance();
-    \u0275\u0275property("title", resource_r2.title)("description", resource_r2.description)("image", resource_r2.image)("postedOn", resource_r2.postedOn)("type", resource_r2.type);
+    \u0275\u0275property("title", resource_r3.title)("description", resource_r3.description)("image", resource_r3.image)("postedOn", resource_r3.postedOn)("type", resource_r3.type);
   }
 }
 var HomeComponent = class _HomeComponent {
   sections;
+  videoPlayer;
   isLoading = true;
   currentIndex = 1;
   resources;
+  loadProgress = 0;
   constructor() {
     this.resources = resources_default;
   }
@@ -62623,24 +62631,37 @@ var HomeComponent = class _HomeComponent {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
+  updateProgress() {
+    const video = this.videoPlayer.nativeElement;
+    if (video.buffered.length > 0) {
+      const bufferedEnd = video.buffered.end(video.buffered.length - 1);
+      const duration = video.duration;
+      this.loadProgress = bufferedEnd / duration * 100;
+    }
+  }
   static \u0275fac = function HomeComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HomeComponent)();
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HomeComponent, selectors: [["app-home"]], viewQuery: function HomeComponent_Query(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275viewQuery(_c06, 5);
+      \u0275\u0275viewQuery(_c06, 7);
+      \u0275\u0275viewQuery(_c15, 5);
     }
     if (rf & 2) {
       let _t;
+      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.videoPlayer = _t.first);
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.sections = _t);
     }
-  }, standalone: false, decls: 66, vars: 6, consts: [["mainDiv", ""], ["section", ""], [1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], ["class", "loader-overlay", 4, "ngIf"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "waiting", "playing"], [1, "fsr-67", "p-48", "pb-48", "text-white", 2, "position", "absolute", "margin", "0px", "bottom", "0%", "line-height", "80.7px", "width", "100vw"], [2, "background", "linear-gradient(271.84deg, #F76230 -9.65%, #FE8454 -0.32%, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [1, "col-md-12", "section1"], ["align", "center", 2, "padding-bottom", "24px", "margin-bottom", "0px"], ["align", "center"], [1, "col-12", "section2"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], [1, "col-12", "section3"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], [1, "section5"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 wipe-up", 4, "ngFor", "ngForOf"], [1, "loader-overlay"], [1, "col-md-4", "col-12", "h-100", "wipe-up"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
+  }, standalone: false, decls: 67, vars: 6, consts: [["mainDiv", ""], ["section", ""], ["videoPlayer", ""], [1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], ["class", "loader-overlay", 4, "ngIf"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "progress", "waiting", "playing"], [1, "fsr-67", "p-48", "pb-48", "text-white", 2, "position", "absolute", "margin", "0px", "bottom", "0%", "line-height", "80.7px", "width", "100vw"], [2, "background", "linear-gradient(271.84deg, #F76230 -9.65%, #FE8454 -0.32%, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [1, "col-md-12", "section1"], ["align", "center", 2, "padding-bottom", "24px", "margin-bottom", "0px"], ["align", "center"], [1, "col-12", "section2"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], [1, "col-12", "section3"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], [1, "section5"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 wipe-up", 4, "ngFor", "ngForOf"], [1, "loader-overlay"], [1, "col-md-4", "col-12", "h-100", "wipe-up"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
-      \u0275\u0275elementStart(0, "div", 2, 0)(2, "div", null, 1);
-      \u0275\u0275template(4, HomeComponent_div_4_Template, 3, 0, "div", 3);
-      \u0275\u0275elementStart(5, "video", 4);
-      \u0275\u0275listener("waiting", function HomeComponent_Template_video_waiting_5_listener() {
+      \u0275\u0275elementStart(0, "div", 3, 0)(2, "div", null, 1);
+      \u0275\u0275template(4, HomeComponent_div_4_Template, 3, 1, "div", 4);
+      \u0275\u0275elementStart(5, "video", 5, 2);
+      \u0275\u0275listener("progress", function HomeComponent_Template_video_progress_5_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.updateProgress());
+      })("waiting", function HomeComponent_Template_video_waiting_5_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.isLoading = true);
       })("playing", function HomeComponent_Template_video_playing_5_listener() {
@@ -62648,77 +62669,77 @@ var HomeComponent = class _HomeComponent {
         return \u0275\u0275resetView(ctx.isLoading = false);
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(6, "p", 5)(7, "span");
-      \u0275\u0275text(8, "Unlocking Life's Secrets: Driving ");
+      \u0275\u0275elementStart(7, "p", 6)(8, "span");
+      \u0275\u0275text(9, "Unlocking Life's Secrets: Driving ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "span", 6);
-      \u0275\u0275text(10, "Innovation ");
+      \u0275\u0275elementStart(10, "span", 7);
+      \u0275\u0275text(11, "Innovation ");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(11, "with Precision Bioinformatics and ");
-      \u0275\u0275elementStart(12, "span", 7);
-      \u0275\u0275text(13, " Collaboration");
+      \u0275\u0275text(12, "with Precision Bioinformatics and ");
+      \u0275\u0275elementStart(13, "span", 8);
+      \u0275\u0275text(14, " Collaboration");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(14, "div", 8)(15, "p", 9);
-      \u0275\u0275text(16, "Who we are");
+      \u0275\u0275elementStart(15, "div", 9)(16, "p", 10);
+      \u0275\u0275text(17, "Who we are");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(17, "h3", 10);
-      \u0275\u0275text(18, "Where Biology Meets Technology: Empowering Breakthroughs with Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and turn bold scientific goals into reality.");
+      \u0275\u0275elementStart(18, "h3", 11);
+      \u0275\u0275text(19, "Where Biology Meets Technology: Empowering Breakthroughs with Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and turn bold scientific goals into reality.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(19, "div", 11, 1)(21, "p", 12);
-      \u0275\u0275text(22, "Our Services");
+      \u0275\u0275elementStart(20, "div", 12, 1)(22, "p", 13);
+      \u0275\u0275text(23, "Our Services");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(23, "h2", 12);
-      \u0275\u0275text(24, "Tailored Solutions for Exceptional Results");
+      \u0275\u0275elementStart(24, "h2", 13);
+      \u0275\u0275text(25, "Tailored Solutions for Exceptional Results");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(25, "app-service-menu", 13);
+      \u0275\u0275element(26, "app-service-menu", 14);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(26, "div", 14, 1)(28, "p", 15);
-      \u0275\u0275text(29, "Why choose us");
+      \u0275\u0275elementStart(27, "div", 15, 1)(29, "p", 16);
+      \u0275\u0275text(30, "Why choose us");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(30, "h2", 15);
-      \u0275\u0275text(31, "Innovative Expertise. Exceptional Results.");
+      \u0275\u0275elementStart(31, "h2", 16);
+      \u0275\u0275text(32, "Innovative Expertise. Exceptional Results.");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(32, "div", 16)(33, "div", 17);
-      \u0275\u0275element(34, "hr", 18);
-      \u0275\u0275elementStart(35, "h5", 19);
-      \u0275\u0275text(36, "01");
+      \u0275\u0275elementStart(33, "div", 17)(34, "div", 18);
+      \u0275\u0275element(35, "hr", 19);
+      \u0275\u0275elementStart(36, "h5", 20);
+      \u0275\u0275text(37, "01");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(37, "h4");
-      \u0275\u0275text(38, "Expert Team");
+      \u0275\u0275elementStart(38, "h4");
+      \u0275\u0275text(39, "Expert Team");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(39, "p");
-      \u0275\u0275text(40, "Our team is composed of highly skilled professionals with extensive experience in bioinformatics and life sciences.");
+      \u0275\u0275elementStart(40, "p");
+      \u0275\u0275text(41, "Our team is composed of highly skilled professionals with extensive experience in bioinformatics and life sciences.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(41, "div", 17);
-      \u0275\u0275element(42, "hr", 18);
-      \u0275\u0275elementStart(43, "h5", 19);
-      \u0275\u0275text(44, "02");
+      \u0275\u0275elementStart(42, "div", 18);
+      \u0275\u0275element(43, "hr", 19);
+      \u0275\u0275elementStart(44, "h5", 20);
+      \u0275\u0275text(45, "02");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(45, "h4");
-      \u0275\u0275text(46, "Innovative Solutions");
+      \u0275\u0275elementStart(46, "h4");
+      \u0275\u0275text(47, "Innovative Solutions");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(47, "p");
-      \u0275\u0275text(48, "Leveraging cutting-edge technologies and methodologies to deliver accurate, actionable results.");
+      \u0275\u0275elementStart(48, "p");
+      \u0275\u0275text(49, "Leveraging cutting-edge technologies and methodologies to deliver accurate, actionable results.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(49, "div", 17);
-      \u0275\u0275element(50, "hr", 18);
-      \u0275\u0275elementStart(51, "h5", 19);
-      \u0275\u0275text(52, "03");
+      \u0275\u0275elementStart(50, "div", 18);
+      \u0275\u0275element(51, "hr", 19);
+      \u0275\u0275elementStart(52, "h5", 20);
+      \u0275\u0275text(53, "03");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(53, "h4");
-      \u0275\u0275text(54, "Collaborative Approach");
+      \u0275\u0275elementStart(54, "h4");
+      \u0275\u0275text(55, "Collaborative Approach");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(55, "p");
-      \u0275\u0275text(56, "We partner with clients to deeply understand their needs and customize our services to achieve their unique goals.");
+      \u0275\u0275elementStart(56, "p");
+      \u0275\u0275text(57, "We partner with clients to deeply understand their needs and customize our services to achieve their unique goals.");
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(57, "div", 20)(58, "p", 21);
-      \u0275\u0275text(59, " Featured Resources ");
-      \u0275\u0275elementStart(60, "a", 22)(61, "span", 23);
-      \u0275\u0275text(62, " View All \xA0 ");
-      \u0275\u0275element(63, "i", 24);
+      \u0275\u0275elementStart(58, "div", 21)(59, "p", 22);
+      \u0275\u0275text(60, " Featured Resources ");
+      \u0275\u0275elementStart(61, "a", 23)(62, "span", 24);
+      \u0275\u0275text(63, " View All \xA0 ");
+      \u0275\u0275element(64, "i", 25);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(64, "div", 25);
-      \u0275\u0275template(65, HomeComponent_div_65_Template, 2, 5, "div", 26);
+      \u0275\u0275elementStart(65, "div", 26);
+      \u0275\u0275template(66, HomeComponent_div_66_Template, 2, 5, "div", 27);
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
@@ -62726,7 +62747,7 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275attribute("data-index", 1);
       \u0275\u0275advance(2);
       \u0275\u0275property("ngIf", ctx.isLoading);
-      \u0275\u0275advance(10);
+      \u0275\u0275advance(11);
       \u0275\u0275attribute("data-index", 2);
       \u0275\u0275advance(5);
       \u0275\u0275attribute("data-index", 3);
@@ -65209,7 +65230,7 @@ var SharedResizeObserver = class _SharedResizeObserver {
 
 // node_modules/@angular/material/fesm2022/form-field.mjs
 var _c08 = ["notch"];
-var _c15 = ["matFormFieldNotchedOutline", ""];
+var _c16 = ["matFormFieldNotchedOutline", ""];
 var _c23 = ["*"];
 var _c33 = ["textField"];
 var _c43 = ["iconPrefixContainer"];
@@ -65776,7 +65797,7 @@ var MatFormFieldNotchedOutline = class _MatFormFieldNotchedOutline {
     inputs: {
       open: [0, "matFormFieldNotchedOutlineOpen", "open"]
     },
-    attrs: _c15,
+    attrs: _c16,
     ngContentSelectors: _c23,
     decls: 5,
     vars: 0,
