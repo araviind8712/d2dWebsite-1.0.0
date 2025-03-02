@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { log } from 'console';
 import resourceList from '../../../assets/resources.json';
 
@@ -12,9 +12,11 @@ import resourceList from '../../../assets/resources.json';
 })
 export class HomeComponent {
   @ViewChildren('section') sections!: QueryList<ElementRef<HTMLDivElement>>;
-  
+  @ViewChild('videoPlayer', { static: true }) videoPlayer!: ElementRef<HTMLVideoElement>;
+  isLoading: Boolean=true;
   currentIndex: number = 1;
   resources:any;
+  loadProgress = 0;
 
   constructor(){
     this.resources=resourceList;
@@ -26,6 +28,4 @@ export class HomeComponent {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
-
-
 }
