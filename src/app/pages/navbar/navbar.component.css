@@ -5,7 +5,7 @@
 }
 
 .nav-pad{
-    padding: 12px 48px;
+    padding: 18px 48px;
 }
 
 .nav-bar .navbar-light .navbar-toggler-icon {
@@ -272,11 +272,9 @@
     left: 0px;
     top: 88px;
     width: 100vw;
-    padding-right: 15%;
     background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
     color: #747B80;
-    padding-right: 15%;
 }
 
 
@@ -285,7 +283,7 @@
     flex: 1 1 calc(33.33% - 16px);
     box-sizing: border-box;
     text-align: left;
-    width: 100/3%;
+    width: 33.33% !important;
 }
 
 .serviceItems-black h4 {
@@ -356,7 +354,6 @@
     left: 0px;
     top: 90px;
     width: 100vw;
-    padding-right: 15%;
     background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
     z-index: 999;
@@ -366,7 +363,7 @@
     flex: 1 1 calc(33.33% - 16px);
     box-sizing: border-box;
     text-align: left;
-    width: 100/3%;
+    width: 33.33% !important;
 }
 
 .serviceItems h4 {
@@ -491,15 +488,15 @@
     }
     .nav-bar ul{
         justify-content: center !important;
-        width: 94vw;
+        width: calc(100vw - 32px);
     }
 
     .nav-bar-black ul{
         justify-content: center !important;
-        width: 94vw;
+        width: calc(100vw - 32px);
     }
     .nav-bar ul li a {
-        width: 90vw;
+        width: calc(100vw - 37px);
         font-weight: 400;
         font-size: 21px;
         line-height: 29px;
@@ -510,7 +507,7 @@
     }
 
     .nav-bar-black ul li a {
-        width: 90vw;
+        width: calc(100vw - 37px);
         font-weight: 400;
         font-size: 21px;
         line-height: 29px;
@@ -587,7 +584,7 @@
     }
     .logo-size{
         width:65px;
-        height:28px;
+        height:32px;
     }
     .nav-bar-black {
         padding: 0px;

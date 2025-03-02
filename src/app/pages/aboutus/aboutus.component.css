@@ -2,4 +2,7 @@
 .aboutus-gallery .col-8:nth-child(odd){
     margin-left:auto;
 }
+.mt-80{
+    margin-top: 64px !important;
+}
 }

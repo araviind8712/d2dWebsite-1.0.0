@@ -1,8 +1,8 @@
-<div class="nav-bar" *ngIf="pageName==='home'">
+<div class="nav-bar" *ngIf="pageName==='home'" style="width: 100vw;">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent nav-pad" style="background: rgba(255, 255, 255, 0.02);border-bottom: 1px solid rgba(255, 255, 255, 0.01);backdrop-filter: blur(20px); margin-bottom: 0px;">
         <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-White.svg" alt="" class="logo-size"></a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" style=" padding: 0px;">
             <img src="assets/icons/menu-icon-white.svg" style="color:#BFC0C0;width: 32px;height: 32px;">
         </button>
 
@@ -79,15 +79,15 @@
         </div>
     </nav>
 
-    <nav class="row companyNavBar" *ngIf="isCompDropdown" style="background-color: inherit;display: flex; flex-direction: row;margin:0px">
-        <div style="cursor: pointer;" class="col-md-3 serviceItems" (click)="company('aboutus')">
+    <nav class="row companyNavBar" *ngIf="isCompDropdown" style="background-color: inherit;display: flex; flex-direction: row;margin:0px;">
+        <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" class="col-md-4 serviceItems" (click)="company('aboutus')">
             <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">About Us</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>
             </h6>
         </div>
-        <div style="cursor: pointer;" class="col-md-3 serviceItems" (click)="company('resources')">
+        <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" class="col-md-4 serviceItems" (click)="company('resources')">
             <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">Resources</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
@@ -97,24 +97,23 @@
     </nav>
 </div>
 
-<div class="nav-bar-black" *ngIf="pageName!=='home'">
+<div class="nav-bar-black" *ngIf="pageName!=='home'" style="width: 100vw;">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent nav-pad" style="background: rgba(255, 255, 255, 0.02);border-bottom: 1px solid rgba(255, 255, 255, 0.01);backdrop-filter: blur(20px); margin-bottom: 0px;z-index: 999;position: relative;">
         <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-Black.svg" alt="" class="logo-size"></a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" style=" padding: 0px;">
             <img src="assets/icons/menu-icon.svg" style="width: 32px !important ;height: 32px !important;">
         </button>
 
         <div class="collapse navbar-collapse pt-48" id="navbarNav">
             <ul class="navbar-nav ml-auto ">
                 <li class="nav-item mb-8" style="cursor: pointer;">
-                    <a class="nav-link px-21" (click)="home()" style="cursor: pointer;" [(class.active)]="isHome"
-                        style="margin-right: 18px;">HOME</a>
+                    <a class="nav-link px-21 mr-16" (click)="home()" style="cursor: pointer;" [(class.active)]="isHome">HOME</a>
                 </li>
                 <li class="nav-item dropdown mb-8">
-                    <a class="nav-link px-21" id="servicesDropdown" (click)="service(serviceVisible)"
+                    <a class="nav-link px-21 mr-18" id="servicesDropdown" (click)="service(serviceVisible)"
                         [class.active]="isServiceVisible"
-                        style="margin-right: 16px; display: flex; align-items: center;">
+                        style="display: flex; align-items: center;">
                         SERVICES
                         <span
                             style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
@@ -182,14 +181,14 @@
     </nav>
 
     <nav class="row companyNavBar-black" *ngIf="isCompDropdown" style="background-color: inherit;display: flex; flex-direction: row; margin:0px">
-        <div style="cursor: pointer;" (click)="company('aboutus')"  class="serviceItems-black">
+        <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" (click)="company('aboutus')"  class="col-md-4 serviceItems-black">
             <h6><a class="link-underline" style="color: #747B80 !important;">About Us</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
                 </span>
             </h6>
         </div>
-        <div style="cursor: pointer;" (click)="company('resources')" class="serviceItems-black" >
+        <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" (click)="company('resources')" class="col-md-4 serviceItems-black" >
             <h6><a class="link-underline" style="color: #747B80 !important;">Resources</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">

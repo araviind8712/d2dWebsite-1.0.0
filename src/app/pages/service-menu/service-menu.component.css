@@ -9,6 +9,11 @@ p {
   color: #747B80;
 }
 
+.service-img{
+  height:320px;
+  width: 100% 
+}
+
 h4{
   font-family: 'NimbusSanL';
   color: #121314;
@@ -54,6 +59,11 @@ line-height: 39px;
   .img32{
     height: 24px;
     width: 24px;
+  }
+
+  .service-img{
+    height:240px;
+    width: 100% 
   }
   
   
