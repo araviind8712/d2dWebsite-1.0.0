@@ -13,22 +13,17 @@ import { ContactUsComponent } from '../contact-us/contact-us.component';
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent {
   serviceName: "bioInfo" | "bioEng" | "bioInfoTraining" | "statisticalTesting" | "seqTech" = "bioInfo";
   defaultServiceName: "bioInfo" | "bioEng" | "bioInfoTraining" | "statisticalTesting" | "seqTech" = "bioInfo";
   serviceData: any;
   isLoading: Boolean = true;
   constructor(public route: ActivatedRoute, public dialog: MatDialog) {
+    this.route.queryParams.subscribe((data) => {
+      this.serviceName = data['service'];
+    })
+    this.serviceData = serviceData[0][this.serviceName];
 
-  }
-  ngOnInit(): void {
-    setTimeout(()=>{
-      this.route.queryParams.subscribe((data) => {
-        this.serviceName = data['service'];
-      })
-      this.serviceData = serviceData[0][this.serviceName];
-      this.isLoading=false
-    },1000);
   }
 
   openDialog(): void {

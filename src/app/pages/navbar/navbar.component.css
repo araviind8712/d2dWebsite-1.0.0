@@ -394,6 +394,9 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 29px;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    backdrop-filter: blur(20.1px);
     color: #121314;
 }
 
