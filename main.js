@@ -62880,7 +62880,7 @@ var ResourceDetailComponent = class _ResourceDetailComponent {
   static \u0275fac = function ResourceDetailComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ResourceDetailComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourceDetailComponent, selectors: [["app-resource-detail"]], standalone: false, decls: 82, vars: 1, consts: [[1, "p-48"], [1, "mt-80"], [1, "fsr-21", "color-grey"], [1, "fsr-51"], [1, "row", "mt-80"], ["src", "assets/images/res1.png", "alt", "", 1, "col-md-8", "col-12"], [1, "d-flex", "flex-column", "mt-80"], [1, "row", "my-4"], [1, "text-uppercase", "col-md-4", "col-12", "fsb-21"], [1, "col-md-8", "col-12", "fsr-21"], [1, "fsb-21"], [1, "fsr-21", "my-5"], [1, "fsr-21", "multi-line"], [1, "fsr-51", "mt-80"], ["class", "col-md-4 col-12 h-100", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourceDetailComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourceDetailComponent, selectors: [["app-resource-detail"]], standalone: false, decls: 82, vars: 1, consts: [[1, "p-48", 2, "width", "100vw"], [1, "mt-80"], [1, "fsr-21", "color-grey"], [1, "fsr-51"], [1, "row", "mt-80"], ["src", "assets/images/res1.png", "alt", "", 1, "col-md-8", "col-12"], [1, "d-flex", "flex-column", "mt-80"], [1, "row", "my-4"], [1, "text-uppercase", "col-md-4", "col-12", "fsb-21"], [1, "col-md-8", "col-12", "fsr-21"], [1, "fsb-21"], [1, "fsr-21", "my-5"], [1, "fsr-21", "multi-line"], [1, "fsr-51", "mt-80"], ["class", "col-md-4 col-12 h-100", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourceDetailComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "section", 1)(2, "p", 2);
       \u0275\u0275text(3, "Dec 20,2024");
@@ -63078,6 +63078,7 @@ var AboutusComponent = class _AboutusComponent {
 
 // src/app/app-routing.module.ts
 var routes = [
+  { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "services", component: ServicesComponent },
   { path: "home", component: HomeComponent },
   { path: "resources", component: ResourcesComponent },
