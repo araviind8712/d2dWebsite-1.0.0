@@ -63992,6 +63992,10 @@ var NavbarComponent = class _NavbarComponent {
     justify-content: center !important;
     width: 94vw;
   }
+  .nav-bar-black[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {
+    justify-content: center !important;
+    width: 94vw;
+  }
   .nav-bar[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {
     width: 90vw;
     font-weight: 400;
