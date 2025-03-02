@@ -457,6 +457,9 @@ a {
   opacity: 0;
   animation: blurReveal 1.5s ease-in-out forwards;
 }
+.animate-image {
+  transition: transform 0.5s ease-in-out;
+}
 @media only screen and (max-width: 768px) {
   .btn-responsive {
     width: 100%;
