@@ -62011,49 +62011,49 @@ var EmailService = class _EmailService {
 // src/app/pages/contact-us/contact-us.component.ts
 function ContactUsComponent_div_19_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 21);
+    \u0275\u0275elementStart(0, "div", 22);
     \u0275\u0275text(1, " Name can't be Empty ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_20_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 21);
+    \u0275\u0275elementStart(0, "div", 22);
     \u0275\u0275text(1, " Invalid Name ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_21_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 21);
+    \u0275\u0275elementStart(0, "div", 22);
     \u0275\u0275text(1, " Invalid Name ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_26_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 21);
+    \u0275\u0275elementStart(0, "div", 22);
     \u0275\u0275text(1, " Email can't be empty ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_27_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 21);
+    \u0275\u0275elementStart(0, "div", 22);
     \u0275\u0275text(1, " Invalid Email ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_32_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 21);
+    \u0275\u0275elementStart(0, "div", 22);
     \u0275\u0275text(1, " Reason required ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_33_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 21);
+    \u0275\u0275elementStart(0, "div", 22);
     \u0275\u0275text(1, " Invalid comments ");
     \u0275\u0275elementEnd();
   }
@@ -62096,7 +62096,7 @@ var ContactUsComponent = class _ContactUsComponent {
   static \u0275fac = function ContactUsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ContactUsComponent)(\u0275\u0275directiveInject(MatDialogRef), \u0275\u0275directiveInject(MatSnackBar), \u0275\u0275directiveInject(EmailService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactUsComponent, selectors: [["app-contact-us"]], standalone: false, decls: 39, vars: 10, consts: [[1, "mat-typography", "mat-padding", 2, "overflow-y", "auto", "scroll-behavior", "smooth", "background-color", "#FFFFFF", "max-height", "100vh"], [1, "row"], [1, "col-md-6", "col-sm-12"], ["mat-dialog-title", "", 1, "pb-2", "px-0", "title"], [1, "px-0", "subTitle", 2, "font-weight", "300"], [1, "contact-info", "py-4", "px-0", "mt-32"], [1, "row", "pl-3", "mb-16"], ["src", "assets/icons/email.svg", "width", "20px", "height", "20px"], [1, "form-wrapper", 2, "padding-left", "4px", "padding-right", "4px"], [3, "ngSubmit", "formGroup"], [1, "form-group"], ["for", "name"], ["id", "name", "type", "text", "formControlName", "name", "placeholder", "John Doe", 1, "form-control"], ["style", "color: red;", 4, "ngIf"], ["for", "email"], ["id", "email", "type", "text", "formControlName", "email", "placeholder", "johndoe@gmail.com", 1, "form-control"], ["for", "comments"], ["id", "comments", "formControlName", "comments", "placeholder", "Write here...", 1, "form-control"], [1, "row", "button-grp"], ["id", "cancelButton", 1, "btn", "btn-primary", "mr-8", 3, "click"], ["type", "submit", 1, "btn", "btn-primary", 3, "disabled"], [2, "color", "red"]], template: function ContactUsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactUsComponent, selectors: [["app-contact-us"]], standalone: false, decls: 39, vars: 10, consts: [[1, "mat-typography", "mat-padding", 2, "overflow-y", "auto", "scroll-behavior", "smooth", "background-color", "#FFFFFF", "max-height", "100vh"], [1, "row"], [1, "col-md-6", "col-sm-12"], ["mat-dialog-title", "", 1, "pb-2", "px-0", "title"], [1, "px-0", "subTitle", 2, "font-weight", "300"], [1, "contact-info", "py-4", "px-0", "mt-32"], [1, "row", "pl-3", "mb-16"], ["src", "assets/icons/email.svg", "width", "20px", "height", "20px"], [1, "col-md-6", "col-sm-12", 2, "width", "100%", "overflow-x", "hidden"], [1, "form-wrapper", 2, "padding-left", "4px", "padding-right", "4px"], [3, "ngSubmit", "formGroup"], [1, "form-group"], ["for", "name"], ["id", "name", "type", "text", "formControlName", "name", "placeholder", "John Doe", 1, "form-control"], ["style", "color: red;", 4, "ngIf"], ["for", "email"], ["id", "email", "type", "text", "formControlName", "email", "placeholder", "johndoe@gmail.com", 1, "form-control"], ["for", "comments"], ["id", "comments", "formControlName", "comments", "placeholder", "Write here...", 1, "form-control"], [1, "row", "button-grp"], ["id", "cancelButton", 1, "btn", "btn-primary", "mr-8", 3, "click"], ["type", "submit", 1, "btn", "btn-primary", 3, "disabled"], [2, "color", "red"]], template: function ContactUsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "mat-dialog-content", 0)(1, "div", 1)(2, "div", 2)(3, "h1", 3);
       \u0275\u0275text(4, "Partner with Us!");
@@ -62109,35 +62109,35 @@ var ContactUsComponent = class _ContactUsComponent {
       \u0275\u0275elementStart(10, "p");
       \u0275\u0275text(11);
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(12, "div", 2)(13, "div", 8)(14, "form", 9);
+      \u0275\u0275elementStart(12, "div", 8)(13, "div", 9)(14, "form", 10);
       \u0275\u0275listener("ngSubmit", function ContactUsComponent_Template_form_ngSubmit_14_listener() {
         return ctx.save();
       });
-      \u0275\u0275elementStart(15, "div", 10)(16, "label", 11);
+      \u0275\u0275elementStart(15, "div", 11)(16, "label", 12);
       \u0275\u0275text(17, "Name");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(18, "input", 12);
-      \u0275\u0275template(19, ContactUsComponent_div_19_Template, 2, 0, "div", 13)(20, ContactUsComponent_div_20_Template, 2, 0, "div", 13)(21, ContactUsComponent_div_21_Template, 2, 0, "div", 13);
+      \u0275\u0275element(18, "input", 13);
+      \u0275\u0275template(19, ContactUsComponent_div_19_Template, 2, 0, "div", 14)(20, ContactUsComponent_div_20_Template, 2, 0, "div", 14)(21, ContactUsComponent_div_21_Template, 2, 0, "div", 14);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(22, "div", 10)(23, "label", 14);
+      \u0275\u0275elementStart(22, "div", 11)(23, "label", 15);
       \u0275\u0275text(24, "Email");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(25, "input", 15);
-      \u0275\u0275template(26, ContactUsComponent_div_26_Template, 2, 0, "div", 13)(27, ContactUsComponent_div_27_Template, 2, 0, "div", 13);
+      \u0275\u0275element(25, "input", 16);
+      \u0275\u0275template(26, ContactUsComponent_div_26_Template, 2, 0, "div", 14)(27, ContactUsComponent_div_27_Template, 2, 0, "div", 14);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(28, "div", 10)(29, "label", 16);
+      \u0275\u0275elementStart(28, "div", 11)(29, "label", 17);
       \u0275\u0275text(30, "Tell us about what you would like to discuss");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(31, "textarea", 17);
-      \u0275\u0275template(32, ContactUsComponent_div_32_Template, 2, 0, "div", 13)(33, ContactUsComponent_div_33_Template, 2, 0, "div", 13);
+      \u0275\u0275element(31, "textarea", 18);
+      \u0275\u0275template(32, ContactUsComponent_div_32_Template, 2, 0, "div", 14)(33, ContactUsComponent_div_33_Template, 2, 0, "div", 14);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(34, "div", 18)(35, "button", 19);
+      \u0275\u0275elementStart(34, "div", 19)(35, "button", 20);
       \u0275\u0275listener("click", function ContactUsComponent_Template_button_click_35_listener() {
         return ctx.closeDialog();
       });
       \u0275\u0275text(36, "Cancel");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(37, "button", 20);
+      \u0275\u0275elementStart(37, "button", 21);
       \u0275\u0275text(38, "Submit");
       \u0275\u0275elementEnd()()()()()()();
     }
@@ -62170,7 +62170,7 @@ var ContactUsComponent = class _ContactUsComponent {
       \u0275\u0275advance(4);
       \u0275\u0275property("disabled", ctx.contactForm.invalid || ctx.contactForm.value.name.trim() === "" || ctx.contactForm.value.comments.trim() === "");
     }
-  }, dependencies: [NgIf, MatDialogTitle, MatDialogContent, \u0275NgNoValidate, DefaultValueAccessor, NgControlStatus, NgControlStatusGroup, FormGroupDirective, FormControlName], styles: ['\n\n.mat-dialog-content[_ngcontent-%COMP%] {\n  overflow-y: auto;\n  display: flex;\n  flex-direction: column;\n  max-height: fit-content !important;\n}\n.form-wrapper[_ngcontent-%COMP%] {\n  max-height: fit-content;\n  overflow-y: auto;\n  padding-right: 0px;\n}\n.mat-padding[_ngcontent-%COMP%] {\n  padding: 70px 48px !important;\n}\n.form-group[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  padding-left: 0px;\n}\n.form-group[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  margin-top: 5px;\n  color: red;\n}\n.form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], \n.form-group[_ngcontent-%COMP%]   textarea[_ngcontent-%COMP%] {\n  height: 40px;\n}\ninput[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 12px;\n  gap: 8px;\n  height: 47px;\n  border: 1px solid #BFC0C0;\n  border-radius: 300px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n}\ntextarea[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  padding: 12px;\n  gap: 8px;\n  border: 1px solid #BFC0C0;\n  border-radius: 16px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n  height: 110px !important;\n}\n#cancelButton[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #FBFBFB;\n  color: #121314;\n  border-radius: 200px;\n  border: 2px solid #121314;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n}\n.mr-8[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}\nbutton[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #121314;\n  color: #FBFBFB;\n  border-radius: 200px;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n  border: 0px;\n}\nbutton[_ngcontent-%COMP%]:disabled {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nbutton[_ngcontent-%COMP%]:hover {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nlabel[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.title[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.subTitle[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin-left: 16px;\n}\n.mb-16[_ngcontent-%COMP%] {\n  margin-bottom: 16px;\n}\n.button-grp[_ngcontent-%COMP%] {\n  position: relative;\n  width: 45vw;\n  padding-left: 15px;\n  align-self: center;\n}\n@media only screen and (max-width: 768px) {\n  .mt-32[_ngcontent-%COMP%] {\n    margin-top: 0px;\n  }\n  .mb-16[_ngcontent-%COMP%] {\n    margin-bottom: 0px;\n  }\n  button[_ngcontent-%COMP%] {\n    width: 43.5vw !important;\n    margin-top: 24px;\n  }\n  #cancelButton[_ngcontent-%COMP%] {\n    width: 43.5vw !important;\n  }\n  textarea[_ngcontent-%COMP%] {\n    height: 200px !important;\n    padding-left: 10px;\n  }\n  .mat-padding[_ngcontent-%COMP%] {\n    padding: 48px 16px !important;\n  }\n  .button-grp[_ngcontent-%COMP%] {\n    position: relative;\n    width: 94vw;\n    padding-left: 15px;\n    justify-content: space-between;\n    align-self: center;\n  }\n  .mr-8[_ngcontent-%COMP%] {\n    margin-right: 8px;\n  }\n}\n/*# sourceMappingURL=contact-us.component.css.map */'] });
+  }, dependencies: [NgIf, MatDialogTitle, MatDialogContent, \u0275NgNoValidate, DefaultValueAccessor, NgControlStatus, NgControlStatusGroup, FormGroupDirective, FormControlName], styles: ['\n\n.mat-dialog-content[_ngcontent-%COMP%] {\n  overflow-y: auto;\n  display: flex;\n  flex-direction: column;\n  max-height: fit-content !important;\n}\n.form-wrapper[_ngcontent-%COMP%] {\n  max-height: fit-content;\n  overflow-y: auto;\n  padding-right: 0px;\n}\n.mat-padding[_ngcontent-%COMP%] {\n  padding: 70px 48px !important;\n}\n.form-group[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  padding-left: 0px;\n}\n.form-group[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  margin-top: 5px;\n  color: red;\n}\n.form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], \n.form-group[_ngcontent-%COMP%]   textarea[_ngcontent-%COMP%] {\n  height: 40px;\n}\ninput[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 12px;\n  gap: 8px;\n  height: 47px;\n  border: 1px solid #BFC0C0;\n  border-radius: 300px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n}\ntextarea[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  padding: 12px;\n  gap: 8px;\n  border: 1px solid #BFC0C0;\n  border-radius: 16px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n  height: 110px !important;\n}\n#cancelButton[_ngcontent-%COMP%] {\n  display: flex;\n  width: 161px;\n  height: 52px;\n  flex-direction: column;\n  justify-content: center;\n  font-size: 21px;\n  font-family: "NimbusSanL";\n  font-weight: 400;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #FBFBFB;\n  color: #121314;\n  border-radius: 200px;\n  border: 2px solid #121314;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n  line-height: 29px;\n}\n.mr-8[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}\nbutton[_ngcontent-%COMP%] {\n  width: 161px;\n  height: 52px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  font-size: 21px;\n  font-family: "NimbusSanL";\n  font-weight: 400;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #121314;\n  color: #FBFBFB;\n  border-radius: 200px;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n  border: 0px;\n  line-height: 29px;\n}\nbutton[_ngcontent-%COMP%]:disabled {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nbutton[_ngcontent-%COMP%]:hover {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nlabel[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.title[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.subTitle[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin-left: 16px;\n}\n.mb-16[_ngcontent-%COMP%] {\n  margin-bottom: 16px;\n}\n.button-grp[_ngcontent-%COMP%] {\n  position: relative;\n  width: 45vw;\n  padding-left: 15px;\n  align-self: center;\n}\n@media only screen and (max-width: 768px) {\n  .mt-32[_ngcontent-%COMP%] {\n    margin-top: 0px;\n  }\n  .mb-16[_ngcontent-%COMP%] {\n    margin-bottom: 0px;\n  }\n  button[_ngcontent-%COMP%] {\n    width: 43vw !important;\n    margin-top: 24px;\n  }\n  #cancelButton[_ngcontent-%COMP%] {\n    width: 43vw !important;\n  }\n  textarea[_ngcontent-%COMP%] {\n    height: 200px !important;\n    padding-left: 10px;\n  }\n  .mat-padding[_ngcontent-%COMP%] {\n    padding: 48px 16px !important;\n  }\n  .button-grp[_ngcontent-%COMP%] {\n    position: relative;\n    width: 94vw;\n    padding-left: 15px;\n    justify-content: space-between;\n    align-self: center;\n  }\n  .mr-8[_ngcontent-%COMP%] {\n    margin-right: 8px;\n  }\n}\n/*# sourceMappingURL=contact-us.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ContactUsComponent, { className: "ContactUsComponent", filePath: "src/app/pages/contact-us/contact-us.component.ts", lineNumber: 13 });
