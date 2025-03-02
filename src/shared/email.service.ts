@@ -21,7 +21,6 @@ export class EmailService {
       .send(this.serviceID, this.templateID1, formData, this.userID)
       .then(
         (response) => {
-          console.log('Email sent successfully:', response);
           alert('Querry Raised Successfully');
 
         },
@@ -34,7 +33,6 @@ export class EmailService {
       .send(this.serviceID, this.templateID2, formData, this.userID)
       .then(
         (response) => {
-          console.log('Email sent successfully:', response);
         },
         (error) => {
           console.error('Error sending email:', error);

@@ -33,7 +33,6 @@ export class NavbarComponent implements OnInit{
       this.pageName =data.get('page');
       this.isHome = data.get('page') === "home";
       this.isServiceVisible = data.get('page') === 'service';
-      console.log(this.isServiceVisible);
       this.isCompany = data.get('page') === 'company';
     })
   }

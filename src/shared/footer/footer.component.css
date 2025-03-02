@@ -4,6 +4,7 @@
     margin-left: 0!important;
     margin-right: 0!important;
     padding: 0;
+    bottom: 0;
 }
 
 .no-underline{
@@ -18,4 +19,34 @@
     text-decoration: underline;
     text-decoration-color: whitesmoke!important;
 }
-      
+
+.mt-43{
+    margin-top: 42px;
+    margin-bottom: 16px;
+}
+
+.p-64{
+    padding-top: 42px;
+    padding-bottom: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+    .pr-8{
+        padding-right: 8px !important;
+    }
+    .mt-43{
+        margin-top: 43px;
+        margin-bottom: 16px;
+    }
+    .fsr-16{
+        font-size: 12px !important;
+        font-weight: 400;
+    }
+    .color-lightwhite{
+        color:#BFC0C0 !important;
+    }
+    .p-64{
+        padding-top: 42px;
+        padding-bottom: 64px;
+    }
+}
