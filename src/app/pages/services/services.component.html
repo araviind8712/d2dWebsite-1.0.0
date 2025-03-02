@@ -1,7 +1,4 @@
-<div *ngIf="isLoading" style="width: 100vw;height: 100vh;justify-content: center;align-items: center;">
-    <div class="spinner"></div>
-</div>
-<div class="container-fluid section1" *ngIf="!isLoading">
+<div class="container-fluid section1">
     <h2 class="pb-48">{{serviceData?.topic}}</h2>
     <div *ngFor="let desc of serviceData?.desc1; let i = index">
     <p align="left" style="text-align: left;" class="per32" 
@@ -14,7 +11,7 @@
     </div>
 </div>
 
-<div class="container-fluid section2" *ngIf="serviceName==='bioInfo' &&  !isLoading">
+<div class="container-fluid section2" *ngIf="serviceName==='bioInfo'">
     <h2 class="pb-80">Solutions Offered</h2>
     <div class="soln">
         <div class="width-50" id="first">
@@ -37,7 +34,7 @@
     </div>
 </div>
 
-<div class="container-fluid section2" *ngIf="serviceName!=='bioInfo' &&  !isLoading">
+<div class="container-fluid section2" *ngIf="serviceName!=='bioInfo'">
     <h2 class="pb-80">Solutions Offered</h2>
     <div class="row">
         <div class="col-12 col-md-6 col-sm-12 padding-default" *ngFor="let sol of serviceData?.solutionsOffered; let i = index">
@@ -49,7 +46,7 @@
     </div>
 </div>
 
-<div style="background-color: #FFFFFF;" class="pt-80 menu" *ngIf="!isLoading">
+<div style="background-color: #FFFFFF;" class="pt-80 menu">
     <h2 class="pb-80">Other Services</h2>
     <app-service-menu [currentService]="serviceName" bgColor="background-color:white;"></app-service-menu>
 </div>

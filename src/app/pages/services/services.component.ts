@@ -17,9 +17,8 @@ export class ServicesComponent implements OnInit,AfterViewInit {
   serviceName: "bioInfo" | "bioEng" | "bioInfoTraining" | "statisticalTesting" | "seqTech" = "bioInfo";
   defaultServiceName: "bioInfo" | "bioEng" | "bioInfoTraining" | "statisticalTesting" | "seqTech" = "bioInfo";
   serviceData: any;
-  isLoading: Boolean =true;
   constructor(public route: ActivatedRoute, public dialog: MatDialog) {
-    this.isLoading=true;
+
   }
   ngOnInit(): void {
     this.route.queryParams.subscribe((data) => {
@@ -38,7 +37,7 @@ export class ServicesComponent implements OnInit,AfterViewInit {
     });
   }
   ngAfterViewInit() {
-    this.isLoading=false;
+
   }
 
 }
