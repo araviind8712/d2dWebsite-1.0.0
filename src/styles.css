@@ -43,6 +43,7 @@ body {
 body {
   margin: 0;
   font-family: 'NimbusSanL', sans-serif;
+  scroll-behavior: smooth;
 }
 
 
@@ -181,6 +182,10 @@ body {
   line-height: 29px !important;
 }
 
+.lh-22{
+  line-height:22.4px !important;
+}
+
 /* Line Height Ends */
 
 body {
@@ -225,7 +230,7 @@ body {
   color: #121314 !important;
 }
 
-.card-hover:hover .link-text:hover {
+.card-link-hover:hover .link-text {
   background-size: 100% 1px;
 }
 

@@ -9,7 +9,7 @@
     <div class="mt-48">
         <div class="row">
             <!-- <div id="card" [@slideUp]="isVisible ? 'visible' : 'hidden'" class="col-md-8 col-12 h-100"> -->
-                <div class="col-md-8 col-12 h-100 card-hover">
+                <div class="col-md-8 col-12 h-100 card-link-hover">
                 <img src="assets/images/res1.png" alt="" class="col-12 w-100 h-75 p-0">
                 <div class="d-flex justify-content-between mt-4 mb-2" >
                     <p class="color-blue fsb-16 p-0 pe-1 m-0 ">PROJECT&nbsp;</p>
@@ -21,21 +21,21 @@
                 </div>
                 <p class="color-lightgrey fsr-21 my-3">Analyzing RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns.</p>
             </div>
-            <div class="col-md-4 col-12 h-100 card-hover">
+            <div class="col-md-4 col-12 h-100 card-link-hover">
                 <img src="assets/images/res2.png" width="100%" alt="" class="col-12 p-0"> 
                 <div class="d-flex justify-content-between mt-4 mb-2">
                     <p class="color-blue fsb-16 p-0 pe-1 m-0">PROJECT&nbsp;</p>
                     <span class="fsr-16 color-grey m-0 p-0"> Dec 20, 2024</span>
                 </div>
-                <div>
-                    <a href="/d2dWebsite-1.0.0/resource?id=1&page=resources" class="fsr-28 link-text">RNA-Seq Analysis and Gene Regulation</a>
+                <div class="w-75">
+                    <a href="/d2dWebsite-1.0.0/resource?id=1&page=resources" class="fsr-28 link-text pe-1">RNA-Seq Analysis and Gene Regulation</a>
                     <i><img src="assets/images/link.png" alt="" class="px-2 pb-2"></i>
                 </div>
                 <p class="color-lightgrey fsr-21 my-3">Analyzing RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns.</p>
             </div>
         </div>
         <div class="row mt-48">
-            <div class="col-md-4 col-12 h-100 card-hover" *ngFor="let resource of resources">
+            <div class="col-md-4 col-12 h-100 card-link-hover" *ngFor="let resource of resources">
                 <app-resource-card [title]="resource.title" [description]="resource.description" [image]="resource.image" [postedOn]="resource.postedOn" [type]="resource.type"></app-resource-card>
             </div>
         </div>
