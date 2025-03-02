@@ -61,7 +61,7 @@ body {
   max-height: fit-content;
 }
 
-@keyframes slideUp {
+/* @keyframes slideUp {
   from {
     transform: translateY(100%);
     opacity: 0;
@@ -71,7 +71,7 @@ body {
     transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 
 ::ng-deep .mat-dialog-container {
   border-radius: 0 !important;
@@ -225,11 +225,9 @@ body {
   color: #121314 !important;
 }
 
-.link-text:hover {
+.card-hover:hover .link-text:hover {
   background-size: 100% 1px;
 }
-
-
 
 .fade-effect {
   transition: all 0.3s ease-in-out;
@@ -266,6 +264,22 @@ a {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+}
+
+@keyframes appeartext {
+  from {
+      opacity: 0;
+      clip-path: inset(100% 0% 0% 0%);
+  }
+  to {
+      opacity: 1;
+      clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+.wipe-up-text {
+  opacity: 0;
+  animation: appeartext 1s ease-out forwards;
 }
 
 @keyframes slideup {

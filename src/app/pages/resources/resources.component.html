@@ -1,5 +1,5 @@
-<div class="p-48 slide-up-page" >
-    <p class="mt-80 fsr-51 text-blur-reveal">Resources</p>
+<div class="p-48" >
+    <p class="mt-80 fsr-51">Resources</p>
     <ul class="d-flex justify-content-between nav-resource fsr-21 mt-80 p-0 mb-0">
         <a class="nav-link nav-active p-0" href="">All</a>
         <a class="nav-link p-0" href="">Blog</a>
@@ -9,7 +9,7 @@
     <div class="mt-48">
         <div class="row">
             <!-- <div id="card" [@slideUp]="isVisible ? 'visible' : 'hidden'" class="col-md-8 col-12 h-100"> -->
-                <div class="col-md-8 col-12 h-100">
+                <div class="col-md-8 col-12 h-100 card-hover">
                 <img src="assets/images/res1.png" alt="" class="col-12 w-100 h-75 p-0">
                 <div class="d-flex justify-content-between mt-4 mb-2" >
                     <p class="color-blue fsb-16 p-0 pe-1 m-0 ">PROJECT&nbsp;</p>
@@ -21,7 +21,7 @@
                 </div>
                 <p class="color-lightgrey fsr-21 my-3">Analyzing RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns.</p>
             </div>
-            <div class="col-md-4 col-12 h-100">
+            <div class="col-md-4 col-12 h-100 card-hover">
                 <img src="assets/images/res2.png" width="100%" alt="" class="col-12 p-0"> 
                 <div class="d-flex justify-content-between mt-4 mb-2">
                     <p class="color-blue fsb-16 p-0 pe-1 m-0">PROJECT&nbsp;</p>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="row mt-48">
-            <div class="col-md-4 col-12 h-100 wipe-up" *ngFor="let resource of resources">
+            <div class="col-md-4 col-12 h-100 card-hover" *ngFor="let resource of resources">
                 <app-resource-card [title]="resource.title" [description]="resource.description" [image]="resource.image" [postedOn]="resource.postedOn" [type]="resource.type"></app-resource-card>
             </div>
         </div>
