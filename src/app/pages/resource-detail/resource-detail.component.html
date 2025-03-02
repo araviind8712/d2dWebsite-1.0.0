@@ -1,4 +1,4 @@
-<div class="container-fluid col-sm-12 col-md-12 p-48" style="overflow-x: hidden;">
+<div class="container-fluid col-sm-12 col-md-12 p-48" style="overflow-x: hidden;" appScrolleffects>
     <section class="mt-80">
         <p class="fsr-21 color-grey">Dec 20,2024</p>
         <p class="fsr-51">RNA-Seq Analysis and Gene Regulation</p>
@@ -82,7 +82,7 @@
     <section>
         <p class="fsr-51 mt-80">Check out our other Resources</p>
         <div class="row mt-80">
-            <div class="col-md-4 col-12 h-100" *ngFor="let resource of resources">
+            <div class="col-md-4 col-12 h-100 wipe-up card-hover" *ngFor="let resource of resources">
                 <app-resource-card [title]="resource.title" [description]="resource.description" [image]="resource.image" [postedOn]="resource.postedOn" [type]="resource.type"></app-resource-card>
             </div>
         </div>

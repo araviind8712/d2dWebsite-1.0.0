@@ -21,6 +21,8 @@ import { ResourceCardComponent } from '../shared/resource-card/resource-card.com
 import { GetintouchComponent } from '../shared/getintouch/getintouch.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ScrolleffectsDirective } from './directive/scrolleffects.directive';
+import { HomescrollDirective } from './directive/homescroll.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ResourceDetailComponent,
     ResourceCardComponent,
     FooterComponent,
-    GetintouchComponent
+    GetintouchComponent,
+    ScrolleffectsDirective,
+    HomescrollDirective
   ],
   imports: [
     BrowserModule,
