@@ -62297,7 +62297,7 @@ var ServiceMenuComponent = class _ServiceMenuComponent {
   static \u0275fac = function ServiceMenuComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ServiceMenuComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServiceMenuComponent, selectors: [["app-service-menu"]], inputs: { currentService: "currentService", bgColor: "bgColor" }, standalone: false, decls: 3, vars: 1, consts: [[1, "container-fluid"], ["align", "center", 1, "row", "justify-content-center"], ["class", "col-12 col-md-4 pb48 cursor-pointer wipe-up", "style", "padding: 0; box-shadow: none; border: none; cursor: pointer;", 3, "click", 4, "ngFor", "ngForOf"], [1, "col-12", "col-md-4", "pb48", "cursor-pointer", "wipe-up", 2, "padding", "0", "box-shadow", "none", "border", "none", "cursor", "pointer", 3, "click"], [1, "pr32", "service-img", 2, "padding-bottom", "24px", 3, "src"], [4, "ngIf"], ["align", "left", 1, "pr32"], ["align", "left", 1, "pr32", 2, "padding-bottom", "8px"], [1, "link-text", 2, "padding-right", "8px"], [1, "icon-container", 2, "background-color", "transparent"], ["src", "assets/icons/right-arrow.svg", 1, "img32"], ["src", "assets/icons/right-arrow.svg", 1, "img32", 2, "cursor", "pointer"]], template: function ServiceMenuComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServiceMenuComponent, selectors: [["app-service-menu"]], inputs: { currentService: "currentService", bgColor: "bgColor" }, standalone: false, decls: 3, vars: 1, consts: [[1, "container-fluid"], ["align", "center", 1, "row", "justify-content-center"], ["class", "col-12 col-md-4 pb48 cursor-pointer card-link-hover", "style", "padding: 0; box-shadow: none; border: none; cursor: pointer;", 3, "click", 4, "ngFor", "ngForOf"], [1, "col-12", "col-md-4", "pb48", "cursor-pointer", "card-link-hover", 2, "padding", "0", "box-shadow", "none", "border", "none", "cursor", "pointer", 3, "click"], [1, "pr32", "service-img", 2, "padding-bottom", "24px", 3, "src"], [4, "ngIf"], ["align", "left", 1, "pr32"], ["align", "left", 1, "pr32", 2, "padding-bottom", "8px"], [1, "link-text"], [1, "icon-container", 2, "background-color", "transparent"], ["src", "assets/icons/right-arrow.svg", 1, "img32"], ["src", "assets/icons/right-arrow.svg", 1, "img32", 2, "cursor", "pointer"]], template: function ServiceMenuComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "div", 1);
       \u0275\u0275template(2, ServiceMenuComponent_div_2_Template, 6, 4, "div", 2);
@@ -62313,12 +62313,92 @@ var ServiceMenuComponent = class _ServiceMenuComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ServiceMenuComponent, { className: "ServiceMenuComponent", filePath: "src/app/pages/service-menu/service-menu.component.ts", lineNumber: 11 });
 })();
 
+// src/app/directive/scrolleffects.directive.ts
+var ScrolleffectsDirective = class _ScrolleffectsDirective {
+  el;
+  renderer;
+  isTransitioning = false;
+  lastScrollY = 0;
+  section1;
+  section2;
+  text;
+  image;
+  section2Reached = false;
+  // Allow free scrolling after Section 2
+  constructor(el, renderer) {
+    this.el = el;
+    this.renderer = renderer;
+  }
+  ngAfterViewInit() {
+    const sections = this.el.nativeElement.querySelectorAll(".section, .section1, .section2");
+    if (sections.length < 2)
+      return;
+    this.section1 = sections[0];
+    this.section2 = sections[1];
+    this.text = this.section1.querySelector("p");
+    this.image = this.section1.querySelector("img");
+  }
+  onWindowScroll() {
+    if (!this.section1 || !this.section2 || !this.text || !this.image)
+      return;
+    if (this.isTransitioning)
+      return;
+    const scrollY = window.scrollY;
+    const fadeStart = this.section1.offsetTop;
+    const fadeEnd = fadeStart + 400;
+    const section2Start = this.section2.offsetTop;
+    const isScrollingDown = scrollY > this.lastScrollY;
+    this.lastScrollY = scrollY;
+    if (isScrollingDown && scrollY >= fadeStart && scrollY <= fadeEnd) {
+      let opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
+      opacity = Math.max(opacity, 0);
+      this.renderer.setStyle(this.text, "opacity", opacity.toString());
+      const moveUpValue = Math.min((scrollY - fadeStart) * 0.8, 200);
+      this.renderer.setStyle(this.image, "transform", `translateY(-${moveUpValue}px)`);
+    }
+    if (!isScrollingDown && scrollY < fadeEnd) {
+      this.renderer.setStyle(this.image, "transform", `translateY(0px)`);
+    }
+    if (!this.section2Reached && scrollY >= fadeEnd && isScrollingDown) {
+      this.autoScrollTo(this.section2.offsetTop, false, true);
+    }
+    if (scrollY < section2Start - 100 && !isScrollingDown) {
+      this.autoScrollTo(this.section1.offsetTop, true);
+    }
+  }
+  autoScrollTo(position, reverse = false, unlockScroll = false) {
+    this.isTransitioning = true;
+    window.scrollTo({ top: position, behavior: "smooth" });
+    setTimeout(() => {
+      this.isTransitioning = false;
+      if (reverse) {
+        this.renderer.setStyle(this.text, "opacity", "1");
+        this.renderer.setStyle(this.image, "transform", "translateY(0px)");
+        this.section2Reached = false;
+      }
+      if (unlockScroll) {
+        this.section2Reached = true;
+      }
+    }, 800);
+  }
+  static \u0275fac = function ScrolleffectsDirective_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ScrolleffectsDirective)(\u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(Renderer2));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({ type: _ScrolleffectsDirective, selectors: [["", "appScrolleffects", ""]], hostBindings: function ScrolleffectsDirective_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275listener("scroll", function ScrolleffectsDirective_scroll_HostBindingHandler($event) {
+        return ctx.onWindowScroll($event);
+      }, false, \u0275\u0275resolveWindow);
+    }
+  }, standalone: false });
+};
+
 // src/app/pages/services/services.component.ts
 var _c05 = (a0) => ({ "padding-bottom": a0 });
 var _c14 = (a0, a1) => ({ "padding-default": a0, "padding-none": a1 });
-function ServicesComponent_div_3_Template(rf, ctx) {
+function ServicesComponent_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 9);
+    \u0275\u0275elementStart(0, "div")(1, "p", 11);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62332,9 +62412,9 @@ function ServicesComponent_div_3_Template(rf, ctx) {
     \u0275\u0275textInterpolate1(" ", desc_r1, " ");
   }
 }
-function ServicesComponent_div_6_div_8_Template(rf, ctx) {
+function ServicesComponent_div_7_div_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 16);
+    \u0275\u0275elementStart(0, "div")(1, "p", 18);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62344,9 +62424,9 @@ function ServicesComponent_div_6_div_8_Template(rf, ctx) {
     \u0275\u0275textInterpolate(des_r4);
   }
 }
-function ServicesComponent_div_6_div_10_div_4_Template(rf, ctx) {
+function ServicesComponent_div_7_div_10_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 16);
+    \u0275\u0275elementStart(0, "div")(1, "p", 18);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62356,13 +62436,13 @@ function ServicesComponent_div_6_div_10_div_4_Template(rf, ctx) {
     \u0275\u0275textInterpolate(des_r5);
   }
 }
-function ServicesComponent_div_6_div_10_Template(rf, ctx) {
+function ServicesComponent_div_7_div_10_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 17)(1, "h5", 13);
+    \u0275\u0275elementStart(0, "div", 19)(1, "h5", 15);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(4, ServicesComponent_div_6_div_10_div_4_Template, 3, 1, "div", 2);
+    \u0275\u0275template(4, ServicesComponent_div_7_div_10_div_4_Template, 3, 1, "div", 3);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62374,19 +62454,19 @@ function ServicesComponent_div_6_div_10_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", sol_r6 == null ? null : sol_r6.description);
   }
 }
-function ServicesComponent_div_6_Template(rf, ctx) {
+function ServicesComponent_div_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 10)(1, "h2", 7);
+    \u0275\u0275elementStart(0, "div", 12)(1, "h2", 9);
     \u0275\u0275text(2, "Solutions Offered");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 11)(4, "div", 12)(5, "h5", 13);
+    \u0275\u0275elementStart(3, "div", 13)(4, "div", 14)(5, "h5", 15);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(8, ServicesComponent_div_6_div_8_Template, 3, 1, "div", 2);
+    \u0275\u0275template(8, ServicesComponent_div_7_div_8_Template, 3, 1, "div", 3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(9, "div", 14);
-    \u0275\u0275template(10, ServicesComponent_div_6_div_10_Template, 5, 8, "div", 15);
+    \u0275\u0275elementStart(9, "div", 16);
+    \u0275\u0275template(10, ServicesComponent_div_7_div_10_Template, 5, 8, "div", 17);
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -62399,9 +62479,9 @@ function ServicesComponent_div_6_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", ctx_r2.serviceData == null ? null : ctx_r2.serviceData.solutionsOffered.slice(1));
   }
 }
-function ServicesComponent_div_7_div_4_div_4_Template(rf, ctx) {
+function ServicesComponent_div_8_div_4_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 16);
+    \u0275\u0275elementStart(0, "div")(1, "p", 18);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62411,13 +62491,13 @@ function ServicesComponent_div_7_div_4_div_4_Template(rf, ctx) {
     \u0275\u0275textInterpolate(des_r7);
   }
 }
-function ServicesComponent_div_7_div_4_Template(rf, ctx) {
+function ServicesComponent_div_8_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 20)(1, "h5", 13);
+    \u0275\u0275elementStart(0, "div", 23)(1, "h5", 15);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(4, ServicesComponent_div_7_div_4_div_4_Template, 3, 1, "div", 2);
+    \u0275\u0275template(4, ServicesComponent_div_8_div_4_div_4_Template, 3, 1, "div", 3);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62428,13 +62508,13 @@ function ServicesComponent_div_7_div_4_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", sol_r8.description);
   }
 }
-function ServicesComponent_div_7_Template(rf, ctx) {
+function ServicesComponent_div_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 10)(1, "h2", 7);
+    \u0275\u0275elementStart(0, "div", 20)(1, "h2", 9);
     \u0275\u0275text(2, "Solutions Offered");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 18);
-    \u0275\u0275template(4, ServicesComponent_div_7_div_4_Template, 5, 4, "div", 19);
+    \u0275\u0275elementStart(3, "div", 21);
+    \u0275\u0275template(4, ServicesComponent_div_8_div_4_Template, 5, 4, "div", 22);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -62470,24 +62550,24 @@ var ServicesComponent = class _ServicesComponent {
   static \u0275fac = function ServicesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ServicesComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(MatDialog));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServicesComponent, selectors: [["app-services"]], standalone: false, decls: 12, vars: 6, consts: [[1, "container-fluid", "section1"], [1, "pb-48"], [4, "ngFor", "ngForOf"], [1, "pt-80", 2, "padding-bottom", "8px"], ["alt", "image", 1, "pic", 3, "src"], ["class", "container-fluid section2", 4, "ngIf"], [1, "pt-80", "menu", 2, "background-color", "#FFFFFF"], [1, "pb-80"], ["bgColor", "background-color:white;", 3, "currentService"], ["align", "left", 1, "per32", 2, "text-align", "left", 3, "ngStyle"], [1, "container-fluid", "section2"], [1, "soln"], ["id", "first", 1, "width-50"], [2, "padding-bottom", "8px", "margin", "0px"], [1, "width-50", "ml-32"], [3, "ngClass", 4, "ngFor", "ngForOf"], [1, "des"], [3, "ngClass"], [1, "row"], ["class", "col-12 col-md-6 col-sm-12 padding-default", 4, "ngFor", "ngForOf"], [1, "col-12", "col-md-6", "col-sm-12", "padding-default"]], template: function ServicesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServicesComponent, selectors: [["app-services"]], standalone: false, decls: 13, vars: 6, consts: [["appScrolleffects", ""], [1, "container-fluid", "section1", "section", "slide-up-page"], [1, "pb-48", "text-blur-reveal"], [4, "ngFor", "ngForOf"], [1, "pt-80", 2, "padding-bottom", "8px"], ["alt", "image", 1, "pic", 3, "src"], ["class", "container-fluid section2 section", 4, "ngIf"], ["class", "container-fluid section3 section", 4, "ngIf"], [1, "pt-80", "menu", 2, "background-color", "#FFFFFF"], [1, "pb-80"], ["bgColor", "background-color:white;", 3, "currentService"], ["align", "left", 1, "per32", 2, "text-align", "left", 3, "ngStyle"], [1, "container-fluid", "section2", "section"], [1, "soln"], ["id", "first", 1, "width-50"], [2, "padding-bottom", "8px", "margin", "0px"], [1, "width-50", "ml-32"], [3, "ngClass", 4, "ngFor", "ngForOf"], [1, "des"], [3, "ngClass"], [1, "container-fluid", "section3", "section"], [1, "row"], ["class", "col-12 col-md-6 col-sm-12 padding-default", 4, "ngFor", "ngForOf"], [1, "col-12", "col-md-6", "col-sm-12", "padding-default"]], template: function ServicesComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0)(1, "h2", 1);
-      \u0275\u0275text(2);
+      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "h2", 2);
+      \u0275\u0275text(3);
       \u0275\u0275elementEnd();
-      \u0275\u0275template(3, ServicesComponent_div_3_Template, 3, 4, "div", 2);
-      \u0275\u0275elementStart(4, "div", 3);
-      \u0275\u0275element(5, "img", 4);
+      \u0275\u0275template(4, ServicesComponent_div_4_Template, 3, 4, "div", 3);
+      \u0275\u0275elementStart(5, "div", 4);
+      \u0275\u0275element(6, "img", 5);
       \u0275\u0275elementEnd()();
-      \u0275\u0275template(6, ServicesComponent_div_6_Template, 11, 5, "div", 5)(7, ServicesComponent_div_7_Template, 5, 1, "div", 5);
-      \u0275\u0275elementStart(8, "div", 6)(9, "h2", 7);
-      \u0275\u0275text(10, "Other Services");
+      \u0275\u0275template(7, ServicesComponent_div_7_Template, 11, 5, "div", 6)(8, ServicesComponent_div_8_Template, 5, 1, "div", 7);
+      \u0275\u0275elementStart(9, "div", 8)(10, "h2", 9);
+      \u0275\u0275text(11, "Other Services");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(11, "app-service-menu", 8);
-      \u0275\u0275elementEnd();
+      \u0275\u0275element(12, "app-service-menu", 10);
+      \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(2);
+      \u0275\u0275advance(3);
       \u0275\u0275textInterpolate(ctx.serviceData == null ? null : ctx.serviceData.topic);
       \u0275\u0275advance();
       \u0275\u0275property("ngForOf", ctx.serviceData == null ? null : ctx.serviceData.desc1);
@@ -62500,7 +62580,7 @@ var ServicesComponent = class _ServicesComponent {
       \u0275\u0275advance(4);
       \u0275\u0275property("currentService", ctx.serviceName);
     }
-  }, dependencies: [NgClass, NgForOf, NgIf, NgStyle, ServiceMenuComponent, UpperCasePipe], styles: ['\n\n.nav-item[_ngcontent-%COMP%] {\n  font-weight: bold;\n  color: black;\n}\n.section1[_ngcontent-%COMP%] {\n  padding: 80px 48px;\n  background-color: #FFFFFF;\n}\n.section2[_ngcontent-%COMP%] {\n  padding-left: 48px;\n  padding-right: 48px;\n  padding-top: 80px;\n  padding-bottom: 32px;\n  background-color: #FBFBFB;\n}\nh2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  display: flex;\n  align-items: center;\n  color: #121314;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  margin: 0;\n}\nh5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #121314;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n}\n.des[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #747B80;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n}\n.per32[_ngcontent-%COMP%] {\n  margin-left: 32%;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.pt-80[_ngcontent-%COMP%] {\n  padding-top: 80px;\n}\n.pic[_ngcontent-%COMP%] {\n  height: 520px;\n  width: 66%;\n}\n.pb-80[_ngcontent-%COMP%] {\n  padding-bottom: 80px;\n  margin: 0px;\n}\n.menu[_ngcontent-%COMP%] {\n  padding-left: 48px;\n  padding-right: 16px;\n  padding-bottom: 38px;\n}\n.ml-32[_ngcontent-%COMP%] {\n  margin-left: 32px;\n}\n.width-50[_ngcontent-%COMP%] {\n  width: 50%;\n}\n.soln[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n}\n.padding-default[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.padding-none[_ngcontent-%COMP%] {\n  padding-bottom: 0px;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  border: 5px solid #f3f3f3;\n  border-top: 5px solid #3498db;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@media only screen and (max-width: 768px) {\n  p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  h5[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 29.4px;\n  }\n  h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n  }\n  .des[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%] {\n    padding: 64px 16px;\n  }\n  .per32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .pt-80[_ngcontent-%COMP%] {\n    padding-top: 48px;\n  }\n  .pic[_ngcontent-%COMP%] {\n    height: 240px;\n    width: 100%;\n  }\n  .pb-80[_ngcontent-%COMP%] {\n    padding-bottom: 48px !important;\n    margin: 0px;\n  }\n  .menu[_ngcontent-%COMP%] {\n    padding-left: 16px;\n  }\n  .ml-32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .width-50[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n  .soln[_ngcontent-%COMP%] {\n    display: flex;\n    width: 100%;\n    flex-direction: column;\n  }\n  #first[_ngcontent-%COMP%] {\n    padding-bottom: 48px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .padding-default[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .padding-none[_ngcontent-%COMP%] {\n    padding-bottom: 0px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n}\n/*# sourceMappingURL=services.component.css.map */'] });
+  }, dependencies: [NgClass, NgForOf, NgIf, NgStyle, ServiceMenuComponent, ScrolleffectsDirective, UpperCasePipe], styles: ['\n\n.nav-item[_ngcontent-%COMP%] {\n  font-weight: bold;\n  color: black;\n}\n.section1[_ngcontent-%COMP%] {\n  padding: 80px 48px;\n  background-color: #FFFFFF;\n}\n.section2[_ngcontent-%COMP%] {\n  padding-left: 48px;\n  padding-right: 48px;\n  padding-top: 80px;\n  padding-bottom: 32px;\n  background-color: #FBFBFB;\n}\nh2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  display: flex;\n  align-items: center;\n  color: #121314;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  margin: 0;\n}\nh5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #121314;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n}\n.des[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #747B80;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n}\n.per32[_ngcontent-%COMP%] {\n  margin-left: 32%;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.pt-80[_ngcontent-%COMP%] {\n  padding-top: 80px;\n}\n.pic[_ngcontent-%COMP%] {\n  height: 520px;\n  width: 66%;\n}\n.pb-80[_ngcontent-%COMP%] {\n  padding-bottom: 80px;\n  margin: 0px;\n}\n.menu[_ngcontent-%COMP%] {\n  padding-left: 48px;\n  padding-right: 16px;\n  padding-bottom: 38px;\n}\n.ml-32[_ngcontent-%COMP%] {\n  margin-left: 32px;\n}\n.width-50[_ngcontent-%COMP%] {\n  width: 50%;\n}\n.soln[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n}\n.padding-default[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.padding-none[_ngcontent-%COMP%] {\n  padding-bottom: 0px;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  border: 5px solid #f3f3f3;\n  border-top: 5px solid #3498db;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@media only screen and (max-width: 768px) {\n  p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  h5[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 29.4px;\n  }\n  h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n  }\n  .des[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%] {\n    padding: 64px 16px;\n  }\n  .per32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .pt-80[_ngcontent-%COMP%] {\n    padding-top: 48px;\n  }\n  .pic[_ngcontent-%COMP%] {\n    height: 240px;\n    width: 100%;\n  }\n  .pb-80[_ngcontent-%COMP%] {\n    padding-bottom: 48px !important;\n    margin: 0px;\n  }\n  .menu[_ngcontent-%COMP%] {\n    padding-left: 16px;\n  }\n  .ml-32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .width-50[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n  .soln[_ngcontent-%COMP%] {\n    display: flex;\n    width: 100%;\n    flex-direction: column;\n  }\n  #first[_ngcontent-%COMP%] {\n    padding-bottom: 48px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .padding-default[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .padding-none[_ngcontent-%COMP%] {\n    padding-bottom: 0px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n}\n/*# sourceMappingURL=services.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ServicesComponent, { className: "ServicesComponent", filePath: "src/app/pages/services/services.component.ts", lineNumber: 16 });
@@ -62646,7 +62726,6 @@ var HomescrollDirective = class _HomescrollDirective {
 // src/app/pages/home/home.component.ts
 var _c06 = ["videoPlayer"];
 var _c15 = ["section"];
-var _c23 = (a0) => ({ "visibility": a0 });
 function HomeComponent_div_4_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 28);
@@ -62695,7 +62774,7 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.videoPlayer = _t.first);
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.sections = _t);
     }
-  }, standalone: false, decls: 66, vars: 9, consts: [["mainDiv", ""], ["section", ""], ["appHomescroll", "", 1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], [1, "section"], ["class", "loader", 4, "ngIf"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", "inline", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "waiting", "loadeddata", "playing", "ngStyle"], [1, "fsr-67", "p-48", "pb-48", "text-white", "videoText", 2, "position", "absolute", "margin", "0px", "bottom", "0%", "width", "100vw", "max-height", "90%", "overflow-y", "scroll"], [2, "background", "linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [1, "col-md-12", "section1"], ["align", "center", 2, "padding-bottom", "24px", "margin-bottom", "0px"], ["align", "center"], [1, "col-12", "section2", "section"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], [1, "col-12", "section3", "section"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], [1, "section5", "section"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 wipe-up", 4, "ngFor", "ngForOf"], [1, "loader"], [1, "spinner"], [1, "col-md-4", "col-12", "h-100", "wipe-up"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
+  }, standalone: false, decls: 66, vars: 6, consts: [["mainDiv", ""], ["section", ""], ["appHomescroll", "", 1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], [1, "section"], ["class", "loader", 4, "ngIf"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", "inline", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "waiting", "loadeddata", "playing"], [1, "fsr-67", "p-48", "pb-48", "text-white", "videoText", 2, "position", "absolute", "margin", "0px", "bottom", "0%", "line-height", "80.7px", "width", "100vw", "max-height", "90%", "overflow-y", "scroll"], [2, "background", "linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [1, "col-md-12", "section1"], ["align", "center", 2, "padding-bottom", "24px", "margin-bottom", "0px"], ["align", "center"], [1, "col-12", "section2", "section"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], [1, "col-12", "section3", "section"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], [1, "section5", "section"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 wipe-up", 4, "ngFor", "ngForOf"], [1, "loader"], [1, "spinner"], [1, "col-md-4", "col-12", "h-100", "wipe-up"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "div", 2, 0)(2, "div", 3, 1);
@@ -62790,9 +62869,7 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275attribute("data-index", 1);
       \u0275\u0275advance(2);
       \u0275\u0275property("ngIf", ctx.isLoading == true);
-      \u0275\u0275advance();
-      \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(7, _c23, ctx.isLoading ? "hidden" : "visible"));
-      \u0275\u0275advance(9);
+      \u0275\u0275advance(10);
       \u0275\u0275attribute("data-index", 2);
       \u0275\u0275advance(5);
       \u0275\u0275attribute("data-index", 3);
@@ -62801,7 +62878,7 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275advance(39);
       \u0275\u0275property("ngForOf", ctx.resources);
     }
-  }, dependencies: [NgForOf, NgIf, NgStyle, ServiceMenuComponent, ResourceCardComponent, HomescrollDirective], styles: ['\n\n.section1[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%], \n.section3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  padding: 80px 48px;\n  width: 100%;\n  min-height: 100vh;\n  box-sizing: border-box;\n}\n.pic[_ngcontent-%COMP%] {\n  width: 100vw;\n  height: 100vh;\n  object-fit: cover;\n}\n.loader[_ngcontent-%COMP%] {\n  padding-bottom: 20vh;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 8;\n  background-color: black;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  border: 5px solid #f3f3f3;\n  border-top: 5px solid #3498db;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.section1[_ngcontent-%COMP%] {\n  background-color: #FFFFFF;\n}\n.section2[_ngcontent-%COMP%] {\n  background-color: #FBFBFB;\n  padding-right: 16px;\n}\n.section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  padding-right: 32px;\n}\n.section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: 16px;\n}\n.section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  padding-bottom: 40px;\n  margin-bottom: 0;\n}\n.section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 400;\n  font-size: 38px;\n  line-height: 46px;\n  text-align: center;\n  font-family: "NimbusSanL";\n  color: #121314;\n  padding: 0 114px 16px;\n  margin: 0px;\n}\n.section4[_ngcontent-%COMP%] {\n  background-color: #FBFBFB;\n}\n.subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: 40px;\n  padding-top: 40px;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #FB4F23;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: 8px;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #121314;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n  padding-bottom: 16px;\n  margin: 0px;\n}\n.head[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n}\n#sub[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.videoText[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 400;\n  font-size: 67px;\n  line-height: 80px;\n}\n@media only screen and (max-width: 768px) {\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%], \n   .section5[_ngcontent-%COMP%] {\n    padding: 64px 16px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-right: 16px;\n    padding-bottom: 38px;\n  }\n  .section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    line-height: 16.8px;\n    margin-bottom: 0px;\n    padding-bottom: 12px;\n  }\n  .section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n    padding-bottom: 40px;\n  }\n  .section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    padding-left: 0px;\n    padding-right: 0px;\n    padding-bottom: 0px;\n    width: 90vw;\n    font-size: 28px;\n    line-height: 39.2px;\n  }\n  .subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n    font-size: 28px;\n    line-height: 39.2px;\n    color: #FB4F23;\n  }\n  .subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n    padding-bottom: 8px;\n    font-size: 21px;\n    line-height: 29.4px;\n  }\n  .subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n    padding-bottom: 40px;\n  }\n  .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    padding-right: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: 16px !important;\n  }\n  .videoText[_ngcontent-%COMP%] {\n    font-style: normal;\n    font-weight: 400;\n    font-size: 51px;\n    line-height: 61px;\n  }\n}\n/*# sourceMappingURL=home.component.css.map */'] });
+  }, dependencies: [NgForOf, NgIf, ServiceMenuComponent, ResourceCardComponent, HomescrollDirective], styles: ['\n\n.section2[_ngcontent-%COMP%], \n.section3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  padding: 80px 48px;\n  width: 100%;\n  min-height: 100vh;\n  box-sizing: border-box;\n}\n.section1[_ngcontent-%COMP%] {\n  min-height: 100vh;\n}\n.pic[_ngcontent-%COMP%] {\n  width: 100vw;\n  height: 100vh;\n  object-fit: cover;\n}\n.loader[_ngcontent-%COMP%] {\n  padding-bottom: 20vh;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 8;\n  background-color: black;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  border: 5px solid #f3f3f3;\n  border-top: 5px solid #3498db;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.section1[_ngcontent-%COMP%] {\n  background-color: #FFFFFF;\n}\n.section2[_ngcontent-%COMP%] {\n  background-color: #FBFBFB;\n  padding-right: 16px;\n}\n.section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  padding-right: 32px;\n}\n.section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: 16px;\n}\n.section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  padding-bottom: 40px;\n  margin-bottom: 0;\n}\n.section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 400;\n  font-size: 38px;\n  line-height: 46px;\n  text-align: center;\n  font-family: "NimbusSanL";\n  color: #121314;\n  padding: 0 114px 16px;\n  margin: 0px;\n}\n.section4[_ngcontent-%COMP%] {\n  background-color: #FBFBFB;\n}\n.subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: 40px;\n  padding-top: 40px;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #FB4F23;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: 8px;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #121314;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n  padding-bottom: 16px;\n  margin: 0px;\n}\n.head[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n}\n#sub[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.videoText[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 400;\n  font-size: 67px;\n  line-height: 80px;\n}\n@media only screen and (max-width: 768px) {\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%], \n   .section5[_ngcontent-%COMP%] {\n    padding: 64px 16px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-right: 16px;\n    padding-bottom: 38px;\n  }\n  .section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    line-height: 16.8px;\n    margin-bottom: 0px;\n    padding-bottom: 12px;\n  }\n  .section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n    padding-bottom: 40px;\n  }\n  .section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    padding-left: 0px;\n    padding-right: 0px;\n    padding-bottom: 0px;\n    width: 90vw;\n    font-size: 28px;\n    line-height: 39.2px;\n  }\n  .subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n    font-size: 28px;\n    line-height: 39.2px;\n    color: #FB4F23;\n  }\n  .subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n    padding-bottom: 8px;\n    font-size: 21px;\n    line-height: 29.4px;\n  }\n  .subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n    padding-bottom: 40px;\n  }\n  .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    padding-right: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: 16px !important;\n  }\n  .videoText[_ngcontent-%COMP%] {\n    font-style: normal;\n    font-weight: 400;\n    font-size: 51px;\n    line-height: 61px;\n  }\n}\n/*# sourceMappingURL=home.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/pages/home/home.component.ts", lineNumber: 13 });
@@ -62811,7 +62888,7 @@ var HomeComponent = class _HomeComponent {
 function ResourcesComponent_div_43_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 15);
-    \u0275\u0275element(1, "app-resource-card", 19);
+    \u0275\u0275element(1, "app-resource-card", 21);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62825,7 +62902,7 @@ var ResourcesComponent = class _ResourcesComponent {
   static \u0275fac = function ResourcesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ResourcesComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourcesComponent, selectors: [["app-resources"]], standalone: false, decls: 44, vars: 1, consts: [[1, "p-48"], [1, "mt-80", "fsr-51"], [1, "d-flex", "justify-content-between", "nav-resource", "fsr-21", "mt-80", "p-0", "mb-0"], ["href", "", 1, "nav-link", "nav-active", "p-0"], ["href", "", 1, "nav-link", "p-0"], [1, "mt-48"], [1, "row"], [1, "col-md-8", "col-12", "h-100", "card-hover"], ["src", "assets/images/res1.png", "alt", "", 1, "col-12", "w-100", "h-75", "p-0"], [1, "d-flex", "justify-content-between", "mt-4", "mb-2"], [1, "color-blue", "fsb-16", "p-0", "pe-1", "m-0"], [1, "fsr-16", "color-grey", "m-0", "p-0"], ["href", "/d2dWebsite-1.0.0/resource?id=1&page=resources", 1, "fsr-28", "link-text"], ["src", "assets/images/link.png", "alt", "", 1, "px-2", "pb-2"], [1, "color-lightgrey", "fsr-21", "my-3"], [1, "col-md-4", "col-12", "h-100", "card-hover"], ["src", "assets/images/res2.png", "width", "100%", "alt", "", 1, "col-12", "p-0"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 card-hover", 4, "ngFor", "ngForOf"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourcesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourcesComponent, selectors: [["app-resources"]], standalone: false, decls: 44, vars: 1, consts: [[1, "p-48"], [1, "mt-80", "fsr-51"], [1, "d-flex", "justify-content-between", "nav-resource", "fsr-21", "mt-80", "p-0", "mb-0"], ["href", "", 1, "nav-link", "nav-active", "p-0"], ["href", "", 1, "nav-link", "p-0"], [1, "mt-48"], [1, "row"], [1, "col-md-8", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res1.png", "alt", "", 1, "col-12", "w-100", "h-75", "p-0"], [1, "d-flex", "justify-content-between", "mt-4", "mb-2"], [1, "color-blue", "fsb-16", "p-0", "pe-1", "m-0"], [1, "fsr-16", "color-grey", "m-0", "p-0"], ["href", "/d2dWebsite-1.0.0/resource?id=1&page=resources", 1, "fsr-28", "link-text"], ["src", "assets/images/link.png", "alt", "", 1, "px-2", "pb-2"], [1, "color-lightgrey", "fsr-21", "my-3"], [1, "col-md-4", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res2.png", "width", "100%", "alt", "", 1, "col-12", "p-0"], [1, "w-75"], ["href", "/d2dWebsite-1.0.0/resource?id=1&page=resources", 1, "fsr-28", "link-text", "pe-1"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 card-link-hover", 4, "ngFor", "ngForOf"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourcesComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "p", 1);
       \u0275\u0275text(2, "Resources");
@@ -62867,7 +62944,7 @@ var ResourcesComponent = class _ResourcesComponent {
       \u0275\u0275elementStart(33, "span", 11);
       \u0275\u0275text(34, " Dec 20, 2024");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(35, "div")(36, "a", 12);
+      \u0275\u0275elementStart(35, "div", 17)(36, "a", 18);
       \u0275\u0275text(37, "RNA-Seq Analysis and Gene Regulation");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(38, "i");
@@ -62876,8 +62953,8 @@ var ResourcesComponent = class _ResourcesComponent {
       \u0275\u0275elementStart(40, "p", 14);
       \u0275\u0275text(41, "Analyzing RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns.");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(42, "div", 17);
-      \u0275\u0275template(43, ResourcesComponent_div_43_Template, 2, 5, "div", 18);
+      \u0275\u0275elementStart(42, "div", 19);
+      \u0275\u0275template(43, ResourcesComponent_div_43_Template, 2, 5, "div", 20);
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
@@ -62896,86 +62973,6 @@ var ResourcesComponent = class _ResourcesComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ResourcesComponent, { className: "ResourcesComponent", filePath: "src/app/pages/resources/resources.component.ts", lineNumber: 22 });
 })();
-
-// src/app/directive/scrolleffects.directive.ts
-var ScrolleffectsDirective = class _ScrolleffectsDirective {
-  el;
-  renderer;
-  isTransitioning = false;
-  lastScrollY = 0;
-  section1;
-  section2;
-  text;
-  image;
-  section2Reached = false;
-  // Allow free scrolling after Section 2
-  constructor(el, renderer) {
-    this.el = el;
-    this.renderer = renderer;
-  }
-  ngAfterViewInit() {
-    const sections = this.el.nativeElement.querySelectorAll(".section, .section1, .section2");
-    if (sections.length < 2)
-      return;
-    this.section1 = sections[0];
-    this.section2 = sections[1];
-    this.text = this.section1.querySelector("p");
-    this.image = this.section1.querySelector("img");
-  }
-  onWindowScroll() {
-    if (!this.section1 || !this.section2 || !this.text || !this.image)
-      return;
-    if (this.isTransitioning)
-      return;
-    const scrollY = window.scrollY;
-    const fadeStart = this.section1.offsetTop;
-    const fadeEnd = fadeStart + 400;
-    const section2Start = this.section2.offsetTop;
-    const isScrollingDown = scrollY > this.lastScrollY;
-    this.lastScrollY = scrollY;
-    if (isScrollingDown && scrollY >= fadeStart && scrollY <= fadeEnd) {
-      let opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
-      opacity = Math.max(opacity, 0);
-      this.renderer.setStyle(this.text, "opacity", opacity.toString());
-      const moveUpValue = Math.min((scrollY - fadeStart) * 0.8, 200);
-      this.renderer.setStyle(this.image, "transform", `translateY(-${moveUpValue}px)`);
-    }
-    if (!isScrollingDown && scrollY < fadeEnd) {
-      this.renderer.setStyle(this.image, "transform", `translateY(0px)`);
-    }
-    if (!this.section2Reached && scrollY >= fadeEnd && isScrollingDown) {
-      this.autoScrollTo(this.section2.offsetTop, false, true);
-    }
-    if (scrollY < section2Start - 100 && !isScrollingDown) {
-      this.autoScrollTo(this.section1.offsetTop, true);
-    }
-  }
-  autoScrollTo(position, reverse = false, unlockScroll = false) {
-    this.isTransitioning = true;
-    window.scrollTo({ top: position, behavior: "smooth" });
-    setTimeout(() => {
-      this.isTransitioning = false;
-      if (reverse) {
-        this.renderer.setStyle(this.text, "opacity", "1");
-        this.renderer.setStyle(this.image, "transform", "translateY(0px)");
-        this.section2Reached = false;
-      }
-      if (unlockScroll) {
-        this.section2Reached = true;
-      }
-    }, 800);
-  }
-  static \u0275fac = function ScrolleffectsDirective_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ScrolleffectsDirective)(\u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(Renderer2));
-  };
-  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({ type: _ScrolleffectsDirective, selectors: [["", "appScrolleffects", ""]], hostBindings: function ScrolleffectsDirective_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("scroll", function ScrolleffectsDirective_scroll_HostBindingHandler($event) {
-        return ctx.onWindowScroll($event);
-      }, false, \u0275\u0275resolveWindow);
-    }
-  }, standalone: false });
-};
 
 // src/app/pages/resource-detail/resource-detail.component.ts
 function ResourceDetailComponent_div_81_Template(rf, ctx) {
@@ -63141,7 +63138,7 @@ var AboutusComponent = class _AboutusComponent {
   static \u0275fac = function AboutusComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AboutusComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AboutusComponent, selectors: [["app-aboutus"]], standalone: false, decls: 40, vars: 0, consts: [["appScrolleffects", "", 1, "p-48", "slide-up-page"], [1, "section1", "section"], [1, "fsr-67", "w-75", "mt-80"], [1, "row", "mt-48"], [1, "col-md-4", "col-12"], [1, "col-md-8", "col-12"], [1, "fsr-21"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4"], ["src", "assets/images/team.png", "alt", "team", 1, "image-view", "mt-80"], [1, "mt-80", "section2", "section"], [1, "text-right", "my-3"], [1, "color-lightgrey", "fsb-16"], [1, "fsr-51"], [1, "mt-80"], [1, "row", "my-3"], [1, "col-md-4", "text-uppercase", "fsb-21"], [1, "col-md-8", "col-12", "multi-line", "fsr-21", "lh-29"], [1, "col-md-4", "text-uppercase", "fsb-21", "lh-29"], [1, "col-md-8", "col-12", "multi-line", "fsr-21"], [1, "text-secondary", "fsb-16", "mb-3"], [1, "fsr-21", "lh-29"]], template: function AboutusComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AboutusComponent, selectors: [["app-aboutus"]], standalone: false, decls: 40, vars: 0, consts: [["appScrolleffects", "", 1, "p-48", "slide-up-page"], [1, "section1", "section"], [1, "fsr-67", "w-75", "mt-80"], [1, "row", "mt-48"], [1, "col-md-4", "col-12"], [1, "col-md-8", "col-12"], [1, "fsr-21"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4"], ["src", "assets/images/team.png", "alt", "team", 1, "image-view", "mt-80"], [1, "mt-80", "section2", "section"], [1, "text-right", "my-3"], [1, "color-lightgrey", "fsb-16"], [1, "fsr-51"], [1, "mt-80"], [1, "row", "my-3"], [1, "col-md-4", "text-uppercase", "fsb-21"], [1, "col-md-8", "col-12", "multi-line", "fsr-21", "lh-29"], [1, "col-md-4", "text-uppercase", "fsb-21", "lh-29"], [1, "col-md-8", "col-12", "multi-line", "fsr-21"], [1, "mt-80", "mb-80"], [1, "text-secondary", "fsb-16", "p-0", "lh-22"], [1, "fsr-21", "lh-29"]], template: function AboutusComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "p", 2);
       \u0275\u0275text(3, "We Revolutionize Research Through Data-Driven Innovation");
@@ -63174,7 +63171,7 @@ var AboutusComponent = class _AboutusComponent {
       \u0275\u0275elementStart(27, "pre", 18);
       \u0275\u0275text(28, "We are dedicated to advancing the accuracy, efficiency, and depth of research through a range of customized services, including bioinformatics training, custom pipeline development, advanced sequencing analysis, statistical testing, data visualization, epigenetics analysis, and cloud tool deployment.\n                \nWe address a wide spectrum of genetic research across diverse biological systems, driving innovative solutions to advance our understanding of health, disease, and ecosystems.\n            ");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(29, "section", 13)(30, "div")(31, "section", 19);
+      \u0275\u0275elementStart(29, "section", 19)(30, "div")(31, "section", 20);
       \u0275\u0275text(32, "Our Team");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(33, "section", 12);
@@ -63182,7 +63179,7 @@ var AboutusComponent = class _AboutusComponent {
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(35, "div", 3);
       \u0275\u0275element(36, "div", 4);
-      \u0275\u0275elementStart(37, "div", 5)(38, "p", 20);
+      \u0275\u0275elementStart(37, "div", 5)(38, "p", 21);
       \u0275\u0275text(39, "We are a team of passionate bioinformaticians and data scientists and we are dedicated to providing innovative solutions in life science research. Our expertise spans a wide range of bioinformatics services, including genomic sequencing, and computational modeling, all designed to unlock the potential hidden within complex biological data.");
       \u0275\u0275elementEnd()()()()()();
     }
@@ -63404,11 +63401,15 @@ function NavbarComponent_div_0_Template(rf, ctx) {
     \u0275\u0275classProp("active", ctx_r1.isHome);
     \u0275\u0275advance(3);
     \u0275\u0275classProp("active", ctx_r1.isServiceVisible);
-    \u0275\u0275advance(4);
+    \u0275\u0275advance(3);
+    \u0275\u0275property("src", ctx_r1.serviceVisible ? "assets/icons/drop-up-white.svg" : "assets/icons/dropdown-white.svg", \u0275\u0275sanitizeUrl);
+    \u0275\u0275advance();
     \u0275\u0275property("ngIf", ctx_r1.serviceVisible);
     \u0275\u0275advance(2);
     \u0275\u0275classProp("active", ctx_r1.isCompany);
-    \u0275\u0275advance(4);
+    \u0275\u0275advance(3);
+    \u0275\u0275property("src", ctx_r1.isCompDropdown ? "assets/icons/drop-up-white.svg" : "assets/icons/dropdown-white.svg", \u0275\u0275sanitizeUrl);
+    \u0275\u0275advance();
     \u0275\u0275property("ngIf", ctx_r1.isCompDropdown);
     \u0275\u0275advance(5);
     \u0275\u0275property("ngIf", ctx_r1.serviceVisible);
@@ -63419,7 +63420,7 @@ function NavbarComponent_div_0_Template(rf, ctx) {
 function NavbarComponent_div_1_ul_16_li_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r10 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "li", 25)(1, "h6")(2, "a", 51);
+    \u0275\u0275elementStart(0, "li", 25)(1, "h6")(2, "a", 50);
     \u0275\u0275listener("click", function NavbarComponent_div_1_ul_16_li_1_Template_a_click_2_listener() {
       const menu_r11 = \u0275\u0275restoreView(_r10).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
@@ -63452,7 +63453,7 @@ function NavbarComponent_div_1_ul_16_Template(rf, ctx) {
 function NavbarComponent_div_1_ul_22_Template(rf, ctx) {
   if (rf & 1) {
     const _r12 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "ul", 23)(1, "li", 25)(2, "h6")(3, "a", 51);
+    \u0275\u0275elementStart(0, "ul", 23)(1, "li", 25)(2, "h6")(3, "a", 50);
     \u0275\u0275listener("click", function NavbarComponent_div_1_ul_22_Template_a_click_3_listener() {
       \u0275\u0275restoreView(_r12);
       const ctx_r1 = \u0275\u0275nextContext(2);
@@ -63463,7 +63464,7 @@ function NavbarComponent_div_1_ul_22_Template(rf, ctx) {
     \u0275\u0275elementStart(5, "span", 28);
     \u0275\u0275element(6, "img", 29);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "li", 25)(8, "h6")(9, "a", 51);
+    \u0275\u0275elementStart(7, "li", 25)(8, "h6")(9, "a", 50);
     \u0275\u0275listener("click", function NavbarComponent_div_1_ul_22_Template_a_click_9_listener() {
       \u0275\u0275restoreView(_r12);
       const ctx_r1 = \u0275\u0275nextContext(2);
@@ -63479,13 +63480,13 @@ function NavbarComponent_div_1_ul_22_Template(rf, ctx) {
 function NavbarComponent_div_1_nav_27_div_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r13 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 54);
+    \u0275\u0275elementStart(0, "div", 53);
     \u0275\u0275listener("click", function NavbarComponent_div_1_nav_27_div_1_Template_div_click_0_listener() {
       const menu_r14 = \u0275\u0275restoreView(_r13).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r1.redirect(menu_r14.image));
     });
-    \u0275\u0275elementStart(1, "h6")(2, "a", 55);
+    \u0275\u0275elementStart(1, "h6")(2, "a", 54);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(4, "span", 28);
@@ -63500,8 +63501,8 @@ function NavbarComponent_div_1_nav_27_div_1_Template(rf, ctx) {
 }
 function NavbarComponent_div_1_nav_27_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "nav", 52);
-    \u0275\u0275template(1, NavbarComponent_div_1_nav_27_div_1_Template, 6, 1, "div", 53);
+    \u0275\u0275elementStart(0, "nav", 51);
+    \u0275\u0275template(1, NavbarComponent_div_1_nav_27_div_1_Template, 6, 1, "div", 52);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63513,25 +63514,25 @@ function NavbarComponent_div_1_nav_27_Template(rf, ctx) {
 function NavbarComponent_div_1_nav_28_Template(rf, ctx) {
   if (rf & 1) {
     const _r15 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "nav", 56)(1, "div", 57);
+    \u0275\u0275elementStart(0, "nav", 55)(1, "div", 56);
     \u0275\u0275listener("click", function NavbarComponent_div_1_nav_28_Template_div_click_1_listener() {
       \u0275\u0275restoreView(_r15);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("aboutus"));
     });
-    \u0275\u0275elementStart(2, "h6")(3, "a", 55);
+    \u0275\u0275elementStart(2, "h6")(3, "a", 54);
     \u0275\u0275text(4, "About Us");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(5, "span", 28);
     \u0275\u0275element(6, "img", 29);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "div", 57);
+    \u0275\u0275elementStart(7, "div", 56);
     \u0275\u0275listener("click", function NavbarComponent_div_1_nav_28_Template_div_click_7_listener() {
       \u0275\u0275restoreView(_r15);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("resources"));
     });
-    \u0275\u0275elementStart(8, "h6")(9, "a", 55);
+    \u0275\u0275elementStart(8, "h6")(9, "a", 54);
     \u0275\u0275text(10, "Resources");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(11, "span", 28);
@@ -63570,11 +63571,11 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     });
     \u0275\u0275text(13, " SERVICES ");
     \u0275\u0275elementStart(14, "span", 14);
-    \u0275\u0275element(15, "img", 46);
+    \u0275\u0275element(15, "img", 15);
     \u0275\u0275elementEnd()();
     \u0275\u0275template(16, NavbarComponent_div_1_ul_16_Template, 2, 1, "ul", 16);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(17, "li", 17)(18, "a", 47);
+    \u0275\u0275elementStart(17, "li", 17)(18, "a", 46);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_18_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63586,11 +63587,11 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     });
     \u0275\u0275text(19, " COMPANY ");
     \u0275\u0275elementStart(20, "span", 14);
-    \u0275\u0275element(21, "img", 46);
+    \u0275\u0275element(21, "img", 15);
     \u0275\u0275elementEnd()();
     \u0275\u0275template(22, NavbarComponent_div_1_ul_22_Template, 13, 0, "ul", 16);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(23, "li", 19)(24, "a", 48);
+    \u0275\u0275elementStart(23, "li", 19)(24, "a", 47);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_24_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63599,7 +63600,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     \u0275\u0275elementStart(25, "span");
     \u0275\u0275text(26, "Get in touch");
     \u0275\u0275elementEnd()()()()()();
-    \u0275\u0275template(27, NavbarComponent_div_1_nav_27_Template, 2, 1, "nav", 49)(28, NavbarComponent_div_1_nav_28_Template, 13, 0, "nav", 50);
+    \u0275\u0275template(27, NavbarComponent_div_1_nav_27_Template, 2, 1, "nav", 48)(28, NavbarComponent_div_1_nav_28_Template, 13, 0, "nav", 49);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63608,11 +63609,15 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     \u0275\u0275classProp("active", ctx_r1.isHome);
     \u0275\u0275advance(3);
     \u0275\u0275classProp("active", ctx_r1.isServiceVisible);
-    \u0275\u0275advance(4);
+    \u0275\u0275advance(3);
+    \u0275\u0275property("src", ctx_r1.serviceVisible ? "assets/icons/drop-up.svg" : "assets/icons/dropdown-black.svg", \u0275\u0275sanitizeUrl);
+    \u0275\u0275advance();
     \u0275\u0275property("ngIf", ctx_r1.serviceVisible);
     \u0275\u0275advance(2);
-    \u0275\u0275classProp("active", ctx_r1.isCompany);
-    \u0275\u0275advance(4);
+    \u0275\u0275classProp("active", ctx_r1.isCompDropdown);
+    \u0275\u0275advance(3);
+    \u0275\u0275property("src", ctx_r1.isCompDropdown ? "assets/icons/drop-up.svg" : "assets/icons/dropdown-black.svg", \u0275\u0275sanitizeUrl);
+    \u0275\u0275advance();
     \u0275\u0275property("ngIf", ctx_r1.isCompDropdown);
     \u0275\u0275advance(5);
     \u0275\u0275property("ngIf", ctx_r1.serviceVisible);
@@ -63688,9 +63693,9 @@ var NavbarComponent = class _NavbarComponent {
   static \u0275fac = function NavbarComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _NavbarComponent)(\u0275\u0275directiveInject(MatDialog), \u0275\u0275directiveInject(ActivatedRoute));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], standalone: false, decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw"], [1, "navbar", "navbar-expand-lg", "navbar-light", "bg-transparent", "nav-pad", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "navbar-brand", "logo"], ["src", "assets/images/Logomark-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px"], ["src", "assets/icons/menu-icon-white.svg", 2, "color", "#BFC0C0", "width", "32px", "height", "32px"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown", "mb-8"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], ["src", "assets/icons/dropdown-white.svg", 1, "dropdown-icon"], ["class", "mobile-nav", 4, "ngIf"], [1, "nav-item", "dropdown"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit;display: flex; flex-direction: row;margin:0px;", 4, "ngIf"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [2, "color", "#BFC0C0", "display", "flex", "align-items", "center"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw"], [1, "navbar", "navbar-expand-lg", "navbar-light", "bg-transparent", "nav-pad", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px", "z-index", "999", "position", "relative"], ["src", "assets/images/Logomark-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", 2, "width", "32px !important", "height", "32px !important"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", "mr-16", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["src", "assets/icons/dropdown-black.svg", 1, "dropdown-icon"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], standalone: false, decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw"], [1, "navbar", "navbar-expand-lg", "navbar-light", "bg-transparent", "nav-pad", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "navbar-brand", "logo"], ["src", "assets/images/Logomark-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown", "mb-8"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], [1, "nav-item", "dropdown"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit;display: flex; flex-direction: row;margin:0px;", 4, "ngIf"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [2, "color", "#BFC0C0", "display", "flex", "align-items", "center"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw"], [1, "navbar", "navbar-expand-lg", "navbar-light", "bg-transparent", "nav-pad", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px", "z-index", "999", "position", "relative"], ["src", "assets/images/Logomark-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", "mr-16", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275template(0, NavbarComponent_div_0_Template, 29, 10, "div", 0)(1, NavbarComponent_div_1_Template, 29, 10, "div", 1);
+      \u0275\u0275template(0, NavbarComponent_div_0_Template, 29, 12, "div", 0)(1, NavbarComponent_div_1_Template, 29, 12, "div", 1);
     }
     if (rf & 2) {
       \u0275\u0275property("ngIf", ctx.pageName === "home");
@@ -63999,6 +64004,10 @@ var NavbarComponent = class _NavbarComponent {
   width: 90px;
   height: 52px;
 }
+.logo-size1[_ngcontent-%COMP%] {
+  width: 52px;
+  height: 52px;
+}
 .companyNavBar[_ngcontent-%COMP%] {
   box-sizing: border-box;
   margin-top: 0px;
@@ -64088,6 +64097,128 @@ var NavbarComponent = class _NavbarComponent {
   }
   .pl-9[_ngcontent-%COMP%] {
     padding-left: 2px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .navbar[_ngcontent-%COMP%] {
+    width: 100vw;
+    justify-content: space-between !important;
+  }
+  .serviceNavBar-black[_ngcontent-%COMP%] {
+    flex-direction: row !important;
+    height: max-content;
+  }
+  .serviceNavBar[_ngcontent-%COMP%] {
+    flex-direction: row !important;
+    height: max-content;
+  }
+  h6[_ngcontent-%COMP%] {
+    text-align: start;
+  }
+  .serviceNavBar[_ngcontent-%COMP%] {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: none;
+  }
+  .serviceNavBar-black[_ngcontent-%COMP%] {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: none;
+  }
+  .mobile-nav[_ngcontent-%COMP%] {
+    display: block;
+    list-style: none;
+    padding-left: 0px;
+    width: 90vw;
+  }
+  .navbar-nav[_ngcontent-%COMP%] {
+    align-items: self-start;
+  }
+  .nav-bar[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {
+    justify-content: center !important;
+    width: calc(100vw - 32px);
+  }
+  .nav-bar-black[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%] {
+    justify-content: center !important;
+    width: calc(100vw - 32px);
+  }
+  .nav-bar[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {
+    width: calc(100vw - 37px);
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-bar-black[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {
+    width: calc(100vw - 37px);
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-bar[_ngcontent-%COMP%]   .navbar-light[_ngcontent-%COMP%]   .navbar-nav[_ngcontent-%COMP%]   .nav-link.active[_ngcontent-%COMP%] {
+    font-size: 21px;
+  }
+  .nav-bar[_ngcontent-%COMP%]   .navbar-light[_ngcontent-%COMP%]   .navbar-nav[_ngcontent-%COMP%]   .nav-link[_ngcontent-%COMP%]:hover {
+    font-size: 21px;
+  }
+  .nav-bar-black[_ngcontent-%COMP%]   .navbar-light[_ngcontent-%COMP%]   .navbar-nav[_ngcontent-%COMP%]   .nav-link.active[_ngcontent-%COMP%] {
+    font-size: 21px;
+  }
+  .nav-bar-black[_ngcontent-%COMP%]   .navbar-light[_ngcontent-%COMP%]   .navbar-nav[_ngcontent-%COMP%]   .nav-link[_ngcontent-%COMP%]:hover {
+    font-size: 21px;
+  }
+  .mr-16[_ngcontent-%COMP%] {
+    margin-right: 0px;
+  }
+  .mr-18[_ngcontent-%COMP%] {
+    margin-right: 0px;
+  }
+  .pt-48[_ngcontent-%COMP%] {
+    padding-top: 48px;
+  }
+  .px-21[_ngcontent-%COMP%] {
+    padding-top: 20.5px;
+    padding-bottom: 20.5px;
+  }
+  .px-19[_ngcontent-%COMP%] {
+    padding-top: 18.5px;
+    padding-bottom: 18.5px;
+  }
+  .dropdown-icon[_ngcontent-%COMP%] {
+    width: 23px;
+    height: 13px;
+  }
+  .mt-48[_ngcontent-%COMP%] {
+    margin-top: 48px !important;
+  }
+  .mb-8[_ngcontent-%COMP%] {
+    margin-bottom: 8px;
+  }
+  .companyNavBar[_ngcontent-%COMP%] {
+    display: none !important;
+  }
+  .companyNavBar-black[_ngcontent-%COMP%] {
+    display: none !important;
+  }
+  .pl-9[_ngcontent-%COMP%] {
+    padding-left: 2px;
+  }
+  .submenu[_ngcontent-%COMP%] {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 65%;
+    text-overflow: ellipsis;
+  }
+  .nav-pad[_ngcontent-%COMP%] {
+    padding: 16px;
+  }
+  .nav-bar-black[_ngcontent-%COMP%] {
+    padding: 0px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -64210,6 +64341,10 @@ var NavbarComponent = class _NavbarComponent {
   }
   .logo-size[_ngcontent-%COMP%] {
     width: 65px;
+    height: 32px;
+  }
+  .logo-size1[_ngcontent-%COMP%] {
+    width: 32px;
     height: 32px;
   }
   .nav-bar-black[_ngcontent-%COMP%] {
@@ -64346,9 +64481,11 @@ var AppComponent = class _AppComponent {
   static \u0275fac = function AppComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AppComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], standalone: false, decls: 4, vars: 0, consts: [[1, "m-0"], [1, "m-0", 2, "bottom", "0"]], template: function AppComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], standalone: false, decls: 5, vars: 0, consts: [[2, "width", "100vw", "overflow-x", "hidden"], [1, "m-0"], [1, "m-0", 2, "bottom", "0"]], template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275element(0, "app-navbar")(1, "router-outlet")(2, "app-getintouch", 0)(3, "app-footer", 1);
+      \u0275\u0275elementStart(0, "div", 0);
+      \u0275\u0275element(1, "app-navbar")(2, "router-outlet")(3, "app-getintouch", 1)(4, "app-footer", 2);
+      \u0275\u0275elementEnd();
     }
   }, dependencies: [RouterOutlet, NavbarComponent, FooterComponent, GetintouchComponent], encapsulation: 2 });
 };
@@ -65374,7 +65511,7 @@ var SharedResizeObserver = class _SharedResizeObserver {
 // node_modules/@angular/material/fesm2022/form-field.mjs
 var _c08 = ["notch"];
 var _c16 = ["matFormFieldNotchedOutline", ""];
-var _c24 = ["*"];
+var _c23 = ["*"];
 var _c33 = ["textField"];
 var _c43 = ["iconPrefixContainer"];
 var _c53 = ["textPrefixContainer"];
@@ -65941,7 +66078,7 @@ var MatFormFieldNotchedOutline = class _MatFormFieldNotchedOutline {
       open: [0, "matFormFieldNotchedOutlineOpen", "open"]
     },
     attrs: _c16,
-    ngContentSelectors: _c24,
+    ngContentSelectors: _c23,
     decls: 5,
     vars: 0,
     consts: [["notch", ""], [1, "mat-mdc-notch-piece", "mdc-notched-outline__leading"], [1, "mat-mdc-notch-piece", "mdc-notched-outline__notch"], [1, "mat-mdc-notch-piece", "mdc-notched-outline__trailing"]],

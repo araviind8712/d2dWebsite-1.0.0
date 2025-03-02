@@ -241,6 +241,7 @@ body {
 body {
   margin: 0;
   font-family: "NimbusSanL", sans-serif;
+  scroll-behavior: smooth;
 }
 .custom-dialog .mat-dialog-container {
   padding: 0;
@@ -333,6 +334,9 @@ body {
 .lh-29 {
   line-height: 29px !important;
 }
+.lh-22 {
+  line-height: 22.4px !important;
+}
 body {
   margin: 0;
   padding: 0;
@@ -364,7 +368,7 @@ body {
   transition: background-size 0.3s ease-in-out;
   color: #121314 !important;
 }
-.card-hover:hover .link-text:hover {
+.card-link-hover:hover .link-text {
   background-size: 100% 1px;
 }
 .fade-effect {
