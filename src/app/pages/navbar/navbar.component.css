@@ -72,8 +72,9 @@
     width: 100vw;
     left: 0px;
     top: 0px;
-    padding: 12px 48px;
-
+    height: 88px;
+    left: 0px;
+    top: 0px;
 }
 
 
@@ -247,13 +248,12 @@
     flex-wrap: wrap;
     height: 192px;
     left: 0px;
-    top: 90px;
+    position: absolute;
+    top: 88px;
     width: 100vw;
     background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
     color: #747B80;
-    padding-right: 15%;
-
 }
 
 
@@ -268,7 +268,7 @@
     flex-wrap: wrap;
     width: 1440px;
     left: 0px;
-    top: 90px;
+    top: 88px;
     width: 100vw;
     padding-right: 15%;
     background: rgba(255, 255, 255, 0.01);
@@ -283,6 +283,7 @@
     flex: 1 1 calc(33.33% - 16px);
     box-sizing: border-box;
     text-align: left;
+    width: 100/3%;
 }
 
 .serviceItems-black h4 {
@@ -330,7 +331,6 @@
     left: 0px;
     top: 90px;
     width: 100vw;
-    padding-right: 12%;
     background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
 }
@@ -363,6 +363,7 @@
     flex: 1 1 calc(33.33% - 16px);
     box-sizing: border-box;
     text-align: left;
+    width: 100/3%;
 }
 
 .serviceItems h4 {
