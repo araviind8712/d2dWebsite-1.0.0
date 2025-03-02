@@ -42,7 +42,7 @@ onWindowScroll() {
   if (isScrollingDown && scrollY >= fadeStart && scrollY <= fadeEnd) {
     let opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
     opacity = Math.max(opacity, 0);
-    this.renderer.setStyle(this.text, 'opacity', opacity.toString());
+    // this.renderer.setStyle(this.text, 'opacity', opacity.toString());
 
     const moveUpValue = Math.min((scrollY - fadeStart) * 0.8, 200);
     this.renderer.setStyle(this.image, 'transform', `translateY(-${moveUpValue}px)`);
@@ -50,7 +50,8 @@ onWindowScroll() {
 
   // **Prevent Moving Image Up When Scrolling Up**
   if (!isScrollingDown && scrollY < fadeEnd) {
-    this.renderer.setStyle(this.image, 'transform', `translateY(0px)`);
+    // this.renderer.setStyle(this.image, 'transform', `translateY(0)`);
+    this.smoothTransform(this.image, 0);
   }
 
   // **Auto-scroll to Section 2 (Once)**
@@ -64,6 +65,23 @@ onWindowScroll() {
   }
 }
 
+private smoothTransform(element: HTMLElement, targetValue: number) {
+  let currentValue = parseFloat(getComputedStyle(element).transform.split(',')[5]) || 0;
+
+  const step = () => {
+    currentValue += (targetValue - currentValue) * 0.2; // Adjust easing for smooth effect
+    if (Math.abs(currentValue - targetValue) < 1) {
+      this.renderer.setStyle(element, 'transform', `translateY(${targetValue}px)`);
+      return;
+    }
+    
+    this.renderer.setStyle(element, 'transform', `translateY(${currentValue}px)`);
+    requestAnimationFrame(step);
+  };
+
+  requestAnimationFrame(step);
+}
+
   private autoScrollTo(position: number, reverse: boolean = false, unlockScroll = false) {
     this.isTransitioning = true;
     window.scrollTo({ top: position, behavior: 'smooth' });
@@ -73,8 +91,9 @@ onWindowScroll() {
 
       if (reverse) {
         // Reset styles when returning to Section 1
-        this.renderer.setStyle(this.text, 'opacity', '1');
-        this.renderer.setStyle(this.image, 'transform', 'translateY(0px)');
+        // this.renderer.setStyle(this.text, 'opacity', '1');
+        // this.renderer.setStyle(this.image, 'transform', 'translateY(0px)');
+        this.smoothTransform(this.image, 0);
         
         // Reset flag to allow animation again when scrolling down
         this.section2Reached = false; 
@@ -84,7 +103,7 @@ onWindowScroll() {
       if (unlockScroll) {
         this.section2Reached = true;
       }
-    }, 800);
+    }, 500);
 }
 
 }

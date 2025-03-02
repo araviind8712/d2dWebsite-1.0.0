@@ -338,6 +338,10 @@ a {
   opacity: 0;
   animation: blurReveal 1.5s ease-in-out forwards;
 }
+
+.animate-image{
+    transition: transform 0.5s ease-in-out;
+}
 /* Animation Ends */
 
 
