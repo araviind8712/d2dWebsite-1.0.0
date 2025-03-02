@@ -62463,12 +62463,12 @@ var ServicesComponent = class _ServicesComponent {
   }
   ngOnInit() {
     setTimeout(() => {
+      this.route.queryParams.subscribe((data) => {
+        this.serviceName = data["service"];
+      });
+      this.serviceData = serviceDetails_default[0][this.serviceName];
       this.isLoading = false;
     }, 1e3);
-    this.route.queryParams.subscribe((data) => {
-      this.serviceName = data["service"];
-    });
-    this.serviceData = serviceDetails_default[0][this.serviceName];
   }
   openDialog() {
     this.dialog.open(ContactUsComponent, {
@@ -62478,8 +62478,6 @@ var ServicesComponent = class _ServicesComponent {
       position: { bottom: "0px" },
       panelClass: "custom-dialog"
     });
-  }
-  ngAfterViewInit() {
   }
   static \u0275fac = function ServicesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ServicesComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(MatDialog));
@@ -64116,7 +64114,7 @@ var FooterComponent = class _FooterComponent {
   static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FooterComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 59, vars: 0, consts: [[1, "footer"], [1, "row", "p-5", "m-0"], [1, "col-md-5", "col-12", "mt-5"], ["href", "/d2dWebsite-1.0.0/home?page=home"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com", 1, "pr-8"], ["src", "assets/images/facebook.png", "alt", ""], ["href", "https://www.instagram.com", 1, "pr-8"], ["src", "assets/images/instagram.png", "alt", ""], ["href", "https://github.com/DNA2discovery-D2D", 1, "pr-8"], ["src", "assets/images/github.png", "alt", ""], ["href", "https://www.twitter.com", 1, "pr-8"], ["src", "assets/images/twitter.png", "alt", ""], ["href", "https://www.linkedin.com/company/dna2discovery/", 1, "pr-8"], ["src", "assets/images/linkedin.png", "alt", ""], ["href", "https://www.youtube.com", 1, "pr-8"], ["src", "assets/images/youtube.png", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-12"], [1, "row"], [1, "col-md-6", "col-12"], [1, "text-white", "mt-43", "fsr-21"], [1, "d-flex", "flex-column"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/aboutus?page=aboutus", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/resources?pages=resources", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfo&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioEng&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=statisticalTesting&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=seqTech&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfoTraining&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16", "p-64"]], template: function FooterComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 59, vars: 0, consts: [[1, "footer"], [1, "row", "p-5", "m-0"], [1, "col-md-5", "col-12", "mt-5"], ["href", "/d2dWebsite-1.0.0/home?page=home"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com", 1, "pr-8"], ["src", "assets/icons/Facebook.svg", "alt", ""], ["href", "https://www.instagram.com", 1, "pr-8"], ["src", "assets/icons/Instagram.svg", "alt", ""], ["href", "https://github.com/DNA2discovery-D2D", 1, "pr-8"], ["src", "assets/icons/github.svg", "alt", ""], ["href", "https://www.twitter.com", 1, "pr-8"], ["src", "assets/icons/X.svg", "alt", ""], ["href", "https://www.linkedin.com/company/dna2discovery/", 1, "pr-8"], ["src", "assets/icons/LinkedIn.svg", "alt", ""], ["href", "https://www.youtube.com", 1, "pr-8"], ["src", "assets/icons/Youtube.png", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-12"], [1, "row"], [1, "col-md-6", "col-12"], [1, "text-white", "mt-43", "fsr-21"], [1, "d-flex", "flex-column"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/aboutus?page=aboutus", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/resources?pages=resources", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfo&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioEng&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=statisticalTesting&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=seqTech&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfoTraining&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16", "p-64"]], template: function FooterComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
       \u0275\u0275element(4, "img", 4);
