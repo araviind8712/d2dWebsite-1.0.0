@@ -10,7 +10,7 @@ p {
 }
 
 .service-img{
-  height:320px;
+  height: 60% !important;
   width: 100% 
 }
 
@@ -62,7 +62,7 @@ line-height: 39px;
   }
 
   .service-img{
-    height:240px;
+    height: 75% !important;
     width: 100% 
   }
   
