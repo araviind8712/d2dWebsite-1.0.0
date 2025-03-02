@@ -340,6 +340,11 @@
     height:52px
 }
 
+.logo-size1{
+    width:52px;
+    height:52px
+}
+
 .companyNavBar {
     box-sizing: border-box;
     margin-top: 0px;
@@ -440,6 +445,149 @@
 
     .pl-9 {
         padding-left: 2px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar{
+        width: 100vw;
+        justify-content: space-between !important;
+    }
+
+    .serviceNavBar-black {
+        flex-direction: row !important;
+        height: max-content;
+    }
+
+    .serviceNavBar {
+        flex-direction: row !important;
+        height: max-content;
+    }
+
+    h6 {
+        text-align: start;
+    }
+
+    .serviceNavBar {
+        padding-left: 16px;
+        padding-right: 16px;
+        display: none;
+    }
+
+    .serviceNavBar-black {
+        padding-left: 16px;
+        padding-right: 16px;
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+        list-style: none;
+        padding-left: 0px;
+        width: 90vw;
+    }
+
+    .navbar-nav {
+        align-items: self-start;
+    }
+    .nav-bar ul{
+        justify-content: center !important;
+        width: calc(100vw - 32px);
+    }
+
+    .nav-bar-black ul{
+        justify-content: center !important;
+        width: calc(100vw - 32px);
+    }
+    .nav-bar ul li a {
+        width: calc(100vw - 37px);
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .nav-bar-black ul li a {
+        width: calc(100vw - 37px);
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .nav-bar .navbar-light .navbar-nav .nav-link.active {
+        font-size: 21px;
+    }
+    .nav-bar .navbar-light .navbar-nav .nav-link:hover {
+        font-size: 21px;
+    }
+    .nav-bar-black .navbar-light .navbar-nav .nav-link.active {
+        font-size: 21px;
+    }
+    .nav-bar-black .navbar-light .navbar-nav .nav-link:hover {
+        font-size: 21px;
+    }
+    .mr-16{
+        margin-right: 0px;
+    }
+
+    .mr-18{
+        margin-right: 0px;
+    }
+
+    .pt-48{
+        padding-top: 48px;
+    }
+
+    .px-21{
+        padding-top: 20.5px;
+        padding-bottom: 20.5px;
+    }
+
+    .px-19{
+        padding-top: 18.5px;
+        padding-bottom: 18.5px;
+        
+    }
+
+    .dropdown-icon{
+        width: 23px;
+        height: 13px;
+    }
+
+    .mt-48{
+        margin-top: 48px !important;
+    }
+    .mb-8{
+        margin-bottom: 8px;
+    }
+    .companyNavBar{
+        display: none !important;
+    }
+    .companyNavBar-black{
+        display: none !important;
+    }
+    .pl-9 {
+        padding-left: 2px;
+    }
+
+    .submenu {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 65%;
+        text-overflow: ellipsis;
+    }
+    .nav-pad{
+        padding: 16px;
+    }
+    .nav-bar-black {
+        padding: 0px;
     }
 }
 
@@ -584,6 +732,10 @@
     }
     .logo-size{
         width:65px;
+        height:32px;
+    }
+    .logo-size1{
+        width:32px;
         height:32px;
     }
     .nav-bar-black {
