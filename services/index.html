@@ -87,7 +87,7 @@
   flex: none;
   order: 8;
   flex-grow: 0;
-  z-index: 8;
+  z-index: 999;
 }
 .nav-bar[_ngcontent-ng-c3306526522]   ul[_ngcontent-ng-c3306526522]   li[_ngcontent-ng-c3306526522]   a[_ngcontent-ng-c3306526522] {
   font-family: "NimbusSanL";
@@ -185,7 +185,7 @@
   position: absolute;
   justify-content: center;
   text-align: center;
-  z-index: 1;
+  z-index: 999;
   background-color: #FBFBFB;
   -webkit-backdrop-filter: blur(20.1px);
   backdrop-filter: blur(20.1px);
@@ -229,6 +229,7 @@
   height: 192px;
   left: 0px;
   position: absolute;
+  z-index: 999;
   top: 88px;
   width: 100vw;
   background: rgba(255, 255, 255, 0.01);
@@ -329,6 +330,7 @@
   background: rgba(255, 255, 255, 0.01);
   -webkit-backdrop-filter: blur(20.1px);
   backdrop-filter: blur(20.1px);
+  z-index: 999;
 }
 .serviceItems[_ngcontent-ng-c3306526522] {
   flex: 1 1 calc(33.33% - 16px);
@@ -586,22 +588,22 @@
 }
 /*# sourceMappingURL=footer.component.css.map */</style><style ng-app-id="ng">
 
-.nav-item[_ngcontent-ng-c3222883451] {
+.nav-item[_ngcontent-ng-c3443831015] {
   font-weight: bold;
   color: black;
 }
-.section1[_ngcontent-ng-c3222883451] {
+.section1[_ngcontent-ng-c3443831015] {
   padding: 80px 48px;
   background-color: #FFFFFF;
 }
-.section2[_ngcontent-ng-c3222883451] {
+.section2[_ngcontent-ng-c3443831015] {
   padding-left: 48px;
   padding-right: 48px;
   padding-top: 80px;
   padding-bottom: 32px;
   background-color: #FBFBFB;
 }
-h2[_ngcontent-ng-c3222883451] {
+h2[_ngcontent-ng-c3443831015] {
   font-family: "NimbusSanL";
   font-style: normal;
   font-weight: 400;
@@ -611,7 +613,7 @@ h2[_ngcontent-ng-c3222883451] {
   align-items: center;
   color: #121314;
 }
-p[_ngcontent-ng-c3222883451] {
+p[_ngcontent-ng-c3443831015] {
   font-family: "NimbusSanL";
   font-style: normal;
   font-weight: 400;
@@ -620,7 +622,7 @@ p[_ngcontent-ng-c3222883451] {
   color: #121314;
   margin: 0;
 }
-h5[_ngcontent-ng-c3222883451] {
+h5[_ngcontent-ng-c3443831015] {
   font-family: "NimbusSanL";
   color: #121314;
   font-style: normal;
@@ -628,7 +630,7 @@ h5[_ngcontent-ng-c3222883451] {
   font-size: 21px;
   line-height: 29px;
 }
-.des[_ngcontent-ng-c3222883451] {
+.des[_ngcontent-ng-c3443831015] {
   font-family: "NimbusSanL";
   color: #747B80;
   font-style: normal;
@@ -636,109 +638,125 @@ h5[_ngcontent-ng-c3222883451] {
   font-size: 21px;
   line-height: 29px;
 }
-.per32[_ngcontent-ng-c3222883451] {
+.per32[_ngcontent-ng-c3443831015] {
   margin-left: 32%;
 }
-.pb-48[_ngcontent-ng-c3222883451] {
+.pb-48[_ngcontent-ng-c3443831015] {
   padding-bottom: 48px;
 }
-.pt-80[_ngcontent-ng-c3222883451] {
+.pt-80[_ngcontent-ng-c3443831015] {
   padding-top: 80px;
 }
-.pic[_ngcontent-ng-c3222883451] {
+.pic[_ngcontent-ng-c3443831015] {
   height: 520px;
   width: 66%;
 }
-.pb-80[_ngcontent-ng-c3222883451] {
+.pb-80[_ngcontent-ng-c3443831015] {
   padding-bottom: 80px;
   margin: 0px;
 }
-.menu[_ngcontent-ng-c3222883451] {
+.menu[_ngcontent-ng-c3443831015] {
   padding-left: 48px;
   padding-right: 16px;
   padding-bottom: 38px;
 }
-.ml-32[_ngcontent-ng-c3222883451] {
+.ml-32[_ngcontent-ng-c3443831015] {
   margin-left: 32px;
 }
-.width-50[_ngcontent-ng-c3222883451] {
+.width-50[_ngcontent-ng-c3443831015] {
   width: 50%;
 }
-.soln[_ngcontent-ng-c3222883451] {
+.soln[_ngcontent-ng-c3443831015] {
   display: flex;
   width: 100%;
 }
-.padding-default[_ngcontent-ng-c3222883451] {
+.padding-default[_ngcontent-ng-c3443831015] {
   padding-bottom: 48px;
 }
-.padding-none[_ngcontent-ng-c3222883451] {
+.padding-none[_ngcontent-ng-c3443831015] {
   padding-bottom: 0px;
 }
+.spinner[_ngcontent-ng-c3443831015] {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: _ngcontent-ng-c3443831015_spin 1s linear infinite;
+}
+@keyframes _ngcontent-ng-c3443831015_spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media only screen and (max-width: 768px) {
-  p[_ngcontent-ng-c3222883451] {
+  p[_ngcontent-ng-c3443831015] {
     font-size: 16px;
     line-height: 22.4px;
   }
-  h5[_ngcontent-ng-c3222883451] {
+  h5[_ngcontent-ng-c3443831015] {
     font-size: 16px;
     line-height: 29.4px;
   }
-  h2[_ngcontent-ng-c3222883451] {
+  h2[_ngcontent-ng-c3443831015] {
     font-size: 38px;
     line-height: 45.6px;
   }
-  .des[_ngcontent-ng-c3222883451] {
+  .des[_ngcontent-ng-c3443831015] {
     font-size: 16px;
     line-height: 22.4px;
   }
-  .section1[_ngcontent-ng-c3222883451], 
-   .section2[_ngcontent-ng-c3222883451] {
+  .section1[_ngcontent-ng-c3443831015], 
+   .section2[_ngcontent-ng-c3443831015] {
     padding: 64px 16px;
   }
-  .per32[_ngcontent-ng-c3222883451] {
+  .per32[_ngcontent-ng-c3443831015] {
     margin-left: 0px;
   }
-  .pb-48[_ngcontent-ng-c3222883451] {
+  .pb-48[_ngcontent-ng-c3443831015] {
     padding-bottom: 32px;
   }
-  .pt-80[_ngcontent-ng-c3222883451] {
+  .pt-80[_ngcontent-ng-c3443831015] {
     padding-top: 48px;
   }
-  .pic[_ngcontent-ng-c3222883451] {
+  .pic[_ngcontent-ng-c3443831015] {
     height: 240px;
     width: 100%;
   }
-  .pb-80[_ngcontent-ng-c3222883451] {
+  .pb-80[_ngcontent-ng-c3443831015] {
     padding-bottom: 48px !important;
     margin: 0px;
   }
-  .menu[_ngcontent-ng-c3222883451] {
+  .menu[_ngcontent-ng-c3443831015] {
     padding-left: 16px;
   }
-  .ml-32[_ngcontent-ng-c3222883451] {
+  .ml-32[_ngcontent-ng-c3443831015] {
     margin-left: 0px;
   }
-  .width-50[_ngcontent-ng-c3222883451] {
+  .width-50[_ngcontent-ng-c3443831015] {
     width: 100%;
   }
-  .soln[_ngcontent-ng-c3222883451] {
+  .soln[_ngcontent-ng-c3443831015] {
     display: flex;
     width: 100%;
     flex-direction: column;
   }
-  #first[_ngcontent-ng-c3222883451] {
+  #first[_ngcontent-ng-c3443831015] {
     padding-bottom: 48px;
   }
-  .section2[_ngcontent-ng-c3222883451] {
+  .section2[_ngcontent-ng-c3443831015] {
     padding-bottom: 32px;
   }
-  .padding-default[_ngcontent-ng-c3222883451] {
+  .padding-default[_ngcontent-ng-c3443831015] {
     padding-bottom: 32px;
   }
-  .padding-none[_ngcontent-ng-c3222883451] {
+  .padding-none[_ngcontent-ng-c3443831015] {
     padding-bottom: 0px;
   }
-  .section2[_ngcontent-ng-c3222883451] {
+  .section2[_ngcontent-ng-c3443831015] {
     padding-bottom: 32px;
   }
 }
@@ -807,15 +825,15 @@ h4[_ngcontent-ng-c3821210978] {
   "ng-reflect-ng-if": "false"
 }--></div><!--bindings={
   "ng-reflect-ng-if": "true"
-}--></app-navbar><router-outlet></router-outlet><app-services _nghost-ng-c3222883451="" ngh="2"><div _ngcontent-ng-c3222883451="" class="container-fluid section1"><h2 _ngcontent-ng-c3222883451="" class="pb-48"><!--ngetn--></h2><!--bindings={
+}--></app-navbar><router-outlet></router-outlet><app-services _nghost-ng-c3443831015="" ngh="2"><div _ngcontent-ng-c3443831015="" class="container-fluid section1"><h2 _ngcontent-ng-c3443831015="" class="pb-48"><!--ngetn--></h2><!--bindings={
   "ng-reflect-ng-for-of": null
-}--><div _ngcontent-ng-c3222883451="" class="pt-80" style="padding-bottom: 8px;"><img _ngcontent-ng-c3222883451="" alt="image" class="pic" src=""></div></div><!--bindings={
+}--><div _ngcontent-ng-c3443831015="" class="pt-80" style="padding-bottom: 8px;"><img _ngcontent-ng-c3443831015="" alt="image" class="pic" src=""></div></div><!--bindings={
   "ng-reflect-ng-if": "false"
-}--><div _ngcontent-ng-c3222883451="" class="container-fluid section2"><h2 _ngcontent-ng-c3222883451="" class="pb-80">Solutions Offered</h2><div _ngcontent-ng-c3222883451="" class="row"><!--bindings={
+}--><div _ngcontent-ng-c3443831015="" class="container-fluid section2"><h2 _ngcontent-ng-c3443831015="" class="pb-80">Solutions Offered</h2><div _ngcontent-ng-c3443831015="" class="row"><!--bindings={
   "ng-reflect-ng-for-of": null
 }--></div></div><!--bindings={
   "ng-reflect-ng-if": "true"
-}--><div _ngcontent-ng-c3222883451="" class="pt-80 menu" style="background-color: #FFFFFF;"><h2 _ngcontent-ng-c3222883451="" class="pb-80">Other Services</h2><app-service-menu _ngcontent-ng-c3222883451="" bgcolor="background-color:white;" _nghost-ng-c3821210978="" ng-reflect-bg-color="background-color:white;" ngh="1"><div _ngcontent-ng-c3821210978="" class="container-fluid"><div _ngcontent-ng-c3821210978="" align="center" class="row justify-content-center"><div _ngcontent-ng-c3821210978="" class="col-12 col-md-4 pb48 cursor-pointer wipe-up" style="padding: 0; box-shadow: none; border: none; cursor: pointer;" jsaction="click:;"><img _ngcontent-ng-c3821210978="" height="320" width="100%" class="pr32" style="padding-bottom: 24px;" src="assets/images/bioInfo.png"><div _ngcontent-ng-c3821210978=""><h4 _ngcontent-ng-c3821210978="" align="left" class="pr32" style="padding-bottom: 8px;"><a _ngcontent-ng-c3821210978="" class="link-text" style="padding-right: 8px;">Bioinformatics Analytics</a><span _ngcontent-ng-c3821210978="" class="icon-container" style="background-color: transparent;"><img _ngcontent-ng-c3821210978="" src="assets/icons/right-arrow.svg" class="img32"></span></h4></div><!--bindings={
+}--><div _ngcontent-ng-c3443831015="" class="pt-80 menu" style="background-color: #FFFFFF;"><h2 _ngcontent-ng-c3443831015="" class="pb-80">Other Services</h2><app-service-menu _ngcontent-ng-c3443831015="" bgcolor="background-color:white;" _nghost-ng-c3821210978="" ng-reflect-bg-color="background-color:white;" ngh="1"><div _ngcontent-ng-c3821210978="" class="container-fluid"><div _ngcontent-ng-c3821210978="" align="center" class="row justify-content-center"><div _ngcontent-ng-c3821210978="" class="col-12 col-md-4 pb48 cursor-pointer wipe-up" style="padding: 0; box-shadow: none; border: none; cursor: pointer;" jsaction="click:;"><img _ngcontent-ng-c3821210978="" height="320" width="100%" class="pr32" style="padding-bottom: 24px;" src="assets/images/bioInfo.png"><div _ngcontent-ng-c3821210978=""><h4 _ngcontent-ng-c3821210978="" align="left" class="pr32" style="padding-bottom: 8px;"><a _ngcontent-ng-c3821210978="" class="link-text" style="padding-right: 8px;">Bioinformatics Analytics</a><span _ngcontent-ng-c3821210978="" class="icon-container" style="background-color: transparent;"><img _ngcontent-ng-c3821210978="" src="assets/icons/right-arrow.svg" class="img32"></span></h4></div><!--bindings={
   "ng-reflect-ng-if": "true"
 }--><!--bindings={
   "ng-reflect-ng-if": "false"
@@ -846,4 +864,4 @@ h4[_ngcontent-ng-c3821210978] {
 
 <script src="./polyfills.js" type="module"></script><script src="./main.js" type="module"></script>
 
-<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"0":"t0","1":"t1"},"c":{"0":[],"1":[{"i":"t1","r":1,"t":{"16":"t2","22":"t3","27":"t4","28":"t5"},"c":{"16":[],"22":[],"27":[],"28":[]}}]}},{"t":{"2":"t10"},"c":{"2":[{"i":"t10","r":1,"t":{"2":"t11","3":"t12"},"c":{"2":[{"i":"t11","r":1}],"3":[]},"x":5}]}},{"t":{"3":"t6","6":"t7","7":"t8"},"c":{"3":[],"6":[],"7":[{"i":"t8","r":1,"t":{"4":"t9"},"c":{"4":[]}}]}},{},{"c":{"1":[{"i":"c3222883451","r":1}]}}]}</script></body></html>
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"0":"t0","1":"t1"},"c":{"0":[],"1":[{"i":"t1","r":1,"t":{"16":"t2","22":"t3","27":"t4","28":"t5"},"c":{"16":[],"22":[],"27":[],"28":[]}}]}},{"t":{"2":"t10"},"c":{"2":[{"i":"t10","r":1,"t":{"2":"t11","3":"t12"},"c":{"2":[{"i":"t11","r":1}],"3":[]},"x":5}]}},{"t":{"3":"t6","6":"t7","7":"t8"},"c":{"3":[],"6":[],"7":[{"i":"t8","r":1,"t":{"4":"t9"},"c":{"4":[]}}]}},{},{"c":{"1":[{"i":"c3443831015","r":1}]}}]}</script></body></html>

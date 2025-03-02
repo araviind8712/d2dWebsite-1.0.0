@@ -62468,6 +62468,8 @@ var ServicesComponent = class _ServicesComponent {
       panelClass: "custom-dialog"
     });
   }
+  ngAfterViewInit() {
+  }
   static \u0275fac = function ServicesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ServicesComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(MatDialog));
   };
@@ -62501,7 +62503,7 @@ var ServicesComponent = class _ServicesComponent {
       \u0275\u0275advance(4);
       \u0275\u0275property("currentService", ctx.serviceName);
     }
-  }, dependencies: [NgClass, NgForOf, NgIf, NgStyle, ServiceMenuComponent, UpperCasePipe], styles: ['\n\n.nav-item[_ngcontent-%COMP%] {\n  font-weight: bold;\n  color: black;\n}\n.section1[_ngcontent-%COMP%] {\n  padding: 80px 48px;\n  background-color: #FFFFFF;\n}\n.section2[_ngcontent-%COMP%] {\n  padding-left: 48px;\n  padding-right: 48px;\n  padding-top: 80px;\n  padding-bottom: 32px;\n  background-color: #FBFBFB;\n}\nh2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  display: flex;\n  align-items: center;\n  color: #121314;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  margin: 0;\n}\nh5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #121314;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n}\n.des[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #747B80;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n}\n.per32[_ngcontent-%COMP%] {\n  margin-left: 32%;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.pt-80[_ngcontent-%COMP%] {\n  padding-top: 80px;\n}\n.pic[_ngcontent-%COMP%] {\n  height: 520px;\n  width: 66%;\n}\n.pb-80[_ngcontent-%COMP%] {\n  padding-bottom: 80px;\n  margin: 0px;\n}\n.menu[_ngcontent-%COMP%] {\n  padding-left: 48px;\n  padding-right: 16px;\n  padding-bottom: 38px;\n}\n.ml-32[_ngcontent-%COMP%] {\n  margin-left: 32px;\n}\n.width-50[_ngcontent-%COMP%] {\n  width: 50%;\n}\n.soln[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n}\n.padding-default[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.padding-none[_ngcontent-%COMP%] {\n  padding-bottom: 0px;\n}\n@media only screen and (max-width: 768px) {\n  p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  h5[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 29.4px;\n  }\n  h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n  }\n  .des[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%] {\n    padding: 64px 16px;\n  }\n  .per32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .pt-80[_ngcontent-%COMP%] {\n    padding-top: 48px;\n  }\n  .pic[_ngcontent-%COMP%] {\n    height: 240px;\n    width: 100%;\n  }\n  .pb-80[_ngcontent-%COMP%] {\n    padding-bottom: 48px !important;\n    margin: 0px;\n  }\n  .menu[_ngcontent-%COMP%] {\n    padding-left: 16px;\n  }\n  .ml-32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .width-50[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n  .soln[_ngcontent-%COMP%] {\n    display: flex;\n    width: 100%;\n    flex-direction: column;\n  }\n  #first[_ngcontent-%COMP%] {\n    padding-bottom: 48px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .padding-default[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .padding-none[_ngcontent-%COMP%] {\n    padding-bottom: 0px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n}\n/*# sourceMappingURL=services.component.css.map */'] });
+  }, dependencies: [NgClass, NgForOf, NgIf, NgStyle, ServiceMenuComponent, UpperCasePipe], styles: ['\n\n.nav-item[_ngcontent-%COMP%] {\n  font-weight: bold;\n  color: black;\n}\n.section1[_ngcontent-%COMP%] {\n  padding: 80px 48px;\n  background-color: #FFFFFF;\n}\n.section2[_ngcontent-%COMP%] {\n  padding-left: 48px;\n  padding-right: 48px;\n  padding-top: 80px;\n  padding-bottom: 32px;\n  background-color: #FBFBFB;\n}\nh2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  display: flex;\n  align-items: center;\n  color: #121314;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  margin: 0;\n}\nh5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #121314;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n}\n.des[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #747B80;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n}\n.per32[_ngcontent-%COMP%] {\n  margin-left: 32%;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.pt-80[_ngcontent-%COMP%] {\n  padding-top: 80px;\n}\n.pic[_ngcontent-%COMP%] {\n  height: 520px;\n  width: 66%;\n}\n.pb-80[_ngcontent-%COMP%] {\n  padding-bottom: 80px;\n  margin: 0px;\n}\n.menu[_ngcontent-%COMP%] {\n  padding-left: 48px;\n  padding-right: 16px;\n  padding-bottom: 38px;\n}\n.ml-32[_ngcontent-%COMP%] {\n  margin-left: 32px;\n}\n.width-50[_ngcontent-%COMP%] {\n  width: 50%;\n}\n.soln[_ngcontent-%COMP%] {\n  display: flex;\n  width: 100%;\n}\n.padding-default[_ngcontent-%COMP%] {\n  padding-bottom: 48px;\n}\n.padding-none[_ngcontent-%COMP%] {\n  padding-bottom: 0px;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  border: 5px solid #f3f3f3;\n  border-top: 5px solid #3498db;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@media only screen and (max-width: 768px) {\n  p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  h5[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 29.4px;\n  }\n  h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n  }\n  .des[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%] {\n    padding: 64px 16px;\n  }\n  .per32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .pt-80[_ngcontent-%COMP%] {\n    padding-top: 48px;\n  }\n  .pic[_ngcontent-%COMP%] {\n    height: 240px;\n    width: 100%;\n  }\n  .pb-80[_ngcontent-%COMP%] {\n    padding-bottom: 48px !important;\n    margin: 0px;\n  }\n  .menu[_ngcontent-%COMP%] {\n    padding-left: 16px;\n  }\n  .ml-32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .width-50[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n  .soln[_ngcontent-%COMP%] {\n    display: flex;\n    width: 100%;\n    flex-direction: column;\n  }\n  #first[_ngcontent-%COMP%] {\n    padding-bottom: 48px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .padding-default[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n  .padding-none[_ngcontent-%COMP%] {\n    padding-bottom: 0px;\n  }\n  .section2[_ngcontent-%COMP%] {\n    padding-bottom: 32px;\n  }\n}\n/*# sourceMappingURL=services.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ServicesComponent, { className: "ServicesComponent", filePath: "src/app/pages/services/services.component.ts", lineNumber: 16 });
@@ -63659,7 +63661,7 @@ var NavbarComponent = class _NavbarComponent {
   flex: none;
   order: 8;
   flex-grow: 0;
-  z-index: 8;
+  z-index: 999;
 }
 .nav-bar[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {
   font-family: "NimbusSanL";
@@ -63757,7 +63759,7 @@ var NavbarComponent = class _NavbarComponent {
   position: absolute;
   justify-content: center;
   text-align: center;
-  z-index: 1;
+  z-index: 999;
   background-color: #FBFBFB;
   -webkit-backdrop-filter: blur(20.1px);
   backdrop-filter: blur(20.1px);
@@ -63801,6 +63803,7 @@ var NavbarComponent = class _NavbarComponent {
   height: 192px;
   left: 0px;
   position: absolute;
+  z-index: 999;
   top: 88px;
   width: 100vw;
   background: rgba(255, 255, 255, 0.01);
@@ -63901,6 +63904,7 @@ var NavbarComponent = class _NavbarComponent {
   background: rgba(255, 255, 255, 0.01);
   -webkit-backdrop-filter: blur(20.1px);
   backdrop-filter: blur(20.1px);
+  z-index: 999;
 }
 .serviceItems[_ngcontent-%COMP%] {
   flex: 1 1 calc(33.33% - 16px);
