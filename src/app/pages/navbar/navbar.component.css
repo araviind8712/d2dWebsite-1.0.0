@@ -493,6 +493,11 @@
         justify-content: center !important;
         width: 94vw;
     }
+
+    .nav-bar-black ul{
+        justify-content: center !important;
+        width: 94vw;
+    }
     .nav-bar ul li a {
         width: 90vw;
         font-weight: 400;
