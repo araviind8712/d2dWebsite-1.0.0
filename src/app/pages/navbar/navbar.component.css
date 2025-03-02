@@ -449,6 +449,7 @@
 @media only screen and (max-width: 768px) {
 
     .navbar{
+        width: 100vw;
         justify-content: space-between !important;
     }
 
@@ -487,6 +488,10 @@
 
     .navbar-nav {
         align-items: self-start;
+    }
+    .nav-bar ul{
+        justify-content: center !important;
+        width: 94vw;
     }
     .nav-bar ul li a {
         width: 90vw;
