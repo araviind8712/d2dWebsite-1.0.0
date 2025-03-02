@@ -1,5 +1,6 @@
-<div class="container-fluid section1">
-    <h2 class="pb-48">{{serviceData?.topic}}</h2>
+<div appScrolleffects>
+<div class="container-fluid section1 section slide-up-page">
+    <h2 class="pb-48 text-blur-reveal">{{serviceData?.topic}}</h2>
     <div *ngFor="let desc of serviceData?.desc1; let i = index">
     <p align="left" style="text-align: left;" class="per32" 
            [ngStyle]="{'padding-bottom': i !== (serviceData?.desc1.length - 1) ? '16px' : '0px'}">
@@ -11,7 +12,7 @@
     </div>
 </div>
 
-<div class="container-fluid section2" *ngIf="serviceName==='bioInfo'">
+<div class="container-fluid section2 section" *ngIf="serviceName==='bioInfo'">
     <h2 class="pb-80">Solutions Offered</h2>
     <div class="soln">
         <div class="width-50" id="first">
@@ -34,7 +35,7 @@
     </div>
 </div>
 
-<div class="container-fluid section2" *ngIf="serviceName!=='bioInfo'">
+<div class="container-fluid section3 section" *ngIf="serviceName!=='bioInfo'">
     <h2 class="pb-80">Solutions Offered</h2>
     <div class="row">
         <div class="col-12 col-md-6 col-sm-12 padding-default" *ngFor="let sol of serviceData?.solutionsOffered; let i = index">
@@ -49,4 +50,5 @@
 <div style="background-color: #FFFFFF;" class="pt-80 menu">
     <h2 class="pb-80">Other Services</h2>
     <app-service-menu [currentService]="serviceName" bgColor="background-color:white;"></app-service-menu>
+</div>
 </div>
