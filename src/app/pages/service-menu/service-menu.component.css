@@ -10,7 +10,7 @@ p {
 }
 
 .service-img{
-  height: 60% !important;
+  aspect-ratio: 427 / 320;
   width: 100% 
 }
 
@@ -62,7 +62,7 @@ line-height: 39px;
   }
 
   .service-img{
-    height: 75% !important;
+    aspect-ratio: 380 / 240;
     width: 100% 
   }
   
