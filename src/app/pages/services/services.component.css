@@ -11,6 +11,7 @@
 .section2 {
     padding-left: 48px!important;
     padding-right: 48px!important;
+
     padding-top: 80px;
     padding-bottom: 32px;
     background-color: #FBFBFB;
@@ -133,7 +134,7 @@ h5 {
     }
 
     .section1,
-    .section2 {
+    .section2,.section3 {
         padding: 64px 16px;
     }
 
@@ -185,7 +186,7 @@ h5 {
     .padding-none {
         padding-bottom: 0px;
     }
-    .section2{
+    .section2,section3{
         padding-bottom: 32px;
     }
 }

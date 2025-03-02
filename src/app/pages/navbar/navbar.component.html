@@ -3,7 +3,7 @@
         <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-White.svg" alt="" class="logo-size"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" style=" padding: 0px;">
-            <img src="assets/icons/menu-icon-white.svg" style="color:#BFC0C0;width: 32px;height: 32px;">
+            <img src="assets/icons/menu-icon-white.svg" style="color:#BFC0C0;" class="logo-size1">
         </button>
 
         <div class="collapse navbar-collapse pt-48" id="navbarNav">
@@ -17,7 +17,7 @@
                         SERVICES
                         <span
                         style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
-                        <img src="assets/icons/dropdown-white.svg" class="dropdown-icon">
+                        <img [src]="serviceVisible ? 'assets/icons/drop-up-white.svg' : 'assets/icons/dropdown-white.svg'"  class="dropdown-icon">
                     </span>
                     </a>
                     <ul *ngIf="serviceVisible" class="mobile-nav">
@@ -38,7 +38,7 @@
                         COMPANY
                         <span
                         style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
-                        <img src="assets/icons/dropdown-white.svg" class="dropdown-icon">
+                        <img [src]="isCompDropdown ? 'assets/icons/drop-up-white.svg' : 'assets/icons/dropdown-white.svg'"  class="dropdown-icon">
                     </span>
                     </a>
                     <ul *ngIf="isCompDropdown" class="mobile-nav">
@@ -102,7 +102,7 @@
         <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-Black.svg" alt="" class="logo-size"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" style=" padding: 0px;">
-            <img src="assets/icons/menu-icon.svg" style="width: 32px !important ;height: 32px !important;">
+            <img src="assets/icons/menu-icon.svg" class="logo-size1">
         </button>
 
         <div class="collapse navbar-collapse pt-48" id="navbarNav">
@@ -117,7 +117,7 @@
                         SERVICES
                         <span
                             style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
-                            <img src="assets/icons/dropdown-black.svg" class="dropdown-icon">
+                            <img [src]="serviceVisible ? 'assets/icons/drop-up.svg' : 'assets/icons/dropdown-black.svg'"  class="dropdown-icon">
                         </span>
                     </a>
                     <ul *ngIf="serviceVisible" class="mobile-nav">
@@ -133,12 +133,12 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link px-21" (click)="isHome=false;isServiceVisible=false;isCompany=true;isCompDropdown=!isCompDropdown;serviceVisible=false"
-                        [class.active]="isCompany" id="companyDropdown"
+                        [class.active]="isCompDropdown" id="companyDropdown"
                         style="margin-right: 18px; display: flex; align-items: center;">
                         COMPANY
                         <span
                             style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
-                            <img src="assets/icons/dropdown-black.svg" class="dropdown-icon">
+                            <img [src]="isCompDropdown ? 'assets/icons/drop-up.svg' : 'assets/icons/dropdown-black.svg'"  class="dropdown-icon">
                         </span>
                     </a>  
                     <ul *ngIf="isCompDropdown" class="mobile-nav">
