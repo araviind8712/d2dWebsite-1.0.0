@@ -1,15 +1,11 @@
+.section1,
 .section2,
 .section3,
 .section4,
 .section5 {
     padding: 80px 48px;
     width: 100%;
-    min-height: 100vh;
     box-sizing: border-box;
-}
-
-.section1{
-    min-height: 100vh;
 }
 
 .pic {
