@@ -13,18 +13,22 @@ import { ContactUsComponent } from '../contact-us/contact-us.component';
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
-export class ServicesComponent implements OnInit,AfterViewInit {
+export class ServicesComponent implements OnInit {
   serviceName: "bioInfo" | "bioEng" | "bioInfoTraining" | "statisticalTesting" | "seqTech" = "bioInfo";
   defaultServiceName: "bioInfo" | "bioEng" | "bioInfoTraining" | "statisticalTesting" | "seqTech" = "bioInfo";
   serviceData: any;
+  isLoading: Boolean = true;
   constructor(public route: ActivatedRoute, public dialog: MatDialog) {
 
   }
   ngOnInit(): void {
-    this.route.queryParams.subscribe((data) => {
-      this.serviceName = data['service'];
-    })
-    this.serviceData = serviceData[0][this.serviceName];
+    setTimeout(()=>{
+      this.route.queryParams.subscribe((data) => {
+        this.serviceName = data['service'];
+      })
+      this.serviceData = serviceData[0][this.serviceName];
+      this.isLoading=false
+    },1000);
   }
 
   openDialog(): void {
@@ -35,9 +39,6 @@ export class ServicesComponent implements OnInit,AfterViewInit {
       position: { bottom: '0px' },
       panelClass: 'custom-dialog'
     });
-  }
-  ngAfterViewInit() {
-
   }
 
 }
