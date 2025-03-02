@@ -61991,14 +61991,12 @@ var EmailService = class _EmailService {
   sendEmail(formData) {
     var res = "none";
     es_default.send(this.serviceID, this.templateID1, formData, this.userID).then((response) => {
-      console.log("Email sent successfully:", response);
       alert("Querry Raised Successfully");
     }, (error) => {
       console.error("Error sending email:", error);
       alert("Unable to raise the querry!!! Please Try again");
     });
     es_default.send(this.serviceID, this.templateID2, formData, this.userID).then((response) => {
-      console.log("Email sent successfully:", response);
     }, (error) => {
       console.error("Error sending email:", error);
     });
@@ -62013,49 +62011,49 @@ var EmailService = class _EmailService {
 // src/app/pages/contact-us/contact-us.component.ts
 function ContactUsComponent_div_19_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275elementStart(0, "div", 21);
     \u0275\u0275text(1, " Name can't be Empty ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_20_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275elementStart(0, "div", 21);
     \u0275\u0275text(1, " Invalid Name ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_21_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275elementStart(0, "div", 21);
     \u0275\u0275text(1, " Invalid Name ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_26_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275elementStart(0, "div", 21);
     \u0275\u0275text(1, " Email can't be empty ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_27_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275elementStart(0, "div", 21);
     \u0275\u0275text(1, " Invalid Email ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_32_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275elementStart(0, "div", 21);
     \u0275\u0275text(1, " Reason required ");
     \u0275\u0275elementEnd();
   }
 }
 function ContactUsComponent_div_33_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275elementStart(0, "div", 21);
     \u0275\u0275text(1, " Invalid comments ");
     \u0275\u0275elementEnd();
   }
@@ -62098,7 +62096,7 @@ var ContactUsComponent = class _ContactUsComponent {
   static \u0275fac = function ContactUsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ContactUsComponent)(\u0275\u0275directiveInject(MatDialogRef), \u0275\u0275directiveInject(MatSnackBar), \u0275\u0275directiveInject(EmailService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactUsComponent, selectors: [["app-contact-us"]], standalone: false, decls: 36, vars: 10, consts: [[1, "mat-typography", 2, "overflow-y", "auto", "scroll-behavior", "smooth", "background-color", "#FFFFFF", "max-height", "100vh"], [1, "row"], [1, "col-md-6", "col-sm-12"], ["mat-dialog-title", "", 1, "pb-2", "px-0", "title"], [1, "px-0", "subTitle", 2, "font-weight", "300"], [1, "contact-info", "py-4", "px-0", "mt-32"], [1, "row", "pl-3", "mb-16"], ["src", "assets/icons/email.svg", "width", "20px", "height", "20px"], [1, "form-wrapper"], [3, "ngSubmit", "formGroup"], [1, "form-group"], ["for", "name"], ["id", "name", "type", "text", "formControlName", "name", "placeholder", "John Doe", 1, "form-control"], ["style", "color: red;", 4, "ngIf"], ["for", "email"], ["id", "email", "type", "text", "formControlName", "email", "placeholder", "johndoe@gmail.com", 1, "form-control"], ["for", "comments"], ["id", "comments", "formControlName", "comments", "placeholder", "Write here...", 1, "form-control"], ["type", "submit", 1, "btn", "btn-primary", 3, "disabled"], [2, "color", "red"]], template: function ContactUsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactUsComponent, selectors: [["app-contact-us"]], standalone: false, decls: 39, vars: 10, consts: [[1, "mat-typography", "mat-padding", 2, "overflow-y", "auto", "scroll-behavior", "smooth", "background-color", "#FFFFFF", "max-height", "100vh"], [1, "row"], [1, "col-md-6", "col-sm-12"], ["mat-dialog-title", "", 1, "pb-2", "px-0", "title"], [1, "px-0", "subTitle", 2, "font-weight", "300"], [1, "contact-info", "py-4", "px-0", "mt-32"], [1, "row", "pl-3", "mb-16"], ["src", "assets/icons/email.svg", "width", "20px", "height", "20px"], [1, "form-wrapper", 2, "padding-left", "4px", "padding-right", "4px"], [3, "ngSubmit", "formGroup"], [1, "form-group"], ["for", "name"], ["id", "name", "type", "text", "formControlName", "name", "placeholder", "John Doe", 1, "form-control"], ["style", "color: red;", 4, "ngIf"], ["for", "email"], ["id", "email", "type", "text", "formControlName", "email", "placeholder", "johndoe@gmail.com", 1, "form-control"], ["for", "comments"], ["id", "comments", "formControlName", "comments", "placeholder", "Write here...", 1, "form-control"], [1, "row", "button-grp"], ["id", "cancelButton", 1, "btn", "btn-primary", "mr-8", 3, "click"], ["type", "submit", 1, "btn", "btn-primary", 3, "disabled"], [2, "color", "red"]], template: function ContactUsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "mat-dialog-content", 0)(1, "div", 1)(2, "div", 2)(3, "h1", 3);
       \u0275\u0275text(4, "Partner with Us!");
@@ -62133,9 +62131,15 @@ var ContactUsComponent = class _ContactUsComponent {
       \u0275\u0275element(31, "textarea", 17);
       \u0275\u0275template(32, ContactUsComponent_div_32_Template, 2, 0, "div", 13)(33, ContactUsComponent_div_33_Template, 2, 0, "div", 13);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(34, "button", 18);
-      \u0275\u0275text(35, "Submit");
-      \u0275\u0275elementEnd()()()()()();
+      \u0275\u0275elementStart(34, "div", 18)(35, "button", 19);
+      \u0275\u0275listener("click", function ContactUsComponent_Template_button_click_35_listener() {
+        return ctx.closeDialog();
+      });
+      \u0275\u0275text(36, "Cancel");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(37, "button", 20);
+      \u0275\u0275text(38, "Submit");
+      \u0275\u0275elementEnd()()()()()()();
     }
     if (rf & 2) {
       let tmp_2_0;
@@ -62163,10 +62167,10 @@ var ContactUsComponent = class _ContactUsComponent {
       \u0275\u0275property("ngIf", ((tmp_7_0 = ctx.contactForm.get("comments")) == null ? null : tmp_7_0.invalid) && ((tmp_7_0 = ctx.contactForm.get("comments")) == null ? null : tmp_7_0.touched));
       \u0275\u0275advance();
       \u0275\u0275property("ngIf", ctx.contactForm.value.comments.trim() === "" && ctx.contactForm.value.comments !== "" && ((tmp_8_0 = ctx.contactForm.get("name")) == null ? null : tmp_8_0.touched));
-      \u0275\u0275advance();
+      \u0275\u0275advance(4);
       \u0275\u0275property("disabled", ctx.contactForm.invalid || ctx.contactForm.value.name.trim() === "" || ctx.contactForm.value.comments.trim() === "");
     }
-  }, dependencies: [NgIf, MatDialogTitle, MatDialogContent, \u0275NgNoValidate, DefaultValueAccessor, NgControlStatus, NgControlStatusGroup, FormGroupDirective, FormControlName], styles: ['\n\n.mat-dialog-content[_ngcontent-%COMP%] {\n  overflow-y: auto;\n  display: flex;\n  flex-direction: column;\n  max-height: fit-content !important;\n}\n.form-wrapper[_ngcontent-%COMP%] {\n  max-height: fit-content;\n  overflow-y: auto;\n  padding-right: 10px;\n}\n.form-group[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  padding-left: 5px;\n}\n.form-group[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  margin-top: 5px;\n  color: red;\n}\n.form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], \n.form-group[_ngcontent-%COMP%]   textarea[_ngcontent-%COMP%] {\n  height: 40px;\n}\ninput[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 12px;\n  gap: 8px;\n  height: 47px;\n  border: 1px solid #BFC0C0;\n  border-radius: 300px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n}\ntextarea[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  padding: 12px;\n  gap: 8px;\n  border: 1px solid #BFC0C0;\n  border-radius: 16px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n  height: 110px !important;\n}\nbutton[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #121314;\n  color: #FBFBFB;\n  border-radius: 200px;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n  border: 0px;\n}\nbutton[_ngcontent-%COMP%]:disabled {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nbutton[_ngcontent-%COMP%]:hover {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nlabel[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.title[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.subTitle[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin-left: 16px;\n}\n.mb-16[_ngcontent-%COMP%] {\n  margin-bottom: 16px;\n}\n@media only screen and (max-width: 768px) {\n  .mt-32[_ngcontent-%COMP%] {\n    margin-top: 0px;\n  }\n  .mb-16[_ngcontent-%COMP%] {\n    margin-bottom: 0px;\n  }\n  button[_ngcontent-%COMP%] {\n    width: 100%;\n    margin-top: 24px;\n  }\n  textarea[_ngcontent-%COMP%] {\n    height: 200px !important;\n  }\n}\n/*# sourceMappingURL=contact-us.component.css.map */'] });
+  }, dependencies: [NgIf, MatDialogTitle, MatDialogContent, \u0275NgNoValidate, DefaultValueAccessor, NgControlStatus, NgControlStatusGroup, FormGroupDirective, FormControlName], styles: ['\n\n.mat-dialog-content[_ngcontent-%COMP%] {\n  overflow-y: auto;\n  display: flex;\n  flex-direction: column;\n  max-height: fit-content !important;\n}\n.form-wrapper[_ngcontent-%COMP%] {\n  max-height: fit-content;\n  overflow-y: auto;\n  padding-right: 0px;\n}\n.mat-padding[_ngcontent-%COMP%] {\n  padding: 70px 48px !important;\n}\n.form-group[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  padding-left: 0px;\n}\n.form-group[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  margin-top: 5px;\n  color: red;\n}\n.form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], \n.form-group[_ngcontent-%COMP%]   textarea[_ngcontent-%COMP%] {\n  height: 40px;\n}\ninput[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 12px;\n  gap: 8px;\n  height: 47px;\n  border: 1px solid #BFC0C0;\n  border-radius: 300px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n}\ntextarea[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  padding: 12px;\n  gap: 8px;\n  border: 1px solid #BFC0C0;\n  border-radius: 16px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n  height: 110px !important;\n}\n#cancelButton[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #FBFBFB;\n  color: #121314;\n  border-radius: 200px;\n  border: 2px solid #121314;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n}\n.mr-8[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}\nbutton[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #121314;\n  color: #FBFBFB;\n  border-radius: 200px;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n  border: 0px;\n}\nbutton[_ngcontent-%COMP%]:disabled {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nbutton[_ngcontent-%COMP%]:hover {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nlabel[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.title[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.subTitle[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin-left: 16px;\n}\n.mb-16[_ngcontent-%COMP%] {\n  margin-bottom: 16px;\n}\n.button-grp[_ngcontent-%COMP%] {\n  position: relative;\n  width: 45vw;\n  padding-left: 15px;\n  align-self: center;\n}\n@media only screen and (max-width: 768px) {\n  .mt-32[_ngcontent-%COMP%] {\n    margin-top: 0px;\n  }\n  .mb-16[_ngcontent-%COMP%] {\n    margin-bottom: 0px;\n  }\n  button[_ngcontent-%COMP%] {\n    width: 43.5vw !important;\n    margin-top: 24px;\n  }\n  #cancelButton[_ngcontent-%COMP%] {\n    width: 43.5vw !important;\n  }\n  textarea[_ngcontent-%COMP%] {\n    height: 200px !important;\n    padding-left: 10px;\n  }\n  .mat-padding[_ngcontent-%COMP%] {\n    padding: 48px 16px !important;\n  }\n  .button-grp[_ngcontent-%COMP%] {\n    position: relative;\n    width: 94vw;\n    padding-left: 15px;\n    justify-content: space-between;\n    align-self: center;\n  }\n  .mr-8[_ngcontent-%COMP%] {\n    margin-right: 8px;\n  }\n}\n/*# sourceMappingURL=contact-us.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ContactUsComponent, { className: "ContactUsComponent", filePath: "src/app/pages/contact-us/contact-us.component.ts", lineNumber: 13 });
@@ -63170,7 +63174,7 @@ function NavbarComponent_div_0_Template(rf, ctx) {
     \u0275\u0275element(3, "img", 5);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(4, "button", 6);
-    \u0275\u0275element(5, "span", 7);
+    \u0275\u0275element(5, "img", 7);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(6, "div", 8)(7, "ul", 9)(8, "li", 10)(9, "a", 11);
     \u0275\u0275listener("click", function NavbarComponent_div_0_Template_a_click_9_listener() {
@@ -63247,7 +63251,7 @@ function NavbarComponent_div_0_Template(rf, ctx) {
 function NavbarComponent_div_1_ul_16_li_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r10 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "li", 25)(1, "h6")(2, "a", 50);
+    \u0275\u0275elementStart(0, "li", 25)(1, "h6")(2, "a", 51);
     \u0275\u0275listener("click", function NavbarComponent_div_1_ul_16_li_1_Template_a_click_2_listener() {
       const menu_r11 = \u0275\u0275restoreView(_r10).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
@@ -63280,7 +63284,7 @@ function NavbarComponent_div_1_ul_16_Template(rf, ctx) {
 function NavbarComponent_div_1_ul_22_Template(rf, ctx) {
   if (rf & 1) {
     const _r12 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "ul", 23)(1, "li", 25)(2, "h6")(3, "a", 50);
+    \u0275\u0275elementStart(0, "ul", 23)(1, "li", 25)(2, "h6")(3, "a", 51);
     \u0275\u0275listener("click", function NavbarComponent_div_1_ul_22_Template_a_click_3_listener() {
       \u0275\u0275restoreView(_r12);
       const ctx_r1 = \u0275\u0275nextContext(2);
@@ -63291,7 +63295,7 @@ function NavbarComponent_div_1_ul_22_Template(rf, ctx) {
     \u0275\u0275elementStart(5, "span", 28);
     \u0275\u0275element(6, "img", 29);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "li", 25)(8, "h6")(9, "a", 50);
+    \u0275\u0275elementStart(7, "li", 25)(8, "h6")(9, "a", 51);
     \u0275\u0275listener("click", function NavbarComponent_div_1_ul_22_Template_a_click_9_listener() {
       \u0275\u0275restoreView(_r12);
       const ctx_r1 = \u0275\u0275nextContext(2);
@@ -63307,13 +63311,13 @@ function NavbarComponent_div_1_ul_22_Template(rf, ctx) {
 function NavbarComponent_div_1_nav_27_div_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r13 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 53);
+    \u0275\u0275elementStart(0, "div", 54);
     \u0275\u0275listener("click", function NavbarComponent_div_1_nav_27_div_1_Template_div_click_0_listener() {
       const menu_r14 = \u0275\u0275restoreView(_r13).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r1.redirect(menu_r14.image));
     });
-    \u0275\u0275elementStart(1, "h6")(2, "a", 54);
+    \u0275\u0275elementStart(1, "h6")(2, "a", 55);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(4, "span", 28);
@@ -63328,8 +63332,8 @@ function NavbarComponent_div_1_nav_27_div_1_Template(rf, ctx) {
 }
 function NavbarComponent_div_1_nav_27_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "nav", 51);
-    \u0275\u0275template(1, NavbarComponent_div_1_nav_27_div_1_Template, 6, 1, "div", 52);
+    \u0275\u0275elementStart(0, "nav", 52);
+    \u0275\u0275template(1, NavbarComponent_div_1_nav_27_div_1_Template, 6, 1, "div", 53);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63341,25 +63345,25 @@ function NavbarComponent_div_1_nav_27_Template(rf, ctx) {
 function NavbarComponent_div_1_nav_28_Template(rf, ctx) {
   if (rf & 1) {
     const _r15 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "nav", 55)(1, "div", 56);
+    \u0275\u0275elementStart(0, "nav", 56)(1, "div", 57);
     \u0275\u0275listener("click", function NavbarComponent_div_1_nav_28_Template_div_click_1_listener() {
       \u0275\u0275restoreView(_r15);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("aboutus"));
     });
-    \u0275\u0275elementStart(2, "h6")(3, "a", 54);
+    \u0275\u0275elementStart(2, "h6")(3, "a", 55);
     \u0275\u0275text(4, "About Us");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(5, "span", 28);
     \u0275\u0275element(6, "img", 29);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "div", 56);
+    \u0275\u0275elementStart(7, "div", 57);
     \u0275\u0275listener("click", function NavbarComponent_div_1_nav_28_Template_div_click_7_listener() {
       \u0275\u0275restoreView(_r15);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("resources"));
     });
-    \u0275\u0275elementStart(8, "h6")(9, "a", 54);
+    \u0275\u0275elementStart(8, "h6")(9, "a", 55);
     \u0275\u0275text(10, "Resources");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(11, "span", 28);
@@ -63374,9 +63378,9 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     \u0275\u0275element(3, "img", 40);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(4, "button", 6);
-    \u0275\u0275element(5, "span", 7);
+    \u0275\u0275element(5, "img", 41);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(6, "div", 8)(7, "ul", 41)(8, "li", 42)(9, "a", 43);
+    \u0275\u0275elementStart(6, "div", 8)(7, "ul", 42)(8, "li", 43)(9, "a", 44);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_9_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63390,7 +63394,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     });
     \u0275\u0275text(10, "HOME");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(11, "li", 12)(12, "a", 44);
+    \u0275\u0275elementStart(11, "li", 12)(12, "a", 45);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_12_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63398,11 +63402,11 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     });
     \u0275\u0275text(13, " SERVICES ");
     \u0275\u0275elementStart(14, "span", 14);
-    \u0275\u0275element(15, "img", 45);
+    \u0275\u0275element(15, "img", 46);
     \u0275\u0275elementEnd()();
     \u0275\u0275template(16, NavbarComponent_div_1_ul_16_Template, 2, 1, "ul", 16);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(17, "li", 17)(18, "a", 46);
+    \u0275\u0275elementStart(17, "li", 17)(18, "a", 47);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_18_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63414,11 +63418,11 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     });
     \u0275\u0275text(19, " COMPANY ");
     \u0275\u0275elementStart(20, "span", 14);
-    \u0275\u0275element(21, "img", 45);
+    \u0275\u0275element(21, "img", 46);
     \u0275\u0275elementEnd()();
     \u0275\u0275template(22, NavbarComponent_div_1_ul_22_Template, 13, 0, "ul", 16);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(23, "li", 19)(24, "a", 47);
+    \u0275\u0275elementStart(23, "li", 19)(24, "a", 48);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_24_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63427,7 +63431,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     \u0275\u0275elementStart(25, "span");
     \u0275\u0275text(26, "Get in touch");
     \u0275\u0275elementEnd()()()()()();
-    \u0275\u0275template(27, NavbarComponent_div_1_nav_27_Template, 2, 1, "nav", 48)(28, NavbarComponent_div_1_nav_28_Template, 13, 0, "nav", 49);
+    \u0275\u0275template(27, NavbarComponent_div_1_nav_27_Template, 2, 1, "nav", 49)(28, NavbarComponent_div_1_nav_28_Template, 13, 0, "nav", 50);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63468,7 +63472,6 @@ var NavbarComponent = class _NavbarComponent {
       this.pageName = data.get("page");
       this.isHome = data.get("page") === "home";
       this.isServiceVisible = data.get("page") === "service";
-      console.log(this.isServiceVisible);
       this.isCompany = data.get("page") === "company";
     });
   }
@@ -63517,7 +63520,7 @@ var NavbarComponent = class _NavbarComponent {
   static \u0275fac = function NavbarComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _NavbarComponent)(\u0275\u0275directiveInject(MatDialog), \u0275\u0275directiveInject(ActivatedRoute));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], standalone: false, decls: 2, vars: 2, consts: [["class", "nav-bar", 4, "ngIf"], ["class", "nav-bar-black", 4, "ngIf"], [1, "nav-bar"], [1, "navbar", "navbar-expand-lg", "navbar-light", "bg-transparent", "nav-pad", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "navbar-brand", "logo"], ["src", "assets/images/Logomark-White.svg", "alt", "", "width", "70px", "height", "36px"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler"], [1, "navbar-toggler-icon", 2, "color", "#BFC0C0"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown", "mb-8"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], ["src", "assets/icons/dropdown-white.svg", 1, "dropdown-icon"], ["class", "mobile-nav", 4, "ngIf"], [1, "nav-item", "dropdown"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit;display: flex; flex-direction: row;margin:0px", 4, "ngIf"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [2, "color", "#BFC0C0", "display", "flex", "align-items", "center"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-3", "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black"], [1, "navbar", "navbar-expand-lg", "navbar-light", "bg-transparent", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px", "padding", "24px 4%"], ["src", "assets/images/Logomark-Black.svg", "alt", "", "width", "70px", "height", "36px"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", 2, "margin-right", "18px", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", 2, "margin-right", "16px", "display", "flex", "align-items", "center", 3, "click"], ["src", "assets/icons/dropdown-black.svg", 1, "dropdown-icon"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-3", "serviceItems-black", 2, "cursor", "pointer", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], standalone: false, decls: 2, vars: 2, consts: [["class", "nav-bar", 4, "ngIf"], ["class", "nav-bar-black", 4, "ngIf"], [1, "nav-bar"], [1, "navbar", "navbar-expand-lg", "navbar-light", "bg-transparent", "nav-pad", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "navbar-brand", "logo"], ["src", "assets/images/Logomark-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler"], ["src", "assets/icons/menu-icon-white.svg", 2, "color", "#BFC0C0", "width", "32px", "height", "32px"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown", "mb-8"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], ["src", "assets/icons/dropdown-white.svg", 1, "dropdown-icon"], ["class", "mobile-nav", 4, "ngIf"], [1, "nav-item", "dropdown"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit;display: flex; flex-direction: row;margin:0px", 4, "ngIf"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [2, "color", "#BFC0C0", "display", "flex", "align-items", "center"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-3", "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black"], [1, "navbar", "navbar-expand-lg", "navbar-light", "bg-transparent", "nav-pad", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px", "padding", "0px"], ["src", "assets/images/Logomark-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", 2, "width", "32px !important", "height", "32px !important"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", 2, "margin-right", "18px", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", 2, "margin-right", "16px", "display", "flex", "align-items", "center", 3, "click"], ["src", "assets/icons/dropdown-black.svg", 1, "dropdown-icon"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-3", "serviceItems-black", 2, "cursor", "pointer", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275template(0, NavbarComponent_div_0_Template, 29, 10, "div", 0)(1, NavbarComponent_div_1_Template, 29, 10, "div", 1);
     }
@@ -63540,13 +63543,13 @@ var NavbarComponent = class _NavbarComponent {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .nav-bar[_ngcontent-%COMP%]   .navbar-light[_ngcontent-%COMP%]   .navbar-toggler[_ngcontent-%COMP%] {
-  border-color: rgba(255, 255, 255, 0.5);
+  border: 0px;
 }
 .nav-bar[_ngcontent-%COMP%]   .navbar-light[_ngcontent-%COMP%]   .navbar-toggler-icon[_ngcontent-%COMP%] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-.nav-bar[_ngcontent-%COMP%]   .navbar-light[_ngcontent-%COMP%]   .navbar-toggler[_ngcontent-%COMP%] {
-  border-color: rgba(255, 255, 255, 0.5);
+.nav-bar-black[_ngcontent-%COMP%]   .navbar-light[_ngcontent-%COMP%]   .navbar-toggler[_ngcontent-%COMP%] {
+  border: 0px;
 }
 .nav-bar-black[_ngcontent-%COMP%]   .navbar-light[_ngcontent-%COMP%]   .navbar-toggler-icon[_ngcontent-%COMP%] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -63585,9 +63588,9 @@ var NavbarComponent = class _NavbarComponent {
   align-items: center;
   gap: 16px;
   width: 100vw;
-  height: 88px;
   left: 0px;
   top: 0px;
+  padding: 12px 48px;
 }
 .nav-bar[_ngcontent-%COMP%] {
   box-sizing: border-box;
@@ -63702,7 +63705,6 @@ var NavbarComponent = class _NavbarComponent {
   text-align: center;
   z-index: 1;
   background-color: #FBFBFB;
-  border: 1px solid #faf5f5;
   -webkit-backdrop-filter: blur(20.1px);
   backdrop-filter: blur(20.1px);
 }
@@ -63747,7 +63749,6 @@ var NavbarComponent = class _NavbarComponent {
   top: 90px;
   width: 100vw;
   background: rgba(255, 255, 255, 0.01);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.01);
   -webkit-backdrop-filter: blur(20.1px);
   backdrop-filter: blur(20.1px);
   color: #747B80;
@@ -63768,7 +63769,6 @@ var NavbarComponent = class _NavbarComponent {
   width: 100vw;
   padding-right: 15%;
   background: rgba(255, 255, 255, 0.01);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.01);
   -webkit-backdrop-filter: blur(20.1px);
   backdrop-filter: blur(20.1px);
   color: #747B80;
@@ -63822,9 +63822,12 @@ var NavbarComponent = class _NavbarComponent {
   width: 100vw;
   padding-right: 12%;
   background: rgba(255, 255, 255, 0.01);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.01);
   -webkit-backdrop-filter: blur(20.1px);
   backdrop-filter: blur(20.1px);
+}
+.logo-size[_ngcontent-%COMP%] {
+  width: 90px;
+  height: 52px;
 }
 .companyNavBar[_ngcontent-%COMP%] {
   box-sizing: border-box;
@@ -63842,7 +63845,6 @@ var NavbarComponent = class _NavbarComponent {
   width: 100vw;
   padding-right: 15%;
   background: rgba(255, 255, 255, 0.01);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.01);
   -webkit-backdrop-filter: blur(20.1px);
   backdrop-filter: blur(20.1px);
 }
@@ -64022,6 +64024,13 @@ var NavbarComponent = class _NavbarComponent {
   .nav-pad[_ngcontent-%COMP%] {
     padding: 16px;
   }
+  .logo-size[_ngcontent-%COMP%] {
+    width: 65px;
+    height: 28px;
+  }
+  .nav-bar-black[_ngcontent-%COMP%] {
+    padding: 16px;
+  }
 }
 /*# sourceMappingURL=navbar.component.css.map */`] });
 };
@@ -64034,72 +64043,73 @@ var FooterComponent = class _FooterComponent {
   static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FooterComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 58, vars: 0, consts: [[1, "footer"], [1, "row", "p-5", "m-0"], [1, "col-md-5", "col-12", "mt-5"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com"], ["src", "assets/images/facebook.png", "alt", ""], ["href", "https://www.instagram.com"], ["src", "assets/images/instagram.png", "alt", ""], ["href", "https://www.github.com"], ["src", "assets/images/github.png", "alt", ""], ["href", "https://www.twitter.com"], ["src", "assets/images/twitter.png", "alt", ""], ["href", "https://www.linkedin.com"], ["src", "assets/images/linkedin.png", "alt", ""], ["href", "https://www.youtube.com"], ["src", "assets/images/youtube.png", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-12", "mt-4"], [1, "row"], [1, "col-md-6", "col-12"], [1, "text-white", "mb-4", "mt-4", "fsr-21"], [1, "d-flex", "flex-column"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/aboutus?page=aboutus", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/resources?pages=resources", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], [1, "text-white", "mt-4", "mb-4", "fsr-21"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfo&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioEng&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=statisticalTesting&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=seqTech&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfoTraining&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16", "p-80"]], template: function FooterComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 59, vars: 0, consts: [[1, "footer"], [1, "row", "p-5", "m-0"], [1, "col-md-5", "col-12", "mt-5"], ["href", "/d2dWebsite-1.0.0/home?page=home"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com", 1, "pr-8"], ["src", "assets/images/facebook.png", "alt", ""], ["href", "https://www.instagram.com", 1, "pr-8"], ["src", "assets/images/instagram.png", "alt", ""], ["href", "https://github.com/DNA2discovery-D2D", 1, "pr-8"], ["src", "assets/images/github.png", "alt", ""], ["href", "https://www.twitter.com", 1, "pr-8"], ["src", "assets/images/twitter.png", "alt", ""], ["href", "https://www.linkedin.com/company/dna2discovery/", 1, "pr-8"], ["src", "assets/images/linkedin.png", "alt", ""], ["href", "https://www.youtube.com", 1, "pr-8"], ["src", "assets/images/youtube.png", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-12"], [1, "row"], [1, "col-md-6", "col-12"], [1, "text-white", "mt-43", "fsr-21"], [1, "d-flex", "flex-column"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/aboutus?page=aboutus", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/resources?pages=resources", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfo&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioEng&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=statisticalTesting&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=seqTech&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfoTraining&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16", "p-64"]], template: function FooterComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2);
-      \u0275\u0275element(3, "img", 3);
-      \u0275\u0275elementStart(4, "div", 4)(5, "a", 5)(6, "i");
-      \u0275\u0275element(7, "img", 6);
+      \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
+      \u0275\u0275element(4, "img", 4);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(5, "div", 5)(6, "a", 6)(7, "i");
+      \u0275\u0275element(8, "img", 7);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(8, "a", 7)(9, "i");
-      \u0275\u0275element(10, "img", 8);
+      \u0275\u0275elementStart(9, "a", 8)(10, "i");
+      \u0275\u0275element(11, "img", 9);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(11, "a", 9)(12, "i");
-      \u0275\u0275element(13, "img", 10);
+      \u0275\u0275elementStart(12, "a", 10)(13, "i");
+      \u0275\u0275element(14, "img", 11);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(14, "a", 11)(15, "i");
-      \u0275\u0275element(16, "img", 12);
+      \u0275\u0275elementStart(15, "a", 12)(16, "i");
+      \u0275\u0275element(17, "img", 13);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(17, "a", 13)(18, "i");
-      \u0275\u0275element(19, "img", 14);
+      \u0275\u0275elementStart(18, "a", 14)(19, "i");
+      \u0275\u0275element(20, "img", 15);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(20, "a", 15)(21, "i");
-      \u0275\u0275element(22, "img", 16);
+      \u0275\u0275elementStart(21, "a", 16)(22, "i");
+      \u0275\u0275element(23, "img", 17);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(23, "div", 17)(24, "a", 18);
-      \u0275\u0275text(25, "Privacy Policy");
+      \u0275\u0275elementStart(24, "div", 18)(25, "a", 19);
+      \u0275\u0275text(26, "Privacy Policy");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(26, "a", 18);
-      \u0275\u0275text(27, "Terms of Service");
+      \u0275\u0275elementStart(27, "a", 19);
+      \u0275\u0275text(28, "Terms of Service");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(28, "a", 18);
-      \u0275\u0275text(29, "Cookies Settings");
+      \u0275\u0275elementStart(29, "a", 19);
+      \u0275\u0275text(30, "Cookies Settings");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(30, "div", 19)(31, "div", 20)(32, "div", 21)(33, "h4", 22);
-      \u0275\u0275text(34, "Company");
+      \u0275\u0275elementStart(31, "div", 20)(32, "div", 21)(33, "div", 22)(34, "h4", 23);
+      \u0275\u0275text(35, "Company");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(35, "div", 23)(36, "a", 24);
-      \u0275\u0275text(37, "Home");
+      \u0275\u0275elementStart(36, "div", 24)(37, "a", 25);
+      \u0275\u0275text(38, "Home");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(38, "a", 25);
-      \u0275\u0275text(39, "About Us");
+      \u0275\u0275elementStart(39, "a", 26);
+      \u0275\u0275text(40, "About Us");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(40, "a", 26);
-      \u0275\u0275text(41, "Resources");
+      \u0275\u0275elementStart(41, "a", 27);
+      \u0275\u0275text(42, "Resources");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(42, "div", 21)(43, "h4", 27);
-      \u0275\u0275text(44, "Services");
+      \u0275\u0275elementStart(43, "div", 22)(44, "h4", 23);
+      \u0275\u0275text(45, "Services");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(45, "div", 23)(46, "a", 28);
-      \u0275\u0275text(47, "Bioinformatics Analytics");
+      \u0275\u0275elementStart(46, "div", 24)(47, "a", 28);
+      \u0275\u0275text(48, "Bioinformatics Analytics");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(48, "a", 29);
-      \u0275\u0275text(49, "Bioinformatics Engineering");
+      \u0275\u0275elementStart(49, "a", 29);
+      \u0275\u0275text(50, "Bioinformatics Engineering");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(50, "a", 30);
-      \u0275\u0275text(51, "Statistical Testing and Data Interpretation");
+      \u0275\u0275elementStart(51, "a", 30);
+      \u0275\u0275text(52, "Statistical Testing and Data Interpretation");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(52, "a", 31);
-      \u0275\u0275text(53, "Sequencing Technology Expertise");
+      \u0275\u0275elementStart(53, "a", 31);
+      \u0275\u0275text(54, "Sequencing Technology Expertise");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(54, "a", 32);
-      \u0275\u0275text(55, "Bioinformatics Training");
+      \u0275\u0275elementStart(55, "a", 32);
+      \u0275\u0275text(56, "Bioinformatics Training");
       \u0275\u0275elementEnd()()()()()();
-      \u0275\u0275elementStart(56, "p", 33);
-      \u0275\u0275text(57, "\xA9 2025 D2D. All rights reserved.");
+      \u0275\u0275elementStart(57, "p", 33);
+      \u0275\u0275text(58, "\xA9 2025 D2D. All rights reserved.");
       \u0275\u0275elementEnd()();
     }
-  }, styles: ["\n\n.footer[_ngcontent-%COMP%] {\n  background-color: #012323;\n  margin-bottom: 0 !important;\n  margin-left: 0 !important;\n  margin-right: 0 !important;\n  padding: 0;\n}\n.no-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%]:hover {\n  text-decoration: underline;\n  text-decoration-color: whitesmoke !important;\n}\n/*# sourceMappingURL=footer.component.css.map */"] });
+  }, styles: ["\n\n.footer[_ngcontent-%COMP%] {\n  background-color: #012323;\n  margin-bottom: 0 !important;\n  margin-left: 0 !important;\n  margin-right: 0 !important;\n  padding: 0;\n  bottom: 0;\n}\n.no-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%]:hover {\n  text-decoration: underline;\n  text-decoration-color: whitesmoke !important;\n}\n.mt-43[_ngcontent-%COMP%] {\n  margin-top: 42px;\n  margin-bottom: 16px;\n}\n.p-64[_ngcontent-%COMP%] {\n  padding-top: 42px;\n  padding-bottom: 80px;\n}\n@media only screen and (max-width: 768px) {\n  .pr-8[_ngcontent-%COMP%] {\n    padding-right: 8px !important;\n  }\n  .mt-43[_ngcontent-%COMP%] {\n    margin-top: 43px;\n    margin-bottom: 16px;\n  }\n  .fsr-16[_ngcontent-%COMP%] {\n    font-size: 12px !important;\n    font-weight: 400;\n  }\n  .color-lightwhite[_ngcontent-%COMP%] {\n    color: #BFC0C0 !important;\n  }\n  .p-64[_ngcontent-%COMP%] {\n    padding-top: 42px;\n    padding-bottom: 64px;\n  }\n}\n/*# sourceMappingURL=footer.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FooterComponent, { className: "FooterComponent", filePath: "src/shared/footer/footer.component.ts", lineNumber: 9 });
@@ -64152,9 +64162,9 @@ var AppComponent = class _AppComponent {
   static \u0275fac = function AppComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AppComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], standalone: false, decls: 4, vars: 0, consts: [[1, "m-0"]], template: function AppComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], standalone: false, decls: 4, vars: 0, consts: [[1, "m-0"], [1, "m-0", 2, "bottom", "0"]], template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275element(0, "app-navbar")(1, "router-outlet")(2, "app-getintouch", 0)(3, "app-footer", 0);
+      \u0275\u0275element(0, "app-navbar")(1, "router-outlet")(2, "app-getintouch", 0)(3, "app-footer", 1);
     }
   }, dependencies: [RouterOutlet, NavbarComponent, FooterComponent, GetintouchComponent], encapsulation: 2 });
 };
