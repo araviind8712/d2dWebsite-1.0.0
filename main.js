@@ -62316,9 +62316,16 @@ var ServiceMenuComponent = class _ServiceMenuComponent {
 // src/app/pages/services/services.component.ts
 var _c05 = (a0) => ({ "padding-bottom": a0 });
 var _c14 = (a0, a1) => ({ "padding-default": a0, "padding-none": a1 });
-function ServicesComponent_div_3_Template(rf, ctx) {
+function ServicesComponent_div_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 9);
+    \u0275\u0275elementStart(0, "div", 10);
+    \u0275\u0275element(1, "div", 11);
+    \u0275\u0275elementEnd();
+  }
+}
+function ServicesComponent_div_4_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div")(1, "p", 12);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62332,9 +62339,9 @@ function ServicesComponent_div_3_Template(rf, ctx) {
     \u0275\u0275textInterpolate1(" ", desc_r1, " ");
   }
 }
-function ServicesComponent_div_6_div_8_Template(rf, ctx) {
+function ServicesComponent_div_7_div_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 16);
+    \u0275\u0275elementStart(0, "div")(1, "p", 19);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62344,9 +62351,9 @@ function ServicesComponent_div_6_div_8_Template(rf, ctx) {
     \u0275\u0275textInterpolate(des_r4);
   }
 }
-function ServicesComponent_div_6_div_10_div_4_Template(rf, ctx) {
+function ServicesComponent_div_7_div_10_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 16);
+    \u0275\u0275elementStart(0, "div")(1, "p", 19);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62356,13 +62363,13 @@ function ServicesComponent_div_6_div_10_div_4_Template(rf, ctx) {
     \u0275\u0275textInterpolate(des_r5);
   }
 }
-function ServicesComponent_div_6_div_10_Template(rf, ctx) {
+function ServicesComponent_div_7_div_10_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 17)(1, "h5", 13);
+    \u0275\u0275elementStart(0, "div", 20)(1, "h5", 16);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(4, ServicesComponent_div_6_div_10_div_4_Template, 3, 1, "div", 2);
+    \u0275\u0275template(4, ServicesComponent_div_7_div_10_div_4_Template, 3, 1, "div", 3);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62374,19 +62381,19 @@ function ServicesComponent_div_6_div_10_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", sol_r6 == null ? null : sol_r6.description);
   }
 }
-function ServicesComponent_div_6_Template(rf, ctx) {
+function ServicesComponent_div_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 10)(1, "h2", 7);
+    \u0275\u0275elementStart(0, "div", 13)(1, "h2", 8);
     \u0275\u0275text(2, "Solutions Offered");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 11)(4, "div", 12)(5, "h5", 13);
+    \u0275\u0275elementStart(3, "div", 14)(4, "div", 15)(5, "h5", 16);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(8, ServicesComponent_div_6_div_8_Template, 3, 1, "div", 2);
+    \u0275\u0275template(8, ServicesComponent_div_7_div_8_Template, 3, 1, "div", 3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(9, "div", 14);
-    \u0275\u0275template(10, ServicesComponent_div_6_div_10_Template, 5, 8, "div", 15);
+    \u0275\u0275elementStart(9, "div", 17);
+    \u0275\u0275template(10, ServicesComponent_div_7_div_10_Template, 5, 8, "div", 18);
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -62399,9 +62406,9 @@ function ServicesComponent_div_6_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", ctx_r2.serviceData == null ? null : ctx_r2.serviceData.solutionsOffered.slice(1));
   }
 }
-function ServicesComponent_div_7_div_4_div_4_Template(rf, ctx) {
+function ServicesComponent_div_8_div_4_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 16);
+    \u0275\u0275elementStart(0, "div")(1, "p", 19);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62411,13 +62418,13 @@ function ServicesComponent_div_7_div_4_div_4_Template(rf, ctx) {
     \u0275\u0275textInterpolate(des_r7);
   }
 }
-function ServicesComponent_div_7_div_4_Template(rf, ctx) {
+function ServicesComponent_div_8_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 20)(1, "h5", 13);
+    \u0275\u0275elementStart(0, "div", 23)(1, "h5", 16);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(4, ServicesComponent_div_7_div_4_div_4_Template, 3, 1, "div", 2);
+    \u0275\u0275template(4, ServicesComponent_div_8_div_4_div_4_Template, 3, 1, "div", 3);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62428,13 +62435,13 @@ function ServicesComponent_div_7_div_4_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", sol_r8.description);
   }
 }
-function ServicesComponent_div_7_Template(rf, ctx) {
+function ServicesComponent_div_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 10)(1, "h2", 7);
+    \u0275\u0275elementStart(0, "div", 13)(1, "h2", 8);
     \u0275\u0275text(2, "Solutions Offered");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 18);
-    \u0275\u0275template(4, ServicesComponent_div_7_div_4_Template, 5, 4, "div", 19);
+    \u0275\u0275elementStart(3, "div", 21);
+    \u0275\u0275template(4, ServicesComponent_div_8_div_4_Template, 5, 4, "div", 22);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -62449,11 +62456,15 @@ var ServicesComponent = class _ServicesComponent {
   serviceName = "bioInfo";
   defaultServiceName = "bioInfo";
   serviceData;
+  isLoading = true;
   constructor(route, dialog) {
     this.route = route;
     this.dialog = dialog;
   }
   ngOnInit() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1e3);
     this.route.queryParams.subscribe((data) => {
       this.serviceName = data["service"];
     });
@@ -62473,24 +62484,26 @@ var ServicesComponent = class _ServicesComponent {
   static \u0275fac = function ServicesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ServicesComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(MatDialog));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServicesComponent, selectors: [["app-services"]], standalone: false, decls: 12, vars: 6, consts: [[1, "container-fluid", "section1"], [1, "pb-48"], [4, "ngFor", "ngForOf"], [1, "pt-80", 2, "padding-bottom", "8px"], ["alt", "image", 1, "pic", 3, "src"], ["class", "container-fluid section2", 4, "ngIf"], [1, "pt-80", "menu", 2, "background-color", "#FFFFFF"], [1, "pb-80"], ["bgColor", "background-color:white;", 3, "currentService"], ["align", "left", 1, "per32", 2, "text-align", "left", 3, "ngStyle"], [1, "container-fluid", "section2"], [1, "soln"], ["id", "first", 1, "width-50"], [2, "padding-bottom", "8px", "margin", "0px"], [1, "width-50", "ml-32"], [3, "ngClass", 4, "ngFor", "ngForOf"], [1, "des"], [3, "ngClass"], [1, "row"], ["class", "col-12 col-md-6 col-sm-12 padding-default", 4, "ngFor", "ngForOf"], [1, "col-12", "col-md-6", "col-sm-12", "padding-default"]], template: function ServicesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServicesComponent, selectors: [["app-services"]], standalone: false, decls: 13, vars: 7, consts: [["style", "width: 100vw; height: 100vh; z-index: 9999; \n         display: flex; justify-content: center; align-items: center; \n         position: fixed; top: 0; left: 0; background: rgba(255, 255, 255, 0.8);", 4, "ngIf"], [1, "container-fluid", "section1"], [1, "pb-48"], [4, "ngFor", "ngForOf"], [1, "pt-80", 2, "padding-bottom", "8px"], ["alt", "image", 1, "pic", 3, "src"], ["class", "container-fluid section2", 4, "ngIf"], [1, "pt-80", "menu", 2, "background-color", "#FFFFFF"], [1, "pb-80"], ["bgColor", "background-color:white;", 3, "currentService"], [2, "width", "100vw", "height", "100vh", "z-index", "9999", "display", "flex", "justify-content", "center", "align-items", "center", "position", "fixed", "top", "0", "left", "0", "background", "rgba(255, 255, 255, 0.8)"], [1, "spinner"], ["align", "left", 1, "per32", 2, "text-align", "left", 3, "ngStyle"], [1, "container-fluid", "section2"], [1, "soln"], ["id", "first", 1, "width-50"], [2, "padding-bottom", "8px", "margin", "0px"], [1, "width-50", "ml-32"], [3, "ngClass", 4, "ngFor", "ngForOf"], [1, "des"], [3, "ngClass"], [1, "row"], ["class", "col-12 col-md-6 col-sm-12 padding-default", 4, "ngFor", "ngForOf"], [1, "col-12", "col-md-6", "col-sm-12", "padding-default"]], template: function ServicesComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0)(1, "h2", 1);
-      \u0275\u0275text(2);
+      \u0275\u0275template(0, ServicesComponent_div_0_Template, 2, 0, "div", 0);
+      \u0275\u0275elementStart(1, "div", 1)(2, "h2", 2);
+      \u0275\u0275text(3);
       \u0275\u0275elementEnd();
-      \u0275\u0275template(3, ServicesComponent_div_3_Template, 3, 4, "div", 2);
-      \u0275\u0275elementStart(4, "div", 3);
-      \u0275\u0275element(5, "img", 4);
+      \u0275\u0275template(4, ServicesComponent_div_4_Template, 3, 4, "div", 3);
+      \u0275\u0275elementStart(5, "div", 4);
+      \u0275\u0275element(6, "img", 5);
       \u0275\u0275elementEnd()();
-      \u0275\u0275template(6, ServicesComponent_div_6_Template, 11, 5, "div", 5)(7, ServicesComponent_div_7_Template, 5, 1, "div", 5);
-      \u0275\u0275elementStart(8, "div", 6)(9, "h2", 7);
-      \u0275\u0275text(10, "Other Services");
+      \u0275\u0275template(7, ServicesComponent_div_7_Template, 11, 5, "div", 6)(8, ServicesComponent_div_8_Template, 5, 1, "div", 6);
+      \u0275\u0275elementStart(9, "div", 7)(10, "h2", 8);
+      \u0275\u0275text(11, "Other Services");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(11, "app-service-menu", 8);
+      \u0275\u0275element(12, "app-service-menu", 9);
       \u0275\u0275elementEnd();
     }
     if (rf & 2) {
-      \u0275\u0275advance(2);
+      \u0275\u0275property("ngIf", ctx.isLoading);
+      \u0275\u0275advance(3);
       \u0275\u0275textInterpolate(ctx.serviceData == null ? null : ctx.serviceData.topic);
       \u0275\u0275advance();
       \u0275\u0275property("ngForOf", ctx.serviceData == null ? null : ctx.serviceData.desc1);
@@ -63647,6 +63660,7 @@ var NavbarComponent = class _NavbarComponent {
   height: 88px;
   left: 0px;
   top: 0px;
+  z-index: 999;
 }
 .nav-bar[_ngcontent-%COMP%] {
   box-sizing: border-box;
