@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import aboutdata  from "../../../assets/about.json";
 import { CommonModule } from '@angular/common';
 import { GetintouchComponent } from '../../../shared/getintouch/getintouch.component';
@@ -12,4 +12,6 @@ import { GetintouchComponent } from '../../../shared/getintouch/getintouch.compo
 
 export class AboutusComponent {
   aboutData:any[]=aboutdata;
+
+ 
 }
