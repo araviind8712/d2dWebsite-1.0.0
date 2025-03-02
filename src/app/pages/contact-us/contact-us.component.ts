@@ -46,4 +46,5 @@ export class ContactUsComponent {
   closeDialog(): void {
     this.dialogRef.close();
   }
+
 }

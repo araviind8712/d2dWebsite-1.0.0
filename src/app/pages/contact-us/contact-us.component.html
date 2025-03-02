@@ -1,4 +1,4 @@
-<mat-dialog-content class="mat-typography" style="overflow-y: auto; scroll-behavior:smooth; background-color: #FFFFFF; max-height: 100vh">
+<mat-dialog-content class="mat-typography mat-padding" style="overflow-y: auto; scroll-behavior:smooth; background-color: #FFFFFF; max-height: 100vh">
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <h1 mat-dialog-title class="pb-2 px-0 title">Partner with Us!</h1>
@@ -20,7 +20,7 @@
         </div>
 
         <div class="col-md-6 col-sm-12">
-            <div class="form-wrapper">
+            <div class="form-wrapper" style="padding-left: 4px; padding-right: 4px;">
                 <form [formGroup]="contactForm" (ngSubmit)="save()">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -55,7 +55,10 @@
                             Invalid comments
                         </div>
                     </div>
-                    <button type="submit" [disabled]="(contactForm.invalid || contactForm.value.name.trim()==='' || contactForm.value.comments.trim()==='') && contactForm.touched" class="btn btn-primary">Submit</button>
+                    <div class="row button-grp">
+                    <button (click)="closeDialog()" class="btn btn-primary mr-8" id="cancelButton">Cancel</button>
+                    <button type="submit" [disabled]="(contactForm.invalid || contactForm.value.name.trim()==='' || contactForm.value.comments.trim()==='')" class="btn btn-primary">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>
