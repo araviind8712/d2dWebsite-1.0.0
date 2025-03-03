@@ -85,7 +85,7 @@ textarea {
 }
 
 .mr-8{
-  margin-right: 8px;
+  margin-right: calc(0.55vw + 0.08px);
 }
 
 button {
@@ -148,7 +148,7 @@ label {
   color: #121314;
   flex: none;
   order: 0;
-  align-self: stretch;
+  justify-content: start;
   flex-grow: 0;
 }
 
@@ -162,6 +162,7 @@ label {
   flex: none;
   order: 1;
   flex-grow: 0;
+  margin-bottom: 0px;
 }
 
 p {
@@ -184,8 +185,8 @@ p {
 .button-grp{
   position: relative;
   width: 45vw;
-  padding-left: 15px;
   align-self: center;
+  margin-left: 0px;
 }
 
 .contact-row{
@@ -202,9 +203,18 @@ p {
   width:  calc(45.55vw + 0.08px);
 }
 
+.contact-info{
+  padding-top: calc(2.22vw + 0.032px);
+}
 
 
 @media only screen and (max-width: 768px) {
+
+  .title{
+    padding-bottom: calc(0.97vw + 0.0036px) !important;
+    margin: 0px !important;
+  }
+
   .mt-32{
     margin-top: 0px;
   }
@@ -212,31 +222,53 @@ p {
     margin-bottom: 0px;
   }
   button{
-    width: 43vw !important;
-    margin-top: 24px;
+    width: 48% !important;
+    margin-top: calc(5.82vw + 0.0216px);
   }
 
   #cancelButton{
-    width: 43vw !important;
+    width: 48% !important;
+  }
+
+  .subTitle {
+    font-size: 16px;
   }
 
   textarea{
     height: 200px !important;
     padding-left: 10px;
   }
-  .mat-padding {
-    padding: 48px 16px !important;
-  }
+
   .button-grp{
-    position: relative;
-    width: 94vw;
-    padding-left: 15px;
+    width: calc(100vw - 2 * (4.80vw + 0.02px));
     justify-content: space-between;
     align-self: center;
   }
   .mr-8{
-    margin-right: 8px;
+    margin-right: calc(1.94vw + 0.0072px);
   }
   
+  .contact-row{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-info{
+    padding-top: calc(11.65vw + 0.002px) !important;
+    padding-bottom: calc(11.65vw + 0.002px) !important;
+  }
+  
+  .info{
+    width: calc(100vw - 2 * (3.88vw + 0.0144px));
+    margin-right: 0px;
+  }
+  
+  .fields{
+    width: calc(100vw - 2 * (3.88vw + 0.0144px));
+  }
+
+  .mat-padding {
+    padding: calc(11.65vw + 0.002px) calc(3.88vw + 0.0144px)!important ;
+  }
   
 }
