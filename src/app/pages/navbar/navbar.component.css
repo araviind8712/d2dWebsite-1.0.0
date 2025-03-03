@@ -124,7 +124,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 29px;
-    display: flex;
     text-transform: uppercase;
     color: #747B80;
 }
@@ -135,7 +134,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 29px;
-    display: flex;
     text-transform: uppercase;
     color: #747B80;
 }
@@ -214,6 +212,8 @@
     position: absolute;
     justify-content: center;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20.1px);
     text-decoration: none;
 }
 
@@ -329,7 +329,8 @@
     left: 0px;
     top: 90px;
     width: 100vw;
-
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20.1px);
 }
 
 .logo-size{
@@ -356,6 +357,8 @@
     left: 0px;
     top: 90px;
     width: 100vw;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20.1px);
     z-index: 999;
 }
 
@@ -485,34 +488,19 @@
     .navbar-nav {
         align-items: self-start;
     }
-    .nav-bar ul{
-        justify-content: center !important;
-        width: calc(100vw - 32px);
-    }
-
-    .nav-bar-black ul{
-        justify-content: center !important;
-        width: calc(100vw - 32px);
-    }
     .nav-bar ul li a {
-        width: calc(100vw - 37px);
         font-weight: 400;
         font-size: 21px;
         line-height: 29px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        
 
     }
 
     .nav-bar-black ul li a {
-        width: calc(100vw - 37px);
         font-weight: 400;
         font-size: 21px;
         line-height: 29px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+       
 
     }
 
@@ -590,7 +578,6 @@
 
     .navbar{
         width: 100vw;
-        justify-content: space-between !important;
     }
 
     .serviceNavBar-black {
@@ -629,34 +616,18 @@
     .navbar-nav {
         align-items: self-start;
     }
-    .nav-bar ul{
-        justify-content: center !important;
-        width: calc(100vw - 32px);
-    }
-
-    .nav-bar-black ul{
-        justify-content: center !important;
-        width: calc(100vw - 32px);
-    }
     .nav-bar ul li a {
-        width: calc(100vw - 37px);
         font-weight: 400;
         font-size: 21px;
         line-height: 29px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+       
 
     }
 
     .nav-bar-black ul li a {
-        width: calc(100vw - 37px);
         font-weight: 400;
         font-size: 21px;
         line-height: 29px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
     }
 
