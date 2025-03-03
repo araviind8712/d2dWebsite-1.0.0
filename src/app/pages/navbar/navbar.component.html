@@ -1,4 +1,4 @@
-<div class="nav-bar" *ngIf="pageName==='home'" style="width: 100vw;">
+<div class="nav-bar" *ngIf="pageName==='home'" style="width: 100vw; ">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent nav-pad" style="margin-bottom: 0px;">
         <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-White.svg" alt="" class="logo-size"></a>
 
@@ -70,7 +70,7 @@
     <nav class="serviceNavBar" *ngIf="serviceVisible" style="background-color: inherit;">
         <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
             class="serviceItems">
-            <h6 style=" color: #BFC0C0; display: flex;align-items: center;">
+            <h6 style=" color: #BFC0C0;">
                 <a class="link-underline" [title]="menu.topic" style="color: #BFC0C0;" class="submenu">{{menu.topic}}</a>
                 <span style="padding-left: 8px;">
                     <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
@@ -79,7 +79,7 @@
         </div>
     </nav>
 
-    <nav class="row companyNavBar" *ngIf="isCompDropdown" style="background-color: inherit;display: flex; flex-direction: row;margin:0px;">
+    <nav class="row companyNavBar" *ngIf="isCompDropdown" style="background-color: inherit; margin:0px;">
         <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" class="col-md-4 serviceItems" (click)="company('aboutus')">
             <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">About Us</a>
                 <span style="padding-left: 8px;">

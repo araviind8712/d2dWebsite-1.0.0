@@ -3,18 +3,14 @@
     color: black;
 }
 
-.section1 {
-    padding: 80px 48px;
-    background-color: #FFFFFF;
+.section1,.section4 {
+    padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);
+    background-color: #FFFFFF !important;
 }
 
-.section2 {
-    padding-left: 48px!important;
-    padding-right: 48px!important;
-
-    padding-top: 80px;
-    padding-bottom: 32px;
-    background-color: #FBFBFB;
+.section2,.section3 {
+    padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);
+    background-color: #FBFBFB !important;
 }
 
 h2 {
@@ -57,59 +53,47 @@ h5 {
 }
 
 .per32 {
-    margin-left: 32%;
+    margin-left: 31.875vw;
 }
 
 .pb-48 {
-    padding-bottom: 48px;
+    padding-bottom: calc(3.33vw + 0.048px);
 }
 
 .pt-80 {
-    padding-top: 80px;
+    padding-top: calc(5.55vw + 0.08px);
 }
 
 .pic {
-    height: 50%;
-    width: 66%;
+    aspect-ratio: 885/520;
+    width: calc(61.45vw + 0.12px);
 }
 
 .pb-80 {
-    padding-bottom: 80px;
+    padding-bottom: calc(5.55vw + 0.08px);
     margin: 0px;
 }
 
-.menu {
-    padding-left: 48px;
-    padding-right: 16px;
-    padding-bottom: 38px;
-}
 .ml-32{
-    margin-left: 32px;;
+    margin-left: calc(2.22vw + 0.032px);
 }
 .width-50{
-    width: 50%;
+    width:calc(50vw - 2.22vw + 0.032px);
 }
 .soln{
     display: flex; width: 100%;
 }
-.padding-default {
-    padding-bottom: 48px;
-}
 .padding-none {
     padding-bottom: 0px;
 }
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3498db;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+.col-md-6{
+    padding: 0px !important;
 }
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.padding-default{
+    padding-bottom: calc(3.33vw + 0.048px) !important;
+}
+.pb-8{
+    padding-bottom: calc(0.55vw + 0.08px);
 }
 
 @media only screen and (max-width: 768px) {

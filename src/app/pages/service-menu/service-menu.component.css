@@ -11,7 +11,7 @@ p {
 
 .service-img{
   aspect-ratio: 427 / 320;
-  width: calc(29.65vw + 0.05px);
+  width: 100%;
 }
 
 .pr0{

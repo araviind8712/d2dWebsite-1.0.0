@@ -5,7 +5,11 @@
 }
 
 .nav-pad{
-    padding: 18px 48px;
+    padding: calc(1.11vw + 0.016px) calc(3.33vw + 0.048px) ;
+}
+
+.nav-bar{
+    background: transparent;
 }
 
 .nav-bar .navbar-light .navbar-toggler-icon {
@@ -36,15 +40,15 @@
 
 .navbar {
     justify-content: flex-end;
+    box-shadow: none !important;
+    border-bottom: none !important;
+    
 }
 
 .navbar-nav {
     align-items: center;
 }
 
-.navbar-brand {
-    margin-right: 20px;
-}
 
 .dropdown-menu-custom {
     position: absolute;
@@ -68,11 +72,11 @@
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: calc(1.11vw + 0.016px);
     width: 100vw;
     left: 0px;
     top: 0px;
-    height: 88px;
+    height: calc(6.11vw + 0.016px);
     left: 0px;
     top: 0px;
     z-index: 999;
@@ -81,12 +85,11 @@
 
 .nav-bar {
     box-sizing: border-box;
-    justify-content: space-between;
     align-items: center;
     gap: 16px;
     position: absolute;
     width: 100vw;
-    height: 88px;
+    height: calc(6.11vw + 0.016px);
     left: 0px;
     top: 0px;
     flex: none;
@@ -160,6 +163,9 @@
     line-height: 29px;
 }
 
+.navbar{
+    backdrop-filter: blur(20.1px);
+}
 
 .btn-contact {
     display: flex;
@@ -212,8 +218,6 @@
     position: absolute;
     justify-content: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(20.1px);
     text-decoration: none;
 }
 
@@ -242,15 +246,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 32px 48px;
-    gap: 16px;
+    padding: calc(2.22vw + 0.032px) calc(3.33vw + 0.048px);
+    gap: calc(1.11vw + 0.016px);
     flex-wrap: wrap;
-    height: 192px;
+    height: 13vw;
+    row-gap: calc(1.66vw + 0.096px);
     left: 0px;
+    top: 90px;
+    width: 100vw;
     position: absolute;
     z-index: 999;
-    top: 88px;
-    width: 100vw;
     background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
     color: #747B80;
@@ -263,25 +268,29 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 32px 48px;
-    gap: 16px;
+    padding: calc(2.22vw + 0.032px) calc(3.33vw + 0.048px);
+    gap: calc(1.11vw + 0.016px);
     flex-wrap: wrap;
-    width: 1440px;
     left: 0px;
     top: 88px;
     width: 100vw;
     background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
     color: #747B80;
+    z-index: 9999 !important;
+    position: absolute;
 }
 
 
 
 .serviceItems-black {
-    flex: 1 1 calc(33.33% - 16px);
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: middle;
     box-sizing: border-box;
     text-align: left;
-    width: 33.33% !important;
+    width: 32%;
+    height: 35%;
 }
 
 .serviceItems-black h4 {
@@ -321,17 +330,19 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 32px 48px;
-    gap: 16px;
+   padding: calc(2.22vw + 0.032px) calc(3.33vw + 0.048px);
+    gap: calc(1.11vw + 0.016px);
     flex-wrap: wrap;
-    width: 1440px;
-    height: 192px;
+    height: 13vw;
+    row-gap: calc(1.66vw + 0.096px);
     left: 0px;
     top: 90px;
     width: 100vw;
-    background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
+    box-shadow: none !important;
+    border-bottom: none !important;
 }
+
 
 .logo-size{
     width:90px;
@@ -349,24 +360,26 @@
     margin-right: 0px;
     right: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    padding: 32px 48px;
-    gap: 16px;
+    padding: calc(2.22vw + 0.032px) calc(3.33vw + 0.048px);
+    gap: calc(1.11vw + 0.016px);
     flex-wrap: wrap;
     left: 0px;
     top: 90px;
     width: 100vw;
-    background: rgba(255, 255, 255, 0.01);
     backdrop-filter: blur(20.1px);
-    z-index: 999;
+    z-index: 9999;  
 }
 
 .serviceItems {
-    flex: 1 1 calc(33.33% - 16px);
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: middle;
     box-sizing: border-box;
     text-align: left;
-    width: 33.33% !important;
+    width: 32%;
+    height: 35%;
 }
 
 .serviceItems h4 {
@@ -375,8 +388,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 29px;
-    display: flex;
-    align-items: center;
     text-align: left;
     text-transform: uppercase;
     flex: none;
@@ -430,21 +441,7 @@
     padding-left: 9.5px;
 }
 
-@media only screen and (max-width: 1024px) {
-    .serviceItems {
-        flex-direction: row !important;
-        height: max-content;
-    }
 
-    .serviceNavBar-black {
-        flex-direction: row !important;
-        height: max-content;
-    }
-
-    .pl-9 {
-        padding-left: 2px;
-    }
-}
 
 @media only screen and (max-width: 991px) {
     .navbar{

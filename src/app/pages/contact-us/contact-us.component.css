@@ -12,7 +12,7 @@
   padding-right: 0px;
 }
 .mat-padding {
-  padding: 70px 48px !important;
+  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px) !important;
 }
 
 .form-group {
@@ -186,6 +186,20 @@ p {
   width: 45vw;
   padding-left: 15px;
   align-self: center;
+}
+
+.contact-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.info{
+  width: calc(42.22vw + 0.032px);
+  margin-right: calc(5.55vw + 0.08px) !important;
+}
+
+.fields{
+  width:  calc(45.55vw + 0.08px);
 }
 
 
