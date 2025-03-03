@@ -11,7 +11,11 @@ p {
 
 .service-img{
   aspect-ratio: 427 / 320;
-  width: 100% 
+  width: calc(29.65vw + 0.05px);
+}
+
+.pr0{
+  padding-right: 0px;
 }
 
 h4{
@@ -25,16 +29,24 @@ line-height: 39px;
 }
 
 .pr32{
-  padding-right: 32px !important;
+  padding-right: calc(2.22vw + 0.032px) !important;
 }
 
 .pb48{
-  padding-bottom: 48px !important;
+  padding-bottom: calc(3.33vw + 0.048px) !important;
 }
 
 .img32{
   height: 32px;
   width: 32px;
+}
+
+.pb24{
+  padding-bottom: calc(1.66vw + 0.096px) !important;
+}
+
+.pb8{
+  padding-bottom: calc(0.55vw + 0.08px) !important;
 }
 
 @media only screen and (max-width: 768px) {
