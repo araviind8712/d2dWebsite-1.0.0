@@ -214,6 +214,8 @@
     position: absolute;
     justify-content: center;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20.1px);
     text-decoration: none;
 }
 
@@ -329,7 +331,8 @@
     left: 0px;
     top: 90px;
     width: 100vw;
-
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20.1px);
 }
 
 .logo-size{
@@ -356,6 +359,8 @@
     left: 0px;
     top: 90px;
     width: 100vw;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20.1px);
     z-index: 999;
 }
 
