@@ -3,18 +3,16 @@
     color: black;
 }
 
-.section1 {
-    padding: 80px 48px;
-    background-color: #FFFFFF;
+.section1,
+.section4 {
+    padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);
+    background-color: #FFFFFF !important;
 }
 
-.section2 {
-    padding-left: 48px!important;
-    padding-right: 48px!important;
-
-    padding-top: 80px;
-    padding-bottom: 32px;
-    background-color: #FBFBFB;
+.section2,
+.section3 {
+    padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);
+    background-color: #FBFBFB !important;
 }
 
 h2 {
@@ -57,62 +55,57 @@ h5 {
 }
 
 .per32 {
-    margin-left: 32%;
+    margin-left: 31.875vw;
 }
 
 .pb-48 {
-    padding-bottom: 48px;
+    padding-bottom: calc(3.33vw + 0.048px);
 }
 
 .pt-80 {
-    padding-top: 80px;
+    padding-top: calc(5.55vw + 0.08px);
 }
 
 .pic {
-    height: 50%;
-    width: 66%;
+    aspect-ratio: 885/520;
+    width: calc(61.45vw + 0.12px);
 }
 
 .pb-80 {
-    padding-bottom: 80px;
+    padding-bottom: calc(5.55vw + 0.08px);
     margin: 0px;
 }
 
-.menu {
-    padding-left: 48px;
-    padding-right: 16px;
-    padding-bottom: 38px;
+.ml-32 {
+    margin-left: calc(2.22vw + 0.032px);
 }
-.ml-32{
-    margin-left: 32px;;
+
+.width-50 {
+    width: calc(50vw - 2.22vw + 0.032px);
 }
-.width-50{
-    width: 50%;
+
+.soln {
+    display: flex;
+    width: 100%;
 }
-.soln{
-    display: flex; width: 100%;
-}
-.padding-default {
-    padding-bottom: 48px;
-}
+
 .padding-none {
     padding-bottom: 0px;
 }
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3498db;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+
+.col-md-6 {
+    padding: 0px !important;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.padding-default {
+    padding-bottom: calc(3.33vw + 0.048px) !important;
 }
 
-@media only screen and (max-width: 768px) {
+.pb-8 {
+    padding-bottom: calc(0.55vw + 0.08px);
+}
+
+@media only screen and (max-width: 767px) {
     p {
         font-size: 16px;
         line-height: 22.4px;
@@ -134,8 +127,10 @@ h5 {
     }
 
     .section1,
-    .section2,.section3 {
-        padding: 64px 16px;
+    .section2,
+    .section3,
+    .section4 {
+        padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px);
     }
 
     .per32 {
@@ -143,50 +138,49 @@ h5 {
     }
 
     .pb-48 {
-        padding-bottom: 32px;
+        padding-bottom: calc(7.76vw + 0.0288px);
     }
 
     .pt-80 {
-        padding-top: 48px;
+        padding-top: calc(11.65vw + 0.002px);
     }
 
     .pic {
-        height: 240px;
         width: 100%;
     }
 
     .pb-80 {
-        padding-bottom: 48px !important;
+        padding-bottom: calc(11.65vw + 0.002px) !important;
         margin: 0px;
     }
 
     .menu {
-        padding-left: 16px;
-    }
-    .ml-32{
-        margin-left: 0px;;
-    }
-    .width-50{
-        width: 100%;
-    }
-    .soln{
-        display: flex; width: 100%;
-        flex-direction: column;
-    }
-    #first{
-        padding-bottom: 48px;
+        padding-left: calc(3.88vw + 0.0144px);
     }
 
-    .section2{
-        padding-bottom: 32px;
+    .ml-32 {
+        margin-left: 0px;
     }
+
+    .width-50 {
+        width: 100%;
+    }
+
+    .soln {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #first {
+        padding-bottom: calc(11.65vw + 0.002px);
+    }
+
     .padding-default {
-        padding-bottom: 32px;
+        padding-bottom: calc(7.76vw + 0.0288px);
     }
+
     .padding-none {
         padding-bottom: 0px;
-    }
-    .section2,section3{
-        padding-bottom: 32px;
     }
 }
