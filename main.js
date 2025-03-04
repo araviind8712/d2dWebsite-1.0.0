@@ -63254,7 +63254,8 @@ var routes = [
   { path: "home", component: HomeComponent },
   { path: "resources", component: ResourcesComponent },
   { path: "resource", component: ResourceDetailComponent },
-  { path: "aboutus", component: AboutusComponent }
+  { path: "aboutus", component: AboutusComponent },
+  { path: "**", redirectTo: "/home?page=home", pathMatch: "full" }
 ];
 var AppRoutingModule = class _AppRoutingModule {
   static \u0275fac = function AppRoutingModule_Factory(__ngFactoryType__) {
