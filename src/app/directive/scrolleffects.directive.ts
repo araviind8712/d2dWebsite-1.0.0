@@ -1,10 +1,10 @@
-import { Directive,ElementRef,Renderer2,HostListener } from '@angular/core';
+import { Directive,ElementRef,Renderer2,HostListener} from '@angular/core';
 
 @Directive({
   selector: '[appScrolleffects]',
   standalone: false
 })
-export class ScrolleffectsDirective {
+export class ScrolleffectsDirective{
 private isTransitioning = false;
   private lastScrollY = 0;
   private section1!: HTMLElement;
@@ -12,11 +12,13 @@ private isTransitioning = false;
   private text!: HTMLElement;
   private image!: HTMLElement;
   private section2Reached = false; // Allow free scrolling after Section 2
+  private isMobile: boolean = window.innerWidth <= 768;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {
   }
 
   ngAfterViewInit() {
+    if (this.isMobile) return;
     const sections = this.el.nativeElement.querySelectorAll('.section, .section1, .section2');
     if (sections.length < 2) return;
     
@@ -26,8 +28,14 @@ private isTransitioning = false;
     this.image = this.section1.querySelector('img')!;
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isMobile = window.innerWidth <= 768;
+  }
+
   @HostListener('window:scroll', ['$event'])
 onWindowScroll() {
+  if (this.isMobile) return;
   if (!this.section1 || !this.section2 || !this.text || !this.image) return;
   if (this.isTransitioning) return;
 
