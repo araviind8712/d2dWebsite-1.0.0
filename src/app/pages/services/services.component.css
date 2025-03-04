@@ -3,12 +3,14 @@
     color: black;
 }
 
-.section1,.section4 {
+.section1,
+.section4 {
     padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);
     background-color: #FFFFFF !important;
 }
 
-.section2,.section3 {
+.section2,
+.section3 {
     padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);
     background-color: #FBFBFB !important;
 }
@@ -74,29 +76,36 @@ h5 {
     margin: 0px;
 }
 
-.ml-32{
+.ml-32 {
     margin-left: calc(2.22vw + 0.032px);
 }
-.width-50{
-    width:calc(50vw - 2.22vw + 0.032px);
+
+.width-50 {
+    width: calc(50vw - 2.22vw + 0.032px);
 }
-.soln{
-    display: flex; width: 100%;
+
+.soln {
+    display: flex;
+    width: 100%;
 }
+
 .padding-none {
     padding-bottom: 0px;
 }
-.col-md-6{
+
+.col-md-6 {
     padding: 0px !important;
 }
-.padding-default{
+
+.padding-default {
     padding-bottom: calc(3.33vw + 0.048px) !important;
 }
-.pb-8{
+
+.pb-8 {
     padding-bottom: calc(0.55vw + 0.08px);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     p {
         font-size: 16px;
         line-height: 22.4px;
@@ -118,8 +127,10 @@ h5 {
     }
 
     .section1,
-    .section2,.section3 {
-        padding: 64px 16px;
+    .section2,
+    .section3,
+    .section4 {
+        padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px);
     }
 
     .per32 {
@@ -127,50 +138,49 @@ h5 {
     }
 
     .pb-48 {
-        padding-bottom: 32px;
+        padding-bottom: calc(7.76vw + 0.0288px);
     }
 
     .pt-80 {
-        padding-top: 48px;
+        padding-top: calc(11.65vw + 0.002px);
     }
 
     .pic {
-        height: 240px;
         width: 100%;
     }
 
     .pb-80 {
-        padding-bottom: 48px !important;
+        padding-bottom: calc(11.65vw + 0.002px) !important;
         margin: 0px;
     }
 
     .menu {
-        padding-left: 16px;
-    }
-    .ml-32{
-        margin-left: 0px;;
-    }
-    .width-50{
-        width: 100%;
-    }
-    .soln{
-        display: flex; width: 100%;
-        flex-direction: column;
-    }
-    #first{
-        padding-bottom: 48px;
+        padding-left: calc(3.88vw + 0.0144px);
     }
 
-    .section2{
-        padding-bottom: 32px;
+    .ml-32 {
+        margin-left: 0px;
     }
+
+    .width-50 {
+        width: 100%;
+    }
+
+    .soln {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #first {
+        padding-bottom: calc(11.65vw + 0.002px);
+    }
+
     .padding-default {
-        padding-bottom: 32px;
+        padding-bottom: calc(7.76vw + 0.0288px);
     }
+
     .padding-none {
         padding-bottom: 0px;
-    }
-    .section2,section3{
-        padding-bottom: 32px;
     }
 }

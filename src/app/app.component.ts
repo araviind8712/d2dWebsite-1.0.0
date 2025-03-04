@@ -8,4 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'd2dWebsite';
+  top(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

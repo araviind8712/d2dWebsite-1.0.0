@@ -1,5 +1,5 @@
 <div class="nav-bar" *ngIf="pageName==='home'" style="width: 100vw; ">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent nav-pad" style="margin-bottom: 0px;">
+    <nav class="navbar navbar-expand-md navbar-light bg-transparent nav-pad" style="margin-bottom: 0px;">
         <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-White.svg" alt="" class="logo-size"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" style=" padding: 0px;">
@@ -69,7 +69,7 @@
 
     <nav class="serviceNavBar" *ngIf="serviceVisible" style="background-color: inherit;">
         <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
-            class="serviceItems">
+            class=" serviceItems">
             <h6 style=" color: #BFC0C0;">
                 <a class="link-underline" [title]="menu.topic" style="color: #BFC0C0;" class="submenu">{{menu.topic}}</a>
                 <span style="padding-left: 8px;">
@@ -98,7 +98,7 @@
 </div>
 
 <div class="nav-bar-black" *ngIf="pageName!=='home'" style="width: 100vw;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent nav-pad" style="background: rgba(255, 255, 255, 0.02);border-bottom: 1px solid rgba(255, 255, 255, 0.01);backdrop-filter: blur(20px); margin-bottom: 0px;z-index: 999;position: relative;">
+    <nav class="navbar navbar-expand-md navbar-light bg-transparent nav-pad" style="background: rgba(255, 255, 255, 0.02);border-bottom: 1px solid rgba(255, 255, 255, 0.01);backdrop-filter: blur(20px); margin-bottom: 0px;z-index: 999;position: relative;">
         <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-Black.svg" alt="" class="logo-size"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" style=" padding: 0px;">

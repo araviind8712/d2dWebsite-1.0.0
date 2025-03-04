@@ -21,32 +21,32 @@
 }
 
 .mt-43{
-    margin-top: 42px;
-    margin-bottom: 16px;
+    margin-top: calc(2.91vw + 0.096px);
+    margin-bottom: calc(1.11vw + 0.016px);
 }
 
 .p-64{
-    padding-top: 42px;
-    padding-bottom: 80px;
+    padding-top: calc(2.91vw + 0.096px);
+    padding-bottom: calc(5.55vw + 0.08px);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .pr-8{
-        padding-right: 8px !important;
+        padding-right: calc(1.94vw + 0.0072px) !important;
     }
     .mt-43{
-        margin-top: 43px;
-        margin-bottom: 16px;
+        margin-top: calc(10.43vw + 0.0284px);
+        margin-bottom: calc(3.88vw + 0.0144px);
     }
     .fsr-16{
-        font-size: 12px !important;
+        font-size: calc(2.91vw + 0.0108px) !important;
         font-weight: 400;
     }
     .color-lightwhite{
         color:#BFC0C0 !important;
     }
     .p-64{
-        padding-top: 42px;
-        padding-bottom: 64px;
+        padding-top: calc(10.19vw + 0.0172px);
+        padding-bottom: calc(15.53vw + 0.0164px);
     }
 }

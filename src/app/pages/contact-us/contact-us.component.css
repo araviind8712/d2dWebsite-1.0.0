@@ -200,7 +200,8 @@ p {
 }
 
 .fields{
-  width:  calc(45.55vw + 0.08px);
+  width:  calc(45.59vw + 0.08px);
+  overflow-x: hidden !important;
 }
 
 .contact-info{
@@ -208,7 +209,7 @@ p {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
   .title{
     padding-bottom: calc(0.97vw + 0.0036px) !important;
