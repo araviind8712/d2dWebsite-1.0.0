@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration=development --base-href=/d2dWebsite-1.0.0/",
+    "add404Html": "copy src\\shared\\404.html dist\\d2dwebsite-1.0.0\\browser\\",
     "deploy": "npx angular-cli-ghpages --dir=dist/d2dWebsite-1.0.0/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
