@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 .aboutus-gallery .col-8:nth-child(odd){
     margin-left:auto;
 }

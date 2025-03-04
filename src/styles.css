@@ -46,6 +46,11 @@ body {
   scroll-behavior: smooth;
 }
 
+::ng-deep .cdk-overlay-container {
+  position: fixed !important;
+  z-index: 1000 !important;
+}
+
 
 .custom-dialog .mat-dialog-container {
   padding: 0;
@@ -58,6 +63,7 @@ body {
 }
 
 .custom-dialog {
+  background: transparent !important;
   animation: slideUp 0.3s ease-out;
   max-height: fit-content;
 }
@@ -133,23 +139,23 @@ body {
 
 
 .p-48 {
-  padding: 0 48px;
+  padding: 0 calc(3.33vw + 0.048px);
 }
 
 .p-80 {
-  padding: 80px 0;
+  padding: calc(5.55vw + 0.08px) 0;
 }
 
 .mt-80 {
-  margin-top: 80px !important;
+  margin-top: calc(5.55vw + 0.08px) !important;
 }
 
 .mb-80 {
-  margin-bottom: 80px !important;
+  margin-bottom: calc(5.55vw + 0.08px) !important;
 }
 
 .mt-48 {
-  margin-top: 48px !important;
+  margin-top: calc(3.33vw + 0.048px) !important;
 }
 
 /* Margin End */
@@ -345,13 +351,13 @@ a {
 /* Animation Ends */
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .btn-responsive {
     width: 100%;
   }
 
   .p-48 {
-    padding: 0 16px !important;
+    padding: 0 calc(3.88vw + 0.0144px) !important;
   }
 
   .fsr-21 {

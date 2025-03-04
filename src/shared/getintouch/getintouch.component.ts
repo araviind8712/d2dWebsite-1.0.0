@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ContactUsComponent } from '../../app/pages/contact-us/contact-us.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -9,14 +9,19 @@ import { MatDialog } from '@angular/material/dialog';
   standalone: false,
 })
 export class GetintouchComponent {
-  constructor(private dialog:MatDialog){}
+  @Output() scrollToTopEvent = new EventEmitter<void>();
+  
+  constructor(private dialog: MatDialog) { }
   openDialog(): void {
+    this.scrollToTopEvent.emit();
+    setTimeout(() => {
       this.dialog.open(ContactUsComponent, {
         width: '100vw',
         maxWidth: '100vw',
         maxHeight: 'fit-content',
         position: { bottom: '0px' },
-        panelClass: 'custom-dialog'
+        panelClass: 'custom-dialog',
       });
-    }
+    }, 800);
+  }
 }

@@ -1,18 +1,22 @@
 <div class="p-48 slide-up-page" appScrolleffects>
     <div class="section1 section">
-    <p class="fsr-67 w-75 mt-80">We Revolutionize Research Through Data-Driven Innovation</p>
-    <div class="row mt-48">
-    <div class="col-md-4 col-12"></div>
-    <div class="col-md-8 col-12">
-        <p class="fsr-21">
-            At DNA2Discovery, we collaborate with researchers and academic institutions to propel life sciences forward with
-            innovative bioinformatics solutions, accelerating discoveries and driving scientific breakthroughs.
-        </p>
-        <button class="btn btn-outline-dark rounded-pill btn-responsive fsr-21 my-4 py-3 px-4">Get in Touch</button>
+        <p class="fsr-67 w-75 mt-80">We Revolutionize Research Through Data-Driven Innovation</p>
+        <div class="row mt-48">
+            <div class="col-md-4 col-12"></div>
+            <div class="col-md-8 col-12">
+                <p class="fsr-21">
+                    At DNA2Discovery, we collaborate with researchers and academic institutions to propel life sciences
+                    forward with
+                    innovative bioinformatics solutions, accelerating discoveries and driving scientific breakthroughs.
+                </p>
+                <button class="btn btn-outline-dark rounded-pill btn-responsive fsr-21 my-4 py-3 px-4" (click)="openContactUs()">Get in
+                    Touch</button>
+            </div>
+        </div>
+        <img src="assets/images/team.png" alt="team" class="image-view mt-80">
     </div>
 </div>
 <img src="assets/images/team.png" alt="team" class="image-view mt-80">
-</div>
 <div class="mt-80 section2 section">
     <div class="text-right my-3">
         <p class="color-lightgrey fsb-16 lh-22">Vision and Mission</p>
@@ -35,26 +39,28 @@ By advancing bioinformatics methodologies and technologies, we aim to drive tran
                 
 We address a wide spectrum of genetic research across diverse biological systems, driving innovative solutions to advance our understanding of health, disease, and ecosystems.
             </pre>
-        </div>
-    </div>
-    <section class="mt-80 mb-80">
-        <div>
-            <section class="text-secondary fsb-16 p-0 lh-22">Our Team</section>
-            <section class="fsr-51">About our Expertise</section>
-        </div>
-        <div class="row mt-48">
-            <div class="col-md-4 col-12"></div>
-            <div class="col-md-8 col-12">
-                <p class="fsr-21 lh-29">We are a team of passionate bioinformaticians and data scientists and we are dedicated to providing innovative solutions in life science research. Our expertise spans a wide range of bioinformatics services, including genomic sequencing, and computational modeling, all designed to unlock the potential hidden within complex biological data.</p>
             </div>
         </div>
-        <!-- <div class="row aboutus-gallery mt-80">
+        <section class="mt-80 mb-80">
+            <div>
+                <section class="text-secondary fsb-16 p-0 lh-22">Our Team</section>
+                <section class="fsr-51">About our Expertise</section>
+            </div>
+            <div class="row mt-48">
+                <div class="col-md-4 col-12"></div>
+                <div class="col-md-8 col-12">
+                    <p class="fsr-21 lh-29">We are a team of passionate bioinformaticians and data scientists and we are
+                        dedicated to providing innovative solutions in life science research. Our expertise spans a wide
+                        range of bioinformatics services, including genomic sequencing, and computational modeling, all
+                        designed to unlock the potential hidden within complex biological data.</p>
+                </div>
+            </div>
+            <!-- <div class="row aboutus-gallery mt-80">
            <div class="col-md-4 col-8" *ngFor="let about of aboutData">
                 <img [src]="about.image" [alt]="about.name" class="w-100">
                 <p class="fsr-28 mt-3 mb-0">{{about.name}}</p>
                 <p class="fsr-16 color-lightgrey">{{about.role}}</p>
            </div>
         </div> -->
-    </section>
-</div>
-</div>
+        </section>
+    </div>

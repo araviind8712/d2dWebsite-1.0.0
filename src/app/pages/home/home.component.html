@@ -1,15 +1,21 @@
 <div #mainDiv appHomescroll class="container-fluid p-0" style="margin-top: 0; width: 100vw;">
     <div #section [attr.data-index]="1" class="section">
         <div *ngIf="isLoading==true" class="loader">
-            <div class="spinner"></div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="loading-text">
+                <p>Loading</p>
+            </div>
+            
         </div>
-        <video src="assets/videos/d2dVid.mp4" (waiting)="isLoading=true" (loadeddata)="isLoading=false" (playing)="isLoading=false" class="pic" autoplay loop muted inline style="filter: brightness(50%);"></video>
-        <p style="position: absolute; margin: 0px; bottom:0%;line-height: 80.7px; width: 100vw; max-height: 90%; overflow-y: scroll;" class="fsr-67 p-48 pb-48 text-white videoText">
+        <video src="assets/videos/d2dVid.mp4" (waiting)="isLoading=true" (loadeddata)="isLoading=false" (playing)="isLoading=false" class="pic" autoplay loop muted inline style="filter: brightness(50%);" [ngStyle]="{'visibility': isLoading ? 'hidden' : 'visible'}"></video>
+        <p *ngIf="isLoading==false" class="fsr-67 pyx-48 text-white videoText">
             <span>Unlocking Life's Secrets: Driving </span><span style="background: linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%);-webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;">Innovation </span>with Precision Bioinformatics and <span style="background: linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> Collaboration</span></p>
        </div>
     <div class="col-md-12 section1" [attr.data-index]="2">
-        <p align="center" style="padding-bottom: 24px; margin-bottom: 0px;">Who we are</p>
+        <p align="center" style="margin-bottom: 0px;" class="pb-24">Who we are</p>
         <h3 align="center">Where Biology Meets Technology: Empowering Breakthroughs with
             Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and
             turn bold scientific goals into reality.</h3>
@@ -79,5 +85,4 @@
             </div>
         </div>
     </div>
-   
 </div>
