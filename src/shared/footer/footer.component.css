@@ -7,6 +7,14 @@
     bottom: 0;
 }
 
+.foot-pad{
+    padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px) !important;
+}
+
+.mt80{
+    margin-top: 80px !important;
+}
+
 .no-underline{
     text-decoration:none;
 }
@@ -49,4 +57,11 @@
         padding-top: calc(10.19vw + 0.0172px);
         padding-bottom: calc(15.53vw + 0.0164px);
     }
+    .foot-pad{
+        padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px) !important;
+    }
+    .mt80{
+        margin-top: 80px !important;
+    }
+    
 }

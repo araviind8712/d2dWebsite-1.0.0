@@ -9,7 +9,7 @@
 }
 
 .nav-bar{
-    background: transparent;
+    background: #FFFFFF05;
 }
 
 .nav-bar .navbar-light .navbar-toggler-icon {
@@ -164,7 +164,7 @@
 }
 
 .navbar{
-    backdrop-filter: blur(20.1px);
+    backdrop-filter: blur(10.2px);
 }
 
 .btn-contact {
@@ -209,7 +209,7 @@
     text-align: center;
     z-index: 999;
     background-color: #FBFBFB;
-    backdrop-filter: blur(20.1px);
+    backdrop-filter: blur(10.2px);
 }
 
 .nav-bar .dropdown-content {
@@ -257,7 +257,7 @@
     position: absolute;
     z-index: 999;
     background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(20.1px);
+    backdrop-filter: blur(10.2px);
     color: #747B80;
 }
 
@@ -275,7 +275,7 @@
     top: 88px;
     width: 100vw;
     background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(20.1px);
+    backdrop-filter: blur(10.2px);
     color: #747B80;
     z-index: 9999 !important;
     position: absolute;
@@ -338,7 +338,7 @@
     left: 0px;
     top: 90px;
     width: 100vw;
-    backdrop-filter: blur(20.1px);
+    backdrop-filter: blur(10.2px);
     box-shadow: none !important;
     border-bottom: none !important;
 }
@@ -368,7 +368,7 @@
     left: 0px;
     top: 90px;
     width: 100vw;
-    backdrop-filter: blur(20.1px);
+    backdrop-filter: blur(10.2px);
     z-index: 9999;  
 }
 
@@ -407,7 +407,7 @@
     line-height: 29px;
     z-index: 9999;
     background-color: rgba(255, 255, 255, 0.07) !important;
-    backdrop-filter: blur(20.1px);
+    backdrop-filter: blur(10.2px);
     color: #121314;
 }
 

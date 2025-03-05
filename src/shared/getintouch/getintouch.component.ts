@@ -13,15 +13,12 @@ export class GetintouchComponent {
   
   constructor(private dialog: MatDialog) { }
   openDialog(): void {
-    this.scrollToTopEvent.emit();
-    setTimeout(() => {
-      this.dialog.open(ContactUsComponent, {
-        width: '100vw',
-        maxWidth: '100vw',
-        maxHeight: 'fit-content',
-        position: { bottom: '0px' },
-        panelClass: 'custom-dialog',
-      });
-    }, 800);
+    this.dialog.open(ContactUsComponent, {
+      width: '100vw',
+      maxWidth: '100vw',
+      maxHeight: 'fit-content',
+      position: { bottom: '0px' },
+      panelClass: 'custom-dialog',
+    });
   }
 }

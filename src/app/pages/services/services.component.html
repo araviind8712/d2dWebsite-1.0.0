@@ -14,7 +14,7 @@
     <div class="section2 section" *ngIf="serviceName==='bioInfo'">
         <h2 class="pb-80">Solutions Offered</h2>
         <div class="soln">
-            <div class="width-50" id="first">
+            <div class="width-50 mr-32" id="first">
                 <h5 style="margin: 0px;" class="pb-8">{{ serviceData.solutionsOffered[0]?.topic | uppercase }}
                 </h5>
                 <div *ngFor="let des of serviceData?.solutionsOffered[0].description">
@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <div class="width-50 ml-32">
+            <div class="width-50">
                 <div *ngFor="let sol of serviceData?.solutionsOffered.slice(1)" [ngClass]="{ 
                 'padding-default': sol?.topic !== 'TRANSCRIPTOMICS', 
                 'padding-none': sol?.topic === 'TRANSCRIPTOMICS' 
@@ -38,9 +38,9 @@
     </div>
     <div class="container-fluid section3 section" *ngIf="serviceName!=='bioInfo'">
         <h2 class="pb-80">Solutions Offered</h2>
-        <div class="row">
-            <div class="col-12 col-md-6 col-sm-12 padding-default"
-                *ngFor="let sol of serviceData?.solutionsOffered; let i = index">
+        <div class="soln">
+            <div *ngFor="let sol of serviceData?.solutionsOffered; let i = index"
+                [ngClass]="(i+1) % 2 === 1 ? 'mr-32 width-50 padding-default' : 'mr-0 width-50 padding-default'">
                 <h5 style="padding-bottom: 8px;margin: 0px">{{sol?.topic | uppercase}}</h5>
                 <div *ngFor="let des of sol.description">
                     <p class="des">{{des}}</p>

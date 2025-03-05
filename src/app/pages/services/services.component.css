@@ -66,6 +66,10 @@ h5 {
     padding-top: calc(5.55vw + 0.08px);
 }
 
+.mr-0{
+    margin-right: 0px;
+}
+
 .pic {
     aspect-ratio: 885/520;
     width: calc(61.45vw + 0.12px);
@@ -80,8 +84,12 @@ h5 {
     margin-left: calc(2.22vw + 0.032px);
 }
 
+.mr-32{
+    margin-right: calc(2.22vw + 0.032px);
+}
+
 .width-50 {
-    width: calc(50vw - 2.22vw + 0.032px);
+    width: 100% !important;
 }
 
 .soln {
@@ -124,6 +132,10 @@ h5 {
     .des {
         font-size: 16px;
         line-height: 22.4px;
+    }
+
+    .mr-32{
+        margin-right: 0 !important;
     }
 
     .section1,
@@ -173,11 +185,11 @@ h5 {
     }
 
     #first {
-        padding-bottom: calc(11.65vw + 0.002px);
+        padding-bottom: calc(7.76vw + 0.0288px) !important;
     }
 
     .padding-default {
-        padding-bottom: calc(7.76vw + 0.0288px);
+        padding-bottom: calc(7.76vw + 0.0288px) !important;
     }
 
     .padding-none {
