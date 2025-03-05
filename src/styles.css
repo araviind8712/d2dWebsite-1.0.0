@@ -149,7 +149,7 @@ body {
 }
 
 .mt-80 {
-  margin-top: calc(5.55vw + 0.08px) !important;
+  margin-top: 80px !important;
 }
 
 .mb-80 {
@@ -408,6 +408,10 @@ a {
   
   .lh-61{
     line-height: 45.6px !important;
+  }
+  
+  .fsb-16{
+    font-size: 12px !important;
   }
 
 }
