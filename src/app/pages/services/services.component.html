@@ -39,8 +39,8 @@
     <div class="container-fluid section3 section" *ngIf="serviceName!=='bioInfo'">
         <h2 class="pb-80">Solutions Offered</h2>
         <div class="soln">
-            <div *ngFor="let sol of serviceData?.solutionsOffered; let i = index"
-                [ngClass]="(i+1) % 2 === 1 ? 'mr-32 width-50 padding-default' : 'mr-0 width-50 padding-default'">
+            <div *ngFor="let sol of serviceData?.solutionsOffered; let i = index" class="width-50"
+                [ngClass]="(i+1) % 2 === 1 ? 'mr-32 padding-default' : 'mr-0 padding-default'">
                 <h5 style="padding-bottom: 8px;margin: 0px">{{sol?.topic | uppercase}}</h5>
                 <div *ngFor="let des of sol.description">
                     <p class="des">{{des}}</p>
