@@ -178,7 +178,8 @@ h5 {
     }
 
     .width-50 {
-        width: 100%;
+        flex:1 1 100%;
+        max-width: 100% !important;
     }
 
     .soln {
