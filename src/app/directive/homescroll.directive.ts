@@ -9,13 +9,20 @@ export class HomescrollDirective{
   private lastScrollY = 0;
   private sections: HTMLElement[] = [];
   private currentSectionIndex = 0;
-  private isMobile: boolean = window.innerWidth <= 768;
+  private isMobile: boolean = false;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {
+    if(typeof window !== 'undefined'){
+      this.isMobile = window.innerWidth <= 768;
+    }
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.isMobile = window.innerWidth <= 768;
+    if (typeof window !== "undefined") {
+      this.isMobile = window.innerWidth <= 768;
+   }
+    
   }
 
   ngAfterViewInit() {
@@ -52,7 +59,9 @@ export class HomescrollDirective{
 
   private autoScrollTo(position: number) {
     this.isTransitioning = true;
-    window.scrollTo({ top: position, behavior: 'smooth' });
+    if(typeof window !== 'undefined'){
+      window.scrollTo({ top: position, behavior: 'smooth' });
+    }
 
     setTimeout(() => {
       this.isTransitioning = false;
