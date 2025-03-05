@@ -307,10 +307,12 @@ body {
   font-weight: 400;
 }
 .p-48 {
-  padding: 0 calc(3.33vw + 0.048px);
+  padding-left: calc(3.33vw + 0.048px);
+  padding-right: calc(3.33vw + 0.048px);
 }
 .p-80 {
-  padding: calc(5.55vw + 0.08px) 0;
+  padding-top: calc(5.55vw + 0.08px);
+  padding-bottom: calc(5.55vw + 0.08px);
 }
 .mt-80 {
   margin-top: calc(5.55vw + 0.08px) !important;
@@ -334,13 +336,19 @@ body {
   color: #fbfbfb !important;
 }
 .bg-lightwhite {
-  background-color: #fbfbfb;
+  background-color: #fbfbfb !important;
 }
 .lh-29 {
   line-height: 29px !important;
 }
 .lh-22 {
   line-height: 22.4px !important;
+}
+.lh-80 {
+  line-height: 80.4px !important;
+}
+.lh-61 {
+  line-height: 61.2px !important;
 }
 body {
   margin: 0;
@@ -469,8 +477,13 @@ a {
   .btn-responsive {
     width: 100%;
   }
+  .p-80 {
+    padding-top: calc(15.53vw + 0.0164px) !important;
+    padding-bottom: calc(15.53vw + 0.0164px) !important;
+  }
   .p-48 {
-    padding: 0 calc(3.88vw + 0.0144px) !important;
+    padding-left: calc(3.88vw + 0.0144px) !important;
+    padding-right: calc(3.88vw + 0.0144px) !important;
   }
   .fsr-21 {
     font-size: 16px !important;
@@ -483,6 +496,18 @@ a {
   }
   .fsb-120 {
     font-size: 67px !important;
+  }
+  .lh-29 {
+    line-height: 22.4px !important;
+  }
+  .lh-22 {
+    line-height: 16.8px !important;
+  }
+  .lh-80 {
+    line-height: 61.2px !important;
+  }
+  .lh-61 {
+    line-height: 45.6px !important;
   }
 }
 
