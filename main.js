@@ -62336,7 +62336,7 @@ var _c05 = (a0) => ({ "padding-bottom": a0 });
 var _c14 = (a0, a1) => ({ "padding-default": a0, "padding-none": a1 });
 function ServicesComponent_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 10);
+    \u0275\u0275elementStart(0, "div")(1, "p", 11);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62352,7 +62352,7 @@ function ServicesComponent_div_4_Template(rf, ctx) {
 }
 function ServicesComponent_div_7_div_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 17);
+    \u0275\u0275elementStart(0, "div")(1, "p", 18);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62364,7 +62364,7 @@ function ServicesComponent_div_7_div_8_Template(rf, ctx) {
 }
 function ServicesComponent_div_7_div_10_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 17);
+    \u0275\u0275elementStart(0, "div")(1, "p", 18);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62376,11 +62376,11 @@ function ServicesComponent_div_7_div_10_div_4_Template(rf, ctx) {
 }
 function ServicesComponent_div_7_div_10_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 18)(1, "h5", 14);
+    \u0275\u0275elementStart(0, "div", 19)(1, "h5", 15);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(4, ServicesComponent_div_7_div_10_div_4_Template, 3, 1, "div", 2);
+    \u0275\u0275template(4, ServicesComponent_div_7_div_10_div_4_Template, 3, 1, "div", 3);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62394,17 +62394,17 @@ function ServicesComponent_div_7_div_10_Template(rf, ctx) {
 }
 function ServicesComponent_div_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 11)(1, "h2", 8);
+    \u0275\u0275elementStart(0, "div", 12)(1, "h2", 9);
     \u0275\u0275text(2, "Solutions Offered");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 12)(4, "div", 13)(5, "h5", 14);
+    \u0275\u0275elementStart(3, "div", 13)(4, "div", 14)(5, "h5", 15);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(8, ServicesComponent_div_7_div_8_Template, 3, 1, "div", 2);
+    \u0275\u0275template(8, ServicesComponent_div_7_div_8_Template, 3, 1, "div", 3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(9, "div", 15);
-    \u0275\u0275template(10, ServicesComponent_div_7_div_10_Template, 5, 8, "div", 16);
+    \u0275\u0275elementStart(9, "div", 16);
+    \u0275\u0275template(10, ServicesComponent_div_7_div_10_Template, 5, 8, "div", 17);
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -62419,7 +62419,7 @@ function ServicesComponent_div_7_Template(rf, ctx) {
 }
 function ServicesComponent_div_8_div_4_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 17);
+    \u0275\u0275elementStart(0, "div")(1, "p", 18);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62431,11 +62431,11 @@ function ServicesComponent_div_8_div_4_div_4_Template(rf, ctx) {
 }
 function ServicesComponent_div_8_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 18)(1, "h5", 20);
+    \u0275\u0275elementStart(0, "div", 19)(1, "h5", 21);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(4, ServicesComponent_div_8_div_4_div_4_Template, 3, 1, "div", 2);
+    \u0275\u0275template(4, ServicesComponent_div_8_div_4_div_4_Template, 3, 1, "div", 3);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62450,11 +62450,11 @@ function ServicesComponent_div_8_div_4_Template(rf, ctx) {
 }
 function ServicesComponent_div_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19)(1, "h2", 8);
+    \u0275\u0275elementStart(0, "div", 20)(1, "h2", 9);
     \u0275\u0275text(2, "Solutions Offered");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 12);
-    \u0275\u0275template(4, ServicesComponent_div_8_div_4_Template, 5, 5, "div", 16);
+    \u0275\u0275elementStart(3, "div", 13);
+    \u0275\u0275template(4, ServicesComponent_div_8_div_4_Template, 5, 5, "div", 17);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -62490,20 +62490,20 @@ var ServicesComponent = class _ServicesComponent {
   static \u0275fac = function ServicesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ServicesComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(MatDialog));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServicesComponent, selectors: [["app-services"]], standalone: false, decls: 13, vars: 6, consts: [[1, "container-fluid", "section1", "section", "slide-up-page"], [1, "pb-48", "text-blur-reveal", 2, "margin", "0px"], [4, "ngFor", "ngForOf"], [1, "pt-80", "pb-8"], ["alt", "image", 1, "animate-image", "pic", 3, "src"], ["class", "section2 section", 4, "ngIf"], ["class", "container-fluid section3 section", 4, "ngIf"], [1, "section4", "menu", 2, "background-color", "#FFFFFF"], [1, "pb-80"], ["bgColor", "background-color:white;", 3, "currentService"], ["align", "left", 1, "per32", 2, "text-align", "left", 3, "ngStyle"], [1, "section2", "section"], [1, "soln"], ["id", "first", 1, "width-50", "mr-32"], [1, "pb-8", 2, "margin", "0px"], [1, "width-50"], [3, "ngClass", 4, "ngFor", "ngForOf"], [1, "des"], [3, "ngClass"], [1, "container-fluid", "section3", "section"], [2, "padding-bottom", "8px", "margin", "0px"]], template: function ServicesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServicesComponent, selectors: [["app-services"]], standalone: false, decls: 13, vars: 6, consts: [[2, "top", "90px", "position", "relative"], [1, "container-fluid", "section1", "section", "slide-up-page"], [1, "pb-48", "text-blur-reveal", 2, "margin", "0px"], [4, "ngFor", "ngForOf"], [1, "pt-80", "pb-8"], ["alt", "image", 1, "animate-image", "pic", 3, "src"], ["class", "section2 section", 4, "ngIf"], ["class", "container-fluid section3 section", 4, "ngIf"], [1, "section4", "menu", 2, "background-color", "#FFFFFF"], [1, "pb-80"], ["bgColor", "background-color:white;", 3, "currentService"], ["align", "left", 1, "per32", 2, "text-align", "left", 3, "ngStyle"], [1, "section2", "section"], [1, "soln"], ["id", "first", 1, "width-50", "mr-32"], [1, "pb-8", 2, "margin", "0px"], [1, "width-50"], [3, "ngClass", 4, "ngFor", "ngForOf"], [1, "des"], [3, "ngClass"], [1, "container-fluid", "section3", "section"], [2, "padding-bottom", "8px", "margin", "0px"]], template: function ServicesComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h2", 1);
+      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "h2", 2);
       \u0275\u0275text(3);
       \u0275\u0275elementEnd();
-      \u0275\u0275template(4, ServicesComponent_div_4_Template, 3, 4, "div", 2);
-      \u0275\u0275elementStart(5, "div", 3);
-      \u0275\u0275element(6, "img", 4);
+      \u0275\u0275template(4, ServicesComponent_div_4_Template, 3, 4, "div", 3);
+      \u0275\u0275elementStart(5, "div", 4);
+      \u0275\u0275element(6, "img", 5);
       \u0275\u0275elementEnd()();
-      \u0275\u0275template(7, ServicesComponent_div_7_Template, 11, 5, "div", 5)(8, ServicesComponent_div_8_Template, 5, 1, "div", 6);
-      \u0275\u0275elementStart(9, "div", 7)(10, "h2", 8);
+      \u0275\u0275template(7, ServicesComponent_div_7_Template, 11, 5, "div", 6)(8, ServicesComponent_div_8_Template, 5, 1, "div", 7);
+      \u0275\u0275elementStart(9, "div", 8)(10, "h2", 9);
       \u0275\u0275text(11, "Other Services");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(12, "app-service-menu", 9);
+      \u0275\u0275element(12, "app-service-menu", 10);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
@@ -62615,13 +62615,18 @@ var HomescrollDirective = class _HomescrollDirective {
   lastScrollY = 0;
   sections = [];
   currentSectionIndex = 0;
-  isMobile = window.innerWidth <= 768;
+  isMobile = false;
   constructor(el, renderer) {
     this.el = el;
     this.renderer = renderer;
+    if (typeof window !== "undefined") {
+      this.isMobile = window.innerWidth <= 768;
+    }
   }
   onResize() {
-    this.isMobile = window.innerWidth <= 768;
+    if (typeof window !== "undefined") {
+      this.isMobile = window.innerWidth <= 768;
+    }
   }
   ngAfterViewInit() {
     if (this.isMobile)
@@ -62654,7 +62659,9 @@ var HomescrollDirective = class _HomescrollDirective {
   }
   autoScrollTo(position) {
     this.isTransitioning = true;
-    window.scrollTo({ top: position, behavior: "smooth" });
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: position, behavior: "smooth" });
+    }
     setTimeout(() => {
       this.isTransitioning = false;
     }, 800);
@@ -62855,7 +62862,7 @@ var ResourcesComponent = class _ResourcesComponent {
   static \u0275fac = function ResourcesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ResourcesComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourcesComponent, selectors: [["app-resources"]], standalone: false, decls: 44, vars: 1, consts: [[1, "p-48"], [1, "mt-80", "fsr-51"], [1, "d-flex", "justify-content-between", "nav-resource", "fsr-21", "mt-80", "p-0", "mb-0"], ["href", "", 1, "nav-link", "nav-active", "p-0"], ["href", "", 1, "nav-link", "p-0"], [1, "mt-48"], [1, "row"], [1, "col-md-8", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res1.png", "alt", "", 1, "col-12", "w-100", "h-75", "p-0"], [1, "d-flex", "justify-content-between", "mt-4", "mb-2"], [1, "color-blue", "fsb-16", "p-0", "pe-1", "m-0"], [1, "fsr-16", "color-grey", "m-0", "p-0"], ["href", "/d2dWebsite-1.0.0/resource?id=1&page=resources", 1, "fsr-28", "link-text"], ["src", "assets/images/link.png", "alt", "", 1, "px-2", "pb-2"], [1, "color-lightgrey", "fsr-21", "my-3"], [1, "col-md-4", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res2.png", "width", "100%", "alt", "", 1, "col-12", "p-0"], [1, "w-75"], ["href", "/d2dWebsite-1.0.0/resource?id=1&page=resources", 1, "fsr-28", "link-text", "pe-1"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 card-link-hover", 4, "ngFor", "ngForOf"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourcesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourcesComponent, selectors: [["app-resources"]], standalone: false, decls: 44, vars: 1, consts: [[1, "p-48", 2, "top", "90px", "position", "relative", "top", "90px"], [1, "mt-80", "fsr-51"], [1, "d-flex", "justify-content-between", "nav-resource", "fsr-21", "mt-80", "p-0", "mb-0"], ["href", "", 1, "nav-link", "nav-active", "p-0"], ["href", "", 1, "nav-link", "p-0"], [1, "mt-48"], [1, "row"], [1, "col-md-8", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res1.png", "alt", "", 1, "col-12", "w-100", "h-75", "p-0"], [1, "d-flex", "justify-content-between", "mt-4", "mb-2"], [1, "color-blue", "fsb-16", "p-0", "pe-1", "m-0"], [1, "fsr-16", "color-grey", "m-0", "p-0"], ["href", "/d2dWebsite-1.0.0/resource?id=1&page=resources", 1, "fsr-28", "link-text"], ["src", "assets/images/link.png", "alt", "", 1, "px-2", "pb-2"], [1, "color-lightgrey", "fsr-21", "my-3"], [1, "col-md-4", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res2.png", "width", "100%", "alt", "", 1, "col-12", "p-0"], [1, "w-75"], ["href", "/d2dWebsite-1.0.0/resource?id=1&page=resources", 1, "fsr-28", "link-text", "pe-1"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 card-link-hover", 4, "ngFor", "ngForOf"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourcesComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "p", 1);
       \u0275\u0275text(2, "Resources");
@@ -63046,7 +63053,7 @@ var ResourceDetailComponent = class _ResourceDetailComponent {
   static \u0275fac = function ResourceDetailComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ResourceDetailComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourceDetailComponent, selectors: [["app-resource-detail"]], standalone: false, decls: 82, vars: 1, consts: [["appScrolleffects", "", 1, "container-fluid", "col-sm-12", "col-md-12", "p-48", 2, "overflow-x", "hidden"], [1, "mt-80"], [1, "fsr-21", "color-grey"], [1, "fsr-51"], [1, "row", "mt-80"], ["src", "assets/images/res1.png", "alt", "", 1, "col-md-8", "col-12"], [1, "d-flex", "flex-column", "mt-80"], [1, "row", "my-4"], [1, "text-uppercase", "col-md-4", "col-12", "fsb-21"], [1, "col-md-8", "col-12", "fsr-21"], [1, "fsb-21"], [1, "fsr-21", "my-5"], [1, "fsr-21", "multi-line"], [1, "fsr-51", "mt-80"], ["class", "col-md-4 col-12 h-100 wipe-up card-hover", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100", "wipe-up", "card-hover"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourceDetailComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourceDetailComponent, selectors: [["app-resource-detail"]], standalone: false, decls: 82, vars: 1, consts: [["appScrolleffects", "", 1, "container-fluid", "col-sm-12", "col-md-12", "p-48", 2, "overflow-x", "hidden", "top", "90px", "position", "relative"], [1, "mt-80"], [1, "fsr-21", "color-grey"], [1, "fsr-51"], [1, "row", "mt-80"], ["src", "assets/images/res1.png", "alt", "", 1, "col-md-8", "col-12"], [1, "d-flex", "flex-column", "mt-80"], [1, "row", "my-4"], [1, "text-uppercase", "col-md-4", "col-12", "fsb-21"], [1, "col-md-8", "col-12", "fsr-21"], [1, "fsb-21"], [1, "fsr-21", "my-5"], [1, "fsr-21", "multi-line"], [1, "fsr-51", "mt-80"], ["class", "col-md-4 col-12 h-100 wipe-up card-hover", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100", "wipe-up", "card-hover"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourceDetailComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "section", 1)(2, "p", 2);
       \u0275\u0275text(3, "Dec 20,2024");
@@ -63205,7 +63212,7 @@ var AboutusComponent = class _AboutusComponent {
   static \u0275fac = function AboutusComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AboutusComponent)(\u0275\u0275directiveInject(MatDialog));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AboutusComponent, selectors: [["app-aboutus"]], standalone: false, decls: 40, vars: 0, consts: [["appScrolleffects", "", 1, "slide-up-page"], [1, "p-48", "p-80", "section1", "section"], [1, "fsr-67", "w-75", "lh-80"], [1, "row", "mt-48"], [1, "col-md-4", "col-12"], [1, "col-md-8", "col-12"], [1, "fsr-21", "lh-29"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4", 3, "click"], ["src", "assets/images/team.png", "alt", "team", 1, "image-view", "mt-80"], [1, "p-48", "p-80", "section2", "section", "bg-lightwhite"], [1, "text-right", "my-3"], [1, "color-lightgrey", "fsb-16", "lh-22"], [1, "fsr-51", "lh-61"], [1, "mt-80"], [1, "row", "my-3"], [1, "col-md-4", "text-uppercase", "fsb-21", "lh-29"], [1, "col-md-8", "col-12", "multi-line", "fsr-21", "lh-29"], [1, "mt-80", "mb-80", "lh-61"], [1, "text-secondary", "fsb-16", "p-0", "lh-22"], [1, "fsr-51"]], template: function AboutusComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AboutusComponent, selectors: [["app-aboutus"]], standalone: false, decls: 40, vars: 0, consts: [["appScrolleffects", "", 1, "slide-up-page", 2, "position", "relative", "top", "90px"], [1, "p-48", "p-80", "section1", "section"], [1, "fsr-67", "w-75", "lh-80"], [1, "row", "mt-48"], [1, "col-md-4", "col-12"], [1, "col-md-8", "col-12"], [1, "fsr-21", "lh-29"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4", 3, "click"], ["src", "assets/images/team.png", "alt", "team", 1, "image-view", "mt-80"], [1, "p-48", "p-80", "section2", "section", "bg-lightwhite"], [1, "text-right", "my-3"], [1, "color-lightgrey", "fsb-16", "lh-22"], [1, "fsr-51", "lh-61"], [1, "mt-80"], [1, "row", "my-3"], [1, "col-md-4", "text-uppercase", "fsb-21", "lh-29"], [1, "col-md-8", "col-12", "multi-line", "fsr-21", "lh-29"], [1, "mt-80", "mb-80", "lh-61"], [1, "text-secondary", "fsb-16", "p-0", "lh-22"], [1, "fsr-51"]], template: function AboutusComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "p", 2);
       \u0275\u0275text(3, "We Revolutionize Research Through Data-Driven Innovation");
@@ -63764,7 +63771,7 @@ var NavbarComponent = class _NavbarComponent {
   static \u0275fac = function NavbarComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _NavbarComponent)(\u0275\u0275directiveInject(MatDialog), \u0275\u0275directiveInject(ActivatedRoute));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], standalone: false, decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "navbar-brand", "logo"], ["src", "assets/images/Logomark-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown", "mb-8"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], [1, "nav-item", "dropdown"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px", "z-index", "999", "position", "relative"], ["src", "assets/images/Logomark-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", "mr-16", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], standalone: false, decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;position: absolute;", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "navbar-brand", "logo"], ["src", "assets/images/Logomark-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown", "mb-8"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], [1, "nav-item", "dropdown"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw", "position", "absolute"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "background", "rgba(255, 255, 255, 0.02)", "border-bottom", "1px solid rgba(255, 255, 255, 0.01)", "backdrop-filter", "blur(20px)", "margin-bottom", "0px", "z-index", "999", "position", "relative"], ["src", "assets/images/Logomark-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", "mr-16", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275template(0, NavbarComponent_div_0_Template, 29, 12, "div", 0)(1, NavbarComponent_div_1_Template, 29, 12, "div", 1);
     }
