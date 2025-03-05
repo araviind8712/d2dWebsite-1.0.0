@@ -62615,14 +62615,22 @@ var HomescrollDirective = class _HomescrollDirective {
   lastScrollY = 0;
   sections = [];
   currentSectionIndex = 0;
+  isMobile = window.innerWidth <= 768;
   constructor(el, renderer) {
     this.el = el;
     this.renderer = renderer;
   }
+  onResize() {
+    this.isMobile = window.innerWidth <= 768;
+  }
   ngAfterViewInit() {
+    if (this.isMobile)
+      return;
     this.sections = Array.from(this.el.nativeElement.children);
   }
   onWindowScroll(event) {
+    if (this.isMobile)
+      return;
     if (this.isTransitioning)
       return;
     const scrollDown = event.deltaY > -100;
@@ -62656,7 +62664,9 @@ var HomescrollDirective = class _HomescrollDirective {
   };
   static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({ type: _HomescrollDirective, selectors: [["", "appHomescroll", ""]], hostBindings: function HomescrollDirective_HostBindings(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275listener("wheel", function HomescrollDirective_wheel_HostBindingHandler($event) {
+      \u0275\u0275listener("resize", function HomescrollDirective_resize_HostBindingHandler($event) {
+        return ctx.onResize($event);
+      }, false, \u0275\u0275resolveWindow)("wheel", function HomescrollDirective_wheel_HostBindingHandler($event) {
         return ctx.onWindowScroll($event);
       }, false, \u0275\u0275resolveWindow);
     }
@@ -62904,7 +62914,7 @@ var ResourcesComponent = class _ResourcesComponent {
       \u0275\u0275advance(43);
       \u0275\u0275property("ngForOf", ctx.resources);
     }
-  }, dependencies: [NgForOf, ResourceCardComponent], styles: ["\n\n.nav-resource[_ngcontent-%COMP%] {\n  width: 20%;\n}\n.nav-active[_ngcontent-%COMP%] {\n  color: #FB4F23;\n}\na[_ngcontent-%COMP%] {\n  color: black;\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  position: inherit;\n}\n@media only screen and (max-width: 600px) {\n  .nav-resource[_ngcontent-%COMP%] {\n    width: 60%;\n  }\n}\n@media only screen and (max-width: 767px) {\n  .nav-resource[_ngcontent-%COMP%] {\n    width: 35%;\n  }\n}\n/*# sourceMappingURL=resources.component.css.map */"], data: { animation: [
+  }, dependencies: [NgForOf, ResourceCardComponent], styles: ["\n\n.nav-resource[_ngcontent-%COMP%] {\n  width: 20%;\n}\n.nav-active[_ngcontent-%COMP%] {\n  color: #FB4F23;\n}\na[_ngcontent-%COMP%] {\n  color: black;\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  position: inherit;\n}\n@media only screen and (max-width: 767px) {\n  .nav-resource[_ngcontent-%COMP%] {\n    width: 60%;\n  }\n}\n/*# sourceMappingURL=resources.component.css.map */"], data: { animation: [
     trigger("slideUp", [
       state("hidden", style({ transform: "translateY(100px)", opacity: 0 })),
       state("visible", style({ transform: "translateY(0)", opacity: 1 }))
@@ -62929,11 +62939,14 @@ var ScrolleffectsDirective = class _ScrolleffectsDirective {
   image;
   section2Reached = false;
   // Allow free scrolling after Section 2
+  isMobile = window.innerWidth <= 768;
   constructor(el, renderer) {
     this.el = el;
     this.renderer = renderer;
   }
   ngAfterViewInit() {
+    if (this.isMobile)
+      return;
     const sections = this.el.nativeElement.querySelectorAll(".section, .section1, .section2");
     if (sections.length < 2)
       return;
@@ -62942,7 +62955,12 @@ var ScrolleffectsDirective = class _ScrolleffectsDirective {
     this.text = this.section1.querySelector("p");
     this.image = this.section1.querySelector("img");
   }
+  onResize() {
+    this.isMobile = window.innerWidth <= 768;
+  }
   onWindowScroll() {
+    if (this.isMobile)
+      return;
     if (!this.section1 || !this.section2 || !this.text || !this.image)
       return;
     if (this.isTransitioning)
@@ -63001,7 +63019,9 @@ var ScrolleffectsDirective = class _ScrolleffectsDirective {
   };
   static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({ type: _ScrolleffectsDirective, selectors: [["", "appScrolleffects", ""]], hostBindings: function ScrolleffectsDirective_HostBindings(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275listener("scroll", function ScrolleffectsDirective_scroll_HostBindingHandler($event) {
+      \u0275\u0275listener("resize", function ScrolleffectsDirective_resize_HostBindingHandler($event) {
+        return ctx.onResize($event);
+      }, false, \u0275\u0275resolveWindow)("scroll", function ScrolleffectsDirective_scroll_HostBindingHandler($event) {
         return ctx.onWindowScroll($event);
       }, false, \u0275\u0275resolveWindow);
     }
