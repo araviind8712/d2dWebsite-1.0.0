@@ -1,24 +1,29 @@
 <div class="container-fluid">
     <div class="row justify-content-center" align="center">
-        <div *ngFor="let service of currentServiceMenu;let i = index" (click)="redirect(service.image)" style="padding: 0; box-shadow: none; border: none; cursor: pointer;" [ngClass]="(i+1)==currentServiceMenu.length?  'col-12 col-md-4 cursor-pointer card-link-hover pb0' : 'col-12 col-md-4 cursor-pointer card-link-hover pb48'">
-            <div *ngIf="currentServiceMenu.length==5">
-                <img [src]="service.image" [ngClass]="(i+1)%3==0 ?  'pr0 pb24 service-img' : 'pr32 pb24 service-img'">
-                <h4 align="left" [ngClass]="(i+1)%3==0 ?  'pr0 pb8' : 'pr32 pb8'"><a class="link-text">{{service.topic}}</a>
+        <div *ngFor="let service of currentServiceMenu;let i = index" (click)="redirect(service.image)"
+            style="padding: 0; box-shadow: none; border: none; cursor: pointer;"
+            [ngClass]="(i+1)==currentServiceMenu.length?  'col-12 col-md-4 cursor-pointer card-link-hover pb0' : 'col-12 col-md-4 cursor-pointer card-link-hover pb48'">
+            <div *ngIf="currentServiceMenu.length==5"
+                [ngClass]="(i+1)%3==0 ?  'pr0 img-container' : 'pr32  img-container'">
+                <img [src]="service.image" class="pb24 service-img">
+                <h4 align="left" class="pb8"><a class="link-text">{{service.topic}}</a>
                     <span class="icon-container" style="background-color: transparent;">
                         <img src="assets/icons/right-arrow.svg" class="img32">
                     </span>
                 </h4>
+                <p align="left">{{service.description}}</p>
+
             </div>
-            <div *ngIf="currentServiceMenu.length!=5">
-                <img [src]="service.image" [ngClass]="(i+1)%3==0 ?  'pr0 pb24 service-img' : 'pr32 pb24 service-img'">
-                <h4 align="left"  [ngClass]="(i+1)%3==0 ?  'pr0 pb8' : 'pr32 pb8'"><a class="link-text">{{service.topic}}</a>
+            <div *ngIf="currentServiceMenu.length!=5"
+                [ngClass]="(i+1)%3==0 ?  'pr0 img-container' : 'pr32  img-container'">
+                <img [src]="service.image" class="pb24 service-img">
+                <h4 align="left" class="pb8"><a class="link-text">{{service.topic}}</a>
                     <span class="icon-container" style="background-color: transparent;">
-                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" class="img32">
+                        <img src="assets/icons/right-arrow.svg" class="img32">
                     </span>
                 </h4>
+                <p align="left">{{service.description}}</p>
             </div>
-            
-            <p align="left"  [ngClass]="(i+1)%3==0 ?  'pr0' : 'pr32'">{{service.description}}</p>
         </div>
     </div>
 </div>

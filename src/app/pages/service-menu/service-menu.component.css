@@ -28,8 +28,12 @@ font-size: 28px;
 line-height: 39px;
 }
 
+.img-container{
+  width: calc(29.65vw + 0.04px)
+}
+
 .pr32{
-  padding-right: calc(2.22vw + 0.032px) !important;
+  margin-right: calc(2.22vw + 0.032px) !important;
 }
 
 .pb48{
@@ -51,7 +55,11 @@ line-height: 39px;
 
 @media only screen and (max-width: 767px) {
   .pr32{
-    padding-right: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .img-container{
+    width: calc(100vw - 2 * (3.88vw + 0.0144px)) !important;
   }
 
   h4{
