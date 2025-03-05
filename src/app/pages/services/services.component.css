@@ -89,12 +89,15 @@ h5 {
 }
 
 .width-50 {
-    width: 100% !important;
+    flex: 1 1 48.5% !important;
+    max-width: 48.5%;
 }
 
 .soln {
     display: flex;
+    flex-direction: row;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .padding-none {
@@ -175,7 +178,8 @@ h5 {
     }
 
     .width-50 {
-        width: 100%;
+        flex:1 1 100%;
+        max-width: 100% !important;
     }
 
     .soln {
