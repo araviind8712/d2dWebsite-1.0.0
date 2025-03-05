@@ -85,11 +85,11 @@ h5 {
 }
 
 .mr-32{
-    padding-right: calc(2.22vw + 0.032px);
+    margin-right: calc(2.22vw + 0.032px);
 }
 
 .width-50 {
-    width: calc(50vw - (3.33vw + 0.048px + 1.11vw + 0.016px)) !important;
+    width: 100% !important;
 }
 
 .soln {
@@ -135,7 +135,7 @@ h5 {
     }
 
     .mr-32{
-        padding-right: 0 !important;
+        margin-right: 0 !important;
     }
 
     .section1,
@@ -185,11 +185,11 @@ h5 {
     }
 
     #first {
-        padding-bottom: calc(11.65vw + 0.002px);
+        padding-bottom: calc(7.76vw + 0.0288px) !important;
     }
 
     .padding-default {
-        padding-bottom: calc(7.76vw + 0.0288px);
+        padding-bottom: calc(7.76vw + 0.0288px) !important;
     }
 
     .padding-none {
