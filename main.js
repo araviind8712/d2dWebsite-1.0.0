@@ -62946,10 +62946,13 @@ var ScrolleffectsDirective = class _ScrolleffectsDirective {
   image;
   section2Reached = false;
   // Allow free scrolling after Section 2
-  isMobile = window.innerWidth <= 768;
+  isMobile = false;
   constructor(el, renderer) {
     this.el = el;
     this.renderer = renderer;
+    if (typeof window !== "undefined") {
+      this.isMobile = window.innerWidth <= 768;
+    }
   }
   ngAfterViewInit() {
     if (this.isMobile)
@@ -62963,7 +62966,9 @@ var ScrolleffectsDirective = class _ScrolleffectsDirective {
     this.image = this.section1.querySelector("img");
   }
   onResize() {
-    this.isMobile = window.innerWidth <= 768;
+    if (typeof window !== "undefined") {
+      this.isMobile = window.innerWidth <= 768;
+    }
   }
   onWindowScroll() {
     if (this.isMobile)
@@ -62972,7 +62977,9 @@ var ScrolleffectsDirective = class _ScrolleffectsDirective {
       return;
     if (this.isTransitioning)
       return;
-    const scrollY = window.scrollY;
+    if (typeof window !== "undefined") {
+      const scrollY2 = window.scrollY;
+    }
     const fadeStart = this.section1.offsetTop;
     const fadeEnd = fadeStart + 400;
     const section2Start = this.section2.offsetTop;
@@ -63009,7 +63016,9 @@ var ScrolleffectsDirective = class _ScrolleffectsDirective {
   }
   autoScrollTo(position, reverse = false, unlockScroll = false) {
     this.isTransitioning = true;
-    window.scrollTo({ top: position, behavior: "smooth" });
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: position, behavior: "smooth" });
+    }
     setTimeout(() => {
       this.isTransitioning = false;
       if (reverse) {
