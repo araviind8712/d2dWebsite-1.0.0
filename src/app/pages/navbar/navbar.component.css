@@ -9,7 +9,13 @@
 }
 
 .nav-bar{
-    background: #FFFFFF05;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 9999;
+    height: fit-content !important;
+    backdrop-filter: blur(10.2px);
 }
 
 .nav-bar .navbar-light .navbar-toggler-icon {
@@ -76,10 +82,11 @@
     width: 100vw;
     left: 0px;
     top: 0px;
-    height: calc(6.11vw + 0.016px);
     left: 0px;
     top: 0px;
+    backdrop-filter: blur(10.2px);
     z-index: 999;
+    height: fit-content;
 }
 
 
@@ -163,10 +170,6 @@
     line-height: 29px;
 }
 
-.navbar{
-    backdrop-filter: blur(10.2px);
-}
-
 .btn-contact {
     display: flex;
     flex-direction: column;
@@ -209,7 +212,6 @@
     text-align: center;
     z-index: 999;
     background-color: #FBFBFB;
-    backdrop-filter: blur(10.2px);
 }
 
 .nav-bar .dropdown-content {
@@ -252,12 +254,11 @@
     height: 13vw;
     row-gap: calc(1.66vw + 0.096px);
     left: 0px;
-    top: 90px;
+    top: 0px;
     width: 100vw;
-    position: absolute;
+    position: relative;
     z-index: 999;
     background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(10.2px);
     color: #747B80;
 }
 
@@ -272,13 +273,12 @@
     gap: calc(1.11vw + 0.016px);
     flex-wrap: wrap;
     left: 0px;
-    top: 88px;
+    top: 0px;
     width: 100vw;
     background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(10.2px);
     color: #747B80;
     z-index: 9999 !important;
-    position: absolute;
+    position: relative;
 }
 
 
@@ -335,10 +335,10 @@
     flex-wrap: wrap;
     height: 13vw;
     row-gap: calc(1.66vw + 0.096px);
+    position: relative;
     left: 0px;
-    top: 90px;
+    top: 0px;
     width: 100vw;
-    backdrop-filter: blur(10.2px);
     box-shadow: none !important;
     border-bottom: none !important;
 }
@@ -366,9 +366,9 @@
     gap: calc(1.11vw + 0.016px);
     flex-wrap: wrap;
     left: 0px;
-    top: 90px;
+    top: 0px;
+    position: relative;
     width: 100vw;
-    backdrop-filter: blur(10.2px);
     z-index: 9999;  
 }
 
@@ -406,8 +406,6 @@
     font-size: 16px;
     line-height: 29px;
     z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.07) !important;
-    backdrop-filter: blur(10.2px);
     color: #121314;
 }
 
