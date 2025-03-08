@@ -1,3 +1,7 @@
+.txt-black{
+    color: #121214 !important;
+}
+
 @media (max-width: 767px) {
     .aboutus-gallery .col-8:nth-child(odd) {
         margin-left: auto;
@@ -5,5 +9,10 @@
 
     .mt-80 {
         margin-top: calc(15.53vw + 0.0164px) !important;
+    }
+
+    .txt-black{
+        color: #747B80 !important;
+        
     }
 }

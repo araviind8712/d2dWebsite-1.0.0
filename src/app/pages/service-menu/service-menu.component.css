@@ -46,7 +46,7 @@ line-height: 39px;
 }
 
 .pb24{
-  padding-bottom: calc(1.66vw + 0.096px) !important;
+  margin-bottom: calc(1.66vw + 0.096px) !important;
 }
 
 .pb8{
@@ -87,9 +87,15 @@ line-height: 39px;
   .service-img{
     aspect-ratio: 380 / 240;
     width: 100% 
+  } 
+
+  .row {
+    margin-right: -15px !important;
+    margin-left: -15px !important;
   }
+}
 
-
-  
-  
+.row {
+  margin-right: -27px !important;
+  margin-left: -30px !important;
 }
