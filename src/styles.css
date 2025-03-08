@@ -47,7 +47,6 @@ body {
 }
 
 ::ng-deep .cdk-overlay-container {
-  position: fixed !important;
   z-index: 1000 !important;
 }
 
@@ -86,6 +85,10 @@ body {
 
 .mat-mdc-dialog-surface {
   border-radius: 0px !important;
+}
+
+.cdk-global-scrollblock {
+  overflow-y: visible !important;
 }
 
 /* Font Sizes Begin*/
@@ -364,6 +367,10 @@ a {
 
 
 @media only screen and (max-width: 767px) {
+  
+.mb-80 {
+  margin-bottom:  calc(15.53vw + 0.0164px) !important;
+}
   .btn-responsive {
     width: 100%;
   }

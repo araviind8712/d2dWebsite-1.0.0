@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, EventEmitter, HostListener, Inject, OnInit, Output, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'd2dWebsite';
-  top(){
+  pageHeight = 0;
+  isCursorAtTop = false;
+  isSecondPage = true;
+
+  constructor() {
+    if (typeof window !== 'undefined') {
+      this.pageHeight = window.innerHeight;
+    }
+  }
+
+  top() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    this.isCursorAtTop = event.clientY <= 40;
+  }
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    if (typeof window !== 'undefined') {
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+      if (scrollPosition >= this.pageHeight) {
+        this.isSecondPage=true;
+        console.log('second');
+      }
+      else if(scrollPosition < this.pageHeight){
+        this.isSecondPage=false;
+      }
+    }
   }
 }

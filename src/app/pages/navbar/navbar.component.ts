@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ServicesComponent } from '../services/services.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
@@ -14,7 +14,11 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit,OnChanges{
+  @Input() mouseTop: boolean = false;
+  @Input() isSecondPage: boolean = false;
+  secondPage: boolean = false;
+  isFixed : boolean = false;
   serviceMenu: any;
   isServiceVisible = false;
   isHome = false;
@@ -84,5 +88,15 @@ export class NavbarComponent implements OnInit{
       console.error('Invalid image path:', image);
     }
   }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['mouseTop']) {
+      this.isFixed = changes['mouseTop'].currentValue;
+    }
+    if(changes['isSecondPage']){
+      this.secondPage = changes['isSecondPage'].currentValue;
+    }
+  }
+  
 
 }

@@ -89,7 +89,7 @@ h5 {
 }
 
 .width-50 {
-    flex: 1 1 48.5% !important;
+    flex: 1 1 47.5% !important;
     max-width: 48.5%;
 }
 
@@ -209,5 +209,20 @@ h5 {
         display: flex;
         align-items: center;
         color: #121314;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .section1, .section2, .section3, .section4 {
+        padding: calc(5.55 * 14.4px) calc(3.33 * 14.4px);
+    }
+
+    .pic {
+        width: calc(61.45 * 14.4px);
+    }
+
+    .width-50 {
+        flex: 1 1 684px;
+        max-width: 696px;
     }
 }
