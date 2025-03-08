@@ -63734,7 +63734,7 @@ var NavbarComponent = class _NavbarComponent {
   route;
   mouseTop = false;
   isSecondPage = false;
-  secondPage = false;
+  secondPage = true;
   isFixed = false;
   serviceMenu;
   isServiceVisible = false;
@@ -64441,7 +64441,7 @@ var AppComponent = class _AppComponent {
   title = "d2dWebsite";
   pageHeight = 0;
   isCursorAtTop = false;
-  isSecondPage = true;
+  isSecondPage = false;
   constructor() {
     if (typeof window !== "undefined") {
       this.pageHeight = window.innerHeight;
@@ -64458,7 +64458,6 @@ var AppComponent = class _AppComponent {
       const scrollPosition = window.scrollY || document.documentElement.scrollTop;
       if (scrollPosition >= this.pageHeight) {
         this.isSecondPage = true;
-        console.log("second");
       } else if (scrollPosition < this.pageHeight) {
         this.isSecondPage = false;
       }
