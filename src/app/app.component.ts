@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'd2dWebsite';
   pageHeight = 0;
   isCursorAtTop = false;
-  isSecondPage = true;
+  isSecondPage = false;
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -32,7 +32,6 @@ export class AppComponent {
       const scrollPosition = window.scrollY || document.documentElement.scrollTop;
       if (scrollPosition >= this.pageHeight) {
         this.isSecondPage=true;
-        console.log('second');
       }
       else if(scrollPosition < this.pageHeight){
         this.isSecondPage=false;

@@ -17,7 +17,7 @@ import { ActivatedRoute } from '@angular/router';
 export class NavbarComponent implements OnInit,OnChanges{
   @Input() mouseTop: boolean = false;
   @Input() isSecondPage: boolean = false;
-  secondPage: boolean = false;
+  secondPage: boolean = true;
   isFixed : boolean = false;
   serviceMenu: any;
   isServiceVisible = false;
