@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { ContactUsComponent } from '../../app/pages/contact-us/contact-us.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-getintouch',
@@ -10,8 +11,13 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class GetintouchComponent {
   @Output() scrollToTopEvent = new EventEmitter<void>();
+  isAboutUs: boolean = false;
   
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog,private route: ActivatedRoute) {
+    this.route.queryParamMap.subscribe((data)=>{
+      this.isAboutUs =data.get('page')=='aboutus';
+    })
+   }
   openDialog(): void {
     this.dialog.open(ContactUsComponent, {
       width: '100vw',

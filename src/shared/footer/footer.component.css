@@ -54,7 +54,7 @@
 
 @media only screen and (max-width: 767px) {
     .pr-8{
-        padding-right: calc(1.94vw + 0.0072px) !important;
+        padding-right: calc(5.41vw + 0.0108px) !important;
     }
     .mt-43{
         margin-top: calc(7.76vw + 0.0288px);
@@ -86,6 +86,5 @@
         font-size: 14px !important;
         font-weight: 400;
     }
-    
     
 }

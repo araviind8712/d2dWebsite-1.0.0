@@ -143,7 +143,7 @@ label {
   font-family: 'NimbusSanL';
   font-style: normal;
   font-weight: 400;
-  font-size: 38px;
+  font-size: 51px;
   line-height: 61px;
   color: #121314;
   flex: none;
@@ -270,6 +270,10 @@ p {
 
   .mat-padding {
     padding: calc(11.65vw + 0.002px) calc(3.88vw + 0.0144px)!important ;
+  }
+
+  .title{
+    font-size: 38px !important;
   }
   
 }

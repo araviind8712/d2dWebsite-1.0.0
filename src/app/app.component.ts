@@ -24,7 +24,7 @@ export class AppComponent {
   }
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    this.isCursorAtTop = event.clientY <= 40;
+    this.isCursorAtTop = event.clientY <= 90;
   }
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
