@@ -5,66 +5,41 @@ import { Directive,ElementRef,Renderer2,HostListener} from '@angular/core';
   standalone: false
 })
 export class HomescrollDirective{
-  private isTransitioning = false;
-  private lastScrollY = 0;
-  private sections: HTMLElement[] = [];
-  private currentSectionIndex = 0;
-  private isMobile: boolean = false;
+  sections: HTMLElement[] = [];
+  isLocked = false; // Prevent multiple scroll triggers
+  currentSectionIndex = 0; // Track the section index
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {
-    if(typeof window !== 'undefined'){
-      this.isMobile = window.innerWidth <= 768;
-    }
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    if (typeof window !== "undefined") {
-      this.isMobile = window.innerWidth <= 768;
-   }
-    
-  }
+  constructor(private el: ElementRef) {}
 
   ngAfterViewInit() {
-    if (this.isMobile) return;
-    this.sections = Array.from(this.el.nativeElement.children) as HTMLElement[];
+    this.sections = Array.from(this.el.nativeElement.querySelectorAll('div[id^="section"]'));
   }
 
-  @HostListener('window:wheel', ['$event'])
-  onWindowScroll(event: WheelEvent) {
-    if (this.isMobile) return;
-    if (this.isTransitioning) return;
+  @HostListener('wheel', ['$event'])
+  onScroll(event: WheelEvent) {
+    if (this.isLocked) return;
 
-    const scrollDown = event.deltaY > -100;
-    if (scrollDown) {
-      this.scrollToNextSection();
+    const direction = event.deltaY > 0 ? 1 : -1; // Scroll down = 1, Scroll up = -1
+    const nextIndex = this.currentSectionIndex + direction;
+
+    // Handle transition for first two sections only
+    if (nextIndex >= 0 && nextIndex <= 2) {
+      event.preventDefault();
+      this.scrollToSection(nextIndex);
     } else {
-      this.scrollToPrevSection();
+      this.currentSectionIndex = nextIndex; // Allow normal scrolling beyond section 2
     }
   }
 
-  private scrollToNextSection() {
-    if (this.currentSectionIndex < this.sections.length - 3) {
-      this.currentSectionIndex++;
-      this.autoScrollTo(this.sections[this.currentSectionIndex].offsetTop);
-    }
-  }
+  scrollToSection(index: number) {
+    if (index < 0 || index >= this.sections.length) return;
 
-  private scrollToPrevSection() {
-    if (this.currentSectionIndex > 0) {
-      this.currentSectionIndex--;
-      this.autoScrollTo(this.sections[this.currentSectionIndex].offsetTop);
-    }
-  }
-
-  private autoScrollTo(position: number) {
-    this.isTransitioning = true;
-    if(typeof window !== 'undefined'){
-      window.scrollTo({ top: position, behavior: 'smooth' });
-    }
+    this.isLocked = true;
+    this.sections[index].scrollIntoView({ behavior: 'smooth' });
 
     setTimeout(() => {
-      this.isTransitioning = false;
-    }, 800);
+      this.currentSectionIndex = index;
+      this.isLocked = false;
+    }, 700); // Timeout to avoid multiple triggers
   }
 }

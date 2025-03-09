@@ -1,5 +1,5 @@
 <div #mainDiv appHomescroll class="container-fluid p-0" style="margin-top: 0; width: 100vw;">
-    <div #section [attr.data-index]="1" class="section">
+    <div #section [attr.data-index]="1" id="section1" class="section">
         <div [hidden]="isLoading==false" class="loader">
             <div class="progress-container">
                 <div class="progress-bar"></div>
@@ -14,18 +14,18 @@
             <span>Unlocking Life's Secrets: Driving </span><span style="background: linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%);-webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;">Innovation </span>with Precision Bioinformatics and <span style="background: linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> Collaboration</span></p>
        </div>
-    <div class="col-md-12 section1" [attr.data-index]="2">
+    <div class="col-md-12 section1" id="section2" [attr.data-index]="2">
         <p align="center" style="margin-bottom: 0px;" class="pb-24">Who we are</p>
         <h3 align="center">Where Biology Meets Technology: Empowering Breakthroughs with
             Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and
             turn bold scientific goals into reality.</h3>
     </div>
-    <div #section class="col-12 section2 section" [attr.data-index]="3">
+    <div #section class="col-12 section2 section" id="section3" [attr.data-index]="3">
         <p align="right">Our Services</p>
         <h2 align="right">Tailored Solutions for Exceptional Results</h2>
         <app-service-menu bgColor="background-color:#EEEEEE;"></app-service-menu>
     </div>
-    <div #section class="col-12 section3 section" [attr.data-index]="4">
+    <div #section class="col-12 section3 section" id="section4" [attr.data-index]="4">
         <p align="left">Why choose us</p>
         <h2 align="left">Innovative Expertise. Exceptional Results.</h2>
         <div class="row subsec31">
@@ -72,7 +72,7 @@
             </div>
         </div>
     </div> -->
-    <div class="section5 section">
+    <div class="section5 section" id="section5">
         <p class="fsr-51" style="display: flex; justify-content: space-between; align-items: baseline; position: relative; width: 100%; color:#121314">
             Featured Resources
             <a href="resources?pages=resources" style="cursor: pointer;text-decoration: none;"><span style="font-style: normal; font-weight: 400; font-size: 21px; line-height: 29px; display: flex; align-items:baseline; color: #121314;">
