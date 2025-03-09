@@ -62612,72 +62612,47 @@ var ResourceCardComponent = class _ResourceCardComponent {
 // src/app/directive/homescroll.directive.ts
 var HomescrollDirective = class _HomescrollDirective {
   el;
-  renderer;
-  isTransitioning = false;
-  lastScrollY = 0;
   sections = [];
+  isLocked = false;
+  // Prevent multiple scroll triggers
   currentSectionIndex = 0;
-  isMobile = false;
-  constructor(el, renderer) {
+  // Track the section index
+  constructor(el) {
     this.el = el;
-    this.renderer = renderer;
-    if (typeof window !== "undefined") {
-      this.isMobile = window.innerWidth <= 768;
-    }
-  }
-  onResize() {
-    if (typeof window !== "undefined") {
-      this.isMobile = window.innerWidth <= 768;
-    }
   }
   ngAfterViewInit() {
-    if (this.isMobile)
-      return;
-    this.sections = Array.from(this.el.nativeElement.children);
+    this.sections = Array.from(this.el.nativeElement.querySelectorAll('div[id^="section"]'));
   }
-  onWindowScroll(event) {
-    if (this.isMobile)
+  onScroll(event) {
+    if (this.isLocked)
       return;
-    if (this.isTransitioning)
-      return;
-    const scrollDown = event.deltaY > -100;
-    if (scrollDown) {
-      this.scrollToNextSection();
+    const direction = event.deltaY > 0 ? 1 : -1;
+    const nextIndex = this.currentSectionIndex + direction;
+    if (nextIndex >= 0 && nextIndex <= 2) {
+      event.preventDefault();
+      this.scrollToSection(nextIndex);
     } else {
-      this.scrollToPrevSection();
+      this.currentSectionIndex = nextIndex;
     }
   }
-  scrollToNextSection() {
-    if (this.currentSectionIndex < this.sections.length - 3) {
-      this.currentSectionIndex++;
-      this.autoScrollTo(this.sections[this.currentSectionIndex].offsetTop);
-    }
-  }
-  scrollToPrevSection() {
-    if (this.currentSectionIndex > 0) {
-      this.currentSectionIndex--;
-      this.autoScrollTo(this.sections[this.currentSectionIndex].offsetTop);
-    }
-  }
-  autoScrollTo(position) {
-    this.isTransitioning = true;
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: position, behavior: "smooth" });
-    }
+  scrollToSection(index) {
+    if (index < 0 || index >= this.sections.length)
+      return;
+    this.isLocked = true;
+    this.sections[index].scrollIntoView({ behavior: "smooth" });
     setTimeout(() => {
-      this.isTransitioning = false;
-    }, 800);
+      this.currentSectionIndex = index;
+      this.isLocked = false;
+    }, 700);
   }
   static \u0275fac = function HomescrollDirective_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _HomescrollDirective)(\u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(Renderer2));
+    return new (__ngFactoryType__ || _HomescrollDirective)(\u0275\u0275directiveInject(ElementRef));
   };
   static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({ type: _HomescrollDirective, selectors: [["", "appHomescroll", ""]], hostBindings: function HomescrollDirective_HostBindings(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275listener("resize", function HomescrollDirective_resize_HostBindingHandler($event) {
-        return ctx.onResize($event);
-      }, false, \u0275\u0275resolveWindow)("wheel", function HomescrollDirective_wheel_HostBindingHandler($event) {
-        return ctx.onWindowScroll($event);
-      }, false, \u0275\u0275resolveWindow);
+      \u0275\u0275listener("wheel", function HomescrollDirective_wheel_HostBindingHandler($event) {
+        return ctx.onScroll($event);
+      });
     }
   }, standalone: false });
 };
@@ -62738,7 +62713,7 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.video = _t.first);
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.sections = _t);
     }
-  }, standalone: false, decls: 71, vars: 9, consts: [["mainDiv", ""], ["section", ""], ["appHomescroll", "", 1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], [1, "section"], [1, "loader", 3, "hidden"], [1, "progress-container"], [3, "ngClass"], [1, "loading-text"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", "inline", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "waiting", "loadeddata", "playing", "hidden"], [1, "fsr-67", "pyx-48", "text-white", "videoText", 3, "hidden"], [2, "background", "linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [1, "col-md-12", "section1"], ["align", "center", 1, "pb-24", 2, "margin-bottom", "0px"], ["align", "center"], [1, "col-12", "section2", "section"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], [1, "col-12", "section3", "section"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], [1, "section5", "section"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
+  }, standalone: false, decls: 71, vars: 9, consts: [["mainDiv", ""], ["section", ""], ["appHomescroll", "", 1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], ["id", "section1", 1, "section"], [1, "loader", 3, "hidden"], [1, "progress-container"], [3, "ngClass"], [1, "loading-text"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", "inline", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "waiting", "loadeddata", "playing", "hidden"], [1, "fsr-67", "pyx-48", "text-white", "videoText", 3, "hidden"], [2, "background", "linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], ["id", "section2", 1, "col-md-12", "section1"], ["align", "center", 1, "pb-24", 2, "margin-bottom", "0px"], ["align", "center"], ["id", "section3", 1, "col-12", "section2", "section"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], ["id", "section4", 1, "col-12", "section3", "section"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], ["id", "section5", 1, "section5", "section"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "div", 2, 0)(2, "div", 3, 1)(4, "div", 4)(5, "div", 5);
@@ -63235,7 +63210,7 @@ var AboutusComponent = class _AboutusComponent {
   static \u0275fac = function AboutusComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AboutusComponent)(\u0275\u0275directiveInject(MatDialog));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AboutusComponent, selectors: [["app-aboutus"]], standalone: false, decls: 41, vars: 0, consts: [["appScrolleffects", "", 1, "slide-up-page", "mb-80", 2, "position", "relative", "top", "90px"], [1, "p-48", "p-80", "section1", "section"], [1, "fsr-67", "w-75", "lh-80"], [1, "row", "mt-48"], [1, "col-md-4", "col-12"], [1, "col-md-8", "col-12"], [1, "fsr-21", "lh-29"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4", 3, "click"], ["src", "assets/images/team.png", "alt", "team", 1, "image-view", "mt-80"], [1, "p-48", "p-80", "section2", "section", "bg-lightwhite"], [1, "text-right", "my-3"], [1, "color-lightgrey", "fsb-16"], [1, "fsr-51", "lh-61"], [1, "mt-80"], [1, "row", "my-3"], [1, "col-md-4", "text-uppercase", "fsb-21", "lh-29"], [1, "col-md-8", "col-12", "multi-line", "fsr-21", "lh-29", "txt-black"], [1, "p-48", "p-80"], [1, "lh-61", "bg-white"], [1, "text-secondary", "fsb-16", "p-0", "lh-22"], [1, "fsr-51"]], template: function AboutusComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AboutusComponent, selectors: [["app-aboutus"]], standalone: false, decls: 40, vars: 0, consts: [[1, "slide-up-page", "mb-80", 2, "position", "relative", "top", "90px"], [1, "p-48", "p-80", "section1", "section"], [1, "fsr-67", "w-75", "lh-80"], [1, "row", "mt-48"], [1, "col-md-4", "col-12"], [1, "col-md-8", "col-12"], [1, "fsr-21", "lh-29"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4", 3, "click"], [1, "p-48", "p-80", "section2", "section", "bg-lightwhite"], [1, "text-right", "my-3"], [1, "color-lightgrey", "fsb-16"], [1, "fsr-51", "lh-61"], [1, "mt-80"], [1, "row", "my-3"], [1, "col-md-4", "text-uppercase", "fsb-21", "lh-29"], [1, "col-md-8", "col-12", "multi-line", "fsr-21", "lh-29", "txt-black"], [1, "p-48", "p-80"], [1, "lh-61", "bg-white"], [1, "text-secondary", "fsb-16", "p-0", "lh-22"], [1, "fsr-51"]], template: function AboutusComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "p", 2);
       \u0275\u0275text(3, "We Revolutionize Research Through Data-Driven Innovation");
@@ -63250,40 +63225,38 @@ var AboutusComponent = class _AboutusComponent {
         return ctx.openContactUs();
       });
       \u0275\u0275text(10, "Get in Touch");
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275element(11, "img", 8);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(12, "div", 9)(13, "div", 10)(14, "p", 11);
-      \u0275\u0275text(15, "Vision and Mission");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(16, "p", 12);
-      \u0275\u0275text(17, "Igniting Innovation to Create Lasting Impact");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(18, "div", 13)(19, "div", 14)(20, "h2", 15);
-      \u0275\u0275text(21, "Vision");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(22, "pre", 16);
-      \u0275\u0275text(23, "Our vision is to lead the way in bioinformatics, shaping the future of life sciences through unparalleled expertise in data analysis, technology, and innovation.\n                \nWe strive to be the trusted partner for researchers and institutions dedicated to deciphering complex biological data and advancing their groundbreaking discoveries.\n                \nBy advancing bioinformatics methodologies and technologies, we aim to drive transformative breakthroughs that deepen biological understanding and enhance human health.\n            ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(24, "div", 14)(25, "h2", 15);
-      \u0275\u0275text(26, "Mission");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(27, "pre", 16);
-      \u0275\u0275text(28, "We are dedicated to advancing the accuracy, efficiency, and depth of research through a range of customized services, including bioinformatics training, custom pipeline development, advanced sequencing analysis, statistical testing, data visualization, epigenetics analysis, and cloud tool deployment.\n                \nWe address a wide spectrum of genetic research across diverse biological systems, driving innovative solutions to advance our understanding of health, disease, and ecosystems.\n            ");
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(29, "div", 17)(30, "section", 18)(31, "div")(32, "section", 19);
-      \u0275\u0275text(33, "Our Team");
+      \u0275\u0275elementStart(11, "div", 8)(12, "div", 9)(13, "p", 10);
+      \u0275\u0275text(14, "Vision and Mission");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(34, "section", 20);
-      \u0275\u0275text(35, "About our Expertise");
+      \u0275\u0275elementStart(15, "p", 11);
+      \u0275\u0275text(16, "Igniting Innovation to Create Lasting Impact");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(36, "div", 3);
-      \u0275\u0275element(37, "div", 4);
-      \u0275\u0275elementStart(38, "div", 5)(39, "p", 6);
-      \u0275\u0275text(40, "We are a team of passionate bioinformaticians and data scientists and we are dedicated to providing innovative solutions in life science research. Our expertise spans a wide range of bioinformatics services, including genomic sequencing, and computational modeling, all designed to unlock the potential hidden within complex biological data.");
+      \u0275\u0275elementStart(17, "div", 12)(18, "div", 13)(19, "h2", 14);
+      \u0275\u0275text(20, "Vision");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(21, "pre", 15);
+      \u0275\u0275text(22, "Our vision is to lead the way in bioinformatics, shaping the future of life sciences through unparalleled expertise in data analysis, technology, and innovation.\n                \nWe strive to be the trusted partner for researchers and institutions dedicated to deciphering complex biological data and advancing their groundbreaking discoveries.\n                \nBy advancing bioinformatics methodologies and technologies, we aim to drive transformative breakthroughs that deepen biological understanding and enhance human health.\n            ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(23, "div", 13)(24, "h2", 14);
+      \u0275\u0275text(25, "Mission");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(26, "pre", 15);
+      \u0275\u0275text(27, "We are dedicated to advancing the accuracy, efficiency, and depth of research through a range of customized services, including bioinformatics training, custom pipeline development, advanced sequencing analysis, statistical testing, data visualization, epigenetics analysis, and cloud tool deployment.\n                \nWe address a wide spectrum of genetic research across diverse biological systems, driving innovative solutions to advance our understanding of health, disease, and ecosystems.\n            ");
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275elementStart(28, "div", 16)(29, "section", 17)(30, "div")(31, "section", 18);
+      \u0275\u0275text(32, "Our Team");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(33, "section", 19);
+      \u0275\u0275text(34, "About our Expertise");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(35, "div", 3);
+      \u0275\u0275element(36, "div", 4);
+      \u0275\u0275elementStart(37, "div", 5)(38, "p", 6);
+      \u0275\u0275text(39, "We are a team of passionate bioinformaticians and data scientists and we are dedicated to providing innovative solutions in life science research. Our expertise spans a wide range of bioinformatics services, including genomic sequencing, and computational modeling, all designed to unlock the potential hidden within complex biological data.");
       \u0275\u0275elementEnd()()()()()();
     }
-  }, dependencies: [ScrolleffectsDirective], styles: ["\n\n.txt-black[_ngcontent-%COMP%] {\n  color: #121214 !important;\n}\n@media (max-width: 767px) {\n  .aboutus-gallery[_ngcontent-%COMP%]   .col-8[_ngcontent-%COMP%]:nth-child(odd) {\n    margin-left: auto;\n  }\n  .mt-80[_ngcontent-%COMP%] {\n    margin-top: calc(15.53vw + 0.0164px) !important;\n  }\n  .txt-black[_ngcontent-%COMP%] {\n    color: #747B80 !important;\n  }\n}\n/*# sourceMappingURL=aboutus.component.css.map */"] });
+  }, styles: ["\n\n.txt-black[_ngcontent-%COMP%] {\n  color: #121214 !important;\n}\n@media (max-width: 767px) {\n  .aboutus-gallery[_ngcontent-%COMP%]   .col-8[_ngcontent-%COMP%]:nth-child(odd) {\n    margin-left: auto;\n  }\n  .mt-80[_ngcontent-%COMP%] {\n    margin-top: calc(15.53vw + 0.0164px) !important;\n  }\n  .txt-black[_ngcontent-%COMP%] {\n    color: #747B80 !important;\n  }\n}\n/*# sourceMappingURL=aboutus.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AboutusComponent, { className: "AboutusComponent", filePath: "src/app/pages/aboutus/aboutus.component.ts", lineNumber: 15 });
