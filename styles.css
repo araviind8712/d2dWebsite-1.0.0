@@ -493,6 +493,10 @@ a {
   .btn-responsive {
     width: 100%;
   }
+  .noscroll {
+    overflow: hidden;
+    height: 100vh;
+  }
   .p-80 {
     padding-top: calc(15.53vw + 0.0164px) !important;
     padding-bottom: calc(15.53vw + 0.0164px) !important;
