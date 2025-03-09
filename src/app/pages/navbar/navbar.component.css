@@ -15,6 +15,9 @@
     width: 100vw;
     z-index: 9999;
     height: fit-content !important;
+    overflow-y: scroll;
+    overflow-y: scroll;
+    max-height: 100vh !important;
     backdrop-filter: blur(10.2px);
 }
 
@@ -87,6 +90,9 @@
     backdrop-filter: blur(10.2px);
     z-index: 999;
     height: fit-content;
+    max-height: 100vh !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 
@@ -435,6 +441,14 @@
     margin-top: 0px !important;
 }
 
+.nav-open{
+    display: block;
+}
+
+.nav-closed{
+    display: block;
+}
+
 @media only screen and (max-width: 1006px) {
     .serviceNavBar {
         height: 19vw;
@@ -464,6 +478,12 @@
     .logo-size1{
         width:calc(7.76vw + 0.0288px);
         height:calc(7.76vw + 0.0288px);
+    }
+
+    .logo-size2{
+        width:calc(7.76vw + 0.0288px);
+        height:calc(7.76vw + 0.0288px);
+        padding: 4px;
     }
 
     .logo-size{
@@ -562,5 +582,13 @@
     }
     .nav-bar-black {
         padding: 0px;
+    }
+
+    .nav-open{
+        display: block;
+    }
+    
+    .nav-closed{
+        display: none;
     }
 }

@@ -1,199 +1,235 @@
-    <div class="nav-bar" *ngIf="pageName==='home' && !isSecondPage" style="width: 100vw;" [ngStyle]="{ 'position': isFixed || serviceVisible || isCompDropdown ? 'fixed' : 'absolute'}">
-        <div class="navbar navbar-expand-md bg-transparent nav-pad" style="margin-bottom: 0px;">
-            <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-White.svg" alt="" class="logo-size"></a>
+<div class="nav-bar" *ngIf="pageName==='home' && !isSecondPage" style="width: 100vw;"
+    [ngStyle]="{ 'position': isFixed || serviceVisible || isCompDropdown || !isCollapsed ? 'fixed' : 'absolute'}">
+    <div class="navbar navbar-expand-md bg-transparent nav-pad" style="margin-bottom: 0px;">
+        <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-White.svg"
+                alt="" class="logo-size"></a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" style=" padding: 0px;" (click)="serviceVisible=false;isCompDropdown=false">
-                <img src="assets/icons/menu-icon-white.svg" style="color:#BFC0C0;" class="logo-size1">
-            </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            style=" padding: 0px;" (click)="serviceVisible=false;isCompDropdown=false;isCollapsed=!isCollapsed;">
+            <img src="assets/icons/menu-icon-white.svg" style="color:#BFC0C0;" class="logo-size1" *ngIf="isCollapsed">
+            <img src="assets/icons/close-white.svg" style="color:#BFC0C0;" class="logo-size2" *ngIf="!isCollapsed">
+        </button>
 
-            <div class="collapse navbar-collapse pt-48" id="navbarNav">
-                <ul class="navbar-nav ml-auto mb-8">
-                    <li class="nav-item" style="cursor: pointer;">
-                        <a class="nav-link mr-18 px-21" (click)="home()" style="cursor: pointer;" [(class.active)]="isHome">HOME</a>
-                    </li>
-                    <li class="nav-item dropdown mb-8">
-                        <a class="nav-link mr-16 px-21" id="servicesDropdown" role="button"
-                            (click)="service(serviceVisible)" [class.active]="isServiceVisible" style="display: flex; align-items: center;">
-                            SERVICES
-                            <span
+        <div class="collapse navbar-collapse pt-48" id="navbarNav" [ngClass]="isCollapsed ? 'nav-closed' : 'nav-open'">
+            <ul class="navbar-nav ml-auto mb-8">
+                <li class="nav-item" style="cursor: pointer;">
+                    <a class="nav-link mr-18 px-21" (click)="home()" style="cursor: pointer;"
+                        [(class.active)]="isHome">HOME</a>
+                </li>
+                <li class="nav-item dropdown mb-8">
+                    <a class="nav-link mr-16 px-21" id="servicesDropdown" role="button"
+                        (click)="service(serviceVisible)" [class.active]="isServiceVisible"
+                        style="display: flex; align-items: center;">
+                        SERVICES
+                        <span
                             style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
-                            <img [src]="serviceVisible ? 'assets/icons/drop-up-white.svg' : 'assets/icons/dropdown-white.svg'"  class="dropdown-icon">
+                            <img [src]="serviceVisible ? 'assets/icons/drop-up-white.svg' : 'assets/icons/dropdown-white.svg'"
+                                class="dropdown-icon">
                         </span>
-                        </a>
-                        <ul *ngIf="serviceVisible" class="mobile-nav">
-                            <li *ngFor="let menu of serviceMenu" class="px-19">
-                                <h6 style="color: #BFC0C0;" >
-                                    <a class="link-underline inline-subnav" (click)="redirect(menu.image)" style="color: #BFC0C0;font-size: 16px !important;">{{ menu.topic }}</a>
-                                    <span style="padding-left: 8px;">
-                                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                                    </span>
-                                </h6>
-                            </li>
-                        </ul>                
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link mr-18 px-21" (click)="isHome=false;isServiceVisible=false;isCompany=true;isCompDropdown=!isCompDropdown;serviceVisible=false"
-                            [class.active]="isCompany" id="companyDropdown" role="button" data-toggle="dropdown"
-                            style="display: flex; align-items: center;">
-                            COMPANY
-                            <span
+                    </a>
+                    <ul *ngIf="serviceVisible" class="mobile-nav">
+                        <li *ngFor="let menu of serviceMenu" class="px-19">
+                            <h6 style="color: #BFC0C0;">
+                                <a class="link-underline inline-subnav" (click)="redirect(menu.image)"
+                                    style="color: #BFC0C0;font-size: 16px !important;">{{ menu.topic }}</a>
+                                <span style="padding-left: 8px;">
+                                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px"
+                                        height="24px">
+                                </span>
+                            </h6>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link mr-18 px-21"
+                        (click)="isHome=false;isServiceVisible=false;isCompany=true;isCompDropdown=!isCompDropdown;serviceVisible=false"
+                        [class.active]="isCompany" id="companyDropdown" role="button" data-toggle="dropdown"
+                        style="display: flex; align-items: center;">
+                        COMPANY
+                        <span
                             style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
-                            <img [src]="isCompDropdown ? 'assets/icons/drop-up-white.svg' : 'assets/icons/dropdown-white.svg'"  class="dropdown-icon">
+                            <img [src]="isCompDropdown ? 'assets/icons/drop-up-white.svg' : 'assets/icons/dropdown-white.svg'"
+                                class="dropdown-icon">
                         </span>
-                        </a>
-                        <ul *ngIf="isCompDropdown" class="mobile-nav">
-                            <li class="px-19">
-                                <h6 style="color: #BFC0C0;">
-                                    <a class="link-underline inline-subnav" style="color: #BFC0C0;font-size: 16px !important;" (click)="company('aboutus')">About Us</a>
-                                    <span style="padding-left: 8px;">
-                                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                                    </span>
-                                </h6>
-                            </li>
-                            <li class="px-19">
-                                <h6 style="color: #BFC0C0;">
-                                    <a class="link-underline inline-subnav" style="color: #BFC0C0;font-size: 16px !important;" (click)="company('resources')">Resources</a>
-                                    <span style="padding-left: 8px;">
-                                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                                    </span>
-                                </h6>
-                            </li>
-                        </ul>  
-                    </li>
-                    <li class="nav-item mt-48">
-                        <a (click)="openDialog()" class="btn btn-contact"><span>Get in touch</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="serviceNavBar" *ngIf="serviceVisible" style="background-color: inherit;">
-            <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
-                class=" serviceItems">
-                <h6 style=" color: #BFC0C0;">
-                    <a class="link-underline" [title]="menu.topic" style="color: #BFC0C0;" class="submenu">{{menu.topic}}</a>
-                    <span style="padding-left: 8px;">
-                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                    </span>
-                </h6>
-            </div>
-        </div>
-
-        <div class="row companyNavBar" *ngIf="isCompDropdown" style="background-color: inherit; margin:0px;">
-            <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" class="col-md-4 serviceItems" (click)="company('aboutus')">
-                <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">About Us</a>
-                    <span style="padding-left: 8px;">
-                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                    </span>
-                </h6>
-            </div>
-            <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" class="col-md-4 serviceItems" (click)="company('resources')">
-                <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">Resources</a>
-                    <span style="padding-left: 8px;">
-                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                    </span>
-                </h6>
-            </div>
+                    </a>
+                    <ul *ngIf="isCompDropdown" class="mobile-nav">
+                        <li class="px-19">
+                            <h6 style="color: #BFC0C0;">
+                                <a class="link-underline inline-subnav"
+                                    style="color: #BFC0C0;font-size: 16px !important;"
+                                    (click)="company('aboutus')">About Us</a>
+                                <span style="padding-left: 8px;">
+                                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px"
+                                        height="24px">
+                                </span>
+                            </h6>
+                        </li>
+                        <li class="px-19">
+                            <h6 style="color: #BFC0C0;">
+                                <a class="link-underline inline-subnav"
+                                    style="color: #BFC0C0;font-size: 16px !important;"
+                                    (click)="company('resources')">Resources</a>
+                                <span style="padding-left: 8px;">
+                                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px"
+                                        height="24px">
+                                </span>
+                            </h6>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item mt-48">
+                    <a (click)="openDialog()" class="btn btn-contact"><span>Get in touch</span></a>
+                </li>
+            </ul>
         </div>
     </div>
 
-    <div class="nav-bar-black" *ngIf="pageName!=='home' || isSecondPage" style="width: 100vw;"  [ngStyle]="{ 'position': isFixed || serviceVisible || isCompDropdown ? 'fixed' : 'absolute'}">
-        <nav class="navbar navbar-expand-md navbar-light bg-transparent nav-pad" style="margin-bottom: 0px;z-index: 999;">
-            <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-Black.svg" alt="" class="logo-size"></a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" style=" padding: 0px;" (click)="serviceVisible=false;isCompDropdown=false">
-                <img src="assets/icons/menu-icon.svg" class="logo-size1">
-            </button>
-
-            <div class="collapse navbar-collapse pt-48" id="navbarNav">
-                <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item mb-8" style="cursor: pointer;">
-                        <a class="nav-link px-21 mr-16" (click)="home()" style="cursor: pointer;" [(class.active)]="isHome">HOME</a>
-                    </li>
-                    <li class="nav-item dropdown mb-8">
-                        <a class="nav-link px-21 mr-18" id="servicesDropdown" (click)="service(serviceVisible)"
-                            [class.active]="isServiceVisible"
-                            style="display: flex; align-items: center;">
-                            SERVICES
-                            <span
-                                style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
-                                <img [src]="serviceVisible ? 'assets/icons/drop-up.svg' : 'assets/icons/dropdown-black.svg'"  class="dropdown-icon">
-                            </span>
-                        </a>
-                        <ul *ngIf="serviceVisible" class="mobile-nav">
-                            <li *ngFor="let menu of serviceMenu" class="px-19">
-                                <h6>
-                                    <a class="link-underline inline-subnav" (click)="redirect(menu.image)" style="font-size: 16px !important;">{{ menu.topic }}</a>
-                                    <span style="padding-left: 8px;">
-                                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                                    </span>
-                                </h6>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link px-21" (click)="isHome=false;isServiceVisible=false;isCompany=true;isCompDropdown=!isCompDropdown;serviceVisible=false"
-                            [class.active]="isCompDropdown" id="companyDropdown"
-                            style="margin-right: 18px; display: flex; align-items: center;">
-                            COMPANY
-                            <span
-                                style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
-                                <img [src]="isCompDropdown ? 'assets/icons/drop-up.svg' : 'assets/icons/dropdown-black.svg'"  class="dropdown-icon">
-                            </span>
-                        </a>  
-                        <ul *ngIf="isCompDropdown" class="mobile-nav">
-                            <li class="px-19">
-                                <h6>
-                                    <a class="link-underline inline-subnav" style="font-size: 16px !important;" (click)="company('aboutus')">About Us</a>
-                                    <span style="padding-left: 8px;">
-                                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                                    </span>
-                                </h6>
-                            </li>
-                            <li class="px-19">
-                                <h6>
-                                    <a class="link-underline inline-subnav" style="font-size: 16px !important;" (click)="company('resources')">Resources</a>
-                                    <span style="padding-left: 8px;">
-                                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                                    </span>
-                                </h6>
-                            </li>
-                        </ul>                  
-                    </li>
-                    <li class="nav-item mt-48">
-                        <a (click)="openDialog()" class="btn btn-contact-black"><span>Get in touch</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        
-
-        <div class="serviceNavBar-black"  *ngIf="serviceVisible" style="background: inherit;">
-            <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
-                class="serviceItems-black">
-                <h6><a class="link-underline" style="color: #747B80 !important;">{{menu.topic}}</a>
-                    <span style="padding-left: 8px;">
-                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                    </span>
-                </h6>
-            </div>
-        </div>
-
-        <div class="row companyNavBar-black" *ngIf="isCompDropdown" style="background-color: inherit;display: flex; flex-direction: row; margin:0px">
-            <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" (click)="company('aboutus')"  class="col-md-4 serviceItems-black">
-                <h6><a class="link-underline" style="color: #747B80 !important;">About Us</a>
-                    <span style="padding-left: 8px;">
-                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                    </span>
-                </h6>
-            </div>
-            <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" (click)="company('resources')" class="col-md-4 serviceItems-black" >
-                <h6><a class="link-underline" style="color: #747B80 !important;">Resources</a>
-                    <span style="padding-left: 8px;">
-                        <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
-                    </span>
-                </h6>
-            </div>
+    <div class="serviceNavBar" *ngIf="serviceVisible" style="background-color: inherit;">
+        <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
+            class=" serviceItems">
+            <h6 style=" color: #BFC0C0;">
+                <a class="link-underline" [title]="menu.topic" style="color: #BFC0C0;"
+                    class="submenu">{{menu.topic}}</a>
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
         </div>
     </div>
+
+    <div class="row companyNavBar" *ngIf="isCompDropdown" style="background-color: inherit; margin:0px;">
+        <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" class="col-md-4 serviceItems"
+            (click)="company('aboutus')">
+            <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">About Us</a>
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
+        </div>
+        <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" class="col-md-4 serviceItems"
+            (click)="company('resources')">
+            <h6 style=" color: #BFC0C0;"><a class="link-underline" style="color: #BFC0C0;">Resources</a>
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
+        </div>
+    </div>
+</div>
+
+<div class="nav-bar-black" *ngIf="pageName!=='home' || isSecondPage" style="width: 100vw;"
+    [ngStyle]="{ 'position': isFixed || serviceVisible || isCompDropdown || !isCollapsed ? 'fixed' : 'absolute'}">
+    <nav class="navbar navbar-expand-md navbar-light bg-transparent nav-pad" style="margin-bottom: 0px;z-index: 999;">
+        <a class="navbar-brand logo" href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logomark-Black.svg"
+                alt="" class="logo-size"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            style=" padding: 0px;" (click)="serviceVisible=false;isCompDropdown=false;isCollapsed=!isCollapsed">
+            <img src="assets/icons/menu-icon.svg" class="logo-size1" *ngIf="isCollapsed">
+            <img src="assets/icons/close-black.svg" class="logo-size2" *ngIf="!isCollapsed">
+        </button>
+
+        <div class="collapse navbar-collapse pt-48" id="navbarNav" [ngClass]="isCollapsed ? 'nav-closed' : 'nav-open'">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item mb-8" style="cursor: pointer;">
+                    <a class="nav-link px-21 mr-16" (click)="home()" style="cursor: pointer;"
+                        [(class.active)]="isHome">HOME</a>
+                </li>
+                <li class="nav-item dropdown mb-8">
+                    <a class="nav-link px-21 mr-18" id="servicesDropdown" (click)="service(serviceVisible)"
+                        [class.active]="isServiceVisible" style="display: flex; align-items: center;">
+                        SERVICES
+                        <span
+                            style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
+                            <img [src]="serviceVisible ? 'assets/icons/drop-up.svg' : 'assets/icons/dropdown-black.svg'"
+                                class="dropdown-icon">
+                        </span>
+                    </a>
+                    <ul *ngIf="serviceVisible" class="mobile-nav">
+                        <li *ngFor="let menu of serviceMenu" class="px-19">
+                            <h6>
+                                <a class="link-underline inline-subnav" (click)="redirect(menu.image)"
+                                    style="font-size: 16px !important;">{{ menu.topic }}</a>
+                                <span style="padding-left: 8px;">
+                                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px"
+                                        height="24px">
+                                </span>
+                            </h6>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link px-21"
+                        (click)="isHome=false;isServiceVisible=false;isCompany=true;isCompDropdown=!isCompDropdown;serviceVisible=false"
+                        [class.active]="isCompDropdown" id="companyDropdown"
+                        style="margin-right: 18px; display: flex; align-items: center;">
+                        COMPANY
+                        <span
+                            style="display: flex; align-items: center; justify-content: center; background-color: transparent; padding-left: 9.5px;">
+                            <img [src]="isCompDropdown ? 'assets/icons/drop-up.svg' : 'assets/icons/dropdown-black.svg'"
+                                class="dropdown-icon">
+                        </span>
+                    </a>
+                    <ul *ngIf="isCompDropdown" class="mobile-nav">
+                        <li class="px-19">
+                            <h6>
+                                <a class="link-underline inline-subnav" style="font-size: 16px !important;"
+                                    (click)="company('aboutus')">About Us</a>
+                                <span style="padding-left: 8px;">
+                                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px"
+                                        height="24px">
+                                </span>
+                            </h6>
+                        </li>
+                        <li class="px-19">
+                            <h6>
+                                <a class="link-underline inline-subnav" style="font-size: 16px !important;"
+                                    (click)="company('resources')">Resources</a>
+                                <span style="padding-left: 8px;">
+                                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px"
+                                        height="24px">
+                                </span>
+                            </h6>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item mt-48">
+                    <a (click)="openDialog()" class="btn btn-contact-black"><span>Get in touch</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="serviceNavBar-black" *ngIf="serviceVisible" style="background: inherit;">
+        <div *ngFor="let menu of serviceMenu" style="cursor: pointer;" (click)="redirect(menu.image)"
+            class="serviceItems-black">
+            <h6><a class="link-underline" style="color: #747B80 !important;">{{menu.topic}}</a>
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
+        </div>
+    </div>
+
+    <div class="row companyNavBar-black" *ngIf="isCompDropdown"
+        style="background-color: inherit;display: flex; flex-direction: row; margin:0px">
+        <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" (click)="company('aboutus')"
+            class="col-md-4 serviceItems-black">
+            <h6><a class="link-underline" style="color: #747B80 !important;">About Us</a>
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
+        </div>
+        <div style="cursor: pointer;padding-left: 0px;padding-right: 0px;" (click)="company('resources')"
+            class="col-md-4 serviceItems-black">
+            <h6><a class="link-underline" style="color: #747B80 !important;">Resources</a>
+                <span style="padding-left: 8px;">
+                    <img style="cursor: pointer;" src="assets/icons/right-arrow.svg" width="24px" height="24px">
+                </span>
+            </h6>
+        </div>
+    </div>
+</div>

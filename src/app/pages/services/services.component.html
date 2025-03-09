@@ -1,6 +1,6 @@
 <div style="top: 90px;position: relative;">
     <div class="container-fluid section1 section slide-up-page">
-        <h2 class="pb-48 text-blur-reveal" style="margin: 0px;">{{serviceData?.topic}}</h2>
+        <h2 class="pb-48 text-blur-reveal" style="margin: 0px;overflow-wrap: break-word;">{{serviceData?.topic}}</h2>
         <div *ngFor="let desc of serviceData?.desc1; let i = index">
             <p align="left" style="text-align: left;" class="per32"
                 [ngStyle]="{'padding-bottom': i !== (serviceData?.desc1.length - 1) ? '16px' : '0px'}">
