@@ -1,9 +1,10 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output, Renderer2, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ServicesComponent } from '../services/services.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import serviceMenu from '../../../assets/serviceMenu.json'
 import { ActivatedRoute } from '@angular/router';
+import { EventEmitter } from 'stream';
 
 
 
@@ -26,8 +27,9 @@ export class NavbarComponent implements OnInit,OnChanges{
   isCompDropdown = false;
   serviceVisible = false;
   pageName:any;
+  isCollapsed : boolean = true;
 
-  constructor(private dialog: MatDialog, private route:ActivatedRoute) { 
+  constructor(private dialog: MatDialog, private route:ActivatedRoute,private renderer: Renderer2) { 
     this.serviceMenu = serviceMenu;
     
   }
@@ -97,6 +99,4 @@ export class NavbarComponent implements OnInit,OnChanges{
       this.secondPage = changes['isSecondPage'].currentValue;
     }
   }
-  
-
 }
