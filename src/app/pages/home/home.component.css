@@ -202,18 +202,36 @@
 }
 
 
-.progress-bar {
+.progress-bar-loading {
     width: 0%;
     height: 100%;
     background: linear-gradient(to top, #9FEFFF 0%, #7CF0FD 57.1%, #96F2E6 78.1%);
     border-radius: 5px;
-    animation: progressLoop 4s infinite linear forwards;
+    animation: progressStart 10s linear forwards;
     box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);
 }
 
-@keyframes progressLoop {
+@keyframes progressStart {
     0% {
         width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+.progress-bar-loading-full {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to top, #9FEFFF 0%, #7CF0FD 57.1%, #96F2E6 78.1%);
+    border-radius: 5px;
+    animation: progressActive 1s linear forwards;
+    box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);
+}
+
+@keyframes progressActive {
+    0% {
+        width: 60%;
     }
 
     100% {

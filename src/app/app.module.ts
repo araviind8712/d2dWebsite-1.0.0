@@ -23,6 +23,7 @@ import { FooterComponent } from '../shared/footer/footer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ScrolleffectsDirective } from './directive/scrolleffects.directive';
 import { HomescrollDirective } from './directive/homescroll.directive';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { HomescrollDirective } from './directive/homescroll.directive';
     HomescrollDirective
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule,

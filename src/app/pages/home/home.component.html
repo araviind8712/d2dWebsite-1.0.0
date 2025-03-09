@@ -2,19 +2,19 @@
     <div #section [attr.data-index]="1" class="section">
         <div [hidden]="isLoading==false" class="loader">
             <div class="progress-container">
-                <div class="progress-bar"></div>
+                <div  [ngClass]="isLoadingAnimation ? 'progress-bar-loading' : 'progress-bar-loading-full'"></div>
             </div>
             <div class="loading-text">
                 <p>Loading</p>
             </div>
             
         </div>
-        <video src="assets/videos/d2dVid.mp4" (waiting)="isLoading=true" (loadeddata)="isLoading=false" (playing)="isLoading=false" class="pic" autoplay loop muted inline style="filter: brightness(50%);" [hidden]="isLoading==true"></video>
+        <video src="assets/videos/d2dVid.mp4" (waiting)="isLoading=true" (loadeddata)="loaded()" (playing)="loaded()" class="pic" autoplay loop muted inline style="filter: brightness(50%);" [hidden]="isLoading==true"></video>
         <p [hidden]="isLoading==true" class="fsr-67 pyx-48 text-white videoText">
             <span>Unlocking Life's Secrets: Driving </span><span style="background: linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%);-webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;">Innovation </span>with Precision Bioinformatics and <span style="background: linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> Collaboration</span></p>
        </div>
-    <div class="col-md-12 section1" [attr.data-index]="2">
+    <div class="col-md-12 section1" [attr.data-index]="2">{{isLoading}}
         <p align="center" style="margin-bottom: 0px;" class="pb-24">Who we are</p>
         <h3 align="center">Where Biology Meets Technology: Empowering Breakthroughs with
             Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and

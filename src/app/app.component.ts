@@ -66,15 +66,5 @@ export class AppComponent {
         this.isSecondPage = false;
       }
     }
-    if (typeof window !== 'undefined') {
-      if (window.innerWidth <= 767) {
-        if (window.scrollY > 0) {
-          console.log('down')
-        }
-        else{
-          console.log('up')
-        }
-      }
-    }
   }
 }
