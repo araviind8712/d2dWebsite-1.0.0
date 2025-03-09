@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["src/app/pages/aboutus/aboutus.component.css"],
-  "sourcesContent": ["@media (max-width: 767px) {\r\n    .aboutus-gallery .col-8:nth-child(odd) {\r\n        margin-left: auto;\r\n    }\r\n\r\n    .mt-80 {\r\n        margin-top: calc(15.53vw + 0.0164px) !important;\r\n    }\r\n}"],
-  "mappings": ";AAAA,OAAO,CAAC,SAAS,EAAE;AACf,GAAC,gBAAgB,CAAC,KAAK;AACnB,iBAAa;AACjB;AAEA,GAAC;AACG,gBAAY,KAAK,QAAQ,EAAE;AAC/B;AACJ;",
+  "sourcesContent": [".txt-black{\r\n    color: #121214 !important;\r\n}\r\n\r\n@media (max-width: 767px) {\r\n    .aboutus-gallery .col-8:nth-child(odd) {\r\n        margin-left: auto;\r\n    }\r\n\r\n    .mt-80 {\r\n        margin-top: calc(15.53vw + 0.0164px) !important;\r\n    }\r\n\r\n    .txt-black{\r\n        color: #747B80 !important;\r\n        \r\n    }\r\n}"],
+  "mappings": ";AAAA,CAAC;AACG,SAAO;AACX;AAEA,OAAO,CAAC,SAAS,EAAE;AACf,GAAC,gBAAgB,CAAC,KAAK;AACnB,iBAAa;AACjB;AAEA,GAAC;AACG,gBAAY,KAAK,QAAQ,EAAE;AAC/B;AAEA,GAbH;AAcO,WAAO;AAEX;AACJ;",
   "names": []
 }
