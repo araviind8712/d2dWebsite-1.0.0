@@ -64071,7 +64071,7 @@ var NavbarComponent = class _NavbarComponent {
   row-gap: calc(1.66vw + 0.096px);
   left: 0px;
   top: 0px;
-  width: 100vw;
+  width: 100%;
   position: relative;
   z-index: 999;
   background: rgba(255, 255, 255, 0.01);
@@ -64088,7 +64088,7 @@ var NavbarComponent = class _NavbarComponent {
   flex-wrap: wrap;
   left: 0px;
   top: 0px;
-  width: 100vw;
+  width: 100%;
   background: rgba(255, 255, 255, 0.01);
   color: #747B80;
   z-index: 9999 !important;
@@ -64144,7 +64144,7 @@ var NavbarComponent = class _NavbarComponent {
   position: relative;
   left: 0px;
   top: 0px;
-  width: 100vw;
+  width: 100%;
   box-shadow: none !important;
   border-bottom: none !important;
 }
@@ -64170,7 +64170,7 @@ var NavbarComponent = class _NavbarComponent {
   left: 0px;
   top: 0px;
   position: relative;
-  width: 100vw;
+  width: 100%;
   z-index: 9999;
 }
 .serviceItems[_ngcontent-%COMP%] {
