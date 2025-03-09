@@ -62685,7 +62685,7 @@ var HomescrollDirective = class _HomescrollDirective {
 // src/app/pages/home/home.component.ts
 var _c06 = ["videoPlayer"];
 var _c15 = ["section"];
-function HomeComponent_div_70_Template(rf, ctx) {
+function HomeComponent_div_71_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 31);
     \u0275\u0275element(1, "app-resource-card", 32);
@@ -62698,6 +62698,7 @@ function HomeComponent_div_70_Template(rf, ctx) {
   }
 }
 var HomeComponent = class _HomeComponent {
+  cdr;
   sections;
   video;
   progress = 2;
@@ -62707,7 +62708,8 @@ var HomeComponent = class _HomeComponent {
   progressWidth = "0%";
   duration = 3;
   isLoadingAnimation = true;
-  constructor() {
+  constructor(cdr) {
+    this.cdr = cdr;
     this.resources = resources_default;
   }
   scrollToIndex(index) {
@@ -62719,11 +62721,12 @@ var HomeComponent = class _HomeComponent {
   loaded() {
     this.isLoadingAnimation = false;
     setTimeout(() => {
-    }, 4e3);
-    this.isLoading = false;
+      this.isLoading = false;
+    }, 1e3);
+    this.cdr.detectChanges();
   }
   static \u0275fac = function HomeComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _HomeComponent)();
+    return new (__ngFactoryType__ || _HomeComponent)(\u0275\u0275directiveInject(ChangeDetectorRef));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HomeComponent, selectors: [["app-home"]], viewQuery: function HomeComponent_Query(rf, ctx) {
     if (rf & 1) {
@@ -62735,7 +62738,7 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.video = _t.first);
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.sections = _t);
     }
-  }, standalone: false, decls: 71, vars: 9, consts: [["mainDiv", ""], ["section", ""], ["appHomescroll", "", 1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], [1, "section"], [1, "loader", 3, "hidden"], [1, "progress-container"], [3, "ngClass"], [1, "loading-text"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", "inline", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "waiting", "loadeddata", "playing", "hidden"], [1, "fsr-67", "pyx-48", "text-white", "videoText", 3, "hidden"], [2, "background", "linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [1, "col-md-12", "section1"], ["align", "center", 1, "pb-24", 2, "margin-bottom", "0px"], ["align", "center"], [1, "col-12", "section2", "section"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], [1, "col-12", "section3", "section"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], [1, "section5", "section"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
+  }, standalone: false, decls: 72, vars: 10, consts: [["mainDiv", ""], ["section", ""], ["appHomescroll", "", 1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], [1, "section"], [1, "loader", 3, "hidden"], [1, "progress-container"], [3, "ngClass"], [1, "loading-text"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", "inline", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "waiting", "loadeddata", "playing", "hidden"], [1, "fsr-67", "pyx-48", "text-white", "videoText", 3, "hidden"], [2, "background", "linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [1, "col-md-12", "section1"], ["align", "center", 1, "pb-24", 2, "margin-bottom", "0px"], ["align", "center"], [1, "col-12", "section2", "section"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], [1, "col-12", "section3", "section"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], [1, "section5", "section"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "div", 2, 0)(2, "div", 3, 1)(4, "div", 4)(5, "div", 5);
@@ -62766,67 +62769,69 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275elementStart(17, "span", 11);
       \u0275\u0275text(18, " Collaboration");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(19, "div", 12)(20, "p", 13);
-      \u0275\u0275text(21, "Who we are");
+      \u0275\u0275elementStart(19, "div", 12);
+      \u0275\u0275text(20);
+      \u0275\u0275elementStart(21, "p", 13);
+      \u0275\u0275text(22, "Who we are");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(22, "h3", 14);
-      \u0275\u0275text(23, "Where Biology Meets Technology: Empowering Breakthroughs with Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and turn bold scientific goals into reality.");
+      \u0275\u0275elementStart(23, "h3", 14);
+      \u0275\u0275text(24, "Where Biology Meets Technology: Empowering Breakthroughs with Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and turn bold scientific goals into reality.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(24, "div", 15, 1)(26, "p", 16);
-      \u0275\u0275text(27, "Our Services");
+      \u0275\u0275elementStart(25, "div", 15, 1)(27, "p", 16);
+      \u0275\u0275text(28, "Our Services");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(28, "h2", 16);
-      \u0275\u0275text(29, "Tailored Solutions for Exceptional Results");
+      \u0275\u0275elementStart(29, "h2", 16);
+      \u0275\u0275text(30, "Tailored Solutions for Exceptional Results");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(30, "app-service-menu", 17);
+      \u0275\u0275element(31, "app-service-menu", 17);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(31, "div", 18, 1)(33, "p", 19);
-      \u0275\u0275text(34, "Why choose us");
+      \u0275\u0275elementStart(32, "div", 18, 1)(34, "p", 19);
+      \u0275\u0275text(35, "Why choose us");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(35, "h2", 19);
-      \u0275\u0275text(36, "Innovative Expertise. Exceptional Results.");
+      \u0275\u0275elementStart(36, "h2", 19);
+      \u0275\u0275text(37, "Innovative Expertise. Exceptional Results.");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(37, "div", 20)(38, "div", 21);
-      \u0275\u0275element(39, "hr", 22);
-      \u0275\u0275elementStart(40, "h5", 23);
-      \u0275\u0275text(41, "01");
+      \u0275\u0275elementStart(38, "div", 20)(39, "div", 21);
+      \u0275\u0275element(40, "hr", 22);
+      \u0275\u0275elementStart(41, "h5", 23);
+      \u0275\u0275text(42, "01");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(42, "h4");
-      \u0275\u0275text(43, "Expert Team");
+      \u0275\u0275elementStart(43, "h4");
+      \u0275\u0275text(44, "Expert Team");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(44, "p");
-      \u0275\u0275text(45, "Our team is composed of highly skilled professionals with extensive experience in bioinformatics and life sciences.");
+      \u0275\u0275elementStart(45, "p");
+      \u0275\u0275text(46, "Our team is composed of highly skilled professionals with extensive experience in bioinformatics and life sciences.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(46, "div", 21);
-      \u0275\u0275element(47, "hr", 22);
-      \u0275\u0275elementStart(48, "h5", 23);
-      \u0275\u0275text(49, "02");
+      \u0275\u0275elementStart(47, "div", 21);
+      \u0275\u0275element(48, "hr", 22);
+      \u0275\u0275elementStart(49, "h5", 23);
+      \u0275\u0275text(50, "02");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(50, "h4");
-      \u0275\u0275text(51, "Innovative Solutions");
+      \u0275\u0275elementStart(51, "h4");
+      \u0275\u0275text(52, "Innovative Solutions");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(52, "p");
-      \u0275\u0275text(53, "Leveraging cutting-edge technologies and methodologies to deliver accurate, actionable results.");
+      \u0275\u0275elementStart(53, "p");
+      \u0275\u0275text(54, "Leveraging cutting-edge technologies and methodologies to deliver accurate, actionable results.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(54, "div", 21);
-      \u0275\u0275element(55, "hr", 22);
-      \u0275\u0275elementStart(56, "h5", 23);
-      \u0275\u0275text(57, "03");
+      \u0275\u0275elementStart(55, "div", 21);
+      \u0275\u0275element(56, "hr", 22);
+      \u0275\u0275elementStart(57, "h5", 23);
+      \u0275\u0275text(58, "03");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(58, "h4");
-      \u0275\u0275text(59, "Collaborative Approach");
+      \u0275\u0275elementStart(59, "h4");
+      \u0275\u0275text(60, "Collaborative Approach");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(60, "p");
-      \u0275\u0275text(61, "We partner with clients to deeply understand their needs and customize our services to achieve their unique goals.");
+      \u0275\u0275elementStart(61, "p");
+      \u0275\u0275text(62, "We partner with clients to deeply understand their needs and customize our services to achieve their unique goals.");
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(62, "div", 24)(63, "p", 25);
-      \u0275\u0275text(64, " Featured Resources ");
-      \u0275\u0275elementStart(65, "a", 26)(66, "span", 27);
-      \u0275\u0275text(67, " View All \xA0 ");
-      \u0275\u0275element(68, "i", 28);
+      \u0275\u0275elementStart(63, "div", 24)(64, "p", 25);
+      \u0275\u0275text(65, " Featured Resources ");
+      \u0275\u0275elementStart(66, "a", 26)(67, "span", 27);
+      \u0275\u0275text(68, " View All \xA0 ");
+      \u0275\u0275element(69, "i", 28);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(69, "div", 29);
-      \u0275\u0275template(70, HomeComponent_div_70_Template, 2, 5, "div", 30);
+      \u0275\u0275elementStart(70, "div", 29);
+      \u0275\u0275template(71, HomeComponent_div_71_Template, 2, 5, "div", 30);
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
@@ -62835,13 +62840,15 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275advance(2);
       \u0275\u0275property("hidden", ctx.isLoading == false);
       \u0275\u0275advance(2);
-      \u0275\u0275property("ngClass", ctx.isLoading ? "progress-bar-loading" : "progress-bar-loading-full");
+      \u0275\u0275property("ngClass", ctx.isLoadingAnimation ? "progress-bar-loading" : "progress-bar-loading-full");
       \u0275\u0275advance(4);
       \u0275\u0275property("hidden", ctx.isLoading == true);
       \u0275\u0275advance();
       \u0275\u0275property("hidden", ctx.isLoading == true);
       \u0275\u0275advance(8);
       \u0275\u0275attribute("data-index", 2);
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate1("", ctx.isLoading, " ");
       \u0275\u0275advance(5);
       \u0275\u0275attribute("data-index", 3);
       \u0275\u0275advance(7);
@@ -62849,10 +62856,10 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275advance(39);
       \u0275\u0275property("ngForOf", ctx.resources);
     }
-  }, dependencies: [NgClass, NgForOf, ServiceMenuComponent, ResourceCardComponent, HomescrollDirective], styles: ['\n\n.section2[_ngcontent-%COMP%], \n.section3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);\n  width: 100%;\n  box-sizing: border-box;\n}\n.section1[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  padding: calc(5.55vw + 0.08px) 11.25vw;\n  min-height: 100vh !important;\n  justify-content: center;\n}\n.pic[_ngcontent-%COMP%] {\n  width: 100vw;\n  height: 100vh;\n  object-fit: cover;\n}\n.loader[_ngcontent-%COMP%] {\n  padding-bottom: 20vh;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 8;\n  background-color: #121314;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  border: 5px solid #f3f3f3;\n  border-top: 5px solid #3498db;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.section1[_ngcontent-%COMP%] {\n  background-color: #FFFFFF;\n}\n.section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: calc(1.66vw + 0.096px);\n}\n.section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: calc(1.11vw + 0.016px);\n}\n.section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  padding-bottom: calc(2.77vw + 0.112px);\n  margin-bottom: 0;\n}\n.section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 400;\n  font-size: 38px;\n  line-height: 46px;\n  text-align: center;\n  font-family: "NimbusSanL";\n  color: #121314;\n  margin: 0px;\n}\n.section4[_ngcontent-%COMP%] {\n  background-color: #FBFBFB;\n}\n.subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: calc(2.77vw + 0.112px);\n  padding-top: calc(2.77vw + 0.112px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #FB4F23;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: calc(0.55vw + 0.08px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #121314;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n  padding-bottom: calc(1.11vw + 0.016px);\n  margin: 0px;\n}\n.head[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n}\n#sub[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n}\n.pb-24[_ngcontent-%COMP%] {\n  padding-bottom: (1.66vw + 0px) !important;\n}\n.progress-container[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 3px;\n  position: absolute;\n  bottom: calc(3.33vw + 0.048px);\n  left: 0;\n  overflow: hidden;\n}\n.loading-text[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0.048px;\n  left: 0;\n  font-family: "NimbusSanL";\n  margin-left: 5px;\n  font-style: normal;\n  font-weight: 400;\n  color: #96F2E6;\n}\n.loading-text[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  visibility: hidden;\n  opacity: 0;\n  transition: opacity 0.3s ease-in-out;\n}\n.loading-text[_ngcontent-%COMP%]:hover   p[_ngcontent-%COMP%] {\n  visibility: visible;\n  opacity: 1;\n}\n.progress-bar-loading[_ngcontent-%COMP%] {\n  width: 0%;\n  height: 100%;\n  background:\n    linear-gradient(\n      to top,\n      #9FEFFF 0%,\n      #7CF0FD 57.1%,\n      #96F2E6 78.1%);\n  border-radius: 5px;\n  animation: _ngcontent-%COMP%_progressStart 7s linear forwards;\n  box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);\n}\n@keyframes _ngcontent-%COMP%_progressStart {\n  0% {\n    width: 0%;\n  }\n  50% {\n    width: 75%;\n  }\n  65% {\n    width: 74%;\n  }\n  75% {\n    width: 75%;\n  }\n  100% {\n    width: 80%;\n  }\n}\n.progress-bar-loading-full[_ngcontent-%COMP%] {\n  width: 0%;\n  height: 100%;\n  background:\n    linear-gradient(\n      to top,\n      #9FEFFF 0%,\n      #7CF0FD 57.1%,\n      #96F2E6 78.1%);\n  border-radius: 5px;\n  animation: _ngcontent-%COMP%_progressActive 0.7s linear forwards;\n  box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);\n}\n@keyframes _ngcontent-%COMP%_progressActive {\n  0% {\n    width: 80%;\n  }\n  100% {\n    width: 100%;\n  }\n}\n.videoText[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n  padding-left: calc(3.33vw + 0.048px);\n  padding-right: calc(3.33vw + 0.048px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 67px;\n  line-height: 80px;\n  position: absolute;\n  margin: 0px;\n  bottom: 0%;\n  line-height: 80.7px;\n  width: 100vw;\n  max-height: 90%;\n  overflow-y: scroll;\n}\n.section2[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  background: #FBFBFB;\n}\n@media only screen and (max-width: 767px) {\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%], \n   .section5[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px);\n  }\n  .section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    line-height: 16.8px;\n    margin-bottom: 0px;\n    padding-bottom: calc(2.91vw + 0.0108px);\n  }\n  .section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n    padding-bottom: calc(9.7vw + 0.036px);\n  }\n  .section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    padding-left: 0px;\n    padding-right: 0px;\n    padding-bottom: 0px;\n    font-size: 28px;\n    line-height: 39.2px;\n  }\n  .subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n    font-size: 28px;\n    line-height: 39.2px;\n    color: #FB4F23;\n  }\n  .subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n    padding-bottom: calc(1.94vw + 0.0072px);\n    font-size: 21px;\n    line-height: 29.4px;\n  }\n  .subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n    padding-bottom: calc(9.7vw + 0.036px);\n  }\n  .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    padding-right: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: calc(3.88vw + 0.0144px) !important;\n  }\n  .videoText[_ngcontent-%COMP%] {\n    font-style: normal;\n    font-weight: 400;\n    font-size: 51px;\n    line-height: 61px;\n  }\n}\n@media only screen and (min-width: 1440px) {\n}\n/*# sourceMappingURL=home.component.css.map */'], changeDetection: 0 });
+  }, dependencies: [NgClass, NgForOf, ServiceMenuComponent, ResourceCardComponent, HomescrollDirective], styles: ['\n\n.section2[_ngcontent-%COMP%], \n.section3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);\n  width: 100%;\n  box-sizing: border-box;\n}\n.section1[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  padding: calc(5.55vw + 0.08px) 11.25vw;\n  min-height: 100vh !important;\n  justify-content: center;\n}\n.pic[_ngcontent-%COMP%] {\n  width: 100vw;\n  height: 100vh;\n  object-fit: cover;\n}\n.loader[_ngcontent-%COMP%] {\n  padding-bottom: 20vh;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 8;\n  background-color: #121314;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  border: 5px solid #f3f3f3;\n  border-top: 5px solid #3498db;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.section1[_ngcontent-%COMP%] {\n  background-color: #FFFFFF;\n}\n.section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: calc(1.66vw + 0.096px);\n}\n.section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: calc(1.11vw + 0.016px);\n}\n.section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  padding-bottom: calc(2.77vw + 0.112px);\n  margin-bottom: 0;\n}\n.section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 400;\n  font-size: 38px;\n  line-height: 46px;\n  text-align: center;\n  font-family: "NimbusSanL";\n  color: #121314;\n  margin: 0px;\n}\n.section4[_ngcontent-%COMP%] {\n  background-color: #FBFBFB;\n}\n.subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: calc(2.77vw + 0.112px);\n  padding-top: calc(2.77vw + 0.112px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #FB4F23;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: calc(0.55vw + 0.08px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #121314;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n  padding-bottom: calc(1.11vw + 0.016px);\n  margin: 0px;\n}\n.head[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n}\n#sub[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n}\n.pb-24[_ngcontent-%COMP%] {\n  padding-bottom: (1.66vw + 0px) !important;\n}\n.progress-container[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 3px;\n  position: absolute;\n  bottom: calc(3.33vw + 0.048px);\n  left: 0;\n  overflow: hidden;\n}\n.loading-text[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0.048px;\n  left: 0;\n  font-family: "NimbusSanL";\n  margin-left: 5px;\n  font-style: normal;\n  font-weight: 400;\n  color: #96F2E6;\n}\n.loading-text[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  visibility: hidden;\n  opacity: 0;\n  transition: opacity 0.3s ease-in-out;\n}\n.loading-text[_ngcontent-%COMP%]:hover   p[_ngcontent-%COMP%] {\n  visibility: visible;\n  opacity: 1;\n}\n.progress-bar-loading[_ngcontent-%COMP%] {\n  width: 0%;\n  height: 100%;\n  background:\n    linear-gradient(\n      to top,\n      #9FEFFF 0%,\n      #7CF0FD 57.1%,\n      #96F2E6 78.1%);\n  border-radius: 5px;\n  animation: _ngcontent-%COMP%_progressStart 10s linear forwards;\n  box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);\n}\n@keyframes _ngcontent-%COMP%_progressStart {\n  0% {\n    width: 0%;\n  }\n  100% {\n    width: 60%;\n  }\n}\n.progress-bar-loading-full[_ngcontent-%COMP%] {\n  width: 0%;\n  height: 100%;\n  background:\n    linear-gradient(\n      to top,\n      #9FEFFF 0%,\n      #7CF0FD 57.1%,\n      #96F2E6 78.1%);\n  border-radius: 5px;\n  animation: _ngcontent-%COMP%_progressActive 1s linear forwards;\n  box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);\n}\n@keyframes _ngcontent-%COMP%_progressActive {\n  0% {\n    width: 60%;\n  }\n  100% {\n    width: 100%;\n  }\n}\n.videoText[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n  padding-left: calc(3.33vw + 0.048px);\n  padding-right: calc(3.33vw + 0.048px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 67px;\n  line-height: 80px;\n  position: absolute;\n  margin: 0px;\n  bottom: 0%;\n  line-height: 80.7px;\n  width: 100vw;\n  max-height: 90%;\n  overflow-y: scroll;\n}\n.section2[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  background: #FBFBFB;\n}\n@media only screen and (max-width: 767px) {\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%], \n   .section5[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px);\n  }\n  .section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    line-height: 16.8px;\n    margin-bottom: 0px;\n    padding-bottom: calc(2.91vw + 0.0108px);\n  }\n  .section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n    padding-bottom: calc(9.7vw + 0.036px);\n  }\n  .section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    padding-left: 0px;\n    padding-right: 0px;\n    padding-bottom: 0px;\n    font-size: 28px;\n    line-height: 39.2px;\n  }\n  .subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n    font-size: 28px;\n    line-height: 39.2px;\n    color: #FB4F23;\n  }\n  .subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n    padding-bottom: calc(1.94vw + 0.0072px);\n    font-size: 21px;\n    line-height: 29.4px;\n  }\n  .subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n    padding-bottom: calc(9.7vw + 0.036px);\n  }\n  .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    padding-right: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: calc(3.88vw + 0.0144px) !important;\n  }\n  .videoText[_ngcontent-%COMP%] {\n    font-style: normal;\n    font-weight: 400;\n    font-size: 51px;\n    line-height: 61px;\n  }\n}\n@media only screen and (min-width: 1440px) {\n}\n/*# sourceMappingURL=home.component.css.map */'] });
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/pages/home/home.component.ts", lineNumber: 13 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/pages/home/home.component.ts", lineNumber: 14 });
 })();
 
 // src/app/pages/resources/resources.component.ts
@@ -64554,15 +64561,6 @@ var AppComponent = class _AppComponent {
         this.isSecondPage = true;
       } else if (scrollPosition < this.pageHeight) {
         this.isSecondPage = false;
-      }
-    }
-    if (typeof window !== "undefined") {
-      if (window.innerWidth <= 767) {
-        if (window.scrollY > 0) {
-          console.log("down");
-        } else {
-          console.log("up");
-        }
       }
     }
   }
@@ -72160,6 +72158,7 @@ var AppModule = class _AppModule {
   static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({ providers: [
     provideClientHydration(withEventReplay2())
   ], imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule,
