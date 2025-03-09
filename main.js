@@ -63504,7 +63504,7 @@ function NavbarComponent_div_0_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(16, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown ? "fixed" : "absolute"));
+    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(16, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
     \u0275\u0275advance(5);
     \u0275\u0275property("ngIf", ctx_r1.isCollapsed);
     \u0275\u0275advance();
@@ -63736,7 +63736,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(16, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown ? "fixed" : "absolute"));
+    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(16, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
     \u0275\u0275advance(5);
     \u0275\u0275property("ngIf", ctx_r1.isCollapsed);
     \u0275\u0275advance();
