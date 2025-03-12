@@ -62310,7 +62310,7 @@ var ServiceMenuComponent = class _ServiceMenuComponent {
   }
   redirect(image) {
     var page = image.split("/")[2].split(".")[0];
-    window.location.href = "/d2dWebsite-1.0.0/services?service=" + page + "&page=service";
+    window.location.href = "/d2dWebsite-1.0.0/services?service=" + page + "&page=services";
   }
   static \u0275fac = function ServiceMenuComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ServiceMenuComponent)();
@@ -63814,7 +63814,7 @@ var NavbarComponent = class _NavbarComponent {
       const segments = image.split("/");
       if (segments.length > 2) {
         const page = segments[2].split(".")[0];
-        window.location.href = `/d2dWebsite-1.0.0/services?service=${page}&page=service`;
+        window.location.href = `/d2dWebsite-1.0.0/services?service=${page}&page=services`;
       }
     } catch (e) {
       console.error("Invalid image path:", image);
@@ -63831,7 +63831,7 @@ var NavbarComponent = class _NavbarComponent {
   static \u0275fac = function NavbarComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _NavbarComponent)(\u0275\u0275directiveInject(MatDialog), \u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(Renderer2));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], inputs: { mouseTop: "mouseTop", isSecondPage: "isSecondPage" }, standalone: false, features: [\u0275\u0275NgOnChangesFeature], decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "navbar-brand", "logo"], ["src", "assets/images/Logomark-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px", 3, "click"], ["src", "assets/icons/menu-icon-white.svg", "style", "color:#BFC0C0;", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-white.svg", "style", "color:#BFC0C0;", "class", "logo-size2", 4, "ngIf"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48", 3, "ngClass"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["src", "assets/icons/close-white.svg", 1, "logo-size2", 2, "color", "#BFC0C0"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px", "z-index", "999"], ["src", "assets/images/Logomark-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-black.svg", "class", "logo-size2", 4, "ngIf"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", "mr-16", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], ["src", "assets/icons/close-black.svg", 1, "logo-size2"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], inputs: { mouseTop: "mouseTop", isSecondPage: "isSecondPage" }, standalone: false, features: [\u0275\u0275NgOnChangesFeature], decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "navbar-brand", "logo"], ["src", "assets/images/Logo-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px", 3, "click"], ["src", "assets/icons/menu-icon-white.svg", "style", "color:#BFC0C0;", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-white.svg", "style", "color:#BFC0C0;", "class", "logo-size2", 4, "ngIf"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48", 3, "ngClass"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["src", "assets/icons/close-white.svg", 1, "logo-size2", 2, "color", "#BFC0C0"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px", "z-index", "999"], ["src", "assets/images/Logo-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-black.svg", "class", "logo-size2", 4, "ngIf"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", "mr-16", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], ["src", "assets/icons/close-black.svg", 1, "logo-size2"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275template(0, NavbarComponent_div_0_Template, 30, 18, "div", 0)(1, NavbarComponent_div_1_Template, 30, 18, "div", 1);
     }
@@ -64149,8 +64149,8 @@ var NavbarComponent = class _NavbarComponent {
   border-bottom: none !important;
 }
 .logo-size[_ngcontent-%COMP%] {
-  width: 90px;
-  height: 52px;
+  width: 165px;
+  height: 65px;
 }
 .logo-size1[_ngcontent-%COMP%] {
   width: 52px;
@@ -64264,7 +64264,7 @@ var NavbarComponent = class _NavbarComponent {
     padding: 4px;
   }
   .logo-size[_ngcontent-%COMP%] {
-    width: calc(17.47vw + 0.0236px);
+    width: 23.7vw;
     height: calc(10.08vw + 0.0104px);
   }
   h6[_ngcontent-%COMP%] {
@@ -64362,7 +64362,7 @@ var FooterComponent = class _FooterComponent {
   static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FooterComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 59, vars: 0, consts: [[1, "footer", "foot-pad"], [1, "row", "m-0"], [1, "col-md-5", "col-sm-12"], ["href", "/d2dWebsite-1.0.0/home?page=home"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com", 1, "pr-8"], ["src", "assets/icons/Facebook.svg", "alt", ""], ["href", "https://www.instagram.com", 1, "pr-8"], ["src", "assets/icons/Instagram.svg", "alt", ""], ["href", "https://github.com/DNA2discovery-D2D", 1, "pr-8"], ["src", "assets/icons/github.svg", "alt", ""], ["href", "https://www.twitter.com", 1, "pr-8"], ["src", "assets/icons/X.svg", "alt", ""], ["href", "https://www.linkedin.com/company/dna2discovery/", 1, "pr-8"], ["src", "assets/icons/LinkedIn.svg", "alt", ""], ["href", "https://www.youtube.com", 1, "pr-8"], ["src", "assets/icons/Youtube.svg", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-sm-12"], [1, "row"], [1, "col-md-6", "col-sm-12"], [1, "text-white", "mt-43", "fsr-21"], [1, "d-flex", "flex-column"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/aboutus?page=aboutus", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/resources?pages=resources", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfo&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioEng&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=statisticalTesting&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=seqTech&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfoTraining&page=service", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16-14", "mt80"]], template: function FooterComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 59, vars: 0, consts: [[1, "footer", "foot-pad"], [1, "row", "m-0"], [1, "col-md-5", "col-sm-12"], ["href", "/d2dWebsite-1.0.0/home?page=home"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com", 1, "pr-8"], ["src", "assets/icons/Facebook.svg", "alt", ""], ["href", "https://www.instagram.com", 1, "pr-8"], ["src", "assets/icons/Instagram.svg", "alt", ""], ["href", "https://github.com/DNA2discovery-D2D", 1, "pr-8"], ["src", "assets/icons/github.svg", "alt", ""], ["href", "https://www.twitter.com", 1, "pr-8"], ["src", "assets/icons/X.svg", "alt", ""], ["href", "https://www.linkedin.com/company/dna2discovery/", 1, "pr-8"], ["src", "assets/icons/LinkedIn.svg", "alt", ""], ["href", "https://www.youtube.com", 1, "pr-8"], ["src", "assets/icons/Youtube.svg", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-sm-12"], [1, "row"], [1, "col-md-6", "col-sm-12"], [1, "text-white", "mt-43", "fsr-21"], [1, "d-flex", "flex-column"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/aboutus?page=aboutus", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/resources?pages=resources", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfo&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioEng&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=statisticalTesting&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=seqTech&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfoTraining&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16-14", "mt80"]], template: function FooterComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
       \u0275\u0275element(4, "img", 4);
@@ -64488,17 +64488,25 @@ var GetintouchComponent = class _GetintouchComponent {
 
 // src/app/app.component.ts
 var AppComponent = class _AppComponent {
-  title = "d2dWebsite";
+  route;
+  titleService;
+  title = "D2D";
   pageHeight = 0;
   isCursorAtTop = false;
   isSecondPage = false;
   touchPoint = 300;
   touchEndY = 0;
   touchStartY = 0;
-  constructor() {
+  constructor(route, titleService) {
+    this.route = route;
+    this.titleService = titleService;
     if (typeof window !== "undefined") {
       this.pageHeight = window.innerHeight;
     }
+    this.route.queryParamMap.subscribe((params) => {
+      this.title = params.get("page") == null ? "D2D" : "D2D - " + params.get("page");
+      this.titleService.setTitle(this.title.toUpperCase());
+    });
   }
   top() {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -64534,7 +64542,7 @@ var AppComponent = class _AppComponent {
     }
   }
   static \u0275fac = function AppComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _AppComponent)();
+    return new (__ngFactoryType__ || _AppComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(Title));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], hostBindings: function AppComponent_HostBindings(rf, ctx) {
     if (rf & 1) {
@@ -64563,7 +64571,7 @@ var AppComponent = class _AppComponent {
   }, dependencies: [RouterOutlet, NavbarComponent, FooterComponent, GetintouchComponent], encapsulation: 2 });
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src/app/app.component.ts", lineNumber: 11 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src/app/app.component.ts", lineNumber: 13 });
 })();
 
 // node_modules/@angular/material/fesm2022/icon.mjs
