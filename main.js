@@ -61989,18 +61989,12 @@ var EmailService = class _EmailService {
   templateID1 = "template_h69oey8";
   templateID2 = "template_9hmn628";
   sendEmail(formData) {
-    var res = "none";
-    es_default.send(this.serviceID, this.templateID1, formData, this.userID).then((response) => {
-      alert("Querry Raised Successfully");
-    }, (error) => {
-      console.error("Error sending email:", error);
-      alert("Unable to raise the querry!!! Please Try again");
+    const email1$ = from(es_default.send(this.serviceID, this.templateID1, formData, this.userID));
+    const email2$ = from(es_default.send(this.serviceID, this.templateID2, formData, this.userID));
+    return forkJoin({
+      res1: email1$,
+      res2: email2$
     });
-    es_default.send(this.serviceID, this.templateID2, formData, this.userID).then((response) => {
-    }, (error) => {
-      console.error("Error sending email:", error);
-    });
-    return res;
   }
   static \u0275fac = function EmailService_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _EmailService)();
@@ -62009,51 +62003,69 @@ var EmailService = class _EmailService {
 };
 
 // src/app/pages/contact-us/contact-us.component.ts
-function ContactUsComponent_div_19_Template(rf, ctx) {
+function ContactUsComponent_div_12_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 22);
-    \u0275\u0275text(1, " Name can't be Empty ");
-    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(0, "div", 24);
+    \u0275\u0275element(1, "i", 25);
+    \u0275\u0275elementStart(2, "div")(3, "h6", 26);
+    \u0275\u0275text(4, "Querry Raised Successfully");
+    \u0275\u0275elementEnd()()();
   }
 }
-function ContactUsComponent_div_20_Template(rf, ctx) {
+function ContactUsComponent_div_13_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 22);
-    \u0275\u0275text(1, " Invalid Name ");
-    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(0, "div", 27);
+    \u0275\u0275element(1, "i", 28);
+    \u0275\u0275elementStart(2, "div")(3, "h6", 26);
+    \u0275\u0275text(4, "Unable to raise the querry!!! Please Try again");
+    \u0275\u0275elementEnd()()();
   }
 }
 function ContactUsComponent_div_21_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 22);
+    \u0275\u0275elementStart(0, "div", 29);
+    \u0275\u0275text(1, " Name can't be Empty ");
+    \u0275\u0275elementEnd();
+  }
+}
+function ContactUsComponent_div_22_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 29);
     \u0275\u0275text(1, " Invalid Name ");
     \u0275\u0275elementEnd();
   }
 }
-function ContactUsComponent_div_26_Template(rf, ctx) {
+function ContactUsComponent_div_23_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 22);
+    \u0275\u0275elementStart(0, "div", 29);
+    \u0275\u0275text(1, " Invalid Name ");
+    \u0275\u0275elementEnd();
+  }
+}
+function ContactUsComponent_div_28_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 29);
     \u0275\u0275text(1, " Email can't be empty ");
     \u0275\u0275elementEnd();
   }
 }
-function ContactUsComponent_div_27_Template(rf, ctx) {
+function ContactUsComponent_div_29_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 22);
+    \u0275\u0275elementStart(0, "div", 29);
     \u0275\u0275text(1, " Invalid Email ");
     \u0275\u0275elementEnd();
   }
 }
-function ContactUsComponent_div_32_Template(rf, ctx) {
+function ContactUsComponent_div_34_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 22);
+    \u0275\u0275elementStart(0, "div", 29);
     \u0275\u0275text(1, " Reason required ");
     \u0275\u0275elementEnd();
   }
 }
-function ContactUsComponent_div_33_Template(rf, ctx) {
+function ContactUsComponent_div_35_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 22);
+    \u0275\u0275elementStart(0, "div", 29);
     \u0275\u0275text(1, " Invalid comments ");
     \u0275\u0275elementEnd();
   }
@@ -62061,6 +62073,8 @@ function ContactUsComponent_div_33_Template(rf, ctx) {
 var ContactUsComponent = class _ContactUsComponent {
   dialogRef;
   gmail = "dna2discovery@outlook.com";
+  errorMsg = false;
+  successMsg = false;
   contactForm;
   snackbar;
   service;
@@ -62085,8 +62099,18 @@ var ContactUsComponent = class _ContactUsComponent {
           user_email: details.email,
           message: details.comments
         };
-        var msg = yield this.service.sendEmail(formData);
-        this.closeDialog();
+        this.service.sendEmail(formData).subscribe({
+          next: (response) => {
+            console.log("Emails sent successfully:", response);
+            this.successMsg = true;
+            this.errorMsg = false;
+          },
+          error: (error) => {
+            console.error("Error sending emails:", error);
+            this.errorMsg = true;
+            this.successMsg = false;
+          }
+        });
       }
     });
   }
@@ -62096,7 +62120,7 @@ var ContactUsComponent = class _ContactUsComponent {
   static \u0275fac = function ContactUsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ContactUsComponent)(\u0275\u0275directiveInject(MatDialogRef), \u0275\u0275directiveInject(MatSnackBar), \u0275\u0275directiveInject(EmailService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactUsComponent, selectors: [["app-contact-us"]], standalone: false, decls: 39, vars: 10, consts: [[1, "mat-typography", "mat-padding", 2, "overflow-y", "auto", "scroll-behavior", "smooth", "background-color", "#FFFFFF", "max-height", "100vh"], [1, "contact-row"], [1, "info"], [1, "px-0", "title"], [1, "px-0", "subTitle", 2, "font-weight", "300"], [1, "contact-info", "px-0", "mt-32"], [1, "row", "pl-3", "mb-16"], ["src", "assets/icons/email.svg", "width", "20px", "height", "20px"], [1, "fields"], [1, "form-wrapper", 2, "padding-left", "4px", "padding-right", "4px", "overflow-x", "hidden"], [3, "ngSubmit", "formGroup"], [1, "form-group"], ["for", "name"], ["id", "name", "type", "text", "formControlName", "name", "placeholder", "John Doe", 1, "form-control"], ["style", "color: red;", 4, "ngIf"], ["for", "email"], ["id", "email", "type", "text", "formControlName", "email", "placeholder", "johndoe@gmail.com", 1, "form-control"], ["for", "comments"], ["id", "comments", "formControlName", "comments", "placeholder", "Write here...", 1, "form-control"], [1, "row", "button-grp"], ["id", "cancelButton", 1, "btn", "btn-primary", "mr-8", 3, "click"], ["type", "submit", 1, "btn", "btn-primary", 3, "disabled"], [2, "color", "red"]], template: function ContactUsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactUsComponent, selectors: [["app-contact-us"]], standalone: false, decls: 41, vars: 12, consts: [[1, "mat-typography", "mat-padding", 2, "overflow-y", "auto", "scroll-behavior", "smooth", "background-color", "#FFFFFF", "max-height", "100vh"], [1, "contact-row"], [1, "info"], [1, "px-0", "title"], [1, "px-0", "subTitle", 2, "font-weight", "300"], [1, "contact-info", "px-0", "mt-32"], [1, "row", "pl-3", "mb-16"], ["src", "assets/icons/email.svg", "width", "20px", "height", "20px"], ["class", "alert alert-success d-flex align-items-center alert-msg", "role", "alert", 4, "ngIf"], ["class", "alert alert-danger d-flex align-items-center alert-msg", "role", "alert", 4, "ngIf"], [1, "fields"], [1, "form-wrapper", 2, "padding-left", "4px", "padding-right", "4px", "overflow-x", "hidden"], [3, "ngSubmit", "formGroup"], [1, "form-group"], ["for", "name"], ["id", "name", "type", "text", "formControlName", "name", "placeholder", "John Doe", 1, "form-control"], ["style", "color: red;", 4, "ngIf"], ["for", "email"], ["id", "email", "type", "text", "formControlName", "email", "placeholder", "johndoe@gmail.com", 1, "form-control"], ["for", "comments"], ["id", "comments", "formControlName", "comments", "placeholder", "Write here...", 1, "form-control"], [1, "row", "button-grp"], ["id", "cancelButton", 1, "btn", "btn-primary", "mr-8", 3, "click"], ["type", "submit", 1, "btn", "btn-primary]", 3, "disabled"], ["role", "alert", 1, "alert", "alert-success", "d-flex", "align-items-center", "alert-msg"], [1, "bi", "bi-check-circle", "me-2", "mr-8"], [2, "margin-bottom", "0px"], ["role", "alert", 1, "alert", "alert-danger", "d-flex", "align-items-center", "alert-msg"], [1, "bi", "bi-x-circle", "me-2", "mr-8"], [2, "color", "red"]], template: function ContactUsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "mat-dialog-content", 0)(1, "div", 1)(2, "div", 2)(3, "h1", 3);
       \u0275\u0275text(4, "Partner with Us!");
@@ -62108,69 +62132,75 @@ var ContactUsComponent = class _ContactUsComponent {
       \u0275\u0275element(9, "img", 7);
       \u0275\u0275elementStart(10, "p");
       \u0275\u0275text(11);
-      \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(12, "div", 8)(13, "div", 9)(14, "form", 10);
-      \u0275\u0275listener("ngSubmit", function ContactUsComponent_Template_form_ngSubmit_14_listener() {
+      \u0275\u0275elementEnd()();
+      \u0275\u0275template(12, ContactUsComponent_div_12_Template, 5, 0, "div", 8)(13, ContactUsComponent_div_13_Template, 5, 0, "div", 9);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(14, "div", 10)(15, "div", 11)(16, "form", 12);
+      \u0275\u0275listener("ngSubmit", function ContactUsComponent_Template_form_ngSubmit_16_listener() {
         return ctx.save();
       });
-      \u0275\u0275elementStart(15, "div", 11)(16, "label", 12);
-      \u0275\u0275text(17, "Name");
+      \u0275\u0275elementStart(17, "div", 13)(18, "label", 14);
+      \u0275\u0275text(19, "Name");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(18, "input", 13);
-      \u0275\u0275template(19, ContactUsComponent_div_19_Template, 2, 0, "div", 14)(20, ContactUsComponent_div_20_Template, 2, 0, "div", 14)(21, ContactUsComponent_div_21_Template, 2, 0, "div", 14);
+      \u0275\u0275element(20, "input", 15);
+      \u0275\u0275template(21, ContactUsComponent_div_21_Template, 2, 0, "div", 16)(22, ContactUsComponent_div_22_Template, 2, 0, "div", 16)(23, ContactUsComponent_div_23_Template, 2, 0, "div", 16);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(22, "div", 11)(23, "label", 15);
-      \u0275\u0275text(24, "Email");
+      \u0275\u0275elementStart(24, "div", 13)(25, "label", 17);
+      \u0275\u0275text(26, "Email");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(25, "input", 16);
-      \u0275\u0275template(26, ContactUsComponent_div_26_Template, 2, 0, "div", 14)(27, ContactUsComponent_div_27_Template, 2, 0, "div", 14);
+      \u0275\u0275element(27, "input", 18);
+      \u0275\u0275template(28, ContactUsComponent_div_28_Template, 2, 0, "div", 16)(29, ContactUsComponent_div_29_Template, 2, 0, "div", 16);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(28, "div", 11)(29, "label", 17);
-      \u0275\u0275text(30, "Tell us about what you would like to discuss");
+      \u0275\u0275elementStart(30, "div", 13)(31, "label", 19);
+      \u0275\u0275text(32, "Tell us about what you would like to discuss");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(31, "textarea", 18);
-      \u0275\u0275template(32, ContactUsComponent_div_32_Template, 2, 0, "div", 14)(33, ContactUsComponent_div_33_Template, 2, 0, "div", 14);
+      \u0275\u0275element(33, "textarea", 20);
+      \u0275\u0275template(34, ContactUsComponent_div_34_Template, 2, 0, "div", 16)(35, ContactUsComponent_div_35_Template, 2, 0, "div", 16);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(34, "div", 19)(35, "button", 20);
-      \u0275\u0275listener("click", function ContactUsComponent_Template_button_click_35_listener() {
+      \u0275\u0275elementStart(36, "div", 21)(37, "button", 22);
+      \u0275\u0275listener("click", function ContactUsComponent_Template_button_click_37_listener() {
         return ctx.closeDialog();
       });
-      \u0275\u0275text(36, "Cancel");
+      \u0275\u0275text(38, "Cancel");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(37, "button", 21);
-      \u0275\u0275text(38, "Submit");
+      \u0275\u0275elementStart(39, "button", 23);
+      \u0275\u0275text(40, "Submit");
       \u0275\u0275elementEnd()()()()()()();
     }
     if (rf & 2) {
-      let tmp_2_0;
-      let tmp_3_0;
       let tmp_4_0;
       let tmp_5_0;
       let tmp_6_0;
       let tmp_7_0;
       let tmp_8_0;
+      let tmp_9_0;
+      let tmp_10_0;
       \u0275\u0275advance(11);
       \u0275\u0275textInterpolate(ctx.gmail);
+      \u0275\u0275advance();
+      \u0275\u0275property("ngIf", ctx.successMsg);
+      \u0275\u0275advance();
+      \u0275\u0275property("ngIf", ctx.errorMsg);
       \u0275\u0275advance(3);
       \u0275\u0275property("formGroup", ctx.contactForm);
       \u0275\u0275advance(5);
-      \u0275\u0275property("ngIf", ((tmp_2_0 = ctx.contactForm.get("name")) == null ? null : tmp_2_0.hasError("required")) && ((tmp_2_0 = ctx.contactForm.get("name")) == null ? null : tmp_2_0.touched));
+      \u0275\u0275property("ngIf", ((tmp_4_0 = ctx.contactForm.get("name")) == null ? null : tmp_4_0.hasError("required")) && ((tmp_4_0 = ctx.contactForm.get("name")) == null ? null : tmp_4_0.touched));
       \u0275\u0275advance();
-      \u0275\u0275property("ngIf", ((tmp_3_0 = ctx.contactForm.get("name")) == null ? null : tmp_3_0.hasError("pattern")) && ((tmp_3_0 = ctx.contactForm.get("name")) == null ? null : tmp_3_0.touched));
+      \u0275\u0275property("ngIf", ((tmp_5_0 = ctx.contactForm.get("name")) == null ? null : tmp_5_0.hasError("pattern")) && ((tmp_5_0 = ctx.contactForm.get("name")) == null ? null : tmp_5_0.touched));
       \u0275\u0275advance();
-      \u0275\u0275property("ngIf", ctx.contactForm.value.name.trim() === "" && ctx.contactForm.value.name !== "" && ((tmp_4_0 = ctx.contactForm.get("name")) == null ? null : tmp_4_0.touched));
+      \u0275\u0275property("ngIf", ctx.contactForm.value.name.trim() === "" && ctx.contactForm.value.name !== "" && ((tmp_6_0 = ctx.contactForm.get("name")) == null ? null : tmp_6_0.touched));
       \u0275\u0275advance(5);
-      \u0275\u0275property("ngIf", ((tmp_5_0 = ctx.contactForm.get("email")) == null ? null : tmp_5_0.hasError("required")) && ((tmp_5_0 = ctx.contactForm.get("email")) == null ? null : tmp_5_0.touched));
+      \u0275\u0275property("ngIf", ((tmp_7_0 = ctx.contactForm.get("email")) == null ? null : tmp_7_0.hasError("required")) && ((tmp_7_0 = ctx.contactForm.get("email")) == null ? null : tmp_7_0.touched));
       \u0275\u0275advance();
-      \u0275\u0275property("ngIf", ((tmp_6_0 = ctx.contactForm.get("email")) == null ? null : tmp_6_0.hasError("pattern")) && ((tmp_6_0 = ctx.contactForm.get("email")) == null ? null : tmp_6_0.touched));
+      \u0275\u0275property("ngIf", ((tmp_8_0 = ctx.contactForm.get("email")) == null ? null : tmp_8_0.hasError("pattern")) && ((tmp_8_0 = ctx.contactForm.get("email")) == null ? null : tmp_8_0.touched));
       \u0275\u0275advance(5);
-      \u0275\u0275property("ngIf", ((tmp_7_0 = ctx.contactForm.get("comments")) == null ? null : tmp_7_0.invalid) && ((tmp_7_0 = ctx.contactForm.get("comments")) == null ? null : tmp_7_0.touched));
+      \u0275\u0275property("ngIf", ((tmp_9_0 = ctx.contactForm.get("comments")) == null ? null : tmp_9_0.invalid) && ((tmp_9_0 = ctx.contactForm.get("comments")) == null ? null : tmp_9_0.touched));
       \u0275\u0275advance();
-      \u0275\u0275property("ngIf", ctx.contactForm.value.comments.trim() === "" && ctx.contactForm.value.comments !== "" && ((tmp_8_0 = ctx.contactForm.get("name")) == null ? null : tmp_8_0.touched));
+      \u0275\u0275property("ngIf", ctx.contactForm.value.comments.trim() === "" && ctx.contactForm.value.comments !== "" && ((tmp_10_0 = ctx.contactForm.get("name")) == null ? null : tmp_10_0.touched));
       \u0275\u0275advance(4);
       \u0275\u0275property("disabled", ctx.contactForm.invalid || ctx.contactForm.value.name.trim() === "" || ctx.contactForm.value.comments.trim() === "");
     }
-  }, dependencies: [NgIf, MatDialogContent, \u0275NgNoValidate, DefaultValueAccessor, NgControlStatus, NgControlStatusGroup, FormGroupDirective, FormControlName], styles: ['\n\n.mat-dialog-content[_ngcontent-%COMP%] {\n  overflow-y: auto;\n  display: flex;\n  flex-direction: column;\n  max-height: fit-content !important;\n}\n.form-wrapper[_ngcontent-%COMP%] {\n  max-height: fit-content;\n  overflow-y: auto;\n  padding-right: 0px;\n}\n.mat-padding[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px) !important;\n}\n.form-group[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  padding-left: 0px;\n}\n.form-group[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  margin-top: 5px;\n  color: red;\n}\n.form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], \n.form-group[_ngcontent-%COMP%]   textarea[_ngcontent-%COMP%] {\n  height: 40px;\n}\ninput[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 12px;\n  gap: 8px;\n  height: 47px;\n  border: 1px solid #BFC0C0;\n  border-radius: 300px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n}\ntextarea[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  padding: 12px;\n  gap: 8px;\n  border: 1px solid #BFC0C0;\n  border-radius: 16px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n  height: 110px !important;\n}\n#cancelButton[_ngcontent-%COMP%] {\n  display: flex;\n  width: 161px;\n  height: 52px;\n  flex-direction: column;\n  justify-content: center;\n  font-size: 21px;\n  font-family: "NimbusSanL";\n  font-weight: 400;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #FBFBFB;\n  color: #121314;\n  border-radius: 200px;\n  border: 2px solid #121314;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n  line-height: 29px;\n}\n.mr-8[_ngcontent-%COMP%] {\n  margin-right: calc(0.55vw + 0.08px);\n}\nbutton[_ngcontent-%COMP%] {\n  width: 161px;\n  height: 52px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  font-size: 21px;\n  font-family: "NimbusSanL";\n  font-weight: 400;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #121314;\n  color: #FBFBFB;\n  border-radius: 200px;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n  border: 0px;\n  line-height: 29px;\n}\nbutton[_ngcontent-%COMP%]:disabled {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nbutton[_ngcontent-%COMP%]:hover {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nlabel[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.title[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  justify-content: start;\n  flex-grow: 0;\n}\n.subTitle[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin-bottom: 0px;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin-left: 16px;\n}\n.mb-16[_ngcontent-%COMP%] {\n  margin-bottom: 16px;\n}\n.button-grp[_ngcontent-%COMP%] {\n  position: relative;\n  width: 45vw;\n  align-self: center;\n  margin-left: 0px;\n}\n.contact-row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n}\n.info[_ngcontent-%COMP%] {\n  width: calc(42.22vw + 0.032px);\n  margin-right: calc(5.55vw + 0.08px) !important;\n}\n.fields[_ngcontent-%COMP%] {\n  width: calc(45.59vw + 0.08px);\n  overflow-x: hidden !important;\n}\n.contact-info[_ngcontent-%COMP%] {\n  padding-top: calc(2.22vw + 0.032px);\n}\n@media only screen and (max-width: 767px) {\n  .title[_ngcontent-%COMP%] {\n    padding-bottom: calc(0.97vw + 0.0036px) !important;\n    margin: 0px !important;\n  }\n  .mt-32[_ngcontent-%COMP%] {\n    margin-top: 0px;\n  }\n  .mb-16[_ngcontent-%COMP%] {\n    margin-bottom: 0px;\n  }\n  button[_ngcontent-%COMP%] {\n    width: 48% !important;\n    margin-top: calc(5.82vw + 0.0216px);\n  }\n  #cancelButton[_ngcontent-%COMP%] {\n    width: 48% !important;\n  }\n  .subTitle[_ngcontent-%COMP%] {\n    font-size: 16px;\n  }\n  textarea[_ngcontent-%COMP%] {\n    height: 200px !important;\n    padding-left: 10px;\n  }\n  .button-grp[_ngcontent-%COMP%] {\n    width: calc(100vw - 2 * (4.80vw + 0.02px));\n    justify-content: space-between;\n    align-self: center;\n  }\n  .mr-8[_ngcontent-%COMP%] {\n    margin-right: calc(1.94vw + 0.0072px);\n  }\n  .contact-row[_ngcontent-%COMP%] {\n    display: flex;\n    flex-direction: column;\n  }\n  .contact-info[_ngcontent-%COMP%] {\n    padding-top: calc(11.65vw + 0.002px) !important;\n    padding-bottom: calc(11.65vw + 0.002px) !important;\n  }\n  .info[_ngcontent-%COMP%] {\n    width: calc(100vw - 2 * (3.88vw + 0.0144px));\n    margin-right: 0px;\n  }\n  .fields[_ngcontent-%COMP%] {\n    width: calc(100vw - 2 * (3.88vw + 0.0144px));\n  }\n  .mat-padding[_ngcontent-%COMP%] {\n    padding: calc(11.65vw + 0.002px) calc(3.88vw + 0.0144px) !important;\n  }\n  .title[_ngcontent-%COMP%] {\n    font-size: 38px !important;\n  }\n}\n/*# sourceMappingURL=contact-us.component.css.map */'] });
+  }, dependencies: [NgIf, MatDialogContent, \u0275NgNoValidate, DefaultValueAccessor, NgControlStatus, NgControlStatusGroup, FormGroupDirective, FormControlName], styles: ['\n\n.mat-dialog-content[_ngcontent-%COMP%] {\n  overflow-y: auto;\n  display: flex;\n  flex-direction: column;\n  max-height: fit-content !important;\n}\n.form-wrapper[_ngcontent-%COMP%] {\n  max-height: fit-content;\n  overflow-y: auto;\n  padding-right: 0px;\n}\n.mat-padding[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px) !important;\n}\n.form-group[_ngcontent-%COMP%] {\n  margin-bottom: 1rem;\n  padding-left: 0px;\n}\n.form-group[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  margin-top: 5px;\n  color: red;\n}\n.form-group[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], \n.form-group[_ngcontent-%COMP%]   textarea[_ngcontent-%COMP%] {\n  height: 40px;\n}\ninput[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  padding: 12px;\n  gap: 8px;\n  height: 47px;\n  border: 1px solid #BFC0C0;\n  border-radius: 300px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n}\ntextarea[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  padding: 12px;\n  gap: 8px;\n  border: 1px solid #BFC0C0;\n  border-radius: 16px;\n  flex: none;\n  order: 1;\n  align-self: stretch;\n  flex-grow: 0;\n  height: 110px !important;\n}\n#cancelButton[_ngcontent-%COMP%] {\n  display: flex;\n  width: 161px;\n  height: 52px;\n  flex-direction: column;\n  justify-content: center;\n  font-size: 21px;\n  font-family: "NimbusSanL";\n  font-weight: 400;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #FBFBFB;\n  color: #121314;\n  border-radius: 200px;\n  border: 2px solid #121314;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n  line-height: 29px;\n}\n.mr-8[_ngcontent-%COMP%] {\n  margin-right: calc(0.55vw + 0.08px);\n}\nbutton[_ngcontent-%COMP%] {\n  width: 161px;\n  height: 52px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  font-size: 21px;\n  font-family: "NimbusSanL";\n  font-weight: 400;\n  align-items: center;\n  padding: 16px 24px;\n  gap: 10px;\n  width: 114px;\n  height: 52px;\n  background: #121314;\n  color: #FBFBFB;\n  border-radius: 200px;\n  flex: none;\n  order: 3;\n  flex-grow: 0;\n  border: 0px;\n  line-height: 29px;\n  box-shadow: none !important;\n}\nbutton[_ngcontent-%COMP%]:disabled {\n  background: #000000;\n  border-radius: 200px;\n  border: 0px;\n}\nbutton[_ngcontent-%COMP%]:hover {\n  background: #000000;\n  border-radius: 200px;\n  color: white;\n  border: 0px black;\n}\n.btn-primary[_ngcontent-%COMP%]:not(:disabled):not(.disabled):active   .btn-primary[_ngcontent-%COMP%]:focus, \n.btn-primary[_ngcontent-%COMP%]:active, \n.btn-primary[_ngcontent-%COMP%]:visited {\n  background: #000000 !important;\n  border-radius: 200px !important;\n  border: 0px !important;\n  color: white !important;\n}\nlabel[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  align-self: stretch;\n  flex-grow: 0;\n}\n.title[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  flex: none;\n  order: 0;\n  justify-content: start;\n  flex-grow: 0;\n}\n.subTitle[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin-bottom: 0px;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 22px;\n  color: #121314;\n  flex: none;\n  order: 1;\n  flex-grow: 0;\n  margin-left: 16px;\n}\n.mb-16[_ngcontent-%COMP%] {\n  margin-bottom: 16px;\n}\n.button-grp[_ngcontent-%COMP%] {\n  position: relative;\n  width: 45vw;\n  align-self: center;\n  margin-left: 0px;\n}\n.contact-row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n}\n.info[_ngcontent-%COMP%] {\n  width: calc(42.22vw + 0.032px);\n  margin-right: calc(5.55vw + 0.08px) !important;\n}\n.fields[_ngcontent-%COMP%] {\n  width: calc(45.59vw + 0.08px);\n  overflow-x: hidden !important;\n}\n.contact-info[_ngcontent-%COMP%] {\n  padding-top: calc(2.22vw + 0.032px);\n}\n@media only screen and (max-width: 767px) {\n  .title[_ngcontent-%COMP%] {\n    padding-bottom: calc(0.97vw + 0.0036px) !important;\n    margin: 0px !important;\n  }\n  .mt-32[_ngcontent-%COMP%] {\n    margin-top: 0px;\n  }\n  .mb-16[_ngcontent-%COMP%] {\n    margin-bottom: 0px;\n  }\n  button[_ngcontent-%COMP%] {\n    width: 48% !important;\n    margin-top: calc(5.82vw + 0.0216px);\n  }\n  #cancelButton[_ngcontent-%COMP%] {\n    width: 48% !important;\n  }\n  .subTitle[_ngcontent-%COMP%] {\n    font-size: 16px;\n  }\n  textarea[_ngcontent-%COMP%] {\n    height: 200px !important;\n    padding-left: 10px;\n  }\n  .button-grp[_ngcontent-%COMP%] {\n    width: calc(100vw - 2 * (4.80vw + 0.02px));\n    justify-content: space-between;\n    align-self: center;\n  }\n  .mr-8[_ngcontent-%COMP%] {\n    margin-right: calc(1.94vw + 0.0072px);\n  }\n  .contact-row[_ngcontent-%COMP%] {\n    display: flex;\n    flex-direction: column;\n  }\n  .contact-info[_ngcontent-%COMP%] {\n    padding-top: calc(11.65vw + 0.002px) !important;\n    padding-bottom: calc(11.65vw + 0.002px) !important;\n  }\n  .info[_ngcontent-%COMP%] {\n    width: calc(100vw - 2 * (3.88vw + 0.0144px));\n    margin-right: 0px;\n  }\n  .fields[_ngcontent-%COMP%] {\n    width: calc(100vw - 2 * (3.88vw + 0.0144px));\n  }\n  .mat-padding[_ngcontent-%COMP%] {\n    padding: calc(11.65vw + 0.002px) calc(3.88vw + 0.0144px) !important;\n  }\n  .title[_ngcontent-%COMP%] {\n    font-size: 38px !important;\n  }\n}\n/*# sourceMappingURL=contact-us.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ContactUsComponent, { className: "ContactUsComponent", filePath: "src/app/pages/contact-us/contact-us.component.ts", lineNumber: 13 });
@@ -62204,6 +62234,16 @@ var serviceMenu_default = [
     description: "Expert advice on selecting and optimizing sequencing platforms to achieve your research objectives."
   }
 ];
+
+// src/assets/urlConfig.ts
+var CONFIG = {
+  baseUrl: "/d2dWebsite-1.0.0/",
+  home: "/d2dWebsite-1.0.0/home?page=home",
+  services: "/d2dWebsite-1.0.0/services?page=services",
+  resources: "/d2dWebsite-1.0.0/resources?page=resources",
+  aboutUs: "/d2dWebsite-1.0.0/aboutus?page=aboutus",
+  singleResource: "/d2dWebsite-1.0.0/resource?page=resources"
+};
 
 // src/app/pages/service-menu/service-menu.component.ts
 function ServiceMenuComponent_div_2_div_1_Template(rf, ctx) {
@@ -62310,7 +62350,7 @@ var ServiceMenuComponent = class _ServiceMenuComponent {
   }
   redirect(image) {
     var page = image.split("/")[2].split(".")[0];
-    window.location.href = "/d2dWebsite-1.0.0/services?service=" + page + "&page=services";
+    window.location.href = CONFIG.services + "&service=" + page;
   }
   static \u0275fac = function ServiceMenuComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ServiceMenuComponent)();
@@ -62328,7 +62368,7 @@ var ServiceMenuComponent = class _ServiceMenuComponent {
   }, dependencies: [NgClass, NgForOf, NgIf], styles: ['\n\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  margin: 0px;\n  line-height: 29px;\n  color: #747B80;\n}\n.service-img[_ngcontent-%COMP%] {\n  aspect-ratio: 427 / 320;\n  width: 100%;\n}\n.pr0[_ngcontent-%COMP%] {\n  padding-right: 0px;\n}\nh4[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #121314;\n  font-style: normal;\n  margin: 0px;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n}\n.img-container[_ngcontent-%COMP%] {\n  width: calc(29.65vw + 0.04px);\n}\n.pr32[_ngcontent-%COMP%] {\n  margin-right: calc(2.22vw + 0.032px) !important;\n}\n.pb48[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px) !important;\n}\n.img32[_ngcontent-%COMP%] {\n  height: 32px;\n  width: 32px;\n}\n.pb24[_ngcontent-%COMP%] {\n  margin-bottom: calc(1.66vw + 0.096px) !important;\n}\n.pb8[_ngcontent-%COMP%] {\n  padding-bottom: calc(0.55vw + 0.08px) !important;\n}\n@media only screen and (max-width: 767px) {\n  .pr32[_ngcontent-%COMP%] {\n    margin-right: 0px !important;\n  }\n  .img-container[_ngcontent-%COMP%] {\n    width: calc(100vw - 2 * (3.88vw + 0.0144px)) !important;\n  }\n  h4[_ngcontent-%COMP%] {\n    font-size: 21px;\n    line-height: 29.4px;\n  }\n  p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .pb0[_ngcontent-%COMP%] {\n    padding-bottom: 0px !important;\n  }\n  .pb48[_ngcontent-%COMP%] {\n    padding-bottom: calc(7.76vw + 0.0288px) !important;\n  }\n  .img32[_ngcontent-%COMP%] {\n    height: 24px;\n    width: 24px;\n  }\n  .service-img[_ngcontent-%COMP%] {\n    aspect-ratio: 380 / 240;\n    width: 100%;\n  }\n  .row[_ngcontent-%COMP%] {\n    margin-right: -15px !important;\n    margin-left: -15px !important;\n  }\n}\n.row[_ngcontent-%COMP%] {\n  margin-right: -27px !important;\n  margin-left: -30px !important;\n}\n/*# sourceMappingURL=service-menu.component.css.map */'] });
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ServiceMenuComponent, { className: "ServiceMenuComponent", filePath: "src/app/pages/service-menu/service-menu.component.ts", lineNumber: 11 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ServiceMenuComponent, { className: "ServiceMenuComponent", filePath: "src/app/pages/service-menu/service-menu.component.ts", lineNumber: 13 });
 })();
 
 // src/app/pages/services/services.component.ts
@@ -62848,10 +62888,22 @@ function ResourcesComponent_div_43_Template(rf, ctx) {
 }
 var ResourcesComponent = class _ResourcesComponent {
   resources = resources_default;
+  config;
+  // isVisible=false;
+  // ngOnInit() {
+  //   const card = document.getElementById('card');
+  //   if (card) {
+  //     const rect = card.getBoundingClientRect();
+  //     this.isVisible = rect.top < window.innerHeight - 100;
+  //   }
+  // }
+  constructor() {
+    this.config = CONFIG;
+  }
   static \u0275fac = function ResourcesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ResourcesComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourcesComponent, selectors: [["app-resources"]], standalone: false, decls: 44, vars: 1, consts: [[1, "p-48", 2, "top", "90px", "position", "relative", "top", "90px"], [1, "mt-80", "fsr-51"], [1, "d-flex", "justify-content-between", "nav-resource", "fsr-21", "mt-80", "p-0", "mb-0"], ["href", "", 1, "nav-link", "nav-active", "p-0"], ["href", "", 1, "nav-link", "p-0"], [1, "mt-48"], [1, "row"], [1, "col-md-8", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res1.png", "alt", "", 1, "col-12", "w-100", "h-75", "p-0"], [1, "d-flex", "justify-content-between", "mt-4", "mb-2"], [1, "color-blue", "fsb-16", "p-0", "pe-1", "m-0"], [1, "fsr-16", "color-grey", "m-0", "p-0"], ["href", "/d2dWebsite-1.0.0/resource?id=1&page=resources", 1, "fsr-28", "link-text"], ["src", "assets/images/link.png", "alt", "", 1, "px-2", "pb-2"], [1, "color-lightgrey", "fsr-21", "my-3"], [1, "col-md-4", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res2.png", "width", "100%", "alt", "", 1, "col-12", "p-0"], [1, "w-75"], ["href", "/d2dWebsite-1.0.0/resource?id=1&page=resources", 1, "fsr-28", "link-text", "pe-1"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 card-link-hover", 4, "ngFor", "ngForOf"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourcesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourcesComponent, selectors: [["app-resources"]], standalone: false, decls: 44, vars: 3, consts: [[1, "p-48", 2, "top", "90px", "position", "relative", "top", "90px"], [1, "mt-80", "fsr-51"], [1, "d-flex", "justify-content-between", "nav-resource", "fsr-21", "mt-80", "p-0", "mb-0"], ["href", "", 1, "nav-link", "nav-active", "p-0"], ["href", "", 1, "nav-link", "p-0"], [1, "mt-48"], [1, "row"], [1, "col-md-8", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res1.png", "alt", "", 1, "col-12", "w-100", "h-75", "p-0"], [1, "d-flex", "justify-content-between", "mt-4", "mb-2"], [1, "color-blue", "fsb-16", "p-0", "pe-1", "m-0"], [1, "fsr-16", "color-grey", "m-0", "p-0"], [1, "fsr-28", "link-text", 3, "href"], ["src", "assets/images/link.png", "alt", "", 1, "px-2", "pb-2"], [1, "color-lightgrey", "fsr-21", "my-3"], [1, "col-md-4", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res2.png", "width", "100%", "alt", "", 1, "col-12", "p-0"], [1, "w-75"], [1, "fsr-28", "link-text", "pe-1", 3, "href"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 card-link-hover", 4, "ngFor", "ngForOf"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourcesComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "p", 1);
       \u0275\u0275text(2, "Resources");
@@ -62877,7 +62929,7 @@ var ResourcesComponent = class _ResourcesComponent {
       \u0275\u0275text(20, " Dec 20, 2024");
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(21, "div")(22, "a", 12);
-      \u0275\u0275text(23, "RNA-Seq Analysis and Gene Regulation");
+      \u0275\u0275text(23, "RNA-Seq Analysis and Gene Regulation ");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(24, "i");
       \u0275\u0275element(25, "img", 13);
@@ -62907,7 +62959,11 @@ var ResourcesComponent = class _ResourcesComponent {
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(43);
+      \u0275\u0275advance(22);
+      \u0275\u0275property("href", ctx.config.singleResource + "&id=1", \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(14);
+      \u0275\u0275property("href", ctx.config.singleResource + "&id=1", \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(7);
       \u0275\u0275property("ngForOf", ctx.resources);
     }
   }, dependencies: [NgForOf, ResourceCardComponent], styles: ["\n\n.nav-resource[_ngcontent-%COMP%] {\n  width: 20%;\n}\n.nav-active[_ngcontent-%COMP%] {\n  color: #FB4F23;\n}\na[_ngcontent-%COMP%] {\n  color: black;\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  position: inherit;\n}\n@media only screen and (max-width: 767px) {\n  .nav-resource[_ngcontent-%COMP%] {\n    width: 60%;\n  }\n}\n/*# sourceMappingURL=resources.component.css.map */"], data: { animation: [
@@ -62920,7 +62976,7 @@ var ResourcesComponent = class _ResourcesComponent {
   ] } });
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ResourcesComponent, { className: "ResourcesComponent", filePath: "src/app/pages/resources/resources.component.ts", lineNumber: 22 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ResourcesComponent, { className: "ResourcesComponent", filePath: "src/app/pages/resources/resources.component.ts", lineNumber: 24 });
 })();
 
 // src/app/directive/scrolleffects.directive.ts
@@ -63489,8 +63545,10 @@ function NavbarComponent_div_0_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(16, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
-    \u0275\u0275advance(5);
+    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(17, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
+    \u0275\u0275advance(2);
+    \u0275\u0275property("href", ctx_r1.config.home, \u0275\u0275sanitizeUrl);
+    \u0275\u0275advance(3);
     \u0275\u0275property("ngIf", ctx_r1.isCollapsed);
     \u0275\u0275advance();
     \u0275\u0275property("ngIf", !ctx_r1.isCollapsed);
@@ -63721,8 +63779,10 @@ function NavbarComponent_div_1_Template(rf, ctx) {
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(16, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
-    \u0275\u0275advance(5);
+    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(17, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
+    \u0275\u0275advance(2);
+    \u0275\u0275property("href", ctx_r1.config.home, \u0275\u0275sanitizeUrl);
+    \u0275\u0275advance(3);
     \u0275\u0275property("ngIf", ctx_r1.isCollapsed);
     \u0275\u0275advance();
     \u0275\u0275property("ngIf", !ctx_r1.isCollapsed);
@@ -63764,11 +63824,13 @@ var NavbarComponent = class _NavbarComponent {
   serviceVisible = false;
   pageName;
   isCollapsed = true;
+  config;
   constructor(dialog, route, renderer) {
     this.dialog = dialog;
     this.route = route;
     this.renderer = renderer;
     this.serviceMenu = serviceMenu_default;
+    this.config = CONFIG;
   }
   ngOnInit() {
     this.route.queryParamMap.subscribe((data) => {
@@ -63801,20 +63863,20 @@ var NavbarComponent = class _NavbarComponent {
     this.isServiceVisible = false;
     this.isCompany = true;
     this.isHome = false;
-    window.location.replace("/d2dWebsite-1.0.0/" + route + "?page=" + route);
+    window.location.replace(this.config.baseUrl + route + "?page=" + route);
   }
   home() {
     this.isServiceVisible = false;
     this.isCompany = false;
     this.isHome = true;
-    window.location.href = "/d2dWebsite-1.0.0/home?page=home";
+    window.location.href = this.config.home;
   }
   redirect(image) {
     try {
       const segments = image.split("/");
       if (segments.length > 2) {
         const page = segments[2].split(".")[0];
-        window.location.href = `/d2dWebsite-1.0.0/services?service=${page}&page=services`;
+        window.location.href = `${this.config.services}&service=${page}`;
       }
     } catch (e) {
       console.error("Invalid image path:", image);
@@ -63831,9 +63893,9 @@ var NavbarComponent = class _NavbarComponent {
   static \u0275fac = function NavbarComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _NavbarComponent)(\u0275\u0275directiveInject(MatDialog), \u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(Renderer2));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], inputs: { mouseTop: "mouseTop", isSecondPage: "isSecondPage" }, standalone: false, features: [\u0275\u0275NgOnChangesFeature], decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "navbar-brand", "logo"], ["src", "assets/images/Logo-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px", 3, "click"], ["src", "assets/icons/menu-icon-white.svg", "style", "color:#BFC0C0;", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-white.svg", "style", "color:#BFC0C0;", "class", "logo-size2", 4, "ngIf"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48", 3, "ngClass"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["src", "assets/icons/close-white.svg", 1, "logo-size2", 2, "color", "#BFC0C0"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px", "z-index", "999"], ["src", "assets/images/Logo-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-black.svg", "class", "logo-size2", 4, "ngIf"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", "mr-16", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], ["src", "assets/icons/close-black.svg", 1, "logo-size2"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], inputs: { mouseTop: "mouseTop", isSecondPage: "isSecondPage" }, standalone: false, features: [\u0275\u0275NgOnChangesFeature], decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], [1, "navbar-brand", "logo", 3, "href"], ["src", "assets/images/Logo-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px", 3, "click"], ["src", "assets/icons/menu-icon-white.svg", "style", "color:#BFC0C0;", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-white.svg", "style", "color:#BFC0C0;", "class", "logo-size2", 4, "ngIf"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48", 3, "ngClass"], [1, "navbar-nav", "ml-auto", "mb-8"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["src", "assets/icons/close-white.svg", 1, "logo-size2", 2, "color", "#BFC0C0"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px", "z-index", "999"], ["src", "assets/images/Logo-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-black.svg", "class", "logo-size2", 4, "ngIf"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mb-8", 2, "cursor", "pointer"], [1, "nav-link", "px-21", "mr-16", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], ["src", "assets/icons/close-black.svg", 1, "logo-size2"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275template(0, NavbarComponent_div_0_Template, 30, 18, "div", 0)(1, NavbarComponent_div_1_Template, 30, 18, "div", 1);
+      \u0275\u0275template(0, NavbarComponent_div_0_Template, 30, 19, "div", 0)(1, NavbarComponent_div_1_Template, 30, 19, "div", 1);
     }
     if (rf & 2) {
       \u0275\u0275property("ngIf", ctx.pageName === "home" && !ctx.isSecondPage);
@@ -64149,8 +64211,8 @@ var NavbarComponent = class _NavbarComponent {
   border-bottom: none !important;
 }
 .logo-size[_ngcontent-%COMP%] {
-  width: 165px;
-  height: 65px;
+  width: calc(11.45vw + 0.12px);
+  height: calc(4.51vw + 0.056px);
 }
 .logo-size1[_ngcontent-%COMP%] {
   width: 52px;
@@ -64354,15 +64416,19 @@ var NavbarComponent = class _NavbarComponent {
 /*# sourceMappingURL=navbar.component.css.map */`] });
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(NavbarComponent, { className: "NavbarComponent", filePath: "src/app/pages/navbar/navbar.component.ts", lineNumber: 18 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(NavbarComponent, { className: "NavbarComponent", filePath: "src/app/pages/navbar/navbar.component.ts", lineNumber: 19 });
 })();
 
 // src/shared/footer/footer.component.ts
 var FooterComponent = class _FooterComponent {
+  config;
+  constructor() {
+    this.config = CONFIG;
+  }
   static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FooterComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 59, vars: 0, consts: [[1, "footer", "foot-pad"], [1, "row", "m-0"], [1, "col-md-5", "col-sm-12"], ["href", "/d2dWebsite-1.0.0/home?page=home"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com", 1, "pr-8"], ["src", "assets/icons/Facebook.svg", "alt", ""], ["href", "https://www.instagram.com", 1, "pr-8"], ["src", "assets/icons/Instagram.svg", "alt", ""], ["href", "https://github.com/DNA2discovery-D2D", 1, "pr-8"], ["src", "assets/icons/github.svg", "alt", ""], ["href", "https://www.twitter.com", 1, "pr-8"], ["src", "assets/icons/X.svg", "alt", ""], ["href", "https://www.linkedin.com/company/dna2discovery/", 1, "pr-8"], ["src", "assets/icons/LinkedIn.svg", "alt", ""], ["href", "https://www.youtube.com", 1, "pr-8"], ["src", "assets/icons/Youtube.svg", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-sm-12"], [1, "row"], [1, "col-md-6", "col-sm-12"], [1, "text-white", "mt-43", "fsr-21"], [1, "d-flex", "flex-column"], ["href", "/d2dWebsite-1.0.0/home?page=home", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/aboutus?page=aboutus", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/resources?pages=resources", 1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfo&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioEng&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=statisticalTesting&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=seqTech&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], ["href", "/d2dWebsite-1.0.0/services?service=bioInfoTraining&page=services", 1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16-14", "mt80"]], template: function FooterComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 59, vars: 9, consts: [[1, "footer", "foot-pad"], [1, "row", "m-0"], [1, "col-md-5", "col-sm-12"], [3, "href"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com", 1, "pr-8"], ["src", "assets/icons/Facebook.svg", "alt", ""], ["href", "https://www.instagram.com", 1, "pr-8"], ["src", "assets/icons/Instagram.svg", "alt", ""], ["href", "https://github.com/DNA2discovery-D2D", 1, "pr-8"], ["src", "assets/icons/github.svg", "alt", ""], ["href", "https://www.twitter.com", 1, "pr-8"], ["src", "assets/icons/X.svg", "alt", ""], ["href", "https://www.linkedin.com/company/dna2discovery/", 1, "pr-8"], ["src", "assets/icons/LinkedIn.svg", "alt", ""], ["href", "https://www.youtube.com", 1, "pr-8"], ["src", "assets/icons/Youtube.svg", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-sm-12"], [1, "row"], [1, "col-md-6", "col-sm-12"], [1, "text-white", "mt-43", "fsr-21"], [1, "d-flex", "flex-column"], [1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline", 3, "href"], [1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline", 3, "href"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16-14", "mt80"]], template: function FooterComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
       \u0275\u0275element(4, "img", 4);
@@ -64400,38 +64466,58 @@ var FooterComponent = class _FooterComponent {
       \u0275\u0275elementStart(36, "div", 24)(37, "a", 25);
       \u0275\u0275text(38, "Home");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(39, "a", 26);
+      \u0275\u0275elementStart(39, "a", 25);
       \u0275\u0275text(40, "About Us");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(41, "a", 27);
+      \u0275\u0275elementStart(41, "a", 25);
       \u0275\u0275text(42, "Resources");
       \u0275\u0275elementEnd()()();
       \u0275\u0275elementStart(43, "div", 22)(44, "h4", 23);
       \u0275\u0275text(45, "Services");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(46, "div", 24)(47, "a", 28);
+      \u0275\u0275elementStart(46, "div", 24)(47, "a", 26);
       \u0275\u0275text(48, "Bioinformatics Analytics");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(49, "a", 29);
+      \u0275\u0275elementStart(49, "a", 26);
       \u0275\u0275text(50, "Bioinformatics Engineering");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(51, "a", 30);
+      \u0275\u0275elementStart(51, "a", 26);
       \u0275\u0275text(52, "Statistical Testing and Data Interpretation");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(53, "a", 31);
+      \u0275\u0275elementStart(53, "a", 26);
       \u0275\u0275text(54, "Sequencing Technology Expertise");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(55, "a", 32);
+      \u0275\u0275elementStart(55, "a", 26);
       \u0275\u0275text(56, "Bioinformatics Training");
       \u0275\u0275elementEnd()()()()()();
-      \u0275\u0275elementStart(57, "p", 33);
+      \u0275\u0275elementStart(57, "p", 27);
       \u0275\u0275text(58, "\xA9 2025 D2D. All rights reserved.");
       \u0275\u0275elementEnd()();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance(3);
+      \u0275\u0275property("href", ctx.config.home, \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(34);
+      \u0275\u0275property("href", ctx.config.home, \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(2);
+      \u0275\u0275property("href", ctx.config.aboutus, \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(2);
+      \u0275\u0275property("href", ctx.config.resources, \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(6);
+      \u0275\u0275property("href", ctx.config.services + "&service=bioInfo", \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(2);
+      \u0275\u0275property("href", ctx.config.services + "&service=bioEng", \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(2);
+      \u0275\u0275property("href", ctx.config.services + "&service=statisticalTesting", \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(2);
+      \u0275\u0275property("href", ctx.config.services + "&service=seqTech", \u0275\u0275sanitizeUrl);
+      \u0275\u0275advance(2);
+      \u0275\u0275property("href", ctx.config.services + "&service=bioInfoTraining", \u0275\u0275sanitizeUrl);
     }
   }, styles: ["\n\n.footer[_ngcontent-%COMP%] {\n  background-color: #012323;\n  margin-bottom: 0 !important;\n  margin-left: 0 !important;\n  margin-right: 0 !important;\n  padding: 0;\n  bottom: 0;\n}\n.row[_ngcontent-%COMP%] {\n  margin-left: 0px !important;\n  margin-right: 0px !important;\n}\n.foot-pad[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px) !important;\n}\n.mt80[_ngcontent-%COMP%] {\n  margin-top: 80px !important;\n}\n.no-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%]:hover {\n  text-decoration: underline;\n  text-decoration-color: whitesmoke !important;\n}\n.mt-43[_ngcontent-%COMP%] {\n  margin-top: 0px;\n  margin-bottom: calc(1.11vw + 0.016px);\n}\n.p-64[_ngcontent-%COMP%] {\n  padding-top: calc(2.91vw + 0.096px);\n  padding-bottom: calc(5.55vw + 0.08px);\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  padding-right: 0px !important;\n  padding-left: 0px !important;\n}\n.fsr-16-14[_ngcontent-%COMP%] {\n  font-size: 16px;\n  font-weight: 400;\n}\n@media only screen and (max-width: 767px) {\n  .pr-8[_ngcontent-%COMP%] {\n    padding-right: calc(5.41vw + 0.0108px) !important;\n  }\n  .mt-43[_ngcontent-%COMP%] {\n    margin-top: calc(7.76vw + 0.0288px);\n    margin-bottom: calc(3.88vw + 0.0144px);\n  }\n  .fsr-16[_ngcontent-%COMP%] {\n    font-size: 12px !important;\n    font-weight: 400;\n  }\n  .fsr-21[_ngcontent-%COMP%] {\n    font-size: 16px !important;\n    font-weight: 400;\n  }\n  .color-lightwhite[_ngcontent-%COMP%] {\n    color: #BFC0C0 !important;\n  }\n  .p-64[_ngcontent-%COMP%] {\n    padding-top: calc(10.19vw + 0.0172px);\n    padding-bottom: calc(15.53vw + 0.0164px);\n  }\n  .foot-pad[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px) !important;\n  }\n  .mt80[_ngcontent-%COMP%] {\n    margin-top: 80px !important;\n  }\n  .fsr-16-14[_ngcontent-%COMP%] {\n    font-size: 14px !important;\n    font-weight: 400;\n  }\n}\n/*# sourceMappingURL=footer.component.css.map */"] });
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FooterComponent, { className: "FooterComponent", filePath: "src/shared/footer/footer.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FooterComponent, { className: "FooterComponent", filePath: "src/shared/footer/footer.component.ts", lineNumber: 10 });
 })();
 
 // src/shared/getintouch/getintouch.component.ts
