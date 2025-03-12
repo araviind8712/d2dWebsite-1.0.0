@@ -1,7 +1,7 @@
 <footer class="footer foot-pad">
     <div class="row m-0">
         <div class="col-md-5 col-sm-12">
-            <a href="/d2dWebsite-1.0.0/home?page=home"><img src="assets/images/Logo-White.svg" alt="Logo" class="mb-4" width="84px" height="36px"></a>
+            <a [href]="config.home"><img src="assets/images/Logo-White.svg" alt="Logo" class="mb-4" width="84px" height="36px"></a>
             <div class="d-flex justify-content-between w-50 mb-4">
                 <a href="https://www.facebook.com" class="pr-8"><i><img src="assets/icons/Facebook.svg" alt=""></i></a>
                 <a href="https://www.instagram.com" class="pr-8"><i><img src="assets/icons/Instagram.svg" alt=""></i></a>
@@ -21,19 +21,19 @@
                 <div class="col-md-6 col-sm-12">
                     <h4 class="text-white mt-43 fsr-21">Company</h4>
                     <div class="d-flex flex-column">
-                        <a href="/d2dWebsite-1.0.0/home?page=home" class="fit-content color-lightwhite no-underline my-2 fsr-16 link-underline">Home</a>
-                        <a href="/d2dWebsite-1.0.0/aboutus?page=aboutus" class="fit-content color-lightwhite no-underline my-2 fsr-16 link-underline">About Us</a>
-                        <a href="/d2dWebsite-1.0.0/resources?pages=resources" class="fit-content color-lightwhite no-underline my-2 fsr-16 link-underline">Resources</a>
+                        <a [href]="config.home" class="fit-content color-lightwhite no-underline my-2 fsr-16 link-underline">Home</a>
+                        <a [href]="config.aboutus" class="fit-content color-lightwhite no-underline my-2 fsr-16 link-underline">About Us</a>
+                        <a [href]="config.resources" class="fit-content color-lightwhite no-underline my-2 fsr-16 link-underline">Resources</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <h4 class="text-white mt-43 fsr-21">Services</h4>
                     <div class="d-flex flex-column">
-                        <a href="/d2dWebsite-1.0.0/services?service=bioInfo&page=services" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Bioinformatics Analytics</a>
-                        <a href="/d2dWebsite-1.0.0/services?service=bioEng&page=services" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Bioinformatics Engineering</a>
-                        <a href="/d2dWebsite-1.0.0/services?service=statisticalTesting&page=services" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Statistical Testing and Data Interpretation</a>
-                        <a href="/d2dWebsite-1.0.0/services?service=seqTech&page=services" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Sequencing Technology Expertise</a>
-                        <a href="/d2dWebsite-1.0.0/services?service=bioInfoTraining&page=services" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Bioinformatics Training</a>
+                        <a [href]="config.services+'&service=bioInfo'" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Bioinformatics Analytics</a>
+                        <a [href]="config.services+'&service=bioEng'" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Bioinformatics Engineering</a>
+                        <a [href]="config.services+'&service=statisticalTesting'" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Statistical Testing and Data Interpretation</a>
+                        <a [href]="config.services+'&service=seqTech'" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Sequencing Technology Expertise</a>
+                        <a [href]="config.services+'&service=bioInfoTraining'" class="fit-content color-lightwhite my-2 fsr-16 no-underline link-underline">Bioinformatics Training</a>
                     </div>
                 </div>
             </div>

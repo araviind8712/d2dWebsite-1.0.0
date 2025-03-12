@@ -5,6 +5,7 @@ import { ContactUsComponent } from '../contact-us/contact-us.component';
 import serviceMenu from '../../../assets/serviceMenu.json'
 import { ActivatedRoute } from '@angular/router';
 import { EventEmitter } from 'stream';
+import {CONFIG} from '../../../assets/urlConfig';
 
 
 
@@ -28,9 +29,11 @@ export class NavbarComponent implements OnInit,OnChanges{
   serviceVisible = false;
   pageName:any;
   isCollapsed : boolean = true;
+  config:any;
 
   constructor(private dialog: MatDialog, private route:ActivatedRoute,private renderer: Renderer2) { 
     this.serviceMenu = serviceMenu;
+    this.config = CONFIG;
     
   }
 
@@ -69,14 +72,14 @@ export class NavbarComponent implements OnInit,OnChanges{
     this.isServiceVisible = false;
     this.isCompany = true;
     this.isHome = false;
-    window.location.replace('/d2dWebsite-1.0.0/'+route+'?page='+route);
+    window.location.replace(this.config.baseUrl+route+'?page='+route);
   }
 
   home(): void {
-    this.isServiceVisible = false; // Fixed issue here
+    this.isServiceVisible = false;
     this.isCompany = false;
     this.isHome = true;
-    window.location.href = '/d2dWebsite-1.0.0/home?page=home';
+    window.location.href = this.config.home;
   }
 
   redirect(image: string): void {
@@ -84,7 +87,7 @@ export class NavbarComponent implements OnInit,OnChanges{
       const segments = image.split('/');
       if (segments.length > 2) {
         const page = segments[2].split('.')[0];
-        window.location.href = `/d2dWebsite-1.0.0/services?service=${page}&page=services`;
+        window.location.href = `${this.config.services}&service=${page}`;
       }
     } catch (e) {
       console.error('Invalid image path:', image);

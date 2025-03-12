@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import serviceMenu from '../../../assets/serviceMenu.json'
 import { MatIconModule } from '@angular/material/icon';
+import {CONFIG} from '../../../assets/urlConfig';
+
 
 @Component({
   selector: 'app-service-menu',
@@ -41,6 +43,6 @@ export class ServiceMenuComponent implements OnInit{
 
   redirect(image:string){
     var page=image.split('/')[2].split('.')[0];
-    window.location.href='/d2dWebsite-1.0.0/services?service='+page+'&page=services';
+    window.location.href=CONFIG.services+'&service='+page;
   }
 }

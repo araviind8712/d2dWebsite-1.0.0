@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CONFIG} from '../../assets/urlConfig';
 
 @Component({
   selector: 'app-footer',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class FooterComponent {
-
+  config: any;
+  constructor(){
+    this.config=CONFIG;
+  }
 }

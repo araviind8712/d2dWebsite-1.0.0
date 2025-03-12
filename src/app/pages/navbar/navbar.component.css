@@ -351,8 +351,8 @@
 
 
 .logo-size{
-    width:165px;
-    height:65px
+    width:calc(11.45vw + 0.12px);
+    height:calc(4.51vw + 0.056px);
 }
 
 .logo-size1{

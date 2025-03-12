@@ -1,8 +1,10 @@
-<mat-dialog-content class="mat-typography mat-padding" style="overflow-y: auto; scroll-behavior:smooth; background-color: #FFFFFF; max-height: 100vh">
+<mat-dialog-content class="mat-typography mat-padding"
+    style="overflow-y: auto; scroll-behavior:smooth; background-color: #FFFFFF; max-height: 100vh">
     <div class="contact-row">
         <div class="info">
             <h1 class="px-0 title">Partner with Us!</h1>
-            <h6 style="font-weight: 300;" class="px-0 subTitle">Explore exciting collaboration and partnership opportunities.</h6>
+            <h6 style="font-weight: 300;" class="px-0 subTitle">Explore exciting collaboration and partnership
+                opportunities.</h6>
             <div class="contact-info px-0  mt-32">
                 <div class="row pl-3 mb-16">
                     <img src="assets/icons/email.svg" width="20px" height="20px">
@@ -16,6 +18,18 @@
                     <img src="assets/icons/location.svg" width="24px" height="24px">
                     <p>123 Sample St, Sydney NSW 2000 AU</p>
                 </div> -->
+                <div class="alert alert-success d-flex align-items-center alert-msg" role="alert" *ngIf="successMsg">
+                    <i class="bi bi-check-circle me-2 mr-8"></i>
+                    <div>
+                        <h6 style="margin-bottom: 0px;">Querry Raised Successfully</h6>
+                    </div>
+                </div>
+                <div class="alert alert-danger d-flex align-items-center alert-msg" role="alert" *ngIf="errorMsg">
+                    <i class="bi bi-x-circle me-2 mr-8"></i>
+                    <div>
+                        <h6 style="margin-bottom: 0px;">Unable to raise the querry!!! Please Try again</h6>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -24,40 +38,50 @@
                 <form [formGroup]="contactForm" (ngSubmit)="save()">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input id="name" type="text" formControlName="name" class="form-control" placeholder="John Doe" />
-                        <div *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched" style="color: red;">
+                        <input id="name" type="text" formControlName="name" class="form-control"
+                            placeholder="John Doe" />
+                        <div *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched"
+                            style="color: red;">
                             Name can't be Empty
                         </div>
-                        <div *ngIf="contactForm.get('name')?.hasError('pattern') && contactForm.get('name')?.touched" style="color: red;">
+                        <div *ngIf="contactForm.get('name')?.hasError('pattern') && contactForm.get('name')?.touched"
+                            style="color: red;">
                             Invalid Name
                         </div>
-                        <div *ngIf="contactForm.value.name.trim()==='' && contactForm.value.name!=='' && contactForm.get('name')?.touched" style="color: red;">
+                        <div *ngIf="contactForm.value.name.trim()==='' && contactForm.value.name!=='' && contactForm.get('name')?.touched"
+                            style="color: red;">
                             Invalid Name
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input id="email" type="text" formControlName="email" class="form-control" placeholder="johndoe@gmail.com" />
-                        <div *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched" style="color: red;">
+                        <input id="email" type="text" formControlName="email" class="form-control"
+                            placeholder="johndoe@gmail.com" />
+                        <div *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched"
+                            style="color: red;">
                             Email can't be empty
                         </div>
-                        <div *ngIf="contactForm.get('email')?.hasError('pattern') && contactForm.get('email')?.touched" style="color: red;">
+                        <div *ngIf="contactForm.get('email')?.hasError('pattern') && contactForm.get('email')?.touched"
+                            style="color: red;">
                             Invalid Email
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="comments">Tell us about what you would like to discuss</label>
-                        <textarea id="comments" formControlName="comments" class="form-control" placeholder="Write here..."></textarea>
-                        <div *ngIf="contactForm.get('comments')?.invalid && contactForm.get('comments')?.touched" style="color: red;">
+                        <textarea id="comments" formControlName="comments" class="form-control"
+                            placeholder="Write here..."></textarea>
+                        <div *ngIf="contactForm.get('comments')?.invalid && contactForm.get('comments')?.touched"
+                            style="color: red;">
                             Reason required
                         </div>
-                        <div *ngIf="contactForm.value.comments.trim()==='' && contactForm.value.comments!=='' && contactForm.get('name')?.touched" style="color: red;">
+                        <div *ngIf="contactForm.value.comments.trim()==='' && contactForm.value.comments!=='' && contactForm.get('name')?.touched"
+                            style="color: red;">
                             Invalid comments
                         </div>
                     </div>
                     <div class="row button-grp">
-                    <button (click)="closeDialog()" class="btn btn-primary mr-8" id="cancelButton">Cancel</button>
-                    <button type="submit" [disabled]="(contactForm.invalid || contactForm.value.name.trim()==='' || contactForm.value.comments.trim()==='')" class="btn btn-primary">Submit</button>
+                        <button (click)="closeDialog()" class="btn btn-primary mr-8" id="cancelButton">Cancel</button>
+                        <button type="submit" [disabled]="(contactForm.invalid || contactForm.value.name.trim()==='' || contactForm.value.comments.trim()==='')" class="btn btn-primary]">Submit</button>
                     </div>
                 </form>
             </div>

@@ -110,6 +110,7 @@ button {
   flex-grow: 0;
   border: 0px;
   line-height: 29px;
+  box-shadow: none !important;
 }
 
 
@@ -123,7 +124,18 @@ button:disabled {
 button:hover {
   background: #000000;
   border-radius: 200px;
-  border: 0px;
+  color: white;
+  border: 0px black;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited {
+  background: #000000 !important;
+  border-radius: 200px !important;
+  border: 0px !important;
+  color: white !important;
 }
 
 label {

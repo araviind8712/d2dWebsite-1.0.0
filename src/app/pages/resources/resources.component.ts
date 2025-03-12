@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { GetintouchComponent } from '../../../shared/getintouch/getintouch.component';
 import { ResourceCardComponent } from '../../../shared/resource-card/resource-card.component';
 import { trigger,state,style,transition,animate } from '@angular/animations';
+import {CONFIG} from '../../../assets/urlConfig'
+
 
 @Component({
   selector: 'app-resources',
@@ -21,6 +23,7 @@ import { trigger,state,style,transition,animate } from '@angular/animations';
 })
 export class ResourcesComponent{
   resources:any[]=resourceData;
+  config:any;
   // isVisible=false;
   // ngOnInit() {
   //   const card = document.getElementById('card');
@@ -29,4 +32,7 @@ export class ResourcesComponent{
   //     this.isVisible = rect.top < window.innerHeight - 100;
   //   }
   // }
+  constructor(){
+    this.config = CONFIG;
+  }
 }

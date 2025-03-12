@@ -12,6 +12,8 @@ import { EmailService } from '../../../shared/email.service';
 })
 export class ContactUsComponent {
   gmail='dna2discovery@outlook.com';
+  errorMsg:boolean = false;
+  successMsg:boolean = false;
   contactForm: FormGroup;
   snackbar:MatSnackBar;
   service: EmailService;
@@ -38,8 +40,19 @@ export class ContactUsComponent {
         user_email:details.email,
         message:details.comments
       };
-      var msg = await this.service.sendEmail(formData);
-      this.closeDialog();
+      this.service.sendEmail(formData).subscribe({
+        next: (response) => {
+          console.log('Emails sent successfully:', response);
+          this.successMsg = true;
+          this.errorMsg = false;
+        },
+        error: (error) => {
+          console.error('Error sending emails:', error);
+          this.errorMsg = true;
+          this.successMsg = false;
+        },
+      });
+      
     }
   }
 
