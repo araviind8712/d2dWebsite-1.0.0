@@ -1,5 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, EventEmitter, HostListener, Inject, OnInit, Output, PLATFORM_ID } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 import { log } from 'console';
 
 @Component({
@@ -9,7 +11,7 @@ import { log } from 'console';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'd2dWebsite';
+  title = 'D2D';
   pageHeight = 0;
   isCursorAtTop = false;
   isSecondPage = false;
@@ -17,10 +19,16 @@ export class AppComponent {
   touchEndY: number = 0;
   touchStartY: number = 0;
 
-  constructor() {
+  constructor(private route: ActivatedRoute,private titleService: Title) {
     if (typeof window !== 'undefined') {
       this.pageHeight = window.innerHeight;
     }
+
+    this.route.queryParamMap.subscribe((params)=>{
+      this.title = params.get('page')==null ? 'D2D' : 'D2D - '+params.get('page');
+      this.titleService.setTitle(this.title.toUpperCase());
+    })
+
   }
 
   top() {

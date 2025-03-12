@@ -84,7 +84,7 @@ export class NavbarComponent implements OnInit,OnChanges{
       const segments = image.split('/');
       if (segments.length > 2) {
         const page = segments[2].split('.')[0];
-        window.location.href = `/d2dWebsite-1.0.0/services?service=${page}&page=service`;
+        window.location.href = `/d2dWebsite-1.0.0/services?service=${page}&page=services`;
       }
     } catch (e) {
       console.error('Invalid image path:', image);
