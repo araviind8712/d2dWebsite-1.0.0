@@ -11,8 +11,8 @@
         </button>
 
         <div class="collapse navbar-collapse pt-48" id="navbarNav" [ngClass]="isCollapsed ? 'nav-closed' : 'nav-open'">
-            <ul class="navbar-nav ml-auto mb-8">
-                <li class="nav-item" style="cursor: pointer;">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-16" style="cursor: pointer;">
                     <a class="nav-link mr-18 px-21" (click)="home()" style="cursor: pointer;"
                         [(class.active)]="isHome">HOME</a>
                 </li>
@@ -130,8 +130,8 @@
         </button>
 
         <div class="collapse navbar-collapse pt-48" id="navbarNav" [ngClass]="isCollapsed ? 'nav-closed' : 'nav-open'">
-            <ul class="navbar-nav ml-auto ">
-                <li class="nav-item mb-8" style="cursor: pointer;">
+            <ul class="navbar-nav ml-auto mr-16">
+                <li class="nav-item" style="cursor: pointer;">
                     <a class="nav-link px-21 mr-16" (click)="home()" style="cursor: pointer;"
                         [(class.active)]="isHome">HOME</a>
                 </li>
