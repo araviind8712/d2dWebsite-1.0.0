@@ -63576,18 +63576,18 @@ function NavbarComponent_div_0_Template(rf, ctx) {
 }
 function NavbarComponent_div_1_img_5_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "img", 52);
+    \u0275\u0275element(0, "img", 50);
   }
 }
 function NavbarComponent_div_1_img_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "img", 53);
+    \u0275\u0275element(0, "img", 51);
   }
 }
 function NavbarComponent_div_1_ul_17_li_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r10 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "li", 27)(1, "h6")(2, "a", 54);
+    \u0275\u0275elementStart(0, "li", 27)(1, "h6")(2, "a", 52);
     \u0275\u0275listener("click", function NavbarComponent_div_1_ul_17_li_1_Template_a_click_2_listener() {
       const menu_r11 = \u0275\u0275restoreView(_r10).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
@@ -63620,7 +63620,7 @@ function NavbarComponent_div_1_ul_17_Template(rf, ctx) {
 function NavbarComponent_div_1_ul_23_Template(rf, ctx) {
   if (rf & 1) {
     const _r12 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "ul", 25)(1, "li", 27)(2, "h6")(3, "a", 54);
+    \u0275\u0275elementStart(0, "ul", 25)(1, "li", 27)(2, "h6")(3, "a", 52);
     \u0275\u0275listener("click", function NavbarComponent_div_1_ul_23_Template_a_click_3_listener() {
       \u0275\u0275restoreView(_r12);
       const ctx_r1 = \u0275\u0275nextContext(2);
@@ -63631,7 +63631,7 @@ function NavbarComponent_div_1_ul_23_Template(rf, ctx) {
     \u0275\u0275elementStart(5, "span", 30);
     \u0275\u0275element(6, "img", 31);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "li", 27)(8, "h6")(9, "a", 54);
+    \u0275\u0275elementStart(7, "li", 27)(8, "h6")(9, "a", 52);
     \u0275\u0275listener("click", function NavbarComponent_div_1_ul_23_Template_a_click_9_listener() {
       \u0275\u0275restoreView(_r12);
       const ctx_r1 = \u0275\u0275nextContext(2);
@@ -63647,13 +63647,13 @@ function NavbarComponent_div_1_ul_23_Template(rf, ctx) {
 function NavbarComponent_div_1_div_28_div_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r13 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 57);
+    \u0275\u0275elementStart(0, "div", 55);
     \u0275\u0275listener("click", function NavbarComponent_div_1_div_28_div_1_Template_div_click_0_listener() {
       const menu_r14 = \u0275\u0275restoreView(_r13).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r1.redirect(menu_r14.image));
     });
-    \u0275\u0275elementStart(1, "h6")(2, "a", 58);
+    \u0275\u0275elementStart(1, "h6")(2, "a", 56);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(4, "span", 30);
@@ -63668,8 +63668,8 @@ function NavbarComponent_div_1_div_28_div_1_Template(rf, ctx) {
 }
 function NavbarComponent_div_1_div_28_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 55);
-    \u0275\u0275template(1, NavbarComponent_div_1_div_28_div_1_Template, 6, 1, "div", 56);
+    \u0275\u0275elementStart(0, "div", 53);
+    \u0275\u0275template(1, NavbarComponent_div_1_div_28_div_1_Template, 6, 1, "div", 54);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63681,25 +63681,25 @@ function NavbarComponent_div_1_div_28_Template(rf, ctx) {
 function NavbarComponent_div_1_div_29_Template(rf, ctx) {
   if (rf & 1) {
     const _r15 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 59)(1, "div", 60);
+    \u0275\u0275elementStart(0, "div", 57)(1, "div", 58);
     \u0275\u0275listener("click", function NavbarComponent_div_1_div_29_Template_div_click_1_listener() {
       \u0275\u0275restoreView(_r15);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("aboutus"));
     });
-    \u0275\u0275elementStart(2, "h6")(3, "a", 58);
+    \u0275\u0275elementStart(2, "h6")(3, "a", 56);
     \u0275\u0275text(4, "About Us");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(5, "span", 30);
     \u0275\u0275element(6, "img", 31);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "div", 60);
+    \u0275\u0275elementStart(7, "div", 58);
     \u0275\u0275listener("click", function NavbarComponent_div_1_div_29_Template_div_click_7_listener() {
       \u0275\u0275restoreView(_r15);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("resources"));
     });
-    \u0275\u0275elementStart(8, "h6")(9, "a", 58);
+    \u0275\u0275elementStart(8, "h6")(9, "a", 56);
     \u0275\u0275text(10, "Resources");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(11, "span", 30);
@@ -63723,7 +63723,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     });
     \u0275\u0275template(5, NavbarComponent_div_1_img_5_Template, 1, 0, "img", 42)(6, NavbarComponent_div_1_img_6_Template, 1, 0, "img", 43);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "div", 9)(8, "ul", 44)(9, "li", 45)(10, "a", 46);
+    \u0275\u0275elementStart(7, "div", 9)(8, "ul", 10)(9, "li", 11)(10, "a", 44);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_10_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63737,7 +63737,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     });
     \u0275\u0275text(11, "HOME");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(12, "li", 13)(13, "a", 47);
+    \u0275\u0275elementStart(12, "li", 13)(13, "a", 45);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_13_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63749,7 +63749,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     \u0275\u0275elementEnd()();
     \u0275\u0275template(17, NavbarComponent_div_1_ul_17_Template, 2, 1, "ul", 17);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(18, "li", 13)(19, "a", 48);
+    \u0275\u0275elementStart(18, "li", 13)(19, "a", 46);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_19_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63765,7 +63765,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     \u0275\u0275elementEnd()();
     \u0275\u0275template(23, NavbarComponent_div_1_ul_23_Template, 13, 0, "ul", 17);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(24, "li", 19)(25, "a", 49);
+    \u0275\u0275elementStart(24, "li", 19)(25, "a", 47);
     \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_25_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -63774,7 +63774,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     \u0275\u0275elementStart(26, "span");
     \u0275\u0275text(27, "Get in touch");
     \u0275\u0275elementEnd()()()()()();
-    \u0275\u0275template(28, NavbarComponent_div_1_div_28_Template, 2, 1, "div", 50)(29, NavbarComponent_div_1_div_29_Template, 13, 0, "div", 51);
+    \u0275\u0275template(28, NavbarComponent_div_1_div_28_Template, 2, 1, "div", 48)(29, NavbarComponent_div_1_div_29_Template, 13, 0, "div", 49);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63893,7 +63893,7 @@ var NavbarComponent = class _NavbarComponent {
   static \u0275fac = function NavbarComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _NavbarComponent)(\u0275\u0275directiveInject(MatDialog), \u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(Renderer2));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], inputs: { mouseTop: "mouseTop", isSecondPage: "isSecondPage" }, standalone: false, features: [\u0275\u0275NgOnChangesFeature], decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], [1, "navbar-brand", "logo", 3, "href"], ["src", "assets/images/Logo-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px", 3, "click"], ["src", "assets/icons/menu-icon-white.svg", "style", "color:#BFC0C0;", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-white.svg", "style", "color:#BFC0C0;", "class", "logo-size2", 4, "ngIf"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48", 3, "ngClass"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mr-16", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["src", "assets/icons/close-white.svg", 1, "logo-size2", 2, "color", "#BFC0C0"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px", "z-index", "999"], ["src", "assets/images/Logo-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-black.svg", "class", "logo-size2", 4, "ngIf"], [1, "navbar-nav", "ml-auto", "mr-16"], [1, "nav-item", 2, "cursor", "pointer"], [1, "nav-link", "px-21", "mr-16", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], ["src", "assets/icons/close-black.svg", 1, "logo-size2"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], inputs: { mouseTop: "mouseTop", isSecondPage: "isSecondPage" }, standalone: false, features: [\u0275\u0275NgOnChangesFeature], decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], [1, "navbar-brand", "logo", 3, "href"], ["src", "assets/images/Logo-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px", 3, "click"], ["src", "assets/icons/menu-icon-white.svg", "style", "color:#BFC0C0;", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-white.svg", "style", "color:#BFC0C0;", "class", "logo-size2", 4, "ngIf"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48", 3, "ngClass"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "mr-16", 2, "cursor", "pointer"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["src", "assets/icons/close-white.svg", 1, "logo-size2", 2, "color", "#BFC0C0"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px", "z-index", "999"], ["src", "assets/images/Logo-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-black.svg", "class", "logo-size2", 4, "ngIf"], [1, "nav-link", "px-21", "mr-18", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], ["src", "assets/icons/close-black.svg", 1, "logo-size2"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275template(0, NavbarComponent_div_0_Template, 30, 19, "div", 0)(1, NavbarComponent_div_1_Template, 30, 19, "div", 1);
     }
