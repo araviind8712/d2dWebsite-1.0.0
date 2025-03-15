@@ -118,7 +118,6 @@ export class NavbarComponent implements OnInit, OnChanges {
   }
 
   onScrollBlack(event?: any) {
-    console.log('scrolling')
     const element = event?.target;
     const isAtBottom: boolean = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
     setTimeout(() => {
@@ -130,7 +129,6 @@ export class NavbarComponent implements OnInit, OnChanges {
 
   }
   onScrollWhite(event?: any) {
-    console.log('scrolling')
     const element = event?.target;
     const isAtBottom: boolean = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
     setTimeout(() => {

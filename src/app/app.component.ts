@@ -77,7 +77,6 @@ export class AppComponent {
   onWindowScroll(): void {
     if (typeof window !== 'undefined') {
       const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-      console.log(this.pageHeight)
       if (scrollPosition >= this.pageHeight-30) {
         this.isSecondPage = true;
       }
