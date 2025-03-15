@@ -328,7 +328,7 @@ body {
   padding-bottom: calc(5.55vw + 0.08px);
 }
 .mt-80 {
-  margin-top: 80px !important;
+  margin-top: calc(5.55vw + 0.08px) !important;
 }
 .mb-80 {
   margin-bottom: calc(5.55vw + 0.08px) !important;
@@ -531,6 +531,25 @@ a {
   }
   .fsb-16 {
     font-size: 12px !important;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .p-48 {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .p-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .mt-80 {
+    margin-top: 80px !important;
+  }
+  .mb-80 {
+    margin-bottom: 80px !important;
+  }
+  .mt-48 {
+    margin-top: 48px !important;
   }
 }
 

@@ -62365,7 +62365,7 @@ var ServiceMenuComponent = class _ServiceMenuComponent {
       \u0275\u0275advance(2);
       \u0275\u0275property("ngForOf", ctx.currentServiceMenu);
     }
-  }, dependencies: [NgClass, NgForOf, NgIf], styles: ['\n\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  margin: 0px;\n  line-height: 29px;\n  color: #747B80;\n}\n.service-img[_ngcontent-%COMP%] {\n  aspect-ratio: 427 / 320;\n  width: 100%;\n}\n.pr0[_ngcontent-%COMP%] {\n  padding-right: 0px;\n}\nh4[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #121314;\n  font-style: normal;\n  margin: 0px;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n}\n.img-container[_ngcontent-%COMP%] {\n  width: calc(29.65vw + 0.04px);\n}\n.pr32[_ngcontent-%COMP%] {\n  margin-right: calc(2.22vw + 0.032px) !important;\n}\n.pb48[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px) !important;\n}\n.img32[_ngcontent-%COMP%] {\n  height: 32px;\n  width: 32px;\n}\n.pb24[_ngcontent-%COMP%] {\n  margin-bottom: calc(1.66vw + 0.096px) !important;\n}\n.pb8[_ngcontent-%COMP%] {\n  padding-bottom: calc(0.55vw + 0.08px) !important;\n}\n@media only screen and (max-width: 767px) {\n  .pr32[_ngcontent-%COMP%] {\n    margin-right: 0px !important;\n  }\n  .img-container[_ngcontent-%COMP%] {\n    width: calc(100vw - 2 * (3.88vw + 0.0144px)) !important;\n  }\n  h4[_ngcontent-%COMP%] {\n    font-size: 21px;\n    line-height: 29.4px;\n  }\n  p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .pb0[_ngcontent-%COMP%] {\n    padding-bottom: 0px !important;\n  }\n  .pb48[_ngcontent-%COMP%] {\n    padding-bottom: calc(7.76vw + 0.0288px) !important;\n  }\n  .img32[_ngcontent-%COMP%] {\n    height: 24px;\n    width: 24px;\n  }\n  .service-img[_ngcontent-%COMP%] {\n    aspect-ratio: 380 / 240;\n    width: 100%;\n  }\n  .row[_ngcontent-%COMP%] {\n    margin-right: -15px !important;\n    margin-left: -15px !important;\n  }\n}\n.row[_ngcontent-%COMP%] {\n  margin-right: -27px !important;\n  margin-left: -30px !important;\n}\n/*# sourceMappingURL=service-menu.component.css.map */'] });
+  }, dependencies: [NgClass, NgForOf, NgIf], styles: ['\n\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  margin: 0px;\n  line-height: 29px;\n  color: #747B80;\n}\n.service-img[_ngcontent-%COMP%] {\n  aspect-ratio: 427 / 320;\n  width: 100%;\n}\n.pr0[_ngcontent-%COMP%] {\n  padding-right: 0px;\n}\nh4[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #121314;\n  font-style: normal;\n  margin: 0px;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n}\n.img-container[_ngcontent-%COMP%] {\n  width: calc(29.65vw + 0.04px);\n}\n.pr32[_ngcontent-%COMP%] {\n  margin-right: calc(2.22vw + 0.032px) !important;\n}\n.pb48[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px) !important;\n}\n.img32[_ngcontent-%COMP%] {\n  height: 32px;\n  width: 32px;\n}\n.pb24[_ngcontent-%COMP%] {\n  margin-bottom: calc(1.66vw + 0.096px) !important;\n}\n.pb8[_ngcontent-%COMP%] {\n  padding-bottom: calc(0.55vw + 0.08px) !important;\n}\n@media only screen and (max-width: 767px) {\n  .pr32[_ngcontent-%COMP%] {\n    margin-right: 0px !important;\n  }\n  .img-container[_ngcontent-%COMP%] {\n    width: calc(100vw - 2 * (3.88vw + 0.0144px)) !important;\n  }\n  h4[_ngcontent-%COMP%] {\n    font-size: 21px;\n    line-height: 29.4px;\n  }\n  p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .pb0[_ngcontent-%COMP%] {\n    padding-bottom: 0px !important;\n  }\n  .pb48[_ngcontent-%COMP%] {\n    padding-bottom: calc(7.76vw + 0.0288px) !important;\n  }\n  .img32[_ngcontent-%COMP%] {\n    height: 24px;\n    width: 24px;\n  }\n  .service-img[_ngcontent-%COMP%] {\n    aspect-ratio: 380 / 240;\n    width: 100%;\n  }\n  .row[_ngcontent-%COMP%] {\n    margin-right: -15px !important;\n    margin-left: -15px !important;\n  }\n}\n.row[_ngcontent-%COMP%] {\n  margin-right: -27px !important;\n  margin-left: -30px !important;\n}\n@media only screen and (min-width: 1600px) {\n  .img-container[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n}\n/*# sourceMappingURL=service-menu.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ServiceMenuComponent, { className: "ServiceMenuComponent", filePath: "src/app/pages/service-menu/service-menu.component.ts", lineNumber: 13 });
@@ -62375,9 +62375,9 @@ var ServiceMenuComponent = class _ServiceMenuComponent {
 var _c05 = (a0) => ({ "padding-bottom": a0 });
 var _c14 = (a0, a1) => ({ "padding-default": a0, "padding-none": a1 });
 var _c23 = (a0, a1, a2, a3) => ({ "mr-32": a0, "mr-0": a1, "padding-none": a2, "padding-default": a3 });
-function ServicesComponent_div_4_Template(rf, ctx) {
+function ServicesComponent_div_5_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 11);
+    \u0275\u0275elementStart(0, "div")(1, "p", 14);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62391,9 +62391,9 @@ function ServicesComponent_div_4_Template(rf, ctx) {
     \u0275\u0275textInterpolate1(" ", desc_r1, " ");
   }
 }
-function ServicesComponent_div_7_div_8_Template(rf, ctx) {
+function ServicesComponent_div_9_div_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 18);
+    \u0275\u0275elementStart(0, "div")(1, "p", 21);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62403,9 +62403,9 @@ function ServicesComponent_div_7_div_8_Template(rf, ctx) {
     \u0275\u0275textInterpolate(des_r4);
   }
 }
-function ServicesComponent_div_7_div_10_div_4_Template(rf, ctx) {
+function ServicesComponent_div_9_div_10_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 18);
+    \u0275\u0275elementStart(0, "div")(1, "p", 21);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62415,13 +62415,13 @@ function ServicesComponent_div_7_div_10_div_4_Template(rf, ctx) {
     \u0275\u0275textInterpolate(des_r5);
   }
 }
-function ServicesComponent_div_7_div_10_Template(rf, ctx) {
+function ServicesComponent_div_9_div_10_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 19)(1, "h5", 15);
+    \u0275\u0275elementStart(0, "div", 22)(1, "h5", 18);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(4, ServicesComponent_div_7_div_10_div_4_Template, 3, 1, "div", 3);
+    \u0275\u0275template(4, ServicesComponent_div_9_div_10_div_4_Template, 3, 1, "div", 4);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62433,19 +62433,19 @@ function ServicesComponent_div_7_div_10_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", sol_r6 == null ? null : sol_r6.description);
   }
 }
-function ServicesComponent_div_7_Template(rf, ctx) {
+function ServicesComponent_div_9_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 12)(1, "h2", 9);
+    \u0275\u0275elementStart(0, "div", 15)(1, "h2", 12);
     \u0275\u0275text(2, "Solutions Offered");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 13)(4, "div", 14)(5, "h5", 15);
+    \u0275\u0275elementStart(3, "div", 16)(4, "div", 17)(5, "h5", 18);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(8, ServicesComponent_div_7_div_8_Template, 3, 1, "div", 3);
+    \u0275\u0275template(8, ServicesComponent_div_9_div_8_Template, 3, 1, "div", 4);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(9, "div", 16);
-    \u0275\u0275template(10, ServicesComponent_div_7_div_10_Template, 5, 8, "div", 17);
+    \u0275\u0275elementStart(9, "div", 19);
+    \u0275\u0275template(10, ServicesComponent_div_9_div_10_Template, 5, 8, "div", 20);
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -62458,9 +62458,9 @@ function ServicesComponent_div_7_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", ctx_r2.serviceData == null ? null : ctx_r2.serviceData.solutionsOffered.slice(1));
   }
 }
-function ServicesComponent_div_8_div_4_div_4_Template(rf, ctx) {
+function ServicesComponent_div_10_div_4_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div")(1, "p", 18);
+    \u0275\u0275elementStart(0, "div")(1, "p", 21);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd()();
   }
@@ -62470,13 +62470,13 @@ function ServicesComponent_div_8_div_4_div_4_Template(rf, ctx) {
     \u0275\u0275textInterpolate(des_r7);
   }
 }
-function ServicesComponent_div_8_div_4_Template(rf, ctx) {
+function ServicesComponent_div_10_div_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 22)(1, "h5", 23);
+    \u0275\u0275elementStart(0, "div", 25)(1, "h5", 26);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "uppercase");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(4, ServicesComponent_div_8_div_4_div_4_Template, 3, 1, "div", 3);
+    \u0275\u0275template(4, ServicesComponent_div_10_div_4_div_4_Template, 3, 1, "div", 4);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62490,13 +62490,13 @@ function ServicesComponent_div_8_div_4_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", sol_r8.description);
   }
 }
-function ServicesComponent_div_8_Template(rf, ctx) {
+function ServicesComponent_div_10_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 20)(1, "h2", 9);
+    \u0275\u0275elementStart(0, "div", 23)(1, "h2", 12);
     \u0275\u0275text(2, "Solutions Offered");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 13);
-    \u0275\u0275template(4, ServicesComponent_div_8_div_4_Template, 5, 10, "div", 21);
+    \u0275\u0275elementStart(3, "div", 16);
+    \u0275\u0275template(4, ServicesComponent_div_10_div_4_Template, 5, 10, "div", 24);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -62532,37 +62532,39 @@ var ServicesComponent = class _ServicesComponent {
   static \u0275fac = function ServicesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ServicesComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(MatDialog));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServicesComponent, selectors: [["app-services"]], standalone: false, decls: 13, vars: 6, consts: [[2, "top", "90px", "position", "relative"], [1, "container-fluid", "section1", "section", "slide-up-page"], [1, "pb-48", "text-blur-reveal", 2, "margin", "0px", "overflow-wrap", "break-word"], [4, "ngFor", "ngForOf"], [1, "pt-80", "pb-8"], ["alt", "image", 1, "animate-image", "pic", 3, "src"], ["class", "section2 section", 4, "ngIf"], ["class", "container-fluid section3 section", 4, "ngIf"], [1, "section4", "menu", 2, "background-color", "#FFFFFF"], [1, "pb-80"], ["bgColor", "background-color:white;", 3, "currentService"], ["align", "left", 1, "per32", 2, "text-align", "left", 3, "ngStyle"], [1, "section2", "section"], [1, "soln"], ["id", "first", 1, "width-50", "mr-32"], [1, "pb-8", 2, "margin", "0px"], [1, "width-50"], [3, "ngClass", 4, "ngFor", "ngForOf"], [1, "des"], [3, "ngClass"], [1, "container-fluid", "section3", "section"], ["class", "width-50", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "width-50", 3, "ngClass"], [2, "padding-bottom", "8px", "margin", "0px"]], template: function ServicesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ServicesComponent, selectors: [["app-services"]], standalone: false, decls: 16, vars: 6, consts: [[1, "top-90", 2, "top", "90px", "position", "relative"], [1, "section-wrap"], [1, "container-fluid", "section1", "section", "slide-up-page"], [1, "pb-48", "text-blur-reveal", 2, "margin", "0px", "overflow-wrap", "break-word"], [4, "ngFor", "ngForOf"], [1, "pt-80", "pb-8"], ["alt", "image", 1, "animate-image", "pic", 3, "src"], [1, "section-wrap", "bgcolor-light-white"], ["class", "section2 section", 4, "ngIf"], ["class", "container-fluid section3 section", 4, "ngIf"], [1, "section-wrap1"], [1, "section4", "menu", 2, "background-color", "#FFFFFF"], [1, "pb-80"], ["bgColor", "background-color:white;", 3, "currentService"], ["align", "left", 1, "per32", 2, "text-align", "left", 3, "ngStyle"], [1, "section2", "section"], [1, "soln"], ["id", "first", 1, "width-50", "mr-32"], [1, "pb-8", 2, "margin", "0px"], [1, "width-50"], [3, "ngClass", 4, "ngFor", "ngForOf"], [1, "des"], [3, "ngClass"], [1, "container-fluid", "section3", "section"], ["class", "width-50", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "width-50", 3, "ngClass"], [2, "padding-bottom", "8px", "margin", "0px"]], template: function ServicesComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "h2", 2);
-      \u0275\u0275text(3);
+      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "h2", 3);
+      \u0275\u0275text(4);
       \u0275\u0275elementEnd();
-      \u0275\u0275template(4, ServicesComponent_div_4_Template, 3, 4, "div", 3);
-      \u0275\u0275elementStart(5, "div", 4);
-      \u0275\u0275element(6, "img", 5);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275template(7, ServicesComponent_div_7_Template, 11, 5, "div", 6)(8, ServicesComponent_div_8_Template, 5, 1, "div", 7);
-      \u0275\u0275elementStart(9, "div", 8)(10, "h2", 9);
-      \u0275\u0275text(11, "Other Services");
+      \u0275\u0275template(5, ServicesComponent_div_5_Template, 3, 4, "div", 4);
+      \u0275\u0275elementStart(6, "div", 5);
+      \u0275\u0275element(7, "img", 6);
+      \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(8, "div", 7);
+      \u0275\u0275template(9, ServicesComponent_div_9_Template, 11, 5, "div", 8)(10, ServicesComponent_div_10_Template, 5, 1, "div", 9);
       \u0275\u0275elementEnd();
-      \u0275\u0275element(12, "app-service-menu", 10);
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(11, "div", 10)(12, "div", 11)(13, "h2", 12);
+      \u0275\u0275text(14, "Other Services");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(15, "app-service-menu", 13);
+      \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(3);
+      \u0275\u0275advance(4);
       \u0275\u0275textInterpolate(ctx.serviceData == null ? null : ctx.serviceData.topic);
       \u0275\u0275advance();
       \u0275\u0275property("ngForOf", ctx.serviceData == null ? null : ctx.serviceData.desc1);
       \u0275\u0275advance(2);
       \u0275\u0275property("src", ctx.serviceData == null ? null : ctx.serviceData.image, \u0275\u0275sanitizeUrl);
-      \u0275\u0275advance();
+      \u0275\u0275advance(2);
       \u0275\u0275property("ngIf", ctx.serviceName === "bioInfo");
       \u0275\u0275advance();
       \u0275\u0275property("ngIf", ctx.serviceName !== "bioInfo");
-      \u0275\u0275advance(4);
+      \u0275\u0275advance(5);
       \u0275\u0275property("currentService", ctx.serviceName);
     }
-  }, dependencies: [NgClass, NgForOf, NgIf, NgStyle, ServiceMenuComponent, UpperCasePipe], styles: ['\n\n.nav-item[_ngcontent-%COMP%] {\n  font-weight: bold;\n  color: black;\n}\n.section1[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);\n  background-color: #FFFFFF !important;\n}\n.section2[_ngcontent-%COMP%], \n.section3[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);\n  background-color: #FBFBFB !important;\n}\nh2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  display: flex;\n  align-items: center;\n  color: #121314;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  margin: 0;\n}\nh5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #121314;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n}\n.des[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #747B80;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n}\n.per32[_ngcontent-%COMP%] {\n  margin-left: 31.875vw;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n}\n.pt-80[_ngcontent-%COMP%] {\n  padding-top: calc(5.55vw + 0.08px);\n}\n.mr-0[_ngcontent-%COMP%] {\n  margin-right: 0px;\n}\n.pic[_ngcontent-%COMP%] {\n  aspect-ratio: 885/520;\n  width: calc(61.45vw + 0.12px);\n}\n.pb-80[_ngcontent-%COMP%] {\n  padding-bottom: calc(5.55vw + 0.08px);\n  margin: 0px;\n}\n.ml-32[_ngcontent-%COMP%] {\n  margin-left: calc(2.22vw + 0.032px);\n}\n.mr-32[_ngcontent-%COMP%] {\n  margin-right: calc(2.22vw + 0.032px);\n}\n.width-50[_ngcontent-%COMP%] {\n  flex: 1 1 47.5% !important;\n  max-width: 48.5%;\n}\n.soln[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  flex-wrap: wrap;\n}\n.padding-none[_ngcontent-%COMP%] {\n  padding-bottom: 0px;\n}\n.col-md-6[_ngcontent-%COMP%] {\n  padding: 0px !important;\n}\n.padding-default[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px) !important;\n}\n.pb-8[_ngcontent-%COMP%] {\n  padding-bottom: calc(0.55vw + 0.08px);\n}\n@media only screen and (max-width: 767px) {\n  p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  h5[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 29.4px;\n  }\n  h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n  }\n  .des[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .mr-32[_ngcontent-%COMP%] {\n    margin-right: 0 !important;\n  }\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px);\n  }\n  .per32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: calc(7.76vw + 0.0288px);\n  }\n  .pt-80[_ngcontent-%COMP%] {\n    padding-top: calc(11.65vw + 0.002px);\n  }\n  .pic[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n  .pb-80[_ngcontent-%COMP%] {\n    padding-bottom: calc(11.65vw + 0.002px) !important;\n    margin: 0px;\n  }\n  .menu[_ngcontent-%COMP%] {\n    padding-left: calc(3.88vw + 0.0144px);\n  }\n  .ml-32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .width-50[_ngcontent-%COMP%] {\n    flex: 1 1 100%;\n    max-width: 100% !important;\n  }\n  .soln[_ngcontent-%COMP%] {\n    display: flex;\n    width: 100%;\n    flex-direction: column;\n  }\n  #first[_ngcontent-%COMP%] {\n    padding-bottom: calc(7.76vw + 0.0288px) !important;\n  }\n  .padding-default[_ngcontent-%COMP%] {\n    padding-bottom: calc(7.76vw + 0.0288px) !important;\n  }\n  .padding-none[_ngcontent-%COMP%] {\n    padding-bottom: 0px;\n  }\n  .section1[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-family: "NimbusSanL";\n    font-style: normal;\n    font-weight: 400;\n    font-size: 48px;\n    line-height: 61px;\n    display: flex;\n    align-items: center;\n    color: #121314;\n  }\n}\n@media only screen and (min-width: 1440px) {\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%] {\n    padding: calc(5.55 * 14.4px) calc(3.33 * 14.4px);\n  }\n  .pic[_ngcontent-%COMP%] {\n    width: calc(61.45 * 14.4px);\n  }\n  .width-50[_ngcontent-%COMP%] {\n    flex: 1 1 684px;\n    max-width: 696px;\n  }\n}\n/*# sourceMappingURL=services.component.css.map */'] });
+  }, dependencies: [NgClass, NgForOf, NgIf, NgStyle, ServiceMenuComponent, UpperCasePipe], styles: ['\n\n.nav-item[_ngcontent-%COMP%] {\n  font-weight: bold;\n  color: black;\n}\n.top-90[_ngcontent-%COMP%] {\n  top: 90px !important;\n}\n.section1[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);\n  background-color: #FFFFFF !important;\n}\n.section2[_ngcontent-%COMP%], \n.section3[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);\n  background-color: #FBFBFB !important;\n}\nh2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  display: flex;\n  align-items: center;\n  color: #121314;\n}\np[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n  margin: 0;\n}\nh5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #121314;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n}\n.des[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  color: #747B80;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n}\n.per32[_ngcontent-%COMP%] {\n  margin-left: 31.875vw;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n}\n.pt-80[_ngcontent-%COMP%] {\n  padding-top: calc(5.55vw + 0.08px);\n}\n.mr-0[_ngcontent-%COMP%] {\n  margin-right: 0px;\n}\n.pic[_ngcontent-%COMP%] {\n  aspect-ratio: 885/520;\n  width: calc(61.45vw + 0.12px);\n}\n.pb-80[_ngcontent-%COMP%] {\n  padding-bottom: calc(5.55vw + 0.08px);\n  margin: 0px;\n}\n.ml-32[_ngcontent-%COMP%] {\n  margin-left: calc(2.22vw + 0.032px);\n}\n.mr-32[_ngcontent-%COMP%] {\n  margin-right: calc(2.22vw + 0.032px);\n}\n.width-50[_ngcontent-%COMP%] {\n  flex: 1 1 47.5% !important;\n  max-width: 48.5%;\n}\n.soln[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  width: 100%;\n  flex-wrap: wrap;\n}\n.padding-none[_ngcontent-%COMP%] {\n  padding-bottom: 0px;\n}\n.col-md-6[_ngcontent-%COMP%] {\n  padding: 0px !important;\n}\n.padding-default[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px) !important;\n}\n.pb-8[_ngcontent-%COMP%] {\n  padding-bottom: calc(0.55vw + 0.08px);\n}\n@media only screen and (max-width: 767px) {\n  p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .top-90[_ngcontent-%COMP%] {\n    top: 90px !important;\n  }\n  h5[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 29.4px;\n  }\n  h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n  }\n  .des[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n  }\n  .mr-32[_ngcontent-%COMP%] {\n    margin-right: 0 !important;\n  }\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px);\n  }\n  .per32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: calc(7.76vw + 0.0288px);\n  }\n  .pt-80[_ngcontent-%COMP%] {\n    padding-top: calc(11.65vw + 0.002px);\n  }\n  .pic[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n  .pb-80[_ngcontent-%COMP%] {\n    padding-bottom: calc(11.65vw + 0.002px) !important;\n    margin: 0px;\n  }\n  .menu[_ngcontent-%COMP%] {\n    padding-left: calc(3.88vw + 0.0144px);\n  }\n  .ml-32[_ngcontent-%COMP%] {\n    margin-left: 0px;\n  }\n  .width-50[_ngcontent-%COMP%] {\n    flex: 1 1 100%;\n    max-width: 100% !important;\n  }\n  .soln[_ngcontent-%COMP%] {\n    display: flex;\n    width: 100%;\n    flex-direction: column;\n  }\n  #first[_ngcontent-%COMP%] {\n    padding-bottom: calc(7.76vw + 0.0288px) !important;\n  }\n  .padding-default[_ngcontent-%COMP%] {\n    padding-bottom: calc(7.76vw + 0.0288px) !important;\n  }\n  .padding-none[_ngcontent-%COMP%] {\n    padding-bottom: 0px;\n  }\n  .section1[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-family: "NimbusSanL";\n    font-style: normal;\n    font-weight: 400;\n    font-size: 48px;\n    line-height: 61px;\n    display: flex;\n    align-items: center;\n    color: #121314;\n  }\n}\n@media only screen and (min-width: 1600px) {\n  .top-90[_ngcontent-%COMP%] {\n    top: 110px !important;\n  }\n  .section-wrap[_ngcontent-%COMP%] {\n    width: 100vw;\n    height: max-content !important;\n    display: flex;\n    justify-content: center;\n  }\n  .section-wrap1[_ngcontent-%COMP%] {\n    width: 100vw;\n    height: max-content !important;\n    margin-bottom: 110px;\n    display: flex;\n    justify-content: center;\n  }\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%] {\n    padding: 80px 48px;\n    max-width: 1600px;\n  }\n  .width-50[_ngcontent-%COMP%] {\n    flex: 1 45.5% !important;\n    max-width: 696px;\n  }\n  .pic[_ngcontent-%COMP%] {\n    width: 900px;\n  }\n  .bgcolor-light-white[_ngcontent-%COMP%] {\n    background-color: #FBFBFB !important;\n  }\n  .per32[_ngcontent-%COMP%] {\n    margin-left: 460px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: 48px;\n  }\n  .pt-80[_ngcontent-%COMP%] {\n    padding-top: 80px;\n  }\n  .mr-0[_ngcontent-%COMP%] {\n    margin-right: 0px;\n  }\n  .pb-80[_ngcontent-%COMP%] {\n    padding-bottom: 80px;\n    margin: 0px;\n  }\n  .ml-32[_ngcontent-%COMP%] {\n    margin-left: 32px;\n  }\n  .mr-32[_ngcontent-%COMP%] {\n    margin-right: 32px;\n  }\n  .padding-default[_ngcontent-%COMP%] {\n    padding-bottom: 48px !important;\n  }\n  .pb-8[_ngcontent-%COMP%] {\n    padding-bottom: 8px;\n  }\n}\n/*# sourceMappingURL=services.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ServicesComponent, { className: "ServicesComponent", filePath: "src/app/pages/services/services.component.ts", lineNumber: 16 });
@@ -62700,10 +62702,10 @@ var HomescrollDirective = class _HomescrollDirective {
 // src/app/pages/home/home.component.ts
 var _c06 = ["videoPlayer"];
 var _c15 = ["section"];
-function HomeComponent_div_70_Template(rf, ctx) {
+function HomeComponent_div_75_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 31);
-    \u0275\u0275element(1, "app-resource-card", 32);
+    \u0275\u0275elementStart(0, "div", 33);
+    \u0275\u0275element(1, "app-resource-card", 34);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62753,102 +62755,102 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.video = _t.first);
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.sections = _t);
     }
-  }, standalone: false, decls: 71, vars: 9, consts: [["mainDiv", ""], ["section", ""], ["appHomescroll", "", 1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], ["id", "section1", 1, "section"], [1, "loader", 3, "hidden"], [1, "progress-container"], [3, "ngClass"], [1, "loading-text"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", "inline", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "waiting", "loadeddata", "playing", "hidden"], [1, "fsr-67", "pyx-48", "text-white", "videoText", 3, "hidden"], [2, "background", "linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], ["id", "section2", 1, "col-md-12", "section1"], ["align", "center", 1, "pb-24", 2, "margin-bottom", "0px"], ["align", "center"], ["id", "section3", 1, "col-12", "section2", "section"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], ["id", "section4", 1, "col-12", "section3", "section"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], ["id", "section5", 1, "section5", "section"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
+  }, standalone: false, decls: 76, vars: 9, consts: [["mainDiv", ""], ["section", ""], ["appHomescroll", "", 1, "container-fluid", "p-0", 2, "margin-top", "0", "width", "100vw"], [1, "section-wrap"], ["id", "section1", 1, "section"], [1, "loader", 3, "hidden"], [1, "progress-container"], [3, "ngClass"], [1, "loading-text"], ["src", "assets/videos/d2dVid.mp4", "autoplay", "", "loop", "", "muted", "", "inline", "", 1, "pic", 2, "filter", "brightness(50%)", 3, "waiting", "loadeddata", "playing", "hidden"], [1, "fsr-67", "pyx-48", "text-white", "videoText", 3, "hidden"], [2, "background", "linear-gradient(271.84deg, #8CFFCD 9.2%, #07B2C5 24.06%, #01819A 36.78%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], [2, "background", "linear-gradient(270.47deg, #F76230 67.86%, #FE8454 93.46%, #8CFFCD 113.82%, #07B2C5 119.73%, #01819A 126.28%)", "-webkit-background-clip", "text", "-webkit-text-fill-color", "transparent"], ["id", "section2", 1, "col-md-12", "section1"], ["align", "center", 1, "pb-24", 2, "margin-bottom", "0px"], ["align", "center"], [1, "section-wrap", "bgcolor-light-white"], ["id", "section3", 1, "col-12", "section2", "section"], ["align", "right"], ["bgColor", "background-color:#EEEEEE;"], ["id", "section4", 1, "col-12", "section3", "section"], ["align", "left"], [1, "row", "subsec31"], [1, "col-md-4"], [2, "border", "1px solid #FB4F23"], [1, "choose"], ["id", "section5", 1, "section5", "section"], [1, "fsr-51", 2, "display", "flex", "justify-content", "space-between", "align-items", "baseline", "position", "relative", "width", "100%", "color", "#121314"], ["href", "resources?pages=resources", 2, "cursor", "pointer", "text-decoration", "none"], [2, "font-style", "normal", "font-weight", "400", "font-size", "21px", "line-height", "29px", "display", "flex", "align-items", "baseline", "color", "#121314"], [1, "bi", "bi-arrow-right"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100"], [3, "title", "description", "image", "postedOn", "type"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
-      \u0275\u0275elementStart(0, "div", 2, 0)(2, "div", 3, 1)(4, "div", 4)(5, "div", 5);
-      \u0275\u0275element(6, "div", 6);
+      \u0275\u0275elementStart(0, "div", 2, 0)(2, "div", 3)(3, "div", 4, 1)(5, "div", 5)(6, "div", 6);
+      \u0275\u0275element(7, "div", 7);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(7, "div", 7)(8, "p");
-      \u0275\u0275text(9, "Loading");
+      \u0275\u0275elementStart(8, "div", 8)(9, "p");
+      \u0275\u0275text(10, "Loading");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(10, "video", 8);
-      \u0275\u0275listener("waiting", function HomeComponent_Template_video_waiting_10_listener() {
+      \u0275\u0275elementStart(11, "video", 9);
+      \u0275\u0275listener("waiting", function HomeComponent_Template_video_waiting_11_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.isLoading = true);
-      })("loadeddata", function HomeComponent_Template_video_loadeddata_10_listener() {
+      })("loadeddata", function HomeComponent_Template_video_loadeddata_11_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.loaded());
-      })("playing", function HomeComponent_Template_video_playing_10_listener() {
+      })("playing", function HomeComponent_Template_video_playing_11_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.loaded());
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(11, "p", 9)(12, "span");
-      \u0275\u0275text(13, "Unlocking Life's Secrets: Driving ");
+      \u0275\u0275elementStart(12, "p", 10)(13, "span");
+      \u0275\u0275text(14, "Unlocking Life's Secrets: Driving ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(14, "span", 10);
-      \u0275\u0275text(15, "Innovation ");
+      \u0275\u0275elementStart(15, "span", 11);
+      \u0275\u0275text(16, "Innovation ");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(16, "with Precision Bioinformatics and ");
-      \u0275\u0275elementStart(17, "span", 11);
-      \u0275\u0275text(18, " Collaboration");
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(19, "div", 12)(20, "p", 13);
-      \u0275\u0275text(21, "Who we are");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(22, "h3", 14);
-      \u0275\u0275text(23, "Where Biology Meets Technology: Empowering Breakthroughs with Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and turn bold scientific goals into reality.");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(24, "div", 15, 1)(26, "p", 16);
-      \u0275\u0275text(27, "Our Services");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(28, "h2", 16);
-      \u0275\u0275text(29, "Tailored Solutions for Exceptional Results");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(30, "app-service-menu", 17);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(31, "div", 18, 1)(33, "p", 19);
-      \u0275\u0275text(34, "Why choose us");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(35, "h2", 19);
-      \u0275\u0275text(36, "Innovative Expertise. Exceptional Results.");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(37, "div", 20)(38, "div", 21);
-      \u0275\u0275element(39, "hr", 22);
-      \u0275\u0275elementStart(40, "h5", 23);
-      \u0275\u0275text(41, "01");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(42, "h4");
-      \u0275\u0275text(43, "Expert Team");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(44, "p");
-      \u0275\u0275text(45, "Our team is composed of highly skilled professionals with extensive experience in bioinformatics and life sciences.");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(46, "div", 21);
-      \u0275\u0275element(47, "hr", 22);
-      \u0275\u0275elementStart(48, "h5", 23);
-      \u0275\u0275text(49, "02");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(50, "h4");
-      \u0275\u0275text(51, "Innovative Solutions");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(52, "p");
-      \u0275\u0275text(53, "Leveraging cutting-edge technologies and methodologies to deliver accurate, actionable results.");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(54, "div", 21);
-      \u0275\u0275element(55, "hr", 22);
-      \u0275\u0275elementStart(56, "h5", 23);
-      \u0275\u0275text(57, "03");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(58, "h4");
-      \u0275\u0275text(59, "Collaborative Approach");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(60, "p");
-      \u0275\u0275text(61, "We partner with clients to deeply understand their needs and customize our services to achieve their unique goals.");
+      \u0275\u0275text(17, "with Precision Bioinformatics and ");
+      \u0275\u0275elementStart(18, "span", 12);
+      \u0275\u0275text(19, " Collaboration");
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(62, "div", 24)(63, "p", 25);
-      \u0275\u0275text(64, " Featured Resources ");
-      \u0275\u0275elementStart(65, "a", 26)(66, "span", 27);
-      \u0275\u0275text(67, " View All \xA0 ");
-      \u0275\u0275element(68, "i", 28);
+      \u0275\u0275elementStart(20, "div", 3)(21, "div", 13)(22, "p", 14);
+      \u0275\u0275text(23, "Who we are");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(24, "h3", 15);
+      \u0275\u0275text(25, "Where Biology Meets Technology: Empowering Breakthroughs with Cutting-Edge Bioinformatics. Partnering with researchers and institutions, we accelerate discoveries and turn bold scientific goals into reality.");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(69, "div", 29);
-      \u0275\u0275template(70, HomeComponent_div_70_Template, 2, 5, "div", 30);
+      \u0275\u0275elementStart(26, "div", 16)(27, "div", 17, 1)(29, "p", 18);
+      \u0275\u0275text(30, "Our Services");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(31, "h2", 18);
+      \u0275\u0275text(32, "Tailored Solutions for Exceptional Results");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(33, "app-service-menu", 19);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(34, "div", 3)(35, "div", 20, 1)(37, "p", 21);
+      \u0275\u0275text(38, "Why choose us");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(39, "h2", 21);
+      \u0275\u0275text(40, "Innovative Expertise. Exceptional Results.");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(41, "div", 22)(42, "div", 23);
+      \u0275\u0275element(43, "hr", 24);
+      \u0275\u0275elementStart(44, "h5", 25);
+      \u0275\u0275text(45, "01");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(46, "h4");
+      \u0275\u0275text(47, "Expert Team");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(48, "p");
+      \u0275\u0275text(49, "Our team is composed of highly skilled professionals with extensive experience in bioinformatics and life sciences.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(50, "div", 23);
+      \u0275\u0275element(51, "hr", 24);
+      \u0275\u0275elementStart(52, "h5", 25);
+      \u0275\u0275text(53, "02");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(54, "h4");
+      \u0275\u0275text(55, "Innovative Solutions");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(56, "p");
+      \u0275\u0275text(57, "Leveraging cutting-edge technologies and methodologies to deliver accurate, actionable results. ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(58, "div", 23);
+      \u0275\u0275element(59, "hr", 24);
+      \u0275\u0275elementStart(60, "h5", 25);
+      \u0275\u0275text(61, "03");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(62, "h4");
+      \u0275\u0275text(63, "Collaborative Approach");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(64, "p");
+      \u0275\u0275text(65, "We partner with clients to deeply understand their needs and customize our services to achieve their unique goals.");
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(66, "div", 16)(67, "div", 26)(68, "p", 27);
+      \u0275\u0275text(69, " Featured Resources ");
+      \u0275\u0275elementStart(70, "a", 28)(71, "span", 29);
+      \u0275\u0275text(72, " View All \xA0 ");
+      \u0275\u0275element(73, "i", 30);
       \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(74, "div", 31);
+      \u0275\u0275template(75, HomeComponent_div_75_Template, 2, 5, "div", 32);
+      \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(2);
+      \u0275\u0275advance(3);
       \u0275\u0275attribute("data-index", 1);
       \u0275\u0275advance(2);
       \u0275\u0275property("hidden", ctx.isLoading == false);
@@ -62858,26 +62860,26 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275property("hidden", ctx.isLoading == true);
       \u0275\u0275advance();
       \u0275\u0275property("hidden", ctx.isLoading == true);
-      \u0275\u0275advance(8);
+      \u0275\u0275advance(9);
       \u0275\u0275attribute("data-index", 2);
-      \u0275\u0275advance(5);
+      \u0275\u0275advance(6);
       \u0275\u0275attribute("data-index", 3);
-      \u0275\u0275advance(7);
+      \u0275\u0275advance(8);
       \u0275\u0275attribute("data-index", 4);
-      \u0275\u0275advance(39);
+      \u0275\u0275advance(40);
       \u0275\u0275property("ngForOf", ctx.resources);
     }
-  }, dependencies: [NgClass, NgForOf, ServiceMenuComponent, ResourceCardComponent, HomescrollDirective], styles: ['\n\n.section2[_ngcontent-%COMP%], \n.section3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);\n  width: 100%;\n  box-sizing: border-box;\n}\n.section1[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  padding: calc(5.55vw + 0.08px) 11.25vw;\n  min-height: 100vh !important;\n  justify-content: center;\n}\n.pic[_ngcontent-%COMP%] {\n  width: 100vw;\n  height: 100vh;\n  object-fit: cover;\n}\n.loader[_ngcontent-%COMP%] {\n  padding-bottom: 20vh;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 8;\n  background-color: #121314;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  border: 5px solid #f3f3f3;\n  border-top: 5px solid #3498db;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.section1[_ngcontent-%COMP%] {\n  background-color: #FFFFFF;\n}\n.section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: calc(1.66vw + 0.096px);\n}\n.section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: calc(1.11vw + 0.016px);\n}\n.section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  padding-bottom: calc(2.77vw + 0.112px);\n  margin-bottom: 0;\n}\n.section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 400;\n  font-size: 38px;\n  line-height: 46px;\n  text-align: center;\n  font-family: "NimbusSanL";\n  color: #121314;\n  margin: 0px;\n}\n.section4[_ngcontent-%COMP%] {\n  background-color: #FBFBFB;\n}\n.subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: calc(2.77vw + 0.112px);\n  padding-top: calc(2.77vw + 0.112px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #FB4F23;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: calc(0.55vw + 0.08px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #121314;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n  padding-bottom: calc(1.11vw + 0.016px);\n  margin: 0px;\n}\n.head[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n}\n#sub[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n}\n.pb-24[_ngcontent-%COMP%] {\n  padding-bottom: (1.66vw + 0px) !important;\n}\n.progress-container[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 3px;\n  position: absolute;\n  bottom: calc(3.33vw + 0.048px);\n  left: 0;\n  overflow: hidden;\n}\n.loading-text[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0.048px;\n  left: 0;\n  font-family: "NimbusSanL";\n  margin-left: 5px;\n  font-style: normal;\n  font-weight: 400;\n  color: #96F2E6;\n}\n.loading-text[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  visibility: hidden;\n  opacity: 0;\n  transition: opacity 0.3s ease-in-out;\n}\n.loading-text[_ngcontent-%COMP%]:hover   p[_ngcontent-%COMP%] {\n  visibility: visible;\n  opacity: 1;\n}\n.progress-bar-loading[_ngcontent-%COMP%] {\n  width: 0%;\n  height: 100%;\n  background:\n    linear-gradient(\n      to top,\n      #9FEFFF 0%,\n      #7CF0FD 57.1%,\n      #96F2E6 78.1%);\n  border-radius: 5px;\n  animation: _ngcontent-%COMP%_progressStart 10s linear forwards;\n  box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);\n}\n@keyframes _ngcontent-%COMP%_progressStart {\n  0% {\n    width: 0%;\n  }\n  100% {\n    width: 60%;\n  }\n}\n.progress-bar-loading-full[_ngcontent-%COMP%] {\n  width: 0%;\n  height: 100%;\n  background:\n    linear-gradient(\n      to top,\n      #9FEFFF 0%,\n      #7CF0FD 57.1%,\n      #96F2E6 78.1%);\n  border-radius: 5px;\n  animation: _ngcontent-%COMP%_progressActive 1s linear forwards;\n  box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);\n}\n@keyframes _ngcontent-%COMP%_progressActive {\n  0% {\n    width: 60%;\n  }\n  100% {\n    width: 100%;\n  }\n}\n.videoText[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n  padding-left: calc(3.33vw + 0.048px);\n  padding-right: calc(3.33vw + 0.048px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 67px;\n  line-height: 80px;\n  position: absolute;\n  margin: 0px;\n  bottom: 0%;\n  line-height: 80.7px;\n  width: 100vw;\n  max-height: 90%;\n  overflow-y: scroll;\n}\n.section2[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  background: #FBFBFB;\n}\n@media only screen and (max-width: 767px) {\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%], \n   .section5[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px);\n  }\n  .section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    line-height: 16.8px;\n    margin-bottom: 0px;\n    padding-bottom: calc(2.91vw + 0.0108px);\n  }\n  .section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n    padding-bottom: calc(9.7vw + 0.036px);\n  }\n  .section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    padding-left: 0px;\n    padding-right: 0px;\n    padding-bottom: 0px;\n    font-size: 28px;\n    line-height: 39.2px;\n  }\n  .subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n    font-size: 28px;\n    line-height: 39.2px;\n    color: #FB4F23;\n  }\n  .subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n    padding-bottom: calc(1.94vw + 0.0072px);\n    font-size: 21px;\n    line-height: 29.4px;\n  }\n  .subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n    padding-bottom: calc(9.7vw + 0.036px);\n  }\n  .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    padding-right: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: calc(3.88vw + 0.0144px) !important;\n  }\n  .videoText[_ngcontent-%COMP%] {\n    font-style: normal;\n    font-weight: 400;\n    font-size: 51px;\n    line-height: 61px;\n  }\n}\n@media only screen and (min-width: 1440px) {\n}\n/*# sourceMappingURL=home.component.css.map */'] });
+  }, dependencies: [NgClass, NgForOf, ServiceMenuComponent, ResourceCardComponent, HomescrollDirective], styles: ['\n\n.section2[_ngcontent-%COMP%], \n.section3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);\n  width: 100%;\n  box-sizing: border-box;\n}\n.section1[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  padding: calc(5.55vw + 0.08px) 11.25vw;\n  min-height: 100vh !important;\n  justify-content: center;\n}\n.pic[_ngcontent-%COMP%] {\n  width: 100vw;\n  height: 100vh;\n  object-fit: cover;\n}\n.loader[_ngcontent-%COMP%] {\n  padding-bottom: 20vh;\n  width: 100vw;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 8;\n  background-color: #121314;\n}\n.spinner[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  border: 5px solid #f3f3f3;\n  border-top: 5px solid #3498db;\n  border-radius: 50%;\n  animation: _ngcontent-%COMP%_spin 1s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.section1[_ngcontent-%COMP%] {\n  background-color: #FFFFFF;\n}\n.section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: calc(1.66vw + 0.096px);\n}\n.section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 700;\n  font-size: 16px;\n  line-height: 22px;\n  font-family: "NimbusSanL";\n  color: #747B80;\n  margin-bottom: 0px;\n  padding-bottom: calc(1.11vw + 0.016px);\n}\n.section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n.section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 51px;\n  line-height: 61px;\n  color: #121314;\n  padding-bottom: calc(2.77vw + 0.112px);\n  margin-bottom: 0;\n}\n.section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-style: normal;\n  font-weight: 400;\n  font-size: 38px;\n  line-height: 46px;\n  text-align: center;\n  font-family: "NimbusSanL";\n  color: #121314;\n  margin: 0px;\n}\n.section4[_ngcontent-%COMP%] {\n  background-color: #FBFBFB;\n}\n.subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: calc(2.77vw + 0.112px);\n  padding-top: calc(2.77vw + 0.112px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #FB4F23;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  padding-bottom: calc(0.55vw + 0.08px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 28px;\n  line-height: 39px;\n  color: #121314;\n  margin: 0px;\n}\n.subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n.section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n  padding-bottom: calc(1.11vw + 0.016px);\n  margin: 0px;\n}\n.head[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 700;\n  font-size: 21px;\n  line-height: 29px;\n  color: #121314;\n}\n#sub[_ngcontent-%COMP%] {\n  font-family: "NimbusSanL";\n  margin-bottom: 0;\n  font-style: normal;\n  font-weight: 400;\n  font-size: 21px;\n  line-height: 29px;\n  color: #747B80;\n}\n.pb-48[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n}\n.pb-24[_ngcontent-%COMP%] {\n  padding-bottom: (1.66vw + 0px) !important;\n}\n.progress-container[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 3px;\n  position: absolute;\n  bottom: calc(3.33vw + 0.048px);\n  left: 0;\n  overflow: hidden;\n}\n.loading-text[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0.048px;\n  left: 0;\n  font-family: "NimbusSanL";\n  margin-left: 5px;\n  font-style: normal;\n  font-weight: 400;\n  color: #96F2E6;\n}\n.loading-text[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  visibility: hidden;\n  opacity: 0;\n  transition: opacity 0.3s ease-in-out;\n}\n.loading-text[_ngcontent-%COMP%]:hover   p[_ngcontent-%COMP%] {\n  visibility: visible;\n  opacity: 1;\n}\n.progress-bar-loading[_ngcontent-%COMP%] {\n  width: 0%;\n  height: 100%;\n  background:\n    linear-gradient(\n      to top,\n      #9FEFFF 0%,\n      #7CF0FD 57.1%,\n      #96F2E6 78.1%);\n  border-radius: 5px;\n  animation: _ngcontent-%COMP%_progressStart 10s linear forwards;\n  box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);\n}\n@keyframes _ngcontent-%COMP%_progressStart {\n  0% {\n    width: 0%;\n  }\n  100% {\n    width: 60%;\n  }\n}\n.progress-bar-loading-full[_ngcontent-%COMP%] {\n  width: 0%;\n  height: 100%;\n  background:\n    linear-gradient(\n      to top,\n      #9FEFFF 0%,\n      #7CF0FD 57.1%,\n      #96F2E6 78.1%);\n  border-radius: 5px;\n  animation: _ngcontent-%COMP%_progressActive 1s linear forwards;\n  box-shadow: 0px -4px 12px rgba(23, 120, 141, 0.9);\n}\n@keyframes _ngcontent-%COMP%_progressActive {\n  0% {\n    width: 60%;\n  }\n  100% {\n    width: 100%;\n  }\n}\n.videoText[_ngcontent-%COMP%] {\n  padding-bottom: calc(3.33vw + 0.048px);\n  padding-left: calc(3.33vw + 0.048px);\n  padding-right: calc(3.33vw + 0.048px);\n  font-style: normal;\n  font-weight: 400;\n  font-size: 67px;\n  line-height: 80px;\n  position: absolute;\n  margin: 0px;\n  bottom: 0%;\n  line-height: 80.7px;\n  width: 100vw;\n  max-height: 90%;\n  overflow-y: scroll;\n}\n.section2[_ngcontent-%COMP%], \n.section5[_ngcontent-%COMP%] {\n  background: #FBFBFB;\n}\n@media only screen and (max-width: 767px) {\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%], \n   .section5[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px);\n  }\n  .section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    line-height: 16.8px;\n    margin-bottom: 0px;\n    padding-bottom: calc(2.91vw + 0.0108px);\n  }\n  .section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 38px;\n    line-height: 45.6px;\n    padding-bottom: calc(9.7vw + 0.036px);\n  }\n  .section1[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    padding-left: 0px;\n    padding-right: 0px;\n    padding-bottom: 0px;\n    font-size: 28px;\n    line-height: 39.2px;\n  }\n  .subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n    font-size: 28px;\n    line-height: 39.2px;\n    color: #FB4F23;\n  }\n  .subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n    padding-bottom: calc(1.94vw + 0.0072px);\n    font-size: 21px;\n    line-height: 29.4px;\n  }\n  .subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    font-size: 16px;\n    line-height: 22.4px;\n    padding-bottom: calc(9.7vw + 0.036px);\n  }\n  .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    padding-right: 0px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: calc(3.88vw + 0.0144px) !important;\n  }\n  .videoText[_ngcontent-%COMP%] {\n    font-style: normal;\n    font-weight: 400;\n    font-size: 51px;\n    line-height: 61px;\n  }\n}\n@media only screen and (min-width: 1600px) {\n  .section1[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%], \n   .section5[_ngcontent-%COMP%] {\n    max-width: 1660px !important;\n  }\n  .section1[_ngcontent-%COMP%] {\n    min-height: 900px !important;\n  }\n  .section[_ngcontent-%COMP%] {\n    max-width: 100vw;\n  }\n  .pic[_ngcontent-%COMP%] {\n    width: 100vw;\n  }\n  .loader[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n  .videoText[_ngcontent-%COMP%] {\n    padding-bottom: 10vw;\n    padding-left: 10vw;\n    width: 60vw;\n    overflow: hidden;\n  }\n  .progress-container[_ngcontent-%COMP%] {\n    width: 1440px;\n  }\n  .section-wrap[_ngcontent-%COMP%] {\n    width: 100vw;\n    display: flex;\n    justify-content: center;\n  }\n  .section2[_ngcontent-%COMP%], \n   .section3[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%], \n   .section5[_ngcontent-%COMP%] {\n    padding: 80px 48px;\n  }\n  .section1[_ngcontent-%COMP%] {\n    padding: 80px 162px;\n    min-height: 900px !important;\n  }\n  .section1[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    padding-bottom: 24px;\n  }\n  .section3[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    padding-bottom: 16px;\n  }\n  .section3[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%], \n   .section2[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    padding-bottom: 40px;\n  }\n  .subsec31[_ngcontent-%COMP%]   h5[_ngcontent-%COMP%] {\n    padding-bottom: 40px;\n    padding-top: 40px;\n  }\n  .subsec31[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n    padding-bottom: 8px;\n  }\n  .subsec31[_ngcontent-%COMP%]   p[_ngcontent-%COMP%], \n   .section4[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    padding-bottom: 16px;\n  }\n  .pb-48[_ngcontent-%COMP%] {\n    padding-bottom: 48px;\n  }\n  .pb-24[_ngcontent-%COMP%] {\n    padding-bottom: 24px !important;\n  }\n  .bgcolor-light-white[_ngcontent-%COMP%] {\n    background-color: #FBFBFB !important;\n  }\n}\n/*# sourceMappingURL=home.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/pages/home/home.component.ts", lineNumber: 14 });
 })();
 
 // src/app/pages/resources/resources.component.ts
-function ResourcesComponent_div_43_Template(rf, ctx) {
+function ResourcesComponent_div_46_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 15);
-    \u0275\u0275element(1, "app-resource-card", 21);
+    \u0275\u0275elementStart(0, "div", 16);
+    \u0275\u0275element(1, "app-resource-card", 22);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -62903,70 +62905,70 @@ var ResourcesComponent = class _ResourcesComponent {
   static \u0275fac = function ResourcesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ResourcesComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourcesComponent, selectors: [["app-resources"]], standalone: false, decls: 44, vars: 3, consts: [[1, "p-48", 2, "top", "90px", "position", "relative", "top", "90px"], [1, "mt-80", "fsr-51"], [1, "d-flex", "justify-content-between", "nav-resource", "fsr-21", "mt-80", "p-0", "mb-0"], ["href", "", 1, "nav-link", "nav-active", "p-0"], ["href", "", 1, "nav-link", "p-0"], [1, "mt-48"], [1, "row"], [1, "col-md-8", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res1.png", "alt", "", 1, "col-12", "w-100", "h-75", "p-0"], [1, "d-flex", "justify-content-between", "mt-4", "mb-2"], [1, "color-blue", "fsb-16", "p-0", "pe-1", "m-0"], [1, "fsr-16", "color-grey", "m-0", "p-0"], [1, "fsr-28", "link-text", 3, "href"], ["src", "assets/images/link.png", "alt", "", 1, "px-2", "pb-2"], [1, "color-lightgrey", "fsr-21", "my-3"], [1, "col-md-4", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res2.png", "width", "100%", "alt", "", 1, "col-12", "p-0"], [1, "w-75"], [1, "fsr-28", "link-text", "pe-1", 3, "href"], [1, "row", "mt-48"], ["class", "col-md-4 col-12 h-100 card-link-hover", 4, "ngFor", "ngForOf"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourcesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourcesComponent, selectors: [["app-resources"]], standalone: false, decls: 47, vars: 3, consts: [[1, "section-wrap"], [1, "p-48", "top-90", 2, "position", "relative", "max-width", "1600px"], [1, "mt-80", "fsr-51"], [1, "d-flex", "justify-content-between", "nav-resource", "fsr-21", "mt-80", "p-0", "mb-0"], ["href", "", 1, "nav-link", "nav-active", "p-0"], ["href", "", 1, "nav-link", "p-0"], [1, "p-80", "mb-80"], [1, "row"], [1, "col-md-8", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res1.png", "alt", "", 1, "col-12", "w-100", "h-75", "p-0"], [1, "d-flex", "justify-content-between", "mt-4", "mb-2"], [1, "color-blue", "fsb-16", "p-0", "pe-1", "m-0"], [1, "fsr-16", "color-grey", "m-0", "p-0"], [1, "fsr-28", "link-text", 3, "href"], ["src", "assets/images/link.png", "alt", "", 1, "px-2", "pb-2"], [1, "color-lightgrey", "fsr-21", "my-3"], [1, "col-md-4", "col-12", "h-100", "card-link-hover"], ["src", "assets/images/res2.png", "width", "100%", "alt", "", 1, "col-12", "p-0"], [1, "w-75"], [1, "fsr-28", "link-text", "pe-1", 3, "href"], [1, "row", "mt-48", "mb-48"], ["class", "col-md-4 col-12 h-100 card-link-hover", 4, "ngFor", "ngForOf"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourcesComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0)(1, "p", 1);
-      \u0275\u0275text(2, "Resources");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "ul", 2)(4, "a", 3);
-      \u0275\u0275text(5, "All");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(6, "a", 4);
-      \u0275\u0275text(7, "Blog");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(8, "a", 4);
-      \u0275\u0275text(9, "Projects");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(10, "a", 4);
-      \u0275\u0275text(11, "Post");
+      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "div")(3, "p", 2);
+      \u0275\u0275text(4, "Resources");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(12, "div", 5)(13, "div", 6)(14, "div", 7);
-      \u0275\u0275element(15, "img", 8);
-      \u0275\u0275elementStart(16, "div", 9)(17, "p", 10);
-      \u0275\u0275text(18, "PROJECT\xA0");
+      \u0275\u0275elementStart(5, "div")(6, "ul", 3)(7, "a", 4);
+      \u0275\u0275text(8, "All");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(19, "span", 11);
-      \u0275\u0275text(20, " Dec 20, 2024");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(21, "div")(22, "a", 12);
-      \u0275\u0275text(23, "RNA-Seq Analysis and Gene Regulation ");
+      \u0275\u0275elementStart(9, "a", 5);
+      \u0275\u0275text(10, "Blog");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(24, "i");
-      \u0275\u0275element(25, "img", 13);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(26, "p", 14);
-      \u0275\u0275text(27, "Analyzing RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns.");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(28, "div", 15);
-      \u0275\u0275element(29, "img", 16);
-      \u0275\u0275elementStart(30, "div", 9)(31, "p", 10);
-      \u0275\u0275text(32, "PROJECT\xA0");
+      \u0275\u0275elementStart(11, "a", 5);
+      \u0275\u0275text(12, "Projects");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(33, "span", 11);
-      \u0275\u0275text(34, " Dec 20, 2024");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(35, "div", 17)(36, "a", 18);
-      \u0275\u0275text(37, "RNA-Seq Analysis and Gene Regulation");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(38, "i");
-      \u0275\u0275element(39, "img", 13);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(40, "p", 14);
-      \u0275\u0275text(41, "Analyzing RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns.");
+      \u0275\u0275elementStart(13, "a", 5);
+      \u0275\u0275text(14, "Post");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(42, "div", 19);
-      \u0275\u0275template(43, ResourcesComponent_div_43_Template, 2, 5, "div", 20);
+      \u0275\u0275elementStart(15, "div", 6)(16, "div", 7)(17, "div", 8);
+      \u0275\u0275element(18, "img", 9);
+      \u0275\u0275elementStart(19, "div", 10)(20, "p", 11);
+      \u0275\u0275text(21, "PROJECT\xA0");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(22, "span", 12);
+      \u0275\u0275text(23, " Dec 20, 2024");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(24, "div")(25, "a", 13);
+      \u0275\u0275text(26, "RNA-Seq Analysis and Gene Regulation ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(27, "i");
+      \u0275\u0275element(28, "img", 14);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(29, "p", 15);
+      \u0275\u0275text(30, "Analyzing RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(31, "div", 16);
+      \u0275\u0275element(32, "img", 17);
+      \u0275\u0275elementStart(33, "div", 10)(34, "p", 11);
+      \u0275\u0275text(35, "PROJECT\xA0");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(36, "span", 12);
+      \u0275\u0275text(37, " Dec 20, 2024");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(38, "div", 18)(39, "a", 19);
+      \u0275\u0275text(40, "RNA-Seq Analysis and Gene Regulation");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(41, "i");
+      \u0275\u0275element(42, "img", 14);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(43, "p", 15);
+      \u0275\u0275text(44, "Analyzing RNA sequencing (RNA-Seq) data for uncovering gene regulation patterns.");
       \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(45, "div", 20);
+      \u0275\u0275template(46, ResourcesComponent_div_46_Template, 2, 5, "div", 21);
+      \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(22);
+      \u0275\u0275advance(25);
       \u0275\u0275property("href", ctx.config.singleResource + "&id=1", \u0275\u0275sanitizeUrl);
       \u0275\u0275advance(14);
       \u0275\u0275property("href", ctx.config.singleResource + "&id=1", \u0275\u0275sanitizeUrl);
       \u0275\u0275advance(7);
       \u0275\u0275property("ngForOf", ctx.resources);
     }
-  }, dependencies: [NgForOf, ResourceCardComponent], styles: ["\n\n.nav-resource[_ngcontent-%COMP%] {\n  width: 20%;\n}\n.nav-active[_ngcontent-%COMP%] {\n  color: #FB4F23;\n}\na[_ngcontent-%COMP%] {\n  color: black;\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  position: inherit;\n}\n@media only screen and (max-width: 767px) {\n  .nav-resource[_ngcontent-%COMP%] {\n    width: 60%;\n  }\n}\n/*# sourceMappingURL=resources.component.css.map */"], data: { animation: [
+  }, dependencies: [NgForOf, ResourceCardComponent], styles: ["\n\n.nav-resource[_ngcontent-%COMP%] {\n  width: 20%;\n}\n.nav-active[_ngcontent-%COMP%] {\n  color: #FB4F23;\n}\na[_ngcontent-%COMP%] {\n  color: black;\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  position: inherit;\n}\n.top-90[_ngcontent-%COMP%] {\n  top: 110px !important;\n}\n@media only screen and (max-width: 767px) {\n  .nav-resource[_ngcontent-%COMP%] {\n    width: 60%;\n  }\n}\n@media only screen and (min-width: 1600px) {\n  .section-wrap[_ngcontent-%COMP%] {\n    width: 100vw;\n    height: max-content !important;\n    display: flex;\n    justify-content: center;\n  }\n  .top-90[_ngcontent-%COMP%] {\n    top: 110px !important;\n  }\n}\n/*# sourceMappingURL=resources.component.css.map */"], data: { animation: [
     trigger("slideUp", [
       state("hidden", style({ transform: "translateY(100px)", opacity: 0 })),
       state("visible", style({ transform: "translateY(0)", opacity: 1 }))
@@ -63107,7 +63109,7 @@ var ResourceDetailComponent = class _ResourceDetailComponent {
   static \u0275fac = function ResourceDetailComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ResourceDetailComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourceDetailComponent, selectors: [["app-resource-detail"]], standalone: false, decls: 82, vars: 1, consts: [["appScrolleffects", "", 1, "container-fluid", "col-sm-12", "col-md-12", "p-48", 2, "overflow-x", "hidden", "top", "90px", "position", "relative"], [1, "mt-80"], [1, "fsr-21", "color-grey"], [1, "fsr-51"], [1, "row", "mt-80"], ["src", "assets/images/res1.png", "alt", "", 1, "col-md-8", "col-12"], [1, "d-flex", "flex-column", "mt-80"], [1, "row", "my-4"], [1, "text-uppercase", "col-md-4", "col-12", "fsb-21"], [1, "col-md-8", "col-12", "fsr-21"], [1, "fsb-21"], [1, "fsr-21", "my-5"], [1, "fsr-21", "multi-line"], [1, "fsr-51", "mt-80"], ["class", "col-md-4 col-12 h-100 wipe-up card-hover", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100", "wipe-up", "card-hover"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourceDetailComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ResourceDetailComponent, selectors: [["app-resource-detail"]], standalone: false, decls: 82, vars: 1, consts: [["appScrolleffects", "", 1, "container-fluid", "col-sm-12", "col-md-12", "p-48", "top-90", 2, "overflow-x", "hidden", "position", "relative", "max-width", "1600px"], [1, "mt-80"], [1, "fsr-21", "color-grey"], [1, "fsr-51"], [1, "row", "mt-80"], ["src", "assets/images/res1.png", "alt", "", 1, "col-md-8", "col-12"], [1, "d-flex", "flex-column", "mt-80"], [1, "row", "my-4"], [1, "text-uppercase", "col-md-4", "col-12", "fsb-21"], [1, "col-md-8", "col-12", "fsr-21"], [1, "fsb-21"], [1, "fsr-21", "my-5"], [1, "fsr-21", "multi-line"], [1, "p-80", "mb-80"], ["class", "col-md-4 col-12 h-100 card-hover", "style", "position: relative;z-index: 9999;", 4, "ngFor", "ngForOf"], [1, "col-md-4", "col-12", "h-100", "card-hover", 2, "position", "relative", "z-index", "9999"], [3, "title", "description", "image", "postedOn", "type"]], template: function ResourceDetailComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "section", 1)(2, "p", 2);
       \u0275\u0275text(3, "Dec 20,2024");
@@ -63190,7 +63192,7 @@ var ResourceDetailComponent = class _ResourceDetailComponent {
       \u0275\u0275elementStart(75, "p");
       \u0275\u0275text(76, " We take pride in blending expertise with education, helping our clients achieve their scientific goals while gaining confidence in bioinformatics practices. ");
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(77, "section")(78, "p", 13);
+      \u0275\u0275elementStart(77, "section", 13)(78, "p", 3);
       \u0275\u0275text(79, "Check out our other Resources");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(80, "div", 4);
@@ -63201,7 +63203,7 @@ var ResourceDetailComponent = class _ResourceDetailComponent {
       \u0275\u0275advance(81);
       \u0275\u0275property("ngForOf", ctx.resources);
     }
-  }, dependencies: [NgForOf, ResourceCardComponent, ScrolleffectsDirective], styles: ["\n\nul[_ngcontent-%COMP%] {\n  list-style-type: disc !important;\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  position: inherit;\n}\n/*# sourceMappingURL=resource-detail.component.css.map */"] });
+  }, dependencies: [NgForOf, ResourceCardComponent, ScrolleffectsDirective], styles: ["\n\nul[_ngcontent-%COMP%] {\n  list-style-type: disc !important;\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  position: inherit;\n}\n.top-90[_ngcontent-%COMP%] {\n  top: 90px !important;\n}\n@media only screen and (min-width: 1600px) {\n  .section-wrap[_ngcontent-%COMP%] {\n    width: 100vw;\n    height: max-content !important;\n    display: flex;\n    justify-content: center;\n  }\n  .top-90[_ngcontent-%COMP%] {\n    top: 110px !important;\n  }\n}\n/*# sourceMappingURL=resource-detail.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ResourceDetailComponent, { className: "ResourceDetailComponent", filePath: "src/app/pages/resource-detail/resource-detail.component.ts", lineNumber: 13 });
@@ -63266,53 +63268,53 @@ var AboutusComponent = class _AboutusComponent {
   static \u0275fac = function AboutusComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AboutusComponent)(\u0275\u0275directiveInject(MatDialog));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AboutusComponent, selectors: [["app-aboutus"]], standalone: false, decls: 40, vars: 0, consts: [[1, "slide-up-page", "mb-80", 2, "position", "relative", "top", "90px"], [1, "p-48", "p-80", "section1", "section"], [1, "fsr-67", "w-75", "lh-80"], [1, "row", "mt-48"], [1, "col-md-4", "col-12"], [1, "col-md-8", "col-12"], [1, "fsr-21", "lh-29"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4", 3, "click"], [1, "p-48", "p-80", "section2", "section", "bg-lightwhite"], [1, "text-right", "my-3"], [1, "color-lightgrey", "fsb-16"], [1, "fsr-51", "lh-61"], [1, "mt-80"], [1, "row", "my-3"], [1, "col-md-4", "text-uppercase", "fsb-21", "lh-29"], [1, "col-md-8", "col-12", "multi-line", "fsr-21", "lh-29", "txt-black"], [1, "p-48", "p-80"], [1, "lh-61", "bg-white"], [1, "text-secondary", "fsb-16", "p-0", "lh-22"], [1, "fsr-51"]], template: function AboutusComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AboutusComponent, selectors: [["app-aboutus"]], standalone: false, decls: 43, vars: 0, consts: [[1, "slide-up-page", "mb-80", 2, "position", "relative", "top", "90px"], [1, "section-wrap"], [1, "p-48", "p-80", "section1", "section", 2, "max-width", "1600px"], [1, "fsr-67", "w-75", "lh-80"], [1, "row", "mt-48"], [1, "col-md-4", "col-12"], [1, "col-md-8", "col-12"], [1, "fsr-21", "lh-29"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4", 3, "click"], [1, "section-wrap", "bg-lightwhite"], [1, "p-48", "p-80", "section2", "section", "bg-lightwhite", 2, "max-width", "1600px"], [1, "text-right", "my-3"], [1, "color-lightgrey", "fsb-16"], [1, "fsr-51", "lh-61"], [1, "mt-80"], [1, "row", "my-3"], [1, "col-md-4", "text-uppercase", "fsb-21", "lh-29"], [1, "col-md-8", "col-12", "multi-line", "fsr-21", "lh-29", "txt-black"], [1, "p-48", "p-80", 2, "max-width", "1600px"], [1, "lh-61", "bg-white"], [1, "text-secondary", "fsb-16", "p-0", "lh-22"], [1, "fsr-51"]], template: function AboutusComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "p", 2);
-      \u0275\u0275text(3, "We Revolutionize Research Through Data-Driven Innovation");
+      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "p", 3);
+      \u0275\u0275text(4, "We Revolutionize Research Through Data-Driven Innovation");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(4, "div", 3);
-      \u0275\u0275element(5, "div", 4);
-      \u0275\u0275elementStart(6, "div", 5)(7, "p", 6);
-      \u0275\u0275text(8, " At DNA2Discovery, we collaborate with researchers and academic institutions to propel life sciences forward with innovative bioinformatics solutions, accelerating discoveries and driving scientific breakthroughs. ");
+      \u0275\u0275elementStart(5, "div", 4);
+      \u0275\u0275element(6, "div", 5);
+      \u0275\u0275elementStart(7, "div", 6)(8, "p", 7);
+      \u0275\u0275text(9, " At DNA2Discovery, we collaborate with researchers and academic institutions to propel life sciences forward with innovative bioinformatics solutions, accelerating discoveries and driving scientific breakthroughs. ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "button", 7);
-      \u0275\u0275listener("click", function AboutusComponent_Template_button_click_9_listener() {
+      \u0275\u0275elementStart(10, "button", 8);
+      \u0275\u0275listener("click", function AboutusComponent_Template_button_click_10_listener() {
         return ctx.openContactUs();
       });
-      \u0275\u0275text(10, "Get in Touch");
-      \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(11, "div", 8)(12, "div", 9)(13, "p", 10);
-      \u0275\u0275text(14, "Vision and Mission");
+      \u0275\u0275text(11, "Get in Touch");
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(12, "div", 9)(13, "div", 10)(14, "div", 11)(15, "p", 12);
+      \u0275\u0275text(16, "Vision and Mission");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(15, "p", 11);
-      \u0275\u0275text(16, "Igniting Innovation to Create Lasting Impact");
+      \u0275\u0275elementStart(17, "p", 13);
+      \u0275\u0275text(18, "Igniting Innovation to Create Lasting Impact");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(17, "div", 12)(18, "div", 13)(19, "h2", 14);
-      \u0275\u0275text(20, "Vision");
+      \u0275\u0275elementStart(19, "div", 14)(20, "div", 15)(21, "h2", 16);
+      \u0275\u0275text(22, "Vision");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(21, "pre", 15);
-      \u0275\u0275text(22, "Our vision is to lead the way in bioinformatics, shaping the future of life sciences through unparalleled expertise in data analysis, technology, and innovation.\n                \nWe strive to be the trusted partner for researchers and institutions dedicated to deciphering complex biological data and advancing their groundbreaking discoveries.\n                \nBy advancing bioinformatics methodologies and technologies, we aim to drive transformative breakthroughs that deepen biological understanding and enhance human health.\n            ");
+      \u0275\u0275elementStart(23, "pre", 17);
+      \u0275\u0275text(24, "Our vision is to lead the way in bioinformatics, shaping the future of life sciences through unparalleled expertise in data analysis, technology, and innovation.\n                    \n    We strive to be the trusted partner for researchers and institutions dedicated to deciphering complex biological data and advancing their groundbreaking discoveries.\n                    \n    By advancing bioinformatics methodologies and technologies, we aim to drive transformative breakthroughs that deepen biological understanding and enhance human health.\n                ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(23, "div", 13)(24, "h2", 14);
-      \u0275\u0275text(25, "Mission");
+      \u0275\u0275elementStart(25, "div", 15)(26, "h2", 16);
+      \u0275\u0275text(27, "Mission");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(26, "pre", 15);
-      \u0275\u0275text(27, "We are dedicated to advancing the accuracy, efficiency, and depth of research through a range of customized services, including bioinformatics training, custom pipeline development, advanced sequencing analysis, statistical testing, data visualization, epigenetics analysis, and cloud tool deployment.\n                \nWe address a wide spectrum of genetic research across diverse biological systems, driving innovative solutions to advance our understanding of health, disease, and ecosystems.\n            ");
-      \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(28, "div", 16)(29, "section", 17)(30, "div")(31, "section", 18);
-      \u0275\u0275text(32, "Our Team");
+      \u0275\u0275elementStart(28, "pre", 17);
+      \u0275\u0275text(29, "We are dedicated to advancing the accuracy, efficiency, and depth of research through a range of customized services, including bioinformatics training, custom pipeline development, advanced sequencing analysis, statistical testing, data visualization, epigenetics analysis, and cloud tool deployment.\n                    \n    We address a wide spectrum of genetic research across diverse biological systems, driving innovative solutions to advance our understanding of health, disease, and ecosystems.\n                ");
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(30, "div", 1)(31, "div", 18)(32, "section", 19)(33, "div")(34, "section", 20);
+      \u0275\u0275text(35, "Our Team");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(33, "section", 19);
-      \u0275\u0275text(34, "About our Expertise");
+      \u0275\u0275elementStart(36, "section", 21);
+      \u0275\u0275text(37, "About our Expertise");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(35, "div", 3);
-      \u0275\u0275element(36, "div", 4);
-      \u0275\u0275elementStart(37, "div", 5)(38, "p", 6);
-      \u0275\u0275text(39, "We are a team of passionate bioinformaticians and data scientists and we are dedicated to providing innovative solutions in life science research. Our expertise spans a wide range of bioinformatics services, including genomic sequencing, and computational modeling, all designed to unlock the potential hidden within complex biological data.");
-      \u0275\u0275elementEnd()()()()()();
+      \u0275\u0275elementStart(38, "div", 4);
+      \u0275\u0275element(39, "div", 5);
+      \u0275\u0275elementStart(40, "div", 6)(41, "p", 7);
+      \u0275\u0275text(42, "We are a team of passionate bioinformaticians and data scientists and we are dedicated to providing innovative solutions in life science research. Our expertise spans a wide range of bioinformatics services, including genomic sequencing, and computational modeling, all designed to unlock the potential hidden within complex biological data.");
+      \u0275\u0275elementEnd()()()()()()();
     }
-  }, styles: ["\n\n.txt-black[_ngcontent-%COMP%] {\n  color: #121214 !important;\n}\n@media (max-width: 767px) {\n  .aboutus-gallery[_ngcontent-%COMP%]   .col-8[_ngcontent-%COMP%]:nth-child(odd) {\n    margin-left: auto;\n  }\n  .mt-80[_ngcontent-%COMP%] {\n    margin-top: calc(15.53vw + 0.0164px) !important;\n  }\n  .txt-black[_ngcontent-%COMP%] {\n    color: #747B80 !important;\n  }\n}\n/*# sourceMappingURL=aboutus.component.css.map */"] });
+  }, styles: ["\n\n.txt-black[_ngcontent-%COMP%] {\n  color: #121214 !important;\n}\n.bgcolor-light-white[_ngcontent-%COMP%] {\n  background-color: #FBFBFB !important;\n}\n@media (max-width: 767px) {\n  .aboutus-gallery[_ngcontent-%COMP%]   .col-8[_ngcontent-%COMP%]:nth-child(odd) {\n    margin-left: auto;\n  }\n  .mt-80[_ngcontent-%COMP%] {\n    margin-top: calc(15.53vw + 0.0164px) !important;\n  }\n  .txt-black[_ngcontent-%COMP%] {\n    color: #747B80 !important;\n  }\n}\n@media only screen and (min-width: 1600px) {\n  .section-wrap[_ngcontent-%COMP%] {\n    width: 100vw;\n    height: max-content !important;\n    display: flex;\n    justify-content: center;\n  }\n}\n/*# sourceMappingURL=aboutus.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AboutusComponent, { className: "AboutusComponent", filePath: "src/app/pages/aboutus/aboutus.component.ts", lineNumber: 15 });
@@ -64474,6 +64476,18 @@ var NavbarComponent = class _NavbarComponent {
     display: none;
   }
 }
+@media only screen and (min-width: 1600px) {
+  .logo-size[_ngcontent-%COMP%] {
+    width: 165px;
+    height: 65px;
+  }
+  .serviceNavBar-black[_ngcontent-%COMP%] {
+    gap: 16px;
+  }
+  .serviceNavBar[_ngcontent-%COMP%] {
+    gap: 16px;
+  }
+}
 /*# sourceMappingURL=navbar.component.css.map */`] });
 };
 (() => {
@@ -64489,74 +64503,74 @@ var FooterComponent = class _FooterComponent {
   static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FooterComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 59, vars: 9, consts: [[1, "footer", "foot-pad"], [1, "row", "m-0"], [1, "col-md-5", "col-sm-12"], [3, "href"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com", 1, "pr-8"], ["src", "assets/icons/Facebook.svg", "alt", ""], ["href", "https://www.instagram.com", 1, "pr-8"], ["src", "assets/icons/Instagram.svg", "alt", ""], ["href", "https://github.com/DNA2discovery-D2D", 1, "pr-8"], ["src", "assets/icons/github.svg", "alt", ""], ["href", "https://www.twitter.com", 1, "pr-8"], ["src", "assets/icons/X.svg", "alt", ""], ["href", "https://www.linkedin.com/company/dna2discovery/", 1, "pr-8"], ["src", "assets/icons/LinkedIn.svg", "alt", ""], ["href", "https://www.youtube.com", 1, "pr-8"], ["src", "assets/icons/Youtube.svg", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-sm-12"], [1, "row"], [1, "col-md-6", "col-sm-12"], [1, "text-white", "mt-43", "fsr-21"], [1, "d-flex", "flex-column"], [1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline", 3, "href"], [1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline", 3, "href"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16-14", "mt80"]], template: function FooterComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], standalone: false, decls: 60, vars: 9, consts: [[1, "section-wrap"], [1, "footer", "foot-pad", 2, "max-width", "1600px"], [1, "row", "m-0"], [1, "col-md-5", "col-sm-12"], [3, "href"], ["src", "assets/images/Logo-White.svg", "alt", "Logo", "width", "84px", "height", "36px", 1, "mb-4"], [1, "d-flex", "justify-content-between", "w-50", "mb-4"], ["href", "https://www.facebook.com", 1, "pr-8"], ["src", "assets/icons/Facebook.svg", "alt", ""], ["href", "https://www.instagram.com", 1, "pr-8"], ["src", "assets/icons/Instagram.svg", "alt", ""], ["href", "https://github.com/DNA2discovery-D2D", 1, "pr-8"], ["src", "assets/icons/github.svg", "alt", ""], ["href", "https://www.twitter.com", 1, "pr-8"], ["src", "assets/icons/X.svg", "alt", ""], ["href", "https://www.linkedin.com/company/dna2discovery/", 1, "pr-8"], ["src", "assets/icons/LinkedIn.svg", "alt", ""], ["href", "https://www.youtube.com", 1, "pr-8"], ["src", "assets/icons/Youtube.svg", "alt", ""], [1, "flex-column", "d-flex"], ["href", "", 1, "fit-content", "color-grey", "no-underline", "fsr-12", "my-2", "link-underline"], [1, "col-md-7", "col-sm-12"], [1, "row"], [1, "col-md-6", "col-sm-12"], [1, "text-white", "mt-43", "fsr-21"], [1, "d-flex", "flex-column"], [1, "fit-content", "color-lightwhite", "no-underline", "my-2", "fsr-16", "link-underline", 3, "href"], [1, "fit-content", "color-lightwhite", "my-2", "fsr-16", "no-underline", "link-underline", 3, "href"], [1, "text-center", "m-0", "color-lightgrey", "fsr-16-14", "mt80"]], template: function FooterComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
-      \u0275\u0275element(4, "img", 4);
+      \u0275\u0275elementStart(0, "div", 0)(1, "footer", 1)(2, "div", 2)(3, "div", 3)(4, "a", 4);
+      \u0275\u0275element(5, "img", 5);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(5, "div", 5)(6, "a", 6)(7, "i");
-      \u0275\u0275element(8, "img", 7);
+      \u0275\u0275elementStart(6, "div", 6)(7, "a", 7)(8, "i");
+      \u0275\u0275element(9, "img", 8);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(9, "a", 8)(10, "i");
-      \u0275\u0275element(11, "img", 9);
+      \u0275\u0275elementStart(10, "a", 9)(11, "i");
+      \u0275\u0275element(12, "img", 10);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(12, "a", 10)(13, "i");
-      \u0275\u0275element(14, "img", 11);
+      \u0275\u0275elementStart(13, "a", 11)(14, "i");
+      \u0275\u0275element(15, "img", 12);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(15, "a", 12)(16, "i");
-      \u0275\u0275element(17, "img", 13);
+      \u0275\u0275elementStart(16, "a", 13)(17, "i");
+      \u0275\u0275element(18, "img", 14);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(18, "a", 14)(19, "i");
-      \u0275\u0275element(20, "img", 15);
+      \u0275\u0275elementStart(19, "a", 15)(20, "i");
+      \u0275\u0275element(21, "img", 16);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(21, "a", 16)(22, "i");
-      \u0275\u0275element(23, "img", 17);
+      \u0275\u0275elementStart(22, "a", 17)(23, "i");
+      \u0275\u0275element(24, "img", 18);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(24, "div", 18)(25, "a", 19);
-      \u0275\u0275text(26, "Privacy Policy");
+      \u0275\u0275elementStart(25, "div", 19)(26, "a", 20);
+      \u0275\u0275text(27, "Privacy Policy");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(27, "a", 19);
-      \u0275\u0275text(28, "Terms of Service");
+      \u0275\u0275elementStart(28, "a", 20);
+      \u0275\u0275text(29, "Terms of Service");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(29, "a", 19);
-      \u0275\u0275text(30, "Cookies Settings");
+      \u0275\u0275elementStart(30, "a", 20);
+      \u0275\u0275text(31, "Cookies Settings");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(31, "div", 20)(32, "div", 21)(33, "div", 22)(34, "h4", 23);
-      \u0275\u0275text(35, "Company");
+      \u0275\u0275elementStart(32, "div", 21)(33, "div", 22)(34, "div", 23)(35, "h4", 24);
+      \u0275\u0275text(36, "Company");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(36, "div", 24)(37, "a", 25);
-      \u0275\u0275text(38, "Home");
+      \u0275\u0275elementStart(37, "div", 25)(38, "a", 26);
+      \u0275\u0275text(39, "Home");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(39, "a", 25);
-      \u0275\u0275text(40, "About Us");
+      \u0275\u0275elementStart(40, "a", 26);
+      \u0275\u0275text(41, "About Us");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(41, "a", 25);
-      \u0275\u0275text(42, "Resources");
+      \u0275\u0275elementStart(42, "a", 26);
+      \u0275\u0275text(43, "Resources");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(43, "div", 22)(44, "h4", 23);
-      \u0275\u0275text(45, "Services");
+      \u0275\u0275elementStart(44, "div", 23)(45, "h4", 24);
+      \u0275\u0275text(46, "Services");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(46, "div", 24)(47, "a", 26);
-      \u0275\u0275text(48, "Bioinformatics Analytics");
+      \u0275\u0275elementStart(47, "div", 25)(48, "a", 27);
+      \u0275\u0275text(49, "Bioinformatics Analytics");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(49, "a", 26);
-      \u0275\u0275text(50, "Bioinformatics Engineering");
+      \u0275\u0275elementStart(50, "a", 27);
+      \u0275\u0275text(51, "Bioinformatics Engineering");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(51, "a", 26);
-      \u0275\u0275text(52, "Statistical Testing and Data Interpretation");
+      \u0275\u0275elementStart(52, "a", 27);
+      \u0275\u0275text(53, "Statistical Testing and Data Interpretation");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(53, "a", 26);
-      \u0275\u0275text(54, "Sequencing Technology Expertise");
+      \u0275\u0275elementStart(54, "a", 27);
+      \u0275\u0275text(55, "Sequencing Technology Expertise");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(55, "a", 26);
-      \u0275\u0275text(56, "Bioinformatics Training");
+      \u0275\u0275elementStart(56, "a", 27);
+      \u0275\u0275text(57, "Bioinformatics Training");
       \u0275\u0275elementEnd()()()()()();
-      \u0275\u0275elementStart(57, "p", 27);
-      \u0275\u0275text(58, "\xA9 2025 D2D. All rights reserved.");
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(58, "p", 28);
+      \u0275\u0275text(59, "\xA9 2025 D2D. All rights reserved.");
+      \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(3);
+      \u0275\u0275advance(4);
       \u0275\u0275property("href", ctx.config.home, \u0275\u0275sanitizeUrl);
       \u0275\u0275advance(34);
       \u0275\u0275property("href", ctx.config.home, \u0275\u0275sanitizeUrl);
@@ -64575,7 +64589,7 @@ var FooterComponent = class _FooterComponent {
       \u0275\u0275advance(2);
       \u0275\u0275property("href", ctx.config.services + "&service=bioInfoTraining", \u0275\u0275sanitizeUrl);
     }
-  }, styles: ["\n\n.footer[_ngcontent-%COMP%] {\n  background-color: #012323;\n  margin-bottom: 0 !important;\n  margin-left: 0 !important;\n  margin-right: 0 !important;\n  padding: 0;\n  bottom: 0;\n}\n.row[_ngcontent-%COMP%] {\n  margin-left: 0px !important;\n  margin-right: 0px !important;\n}\n.foot-pad[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px) !important;\n}\n.mt80[_ngcontent-%COMP%] {\n  margin-top: 80px !important;\n}\n.no-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%]:hover {\n  text-decoration: underline;\n  text-decoration-color: whitesmoke !important;\n}\n.mt-43[_ngcontent-%COMP%] {\n  margin-top: 0px;\n  margin-bottom: calc(1.11vw + 0.016px);\n}\n.p-64[_ngcontent-%COMP%] {\n  padding-top: calc(2.91vw + 0.096px);\n  padding-bottom: calc(5.55vw + 0.08px);\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  padding-right: 0px !important;\n  padding-left: 0px !important;\n}\n.fsr-16-14[_ngcontent-%COMP%] {\n  font-size: 16px;\n  font-weight: 400;\n}\n@media only screen and (max-width: 767px) {\n  .pr-8[_ngcontent-%COMP%] {\n    padding-right: calc(5.41vw + 0.0108px) !important;\n  }\n  .mt-43[_ngcontent-%COMP%] {\n    margin-top: calc(7.76vw + 0.0288px);\n    margin-bottom: calc(3.88vw + 0.0144px);\n  }\n  .fsr-16[_ngcontent-%COMP%] {\n    font-size: 12px !important;\n    font-weight: 400;\n  }\n  .fsr-21[_ngcontent-%COMP%] {\n    font-size: 16px !important;\n    font-weight: 400;\n  }\n  .color-lightwhite[_ngcontent-%COMP%] {\n    color: #BFC0C0 !important;\n  }\n  .p-64[_ngcontent-%COMP%] {\n    padding-top: calc(10.19vw + 0.0172px);\n    padding-bottom: calc(15.53vw + 0.0164px);\n  }\n  .foot-pad[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px) !important;\n  }\n  .mt80[_ngcontent-%COMP%] {\n    margin-top: 80px !important;\n  }\n  .fsr-16-14[_ngcontent-%COMP%] {\n    font-size: 14px !important;\n    font-weight: 400;\n  }\n}\n/*# sourceMappingURL=footer.component.css.map */"] });
+  }, styles: ["\n\n.footer[_ngcontent-%COMP%] {\n  background-color: #012323;\n  margin-bottom: 0 !important;\n  margin-left: 0 !important;\n  margin-right: 0 !important;\n  padding: 0;\n  bottom: 0;\n}\n.row[_ngcontent-%COMP%] {\n  margin-left: 0px !important;\n  margin-right: 0px !important;\n}\n.foot-pad[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px) !important;\n}\n.mt80[_ngcontent-%COMP%] {\n  margin-top: 80px !important;\n}\n.no-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.link-underline[_ngcontent-%COMP%]:hover {\n  text-decoration: underline;\n  text-decoration-color: whitesmoke !important;\n}\n.mt-43[_ngcontent-%COMP%] {\n  margin-top: 0px;\n  margin-bottom: calc(1.11vw + 0.016px);\n}\n.p-64[_ngcontent-%COMP%] {\n  padding-top: calc(2.91vw + 0.096px);\n  padding-bottom: calc(5.55vw + 0.08px);\n}\n.col[_ngcontent-%COMP%], \n.col-1[_ngcontent-%COMP%], \n.col-10[_ngcontent-%COMP%], \n.col-11[_ngcontent-%COMP%], \n.col-12[_ngcontent-%COMP%], \n.col-2[_ngcontent-%COMP%], \n.col-3[_ngcontent-%COMP%], \n.col-4[_ngcontent-%COMP%], \n.col-5[_ngcontent-%COMP%], \n.col-6[_ngcontent-%COMP%], \n.col-7[_ngcontent-%COMP%], \n.col-8[_ngcontent-%COMP%], \n.col-9[_ngcontent-%COMP%], \n.col-auto[_ngcontent-%COMP%], \n.col-lg[_ngcontent-%COMP%], \n.col-lg-1[_ngcontent-%COMP%], \n.col-lg-10[_ngcontent-%COMP%], \n.col-lg-11[_ngcontent-%COMP%], \n.col-lg-12[_ngcontent-%COMP%], \n.col-lg-2[_ngcontent-%COMP%], \n.col-lg-3[_ngcontent-%COMP%], \n.col-lg-4[_ngcontent-%COMP%], \n.col-lg-5[_ngcontent-%COMP%], \n.col-lg-6[_ngcontent-%COMP%], \n.col-lg-7[_ngcontent-%COMP%], \n.col-lg-8[_ngcontent-%COMP%], \n.col-lg-9[_ngcontent-%COMP%], \n.col-lg-auto[_ngcontent-%COMP%], \n.col-md[_ngcontent-%COMP%], \n.col-md-1[_ngcontent-%COMP%], \n.col-md-10[_ngcontent-%COMP%], \n.col-md-11[_ngcontent-%COMP%], \n.col-md-12[_ngcontent-%COMP%], \n.col-md-2[_ngcontent-%COMP%], \n.col-md-3[_ngcontent-%COMP%], \n.col-md-4[_ngcontent-%COMP%], \n.col-md-5[_ngcontent-%COMP%], \n.col-md-6[_ngcontent-%COMP%], \n.col-md-7[_ngcontent-%COMP%], \n.col-md-8[_ngcontent-%COMP%], \n.col-md-9[_ngcontent-%COMP%], \n.col-md-auto[_ngcontent-%COMP%], \n.col-sm[_ngcontent-%COMP%], \n.col-sm-1[_ngcontent-%COMP%], \n.col-sm-10[_ngcontent-%COMP%], \n.col-sm-11[_ngcontent-%COMP%], \n.col-sm-12[_ngcontent-%COMP%], \n.col-sm-2[_ngcontent-%COMP%], \n.col-sm-3[_ngcontent-%COMP%], \n.col-sm-4[_ngcontent-%COMP%], \n.col-sm-5[_ngcontent-%COMP%], \n.col-sm-6[_ngcontent-%COMP%], \n.col-sm-7[_ngcontent-%COMP%], \n.col-sm-8[_ngcontent-%COMP%], \n.col-sm-9[_ngcontent-%COMP%], \n.col-sm-auto[_ngcontent-%COMP%], \n.col-xl[_ngcontent-%COMP%], \n.col-xl-1[_ngcontent-%COMP%], \n.col-xl-10[_ngcontent-%COMP%], \n.col-xl-11[_ngcontent-%COMP%], \n.col-xl-12[_ngcontent-%COMP%], \n.col-xl-2[_ngcontent-%COMP%], \n.col-xl-3[_ngcontent-%COMP%], \n.col-xl-4[_ngcontent-%COMP%], \n.col-xl-5[_ngcontent-%COMP%], \n.col-xl-6[_ngcontent-%COMP%], \n.col-xl-7[_ngcontent-%COMP%], \n.col-xl-8[_ngcontent-%COMP%], \n.col-xl-9[_ngcontent-%COMP%], \n.col-xl-auto[_ngcontent-%COMP%] {\n  padding-right: 0px !important;\n  padding-left: 0px !important;\n}\n.fsr-16-14[_ngcontent-%COMP%] {\n  font-size: 16px;\n  font-weight: 400;\n}\n@media only screen and (max-width: 767px) {\n  .pr-8[_ngcontent-%COMP%] {\n    padding-right: calc(5.41vw + 0.0108px) !important;\n  }\n  .mt-43[_ngcontent-%COMP%] {\n    margin-top: calc(7.76vw + 0.0288px);\n    margin-bottom: calc(3.88vw + 0.0144px);\n  }\n  .fsr-16[_ngcontent-%COMP%] {\n    font-size: 12px !important;\n    font-weight: 400;\n  }\n  .fsr-21[_ngcontent-%COMP%] {\n    font-size: 16px !important;\n    font-weight: 400;\n  }\n  .color-lightwhite[_ngcontent-%COMP%] {\n    color: #BFC0C0 !important;\n  }\n  .p-64[_ngcontent-%COMP%] {\n    padding-top: calc(10.19vw + 0.0172px);\n    padding-bottom: calc(15.53vw + 0.0164px);\n  }\n  .foot-pad[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px) !important;\n  }\n  .mt80[_ngcontent-%COMP%] {\n    margin-top: 80px !important;\n  }\n  .fsr-16-14[_ngcontent-%COMP%] {\n    font-size: 14px !important;\n    font-weight: 400;\n  }\n}\n@media only screen and (min-width: 1600px) {\n  .foot-pad[_ngcontent-%COMP%] {\n    padding: 80px 48px !important;\n  }\n  .section-wrap[_ngcontent-%COMP%] {\n    padding-left: 90px;\n    padding-left: calc((100vw - 1600px) / 2);\n    padding-right: calc((100vw - 1600px) / 2);\n    background-color: #012323;\n  }\n}\n/*# sourceMappingURL=footer.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FooterComponent, { className: "FooterComponent", filePath: "src/shared/footer/footer.component.ts", lineNumber: 10 });
@@ -64588,11 +64602,15 @@ var GetintouchComponent = class _GetintouchComponent {
   route;
   scrollToTopEvent = new EventEmitter();
   isAboutUs = false;
+  isServices = false;
+  isResources = false;
   constructor(dialog, route) {
     this.dialog = dialog;
     this.route = route;
     this.route.queryParamMap.subscribe((data) => {
       this.isAboutUs = data.get("page") == "aboutus";
+      this.isServices = data.get("page") == "services";
+      this.isResources = data.get("page") == "resources";
     });
   }
   openDialog() {
@@ -64607,27 +64625,29 @@ var GetintouchComponent = class _GetintouchComponent {
   static \u0275fac = function GetintouchComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _GetintouchComponent)(\u0275\u0275directiveInject(MatDialog), \u0275\u0275directiveInject(ActivatedRoute));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _GetintouchComponent, selectors: [["app-getintouch"]], outputs: { scrollToTopEvent: "scrollToTopEvent" }, standalone: false, decls: 11, vars: 3, consts: [[1, "p-80", 2, "z-index", "9999 !important", 3, "ngStyle"], [1, "marquee"], [1, "fsb-120", 2, "font-weight", "700"], [1, "row", "my-4", "p-48", "mx-0"], [1, "col-md-4", "d-md-hidden"], [1, "col-md-8"], [1, "fsr-21", "my-5", "lh-29"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4", 3, "click"]], template: function GetintouchComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _GetintouchComponent, selectors: [["app-getintouch"]], outputs: { scrollToTopEvent: "scrollToTopEvent" }, standalone: false, decls: 12, vars: 7, consts: [[1, "section-wrap", 3, "ngStyle"], [2, "z-index", "9999 !important", "max-width", "1600px", 3, "ngClass", "ngStyle"], [1, "marquee"], [1, "fsb-120", 2, "font-weight", "700"], [1, "row", "my-4", "p-48", "mx-0"], [1, "col-md-4", "d-md-hidden"], [1, "col-md-8"], [1, "fsr-21", "my-5", "lh-29"], [1, "btn", "btn-outline-dark", "rounded-pill", "btn-responsive", "fsr-21", "my-4", "py-3", "px-4", 3, "click"]], template: function GetintouchComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "p", 2);
-      \u0275\u0275text(3, " Fueling Innovation through Collaborative Bioinformatics ");
+      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "p", 3);
+      \u0275\u0275text(4, " Fueling Innovation through Collaborative Bioinformatics ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 3);
-      \u0275\u0275element(5, "div", 4);
-      \u0275\u0275elementStart(6, "div", 5)(7, "p", 6);
-      \u0275\u0275text(8, " We are eager to collaborate with researchers, institutions, and organizations dedicated to advancing science. Together, we can drive breakthroughs, uncover transformative discoveries, and make a lasting impact in the life sciences. ");
+      \u0275\u0275elementStart(5, "div", 4);
+      \u0275\u0275element(6, "div", 5);
+      \u0275\u0275elementStart(7, "div", 6)(8, "p", 7);
+      \u0275\u0275text(9, " We are eager to collaborate with researchers, institutions, and organizations dedicated to advancing science. Together, we can drive breakthroughs, uncover transformative discoveries, and make a lasting impact in the life sciences. ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "button", 7);
-      \u0275\u0275listener("click", function GetintouchComponent_Template_button_click_9_listener() {
+      \u0275\u0275elementStart(10, "button", 8);
+      \u0275\u0275listener("click", function GetintouchComponent_Template_button_click_10_listener() {
         return ctx.openDialog();
       });
-      \u0275\u0275text(10, "Get in touch");
-      \u0275\u0275elementEnd()()()();
+      \u0275\u0275text(11, "Get in touch");
+      \u0275\u0275elementEnd()()()()();
     }
     if (rf & 2) {
-      \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(1, _c08, ctx.isAboutUs ? "#FBFBFB" : "white"));
+      \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(3, _c08, ctx.isAboutUs || ctx.isServices ? "#FBFBFB" : "white"));
+      \u0275\u0275advance();
+      \u0275\u0275property("ngClass", ctx.isServices ? "p-80-service" : "p-80")("ngStyle", \u0275\u0275pureFunction1(5, _c08, ctx.isAboutUs || ctx.isServices ? "#FBFBFB" : "white"));
     }
-  }, dependencies: [NgStyle], styles: ["\n\n.marquee[_ngcontent-%COMP%] {\n  white-space: nowrap;\n  overflow: hidden;\n  width: 100%;\n}\n.marquee[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  display: inline-block;\n  white-space: nowrap;\n  will-change: transform;\n  animation: _ngcontent-%COMP%_marqueeAnimation 12s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_marqueeAnimation {\n  from {\n    transform: translateX(100vw);\n  }\n  to {\n    transform: translateX(-100%);\n  }\n}\n.p-80[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) 0px;\n}\n@media only screen and (max-width: 768px) {\n  .p-80[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) 0px;\n  }\n}\n/*# sourceMappingURL=getintouch.component.css.map */"] });
+  }, dependencies: [NgClass, NgStyle], styles: ["\n\n.marquee[_ngcontent-%COMP%] {\n  white-space: nowrap;\n  overflow: hidden;\n  width: 100%;\n}\n.marquee[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  display: inline-block;\n  white-space: nowrap;\n  will-change: transform;\n  animation: _ngcontent-%COMP%_marqueeAnimation 12s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_marqueeAnimation {\n  from {\n    transform: translateX(100vw);\n  }\n  to {\n    transform: translateX(-100%);\n  }\n}\n.p-80[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) 0px;\n}\n.p-80-service[_ngcontent-%COMP%] {\n  padding: calc(5.55vw + 0.08px) 0px;\n  padding-top: calc(11.10vw + 0.16px);\n}\n@media only screen and (max-width: 768px) {\n  .p-80[_ngcontent-%COMP%] {\n    padding: calc(15.53vw + 0.0164px) 0px;\n  }\n}\n@media only screen and (min-width: 1600px) {\n  .p-80[_ngcontent-%COMP%] {\n    padding: 80px 0px;\n  }\n  .p-80-service[_ngcontent-%COMP%] {\n    padding: 80px 0px !important;\n  }\n  .section-wrap[_ngcontent-%COMP%] {\n    padding-left: calc((100vw - 1600px) / 2);\n    padding-right: calc((100vw - 1600px) / 2);\n  }\n}\n/*# sourceMappingURL=getintouch.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(GetintouchComponent, { className: "GetintouchComponent", filePath: "src/shared/getintouch/getintouch.component.ts", lineNumber: 12 });
@@ -64676,10 +64696,12 @@ var AppComponent = class _AppComponent {
     this.touchStartY = event.touches[0].clientY;
   }
   onTouchMove(event) {
-    if (this.touchStartY < this.navbarHeight && this.navbarHeight < window.innerHeight) {
-      event.preventDefault();
+    if (typeof window !== "undefined") {
+      if (this.touchStartY < this.navbarHeight && this.navbarHeight < window.innerHeight) {
+        event.preventDefault();
+      }
+      this.touchEndY = event.touches[0].clientY;
     }
-    this.touchEndY = event.touches[0].clientY;
   }
   onTouchEnd(event) {
     if (this.touchEndY - this.touchStartY > 50 && this.touchStartY < 100) {
@@ -64711,16 +64733,18 @@ var AppComponent = class _AppComponent {
   }
   scrollControl(event) {
     this.navbarHeight = event.height;
-    if (event.height >= this.pageHeight - 10 && event.bottomReached) {
-      window.addEventListener("wheel", this.preventScroll, { passive: false });
-      window.addEventListener("touchmove", this.preventScroll, { passive: false });
-      window.addEventListener("keydown", this.preventKeyScroll, false);
-      window.addEventListener("scroll", this.preventScroll, { passive: false });
-    } else {
-      window.removeEventListener("wheel", this.preventScroll);
-      window.removeEventListener("touchmove", this.preventScroll);
-      window.removeEventListener("keydown", this.preventKeyScroll);
-      window.removeEventListener("scroll", this.preventScroll);
+    if (typeof window !== "undefined") {
+      if (event.height >= this.pageHeight - 10 && event.bottomReached) {
+        window.addEventListener("wheel", this.preventScroll, { passive: false });
+        window.addEventListener("touchmove", this.preventScroll, { passive: false });
+        window.addEventListener("keydown", this.preventKeyScroll, false);
+        window.addEventListener("scroll", this.preventScroll, { passive: false });
+      } else {
+        window.removeEventListener("wheel", this.preventScroll);
+        window.removeEventListener("touchmove", this.preventScroll);
+        window.removeEventListener("keydown", this.preventKeyScroll);
+        window.removeEventListener("scroll", this.preventScroll);
+      }
     }
   }
   static \u0275fac = function AppComponent_Factory(__ngFactoryType__) {
