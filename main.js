@@ -63482,7 +63482,7 @@ function NavbarComponent_div_0_Template(rf, ctx) {
     \u0275\u0275listener("scroll", function NavbarComponent_div_0_Template_div_scroll_0_listener($event) {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.onScroll($event));
+      return \u0275\u0275resetView(ctx_r1.onScrollWhite($event));
     });
     \u0275\u0275elementStart(2, "div", 5)(3, "a", 6);
     \u0275\u0275element(4, "img", 7);
@@ -63494,7 +63494,7 @@ function NavbarComponent_div_0_Template(rf, ctx) {
       ctx_r1.serviceVisible = false;
       ctx_r1.isCompDropdown = false;
       ctx_r1.isCollapsed = !ctx_r1.isCollapsed;
-      return \u0275\u0275resetView(ctx_r1.onScroll());
+      return \u0275\u0275resetView(ctx_r1.onScrollWhite());
     });
     \u0275\u0275template(6, NavbarComponent_div_0_img_6_Template, 1, 0, "img", 9)(7, NavbarComponent_div_0_img_7_Template, 1, 0, "img", 10);
     \u0275\u0275elementEnd();
@@ -63533,7 +63533,7 @@ function NavbarComponent_div_0_Template(rf, ctx) {
       ctx_r1.isCompany = true;
       ctx_r1.isCompDropdown = !ctx_r1.isCompDropdown;
       ctx_r1.serviceVisible = false;
-      return \u0275\u0275resetView(ctx_r1.onScroll());
+      return \u0275\u0275resetView(ctx_r1.onScrollWhite());
     });
     \u0275\u0275text(21, " COMPANY ");
     \u0275\u0275elementStart(22, "span", 17);
@@ -63724,7 +63724,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
     \u0275\u0275listener("scroll", function NavbarComponent_div_1_Template_div_scroll_0_listener($event) {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
-      return \u0275\u0275resetView(ctx_r1.onScroll($event));
+      return \u0275\u0275resetView(ctx_r1.onScrollBlack($event));
     });
     \u0275\u0275elementStart(2, "nav", 42)(3, "a", 6);
     \u0275\u0275element(4, "img", 43);
@@ -63736,7 +63736,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
       ctx_r1.serviceVisible = false;
       ctx_r1.isCompDropdown = false;
       ctx_r1.isCollapsed = !ctx_r1.isCollapsed;
-      return \u0275\u0275resetView(ctx_r1.onScroll());
+      return \u0275\u0275resetView(ctx_r1.onScrollBlack());
     });
     \u0275\u0275template(6, NavbarComponent_div_1_img_6_Template, 1, 0, "img", 44)(7, NavbarComponent_div_1_img_7_Template, 1, 0, "img", 45);
     \u0275\u0275elementEnd();
@@ -63775,7 +63775,7 @@ function NavbarComponent_div_1_Template(rf, ctx) {
       ctx_r1.isCompany = true;
       ctx_r1.isCompDropdown = !ctx_r1.isCompDropdown;
       ctx_r1.serviceVisible = false;
-      return \u0275\u0275resetView(ctx_r1.onScroll());
+      return \u0275\u0275resetView(ctx_r1.onScrollBlack());
     });
     \u0275\u0275text(21, " COMPANY ");
     \u0275\u0275elementStart(22, "span", 17);
@@ -63860,7 +63860,11 @@ var NavbarComponent = class _NavbarComponent {
       this.isServiceVisible = data.get("page") === "service";
       this.isCompany = data.get("page") === "company";
     });
-    this.onScroll();
+    if (this.pageName === "home" && !this.isSecondPage) {
+      this.onScrollWhite();
+    } else {
+      this.onScrollBlack();
+    }
   }
   toggleSecondaryNavbar() {
     this.isServiceVisible = !this.isServiceVisible;
@@ -63880,7 +63884,11 @@ var NavbarComponent = class _NavbarComponent {
     this.isCompany = false;
     this.isHome = false;
     this.isCompDropdown = false;
-    this.onScroll();
+    if (this.pageName === "home" && !this.isSecondPage) {
+      this.onScrollWhite();
+    } else {
+      this.onScrollBlack();
+    }
   }
   company(route) {
     this.isServiceVisible = false;
@@ -63913,21 +63921,23 @@ var NavbarComponent = class _NavbarComponent {
       this.secondPage = changes["isSecondPage"].currentValue;
     }
   }
-  onScroll(event) {
-    console.log("scrolling");
+  onScrollBlack(event) {
     const element = event?.target;
     const isAtBottom = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
     setTimeout(() => {
-      if (this.pageName === "home" && !this.isSecondPage) {
-        if (this.navbarwhite && this.navbarwhite.nativeElement) {
-          const rect = this.navbarwhite.nativeElement.getBoundingClientRect().height;
-          this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
-        }
-      } else {
-        if (this.navbarblack && this.navbarblack.nativeElement) {
-          const rect = this.navbarblack.nativeElement.getBoundingClientRect().height;
-          this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
-        }
+      if (this.navbarblack && this.navbarblack.nativeElement) {
+        const rect = this.navbarblack.nativeElement.getBoundingClientRect().height;
+        this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
+      }
+    }, 500);
+  }
+  onScrollWhite(event) {
+    const element = event?.target;
+    const isAtBottom = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
+    setTimeout(() => {
+      if (this.navbarwhite && this.navbarwhite.nativeElement) {
+        const rect = this.navbarwhite.nativeElement.getBoundingClientRect().height;
+        this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
       }
     }, 500);
   }
@@ -64681,10 +64691,9 @@ var AppComponent = class _AppComponent {
   onWindowScroll() {
     if (typeof window !== "undefined") {
       const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-      console.log(this.pageHeight);
-      if (scrollPosition >= this.pageHeight - 20) {
+      if (scrollPosition >= this.pageHeight - 30) {
         this.isSecondPage = true;
-      } else if (scrollPosition < this.pageHeight) {
+      } else if (scrollPosition < this.pageHeight - 30) {
         this.isSecondPage = false;
       }
     }
