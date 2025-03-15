@@ -1,10 +1,9 @@
-import { Component, Input, OnChanges, OnInit, Output, Renderer2, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output, Renderer2, SimpleChanges, EventEmitter, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ServicesComponent } from '../services/services.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import serviceMenu from '../../../assets/serviceMenu.json'
 import { ActivatedRoute } from '@angular/router';
-import { EventEmitter } from 'stream';
 import {CONFIG} from '../../../assets/urlConfig';
 
 
@@ -19,6 +18,11 @@ import {CONFIG} from '../../../assets/urlConfig';
 export class NavbarComponent implements OnInit,OnChanges{
   @Input() mouseTop: boolean = false;
   @Input() isSecondPage: boolean = false;
+  @Output() navHeightChanged: EventEmitter<{height:number,bottomReached:boolean}> = new EventEmitter<{height:number,bottomReached:boolean}>();
+  @ViewChild('navbarwhite', { static: false }) navbarwhite!: ElementRef;
+  @ViewChild('navbarblack', { static: false }) navbarblack!: ElementRef;
+
+  
   secondPage: boolean = true;
   isFixed : boolean = false;
   serviceMenu: any;
@@ -44,6 +48,7 @@ export class NavbarComponent implements OnInit,OnChanges{
       this.isServiceVisible = data.get('page') === 'service';
       this.isCompany = data.get('page') === 'company';
     })
+    this.onScroll();
   }
 
   toggleSecondaryNavbar(): void {
@@ -66,6 +71,7 @@ export class NavbarComponent implements OnInit,OnChanges{
     this.isCompany = false;
     this.isHome = false;
     this.isCompDropdown=false;
+    this.onScroll();
   }
 
   company(route:any): void {
@@ -101,5 +107,19 @@ export class NavbarComponent implements OnInit,OnChanges{
     if(changes['isSecondPage']){
       this.secondPage = changes['isSecondPage'].currentValue;
     }
+  }
+
+  onScroll(event?: any) {
+    const element = event?.target;
+    const isAtBottom : boolean = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
+    setTimeout(() => {
+      if(this.pageName==='home' && !this.isSecondPage){
+        const rect : number = this.navbarwhite.nativeElement.getBoundingClientRect().height;
+        this.navHeightChanged.emit({height: rect, bottomReached: isAtBottom});
+      }else{
+        const rect = this.navbarblack.nativeElement.getBoundingClientRect().height;
+        this.navHeightChanged.emit({height: rect, bottomReached: isAtBottom});
+      }
+    },500);
   }
 }
