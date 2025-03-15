@@ -63337,30 +63337,32 @@ var AppRoutingModule = class _AppRoutingModule {
 };
 
 // src/app/pages/navbar/navbar.component.ts
-var _c07 = (a0) => ({ "position": a0 });
-function NavbarComponent_div_0_img_5_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275element(0, "img", 23);
-  }
-}
+var _c07 = ["navbarwhite"];
+var _c16 = ["navbarblack"];
+var _c24 = (a0) => ({ "position": a0 });
 function NavbarComponent_div_0_img_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "img", 24);
+    \u0275\u0275element(0, "img", 25);
   }
 }
-function NavbarComponent_div_0_ul_17_li_1_Template(rf, ctx) {
+function NavbarComponent_div_0_img_7_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275element(0, "img", 26);
+  }
+}
+function NavbarComponent_div_0_ul_18_li_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "li", 27)(1, "h6", 28)(2, "a", 29);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_ul_17_li_1_Template_a_click_2_listener() {
+    \u0275\u0275elementStart(0, "li", 29)(1, "h6", 30)(2, "a", 31);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_ul_18_li_1_Template_a_click_2_listener() {
       const menu_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r1.redirect(menu_r4.image));
     });
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "span", 30);
-    \u0275\u0275element(5, "img", 31);
+    \u0275\u0275elementStart(4, "span", 32);
+    \u0275\u0275element(5, "img", 33);
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -63369,10 +63371,10 @@ function NavbarComponent_div_0_ul_17_li_1_Template(rf, ctx) {
     \u0275\u0275textInterpolate(menu_r4.topic);
   }
 }
-function NavbarComponent_div_0_ul_17_Template(rf, ctx) {
+function NavbarComponent_div_0_ul_18_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "ul", 25);
-    \u0275\u0275template(1, NavbarComponent_div_0_ul_17_li_1_Template, 6, 1, "li", 26);
+    \u0275\u0275elementStart(0, "ul", 27);
+    \u0275\u0275template(1, NavbarComponent_div_0_ul_18_li_1_Template, 6, 1, "li", 28);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63381,47 +63383,47 @@ function NavbarComponent_div_0_ul_17_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", ctx_r1.serviceMenu);
   }
 }
-function NavbarComponent_div_0_ul_23_Template(rf, ctx) {
+function NavbarComponent_div_0_ul_24_Template(rf, ctx) {
   if (rf & 1) {
     const _r5 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "ul", 25)(1, "li", 27)(2, "h6", 28)(3, "a", 29);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_ul_23_Template_a_click_3_listener() {
+    \u0275\u0275elementStart(0, "ul", 27)(1, "li", 29)(2, "h6", 30)(3, "a", 31);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_ul_24_Template_a_click_3_listener() {
       \u0275\u0275restoreView(_r5);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("aboutus"));
     });
     \u0275\u0275text(4, "About Us");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(5, "span", 30);
-    \u0275\u0275element(6, "img", 31);
+    \u0275\u0275elementStart(5, "span", 32);
+    \u0275\u0275element(6, "img", 33);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "li", 27)(8, "h6", 28)(9, "a", 29);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_ul_23_Template_a_click_9_listener() {
+    \u0275\u0275elementStart(7, "li", 29)(8, "h6", 30)(9, "a", 31);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_ul_24_Template_a_click_9_listener() {
       \u0275\u0275restoreView(_r5);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("resources"));
     });
     \u0275\u0275text(10, "Resources");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(11, "span", 30);
-    \u0275\u0275element(12, "img", 31);
+    \u0275\u0275elementStart(11, "span", 32);
+    \u0275\u0275element(12, "img", 33);
     \u0275\u0275elementEnd()()()();
   }
 }
-function NavbarComponent_div_0_div_28_div_1_Template(rf, ctx) {
+function NavbarComponent_div_0_div_29_div_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r6 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 34);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_div_28_div_1_Template_div_click_0_listener() {
+    \u0275\u0275elementStart(0, "div", 36);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_div_29_div_1_Template_div_click_0_listener() {
       const menu_r7 = \u0275\u0275restoreView(_r6).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r1.redirect(menu_r7.image));
     });
-    \u0275\u0275elementStart(1, "h6", 28)(2, "a", 35);
+    \u0275\u0275elementStart(1, "h6", 30)(2, "a", 37);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "span", 30);
-    \u0275\u0275element(5, "img", 31);
+    \u0275\u0275elementStart(4, "span", 32);
+    \u0275\u0275element(5, "img", 33);
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -63432,10 +63434,10 @@ function NavbarComponent_div_0_div_28_div_1_Template(rf, ctx) {
     \u0275\u0275textInterpolate(menu_r7.topic);
   }
 }
-function NavbarComponent_div_0_div_28_Template(rf, ctx) {
+function NavbarComponent_div_0_div_29_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 32);
-    \u0275\u0275template(1, NavbarComponent_div_0_div_28_div_1_Template, 6, 2, "div", 33);
+    \u0275\u0275elementStart(0, "div", 34);
+    \u0275\u0275template(1, NavbarComponent_div_0_div_29_div_1_Template, 6, 2, "div", 35);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63444,79 +63446,85 @@ function NavbarComponent_div_0_div_28_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", ctx_r1.serviceMenu);
   }
 }
-function NavbarComponent_div_0_div_29_Template(rf, ctx) {
+function NavbarComponent_div_0_div_30_Template(rf, ctx) {
   if (rf & 1) {
     const _r8 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 36)(1, "div", 37);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_div_29_Template_div_click_1_listener() {
+    \u0275\u0275elementStart(0, "div", 38)(1, "div", 39);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_div_30_Template_div_click_1_listener() {
       \u0275\u0275restoreView(_r8);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("aboutus"));
     });
-    \u0275\u0275elementStart(2, "h6", 28)(3, "a", 38);
+    \u0275\u0275elementStart(2, "h6", 30)(3, "a", 40);
     \u0275\u0275text(4, "About Us");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(5, "span", 30);
-    \u0275\u0275element(6, "img", 31);
+    \u0275\u0275elementStart(5, "span", 32);
+    \u0275\u0275element(6, "img", 33);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "div", 37);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_div_29_Template_div_click_7_listener() {
+    \u0275\u0275elementStart(7, "div", 39);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_div_30_Template_div_click_7_listener() {
       \u0275\u0275restoreView(_r8);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("resources"));
     });
-    \u0275\u0275elementStart(8, "h6", 28)(9, "a", 38);
+    \u0275\u0275elementStart(8, "h6", 30)(9, "a", 40);
     \u0275\u0275text(10, "Resources");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(11, "span", 30);
-    \u0275\u0275element(12, "img", 31);
+    \u0275\u0275elementStart(11, "span", 32);
+    \u0275\u0275element(12, "img", 33);
     \u0275\u0275elementEnd()()()();
   }
 }
 function NavbarComponent_div_0_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 2)(1, "div", 3)(2, "a", 4);
-    \u0275\u0275element(3, "img", 5);
+    \u0275\u0275elementStart(0, "div", 4, 0);
+    \u0275\u0275listener("scroll", function NavbarComponent_div_0_Template_div_scroll_0_listener($event) {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onScroll($event));
+    });
+    \u0275\u0275elementStart(2, "div", 5)(3, "a", 6);
+    \u0275\u0275element(4, "img", 7);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "button", 6);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_button_click_4_listener() {
+    \u0275\u0275elementStart(5, "button", 8);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_button_click_5_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       ctx_r1.serviceVisible = false;
       ctx_r1.isCompDropdown = false;
       return \u0275\u0275resetView(ctx_r1.isCollapsed = !ctx_r1.isCollapsed);
     });
-    \u0275\u0275template(5, NavbarComponent_div_0_img_5_Template, 1, 0, "img", 7)(6, NavbarComponent_div_0_img_6_Template, 1, 0, "img", 8);
+    \u0275\u0275template(6, NavbarComponent_div_0_img_6_Template, 1, 0, "img", 9)(7, NavbarComponent_div_0_img_7_Template, 1, 0, "img", 10);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "div", 9)(8, "ul", 10)(9, "li", 11)(10, "a", 12);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_a_click_10_listener() {
+    \u0275\u0275elementStart(8, "div", 11)(9, "ul", 12)(10, "li", 13)(11, "a", 14);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_a_click_11_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.home());
     });
-    \u0275\u0275twoWayListener("class.activeChange", function NavbarComponent_div_0_Template_a_class_activeChange_10_listener($event) {
+    \u0275\u0275twoWayListener("class.activeChange", function NavbarComponent_div_0_Template_a_class_activeChange_11_listener($event) {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       \u0275\u0275twoWayBindingSet(ctx_r1.isHome, $event) || (ctx_r1.isHome = $event);
       return \u0275\u0275resetView($event);
     });
-    \u0275\u0275text(11, "HOME");
+    \u0275\u0275text(12, "HOME");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(12, "li", 13)(13, "a", 14);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_a_click_13_listener() {
+    \u0275\u0275elementStart(13, "li", 15)(14, "a", 16);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_a_click_14_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.service(ctx_r1.serviceVisible));
     });
-    \u0275\u0275text(14, " SERVICES ");
-    \u0275\u0275elementStart(15, "span", 15);
-    \u0275\u0275element(16, "img", 16);
+    \u0275\u0275text(15, " SERVICES ");
+    \u0275\u0275elementStart(16, "span", 17);
+    \u0275\u0275element(17, "img", 18);
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(17, NavbarComponent_div_0_ul_17_Template, 2, 1, "ul", 17);
+    \u0275\u0275template(18, NavbarComponent_div_0_ul_18_Template, 2, 1, "ul", 19);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(18, "li", 13)(19, "a", 18);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_a_click_19_listener() {
+    \u0275\u0275elementStart(19, "li", 15)(20, "a", 20);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_a_click_20_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       ctx_r1.isHome = false;
@@ -63525,28 +63533,28 @@ function NavbarComponent_div_0_Template(rf, ctx) {
       ctx_r1.isCompDropdown = !ctx_r1.isCompDropdown;
       return \u0275\u0275resetView(ctx_r1.serviceVisible = false);
     });
-    \u0275\u0275text(20, " COMPANY ");
-    \u0275\u0275elementStart(21, "span", 15);
-    \u0275\u0275element(22, "img", 16);
+    \u0275\u0275text(21, " COMPANY ");
+    \u0275\u0275elementStart(22, "span", 17);
+    \u0275\u0275element(23, "img", 18);
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(23, NavbarComponent_div_0_ul_23_Template, 13, 0, "ul", 17);
+    \u0275\u0275template(24, NavbarComponent_div_0_ul_24_Template, 13, 0, "ul", 19);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(24, "li", 19)(25, "a", 20);
-    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_a_click_25_listener() {
+    \u0275\u0275elementStart(25, "li", 21)(26, "a", 22);
+    \u0275\u0275listener("click", function NavbarComponent_div_0_Template_a_click_26_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.openDialog());
     });
-    \u0275\u0275elementStart(26, "span");
-    \u0275\u0275text(27, "Get in touch");
+    \u0275\u0275elementStart(27, "span");
+    \u0275\u0275text(28, "Get in touch");
     \u0275\u0275elementEnd()()()()()();
-    \u0275\u0275template(28, NavbarComponent_div_0_div_28_Template, 2, 1, "div", 21)(29, NavbarComponent_div_0_div_29_Template, 13, 0, "div", 22);
+    \u0275\u0275template(29, NavbarComponent_div_0_div_29_Template, 2, 1, "div", 23)(30, NavbarComponent_div_0_div_30_Template, 13, 0, "div", 24);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(17, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
-    \u0275\u0275advance(2);
+    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(17, _c24, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
+    \u0275\u0275advance(3);
     \u0275\u0275property("href", ctx_r1.config.home, \u0275\u0275sanitizeUrl);
     \u0275\u0275advance(3);
     \u0275\u0275property("ngIf", ctx_r1.isCollapsed);
@@ -63574,29 +63582,29 @@ function NavbarComponent_div_0_Template(rf, ctx) {
     \u0275\u0275property("ngIf", ctx_r1.isCompDropdown);
   }
 }
-function NavbarComponent_div_1_img_5_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275element(0, "img", 50);
-  }
-}
 function NavbarComponent_div_1_img_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "img", 51);
+    \u0275\u0275element(0, "img", 52);
   }
 }
-function NavbarComponent_div_1_ul_17_li_1_Template(rf, ctx) {
+function NavbarComponent_div_1_img_7_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275element(0, "img", 53);
+  }
+}
+function NavbarComponent_div_1_ul_18_li_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r10 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "li", 27)(1, "h6")(2, "a", 52);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_ul_17_li_1_Template_a_click_2_listener() {
+    \u0275\u0275elementStart(0, "li", 29)(1, "h6")(2, "a", 54);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_ul_18_li_1_Template_a_click_2_listener() {
       const menu_r11 = \u0275\u0275restoreView(_r10).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r1.redirect(menu_r11.image));
     });
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "span", 30);
-    \u0275\u0275element(5, "img", 31);
+    \u0275\u0275elementStart(4, "span", 32);
+    \u0275\u0275element(5, "img", 33);
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -63605,10 +63613,10 @@ function NavbarComponent_div_1_ul_17_li_1_Template(rf, ctx) {
     \u0275\u0275textInterpolate(menu_r11.topic);
   }
 }
-function NavbarComponent_div_1_ul_17_Template(rf, ctx) {
+function NavbarComponent_div_1_ul_18_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "ul", 25);
-    \u0275\u0275template(1, NavbarComponent_div_1_ul_17_li_1_Template, 6, 1, "li", 26);
+    \u0275\u0275elementStart(0, "ul", 27);
+    \u0275\u0275template(1, NavbarComponent_div_1_ul_18_li_1_Template, 6, 1, "li", 28);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63617,47 +63625,47 @@ function NavbarComponent_div_1_ul_17_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", ctx_r1.serviceMenu);
   }
 }
-function NavbarComponent_div_1_ul_23_Template(rf, ctx) {
+function NavbarComponent_div_1_ul_24_Template(rf, ctx) {
   if (rf & 1) {
     const _r12 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "ul", 25)(1, "li", 27)(2, "h6")(3, "a", 52);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_ul_23_Template_a_click_3_listener() {
+    \u0275\u0275elementStart(0, "ul", 27)(1, "li", 29)(2, "h6")(3, "a", 54);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_ul_24_Template_a_click_3_listener() {
       \u0275\u0275restoreView(_r12);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("aboutus"));
     });
     \u0275\u0275text(4, "About Us");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(5, "span", 30);
-    \u0275\u0275element(6, "img", 31);
+    \u0275\u0275elementStart(5, "span", 32);
+    \u0275\u0275element(6, "img", 33);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "li", 27)(8, "h6")(9, "a", 52);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_ul_23_Template_a_click_9_listener() {
+    \u0275\u0275elementStart(7, "li", 29)(8, "h6")(9, "a", 54);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_ul_24_Template_a_click_9_listener() {
       \u0275\u0275restoreView(_r12);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("resources"));
     });
     \u0275\u0275text(10, "Resources");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(11, "span", 30);
-    \u0275\u0275element(12, "img", 31);
+    \u0275\u0275elementStart(11, "span", 32);
+    \u0275\u0275element(12, "img", 33);
     \u0275\u0275elementEnd()()()();
   }
 }
-function NavbarComponent_div_1_div_28_div_1_Template(rf, ctx) {
+function NavbarComponent_div_1_div_29_div_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r13 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 55);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_div_28_div_1_Template_div_click_0_listener() {
+    \u0275\u0275elementStart(0, "div", 57);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_div_29_div_1_Template_div_click_0_listener() {
       const menu_r14 = \u0275\u0275restoreView(_r13).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(3);
       return \u0275\u0275resetView(ctx_r1.redirect(menu_r14.image));
     });
-    \u0275\u0275elementStart(1, "h6")(2, "a", 56);
+    \u0275\u0275elementStart(1, "h6")(2, "a", 58);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "span", 30);
-    \u0275\u0275element(5, "img", 31);
+    \u0275\u0275elementStart(4, "span", 32);
+    \u0275\u0275element(5, "img", 33);
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -63666,10 +63674,10 @@ function NavbarComponent_div_1_div_28_div_1_Template(rf, ctx) {
     \u0275\u0275textInterpolate(menu_r14.topic);
   }
 }
-function NavbarComponent_div_1_div_28_Template(rf, ctx) {
+function NavbarComponent_div_1_div_29_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 53);
-    \u0275\u0275template(1, NavbarComponent_div_1_div_28_div_1_Template, 6, 1, "div", 54);
+    \u0275\u0275elementStart(0, "div", 55);
+    \u0275\u0275template(1, NavbarComponent_div_1_div_29_div_1_Template, 6, 1, "div", 56);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -63678,79 +63686,85 @@ function NavbarComponent_div_1_div_28_Template(rf, ctx) {
     \u0275\u0275property("ngForOf", ctx_r1.serviceMenu);
   }
 }
-function NavbarComponent_div_1_div_29_Template(rf, ctx) {
+function NavbarComponent_div_1_div_30_Template(rf, ctx) {
   if (rf & 1) {
     const _r15 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 57)(1, "div", 58);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_div_29_Template_div_click_1_listener() {
+    \u0275\u0275elementStart(0, "div", 59)(1, "div", 60);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_div_30_Template_div_click_1_listener() {
       \u0275\u0275restoreView(_r15);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("aboutus"));
     });
-    \u0275\u0275elementStart(2, "h6")(3, "a", 56);
+    \u0275\u0275elementStart(2, "h6")(3, "a", 58);
     \u0275\u0275text(4, "About Us");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(5, "span", 30);
-    \u0275\u0275element(6, "img", 31);
+    \u0275\u0275elementStart(5, "span", 32);
+    \u0275\u0275element(6, "img", 33);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(7, "div", 58);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_div_29_Template_div_click_7_listener() {
+    \u0275\u0275elementStart(7, "div", 60);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_div_30_Template_div_click_7_listener() {
       \u0275\u0275restoreView(_r15);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.company("resources"));
     });
-    \u0275\u0275elementStart(8, "h6")(9, "a", 56);
+    \u0275\u0275elementStart(8, "h6")(9, "a", 58);
     \u0275\u0275text(10, "Resources");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(11, "span", 30);
-    \u0275\u0275element(12, "img", 31);
+    \u0275\u0275elementStart(11, "span", 32);
+    \u0275\u0275element(12, "img", 33);
     \u0275\u0275elementEnd()()()();
   }
 }
 function NavbarComponent_div_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r9 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 39)(1, "nav", 40)(2, "a", 4);
-    \u0275\u0275element(3, "img", 41);
+    \u0275\u0275elementStart(0, "div", 41, 1);
+    \u0275\u0275listener("scroll", function NavbarComponent_div_1_Template_div_scroll_0_listener($event) {
+      \u0275\u0275restoreView(_r9);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.onScroll($event));
+    });
+    \u0275\u0275elementStart(2, "nav", 42)(3, "a", 6);
+    \u0275\u0275element(4, "img", 43);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "button", 6);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_button_click_4_listener() {
+    \u0275\u0275elementStart(5, "button", 8);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_button_click_5_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       ctx_r1.serviceVisible = false;
       ctx_r1.isCompDropdown = false;
       return \u0275\u0275resetView(ctx_r1.isCollapsed = !ctx_r1.isCollapsed);
     });
-    \u0275\u0275template(5, NavbarComponent_div_1_img_5_Template, 1, 0, "img", 42)(6, NavbarComponent_div_1_img_6_Template, 1, 0, "img", 43);
+    \u0275\u0275template(6, NavbarComponent_div_1_img_6_Template, 1, 0, "img", 44)(7, NavbarComponent_div_1_img_7_Template, 1, 0, "img", 45);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "div", 9)(8, "ul", 10)(9, "li", 11)(10, "a", 44);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_10_listener() {
+    \u0275\u0275elementStart(8, "div", 11)(9, "ul", 12)(10, "li", 13)(11, "a", 46);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_11_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.home());
     });
-    \u0275\u0275twoWayListener("class.activeChange", function NavbarComponent_div_1_Template_a_class_activeChange_10_listener($event) {
+    \u0275\u0275twoWayListener("class.activeChange", function NavbarComponent_div_1_Template_a_class_activeChange_11_listener($event) {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       \u0275\u0275twoWayBindingSet(ctx_r1.isHome, $event) || (ctx_r1.isHome = $event);
       return \u0275\u0275resetView($event);
     });
-    \u0275\u0275text(11, "HOME");
+    \u0275\u0275text(12, "HOME");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(12, "li", 13)(13, "a", 45);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_13_listener() {
+    \u0275\u0275elementStart(13, "li", 15)(14, "a", 47);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_14_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.service(ctx_r1.serviceVisible));
     });
-    \u0275\u0275text(14, " SERVICES ");
-    \u0275\u0275elementStart(15, "span", 15);
-    \u0275\u0275element(16, "img", 16);
+    \u0275\u0275text(15, " SERVICES ");
+    \u0275\u0275elementStart(16, "span", 17);
+    \u0275\u0275element(17, "img", 18);
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(17, NavbarComponent_div_1_ul_17_Template, 2, 1, "ul", 17);
+    \u0275\u0275template(18, NavbarComponent_div_1_ul_18_Template, 2, 1, "ul", 19);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(18, "li", 13)(19, "a", 46);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_19_listener() {
+    \u0275\u0275elementStart(19, "li", 15)(20, "a", 48);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_20_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       ctx_r1.isHome = false;
@@ -63759,28 +63773,28 @@ function NavbarComponent_div_1_Template(rf, ctx) {
       ctx_r1.isCompDropdown = !ctx_r1.isCompDropdown;
       return \u0275\u0275resetView(ctx_r1.serviceVisible = false);
     });
-    \u0275\u0275text(20, " COMPANY ");
-    \u0275\u0275elementStart(21, "span", 15);
-    \u0275\u0275element(22, "img", 16);
+    \u0275\u0275text(21, " COMPANY ");
+    \u0275\u0275elementStart(22, "span", 17);
+    \u0275\u0275element(23, "img", 18);
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(23, NavbarComponent_div_1_ul_23_Template, 13, 0, "ul", 17);
+    \u0275\u0275template(24, NavbarComponent_div_1_ul_24_Template, 13, 0, "ul", 19);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(24, "li", 19)(25, "a", 47);
-    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_25_listener() {
+    \u0275\u0275elementStart(25, "li", 21)(26, "a", 49);
+    \u0275\u0275listener("click", function NavbarComponent_div_1_Template_a_click_26_listener() {
       \u0275\u0275restoreView(_r9);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.openDialog());
     });
-    \u0275\u0275elementStart(26, "span");
-    \u0275\u0275text(27, "Get in touch");
+    \u0275\u0275elementStart(27, "span");
+    \u0275\u0275text(28, "Get in touch");
     \u0275\u0275elementEnd()()()()()();
-    \u0275\u0275template(28, NavbarComponent_div_1_div_28_Template, 2, 1, "div", 48)(29, NavbarComponent_div_1_div_29_Template, 13, 0, "div", 49);
+    \u0275\u0275template(29, NavbarComponent_div_1_div_29_Template, 2, 1, "div", 50)(30, NavbarComponent_div_1_div_30_Template, 13, 0, "div", 51);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(17, _c07, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
-    \u0275\u0275advance(2);
+    \u0275\u0275property("ngStyle", \u0275\u0275pureFunction1(17, _c24, ctx_r1.isFixed || ctx_r1.serviceVisible || ctx_r1.isCompDropdown || !ctx_r1.isCollapsed ? "fixed" : "absolute"));
+    \u0275\u0275advance(3);
     \u0275\u0275property("href", ctx_r1.config.home, \u0275\u0275sanitizeUrl);
     \u0275\u0275advance(3);
     \u0275\u0275property("ngIf", ctx_r1.isCollapsed);
@@ -63814,6 +63828,9 @@ var NavbarComponent = class _NavbarComponent {
   renderer;
   mouseTop = false;
   isSecondPage = false;
+  navHeightChanged = new EventEmitter();
+  navbarwhite;
+  navbarblack;
   secondPage = true;
   isFixed = false;
   serviceMenu;
@@ -63890,12 +63907,35 @@ var NavbarComponent = class _NavbarComponent {
       this.secondPage = changes["isSecondPage"].currentValue;
     }
   }
+  onScroll(event) {
+    const element = event.target;
+    const isAtBottom = element.scrollHeight === element.scrollTop + element.clientHeight;
+    setTimeout(() => {
+      if (this.pageName === "home" && !this.isSecondPage) {
+        const rect = this.navbarwhite.nativeElement.getBoundingClientRect().height;
+        this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
+      } else {
+        const rect = this.navbarblack.nativeElement.getBoundingClientRect().height;
+        this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
+      }
+    });
+  }
   static \u0275fac = function NavbarComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _NavbarComponent)(\u0275\u0275directiveInject(MatDialog), \u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(Renderer2));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], inputs: { mouseTop: "mouseTop", isSecondPage: "isSecondPage" }, standalone: false, features: [\u0275\u0275NgOnChangesFeature], decls: 2, vars: 2, consts: [["class", "nav-bar", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 3, "ngStyle", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], [1, "navbar-brand", "logo", 3, "href"], ["src", "assets/images/Logo-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px", 3, "click"], ["src", "assets/icons/menu-icon-white.svg", "style", "color:#BFC0C0;", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-white.svg", "style", "color:#BFC0C0;", "class", "logo-size2", 4, "ngIf"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48", 3, "ngClass"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", 2, "cursor", "pointer", "margin-right", "3px"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["src", "assets/icons/close-white.svg", 1, "logo-size2", 2, "color", "#BFC0C0"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw", 3, "ngStyle"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px", "z-index", "999"], ["src", "assets/images/Logo-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-black.svg", "class", "logo-size2", 4, "ngIf"], [1, "nav-link", "px-21", "mr-18", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], ["src", "assets/icons/close-black.svg", 1, "logo-size2"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavbarComponent, selectors: [["app-navbar"]], viewQuery: function NavbarComponent_Query(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275template(0, NavbarComponent_div_0_Template, 30, 19, "div", 0)(1, NavbarComponent_div_1_Template, 30, 19, "div", 1);
+      \u0275\u0275viewQuery(_c07, 5);
+      \u0275\u0275viewQuery(_c16, 5);
+    }
+    if (rf & 2) {
+      let _t;
+      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.navbarwhite = _t.first);
+      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.navbarblack = _t.first);
+    }
+  }, inputs: { mouseTop: "mouseTop", isSecondPage: "isSecondPage" }, outputs: { navHeightChanged: "navHeightChanged" }, standalone: false, features: [\u0275\u0275NgOnChangesFeature], decls: 2, vars: 2, consts: [["navbarwhite", ""], ["navbarblack", ""], ["class", "nav-bar", "style", "width: 100vw;", 3, "ngStyle", "scroll", 4, "ngIf"], ["class", "nav-bar-black", "style", "width: 100vw;", 3, "ngStyle", "scroll", 4, "ngIf"], [1, "nav-bar", 2, "width", "100vw", 3, "scroll", "ngStyle"], [1, "navbar", "navbar-expand-md", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px"], [1, "navbar-brand", "logo", 3, "href"], ["src", "assets/images/Logo-White.svg", "alt", "", 1, "logo-size"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNav", 1, "navbar-toggler", 2, "padding", "0px", 3, "click"], ["src", "assets/icons/menu-icon-white.svg", "style", "color:#BFC0C0;", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-white.svg", "style", "color:#BFC0C0;", "class", "logo-size2", 4, "ngIf"], ["id", "navbarNav", 1, "collapse", "navbar-collapse", "pt-48", 3, "ngClass"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", 2, "cursor", "pointer", "margin-right", "3px"], [1, "nav-link", "mr-18", "px-21", 2, "cursor", "pointer", 3, "click", "class.activeChange"], [1, "nav-item", "dropdown"], ["id", "servicesDropdown", "role", "button", 1, "nav-link", "mr-16", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [2, "display", "flex", "align-items", "center", "justify-content", "center", "background-color", "transparent", "padding-left", "9.5px"], [1, "dropdown-icon", 3, "src"], ["class", "mobile-nav", 4, "ngIf"], ["id", "companyDropdown", "role", "button", "data-toggle", "dropdown", 1, "nav-link", "mr-18", "px-21", 2, "display", "flex", "align-items", "center", 3, "click"], [1, "nav-item", "mt-48"], [1, "btn", "btn-contact", 3, "click"], ["class", "serviceNavBar", "style", "background-color: inherit;", 4, "ngIf"], ["class", "row companyNavBar", "style", "background-color: inherit; margin:0px;", 4, "ngIf"], ["src", "assets/icons/menu-icon-white.svg", 1, "logo-size1", 2, "color", "#BFC0C0"], ["src", "assets/icons/close-white.svg", 1, "logo-size2", 2, "color", "#BFC0C0"], [1, "mobile-nav"], ["class", "px-19", 4, "ngFor", "ngForOf"], [1, "px-19"], [2, "color", "#BFC0C0"], [1, "link-underline", "inline-subnav", 2, "color", "#BFC0C0", "font-size", "16px !important", 3, "click"], [2, "padding-left", "8px"], ["src", "assets/icons/right-arrow.svg", "width", "24px", "height", "24px", 2, "cursor", "pointer"], [1, "serviceNavBar", 2, "background-color", "inherit"], ["style", "cursor: pointer;", "class", " serviceItems", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems", 2, "cursor", "pointer", 3, "click"], [1, "submenu", 2, "color", "#BFC0C0", 3, "title"], [1, "row", "companyNavBar", 2, "background-color", "inherit", "margin", "0px"], [1, "col-md-4", "serviceItems", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"], [1, "link-underline", 2, "color", "#BFC0C0"], [1, "nav-bar-black", 2, "width", "100vw", 3, "scroll", "ngStyle"], [1, "navbar", "navbar-expand-md", "navbar-light", "bg-transparent", "nav-pad", 2, "margin-bottom", "0px", "z-index", "999"], ["src", "assets/images/Logo-Black.svg", "alt", "", 1, "logo-size"], ["src", "assets/icons/menu-icon.svg", "class", "logo-size1", 4, "ngIf"], ["src", "assets/icons/close-black.svg", "class", "logo-size2", 4, "ngIf"], [1, "nav-link", "px-21", "mr-18", 2, "cursor", "pointer", 3, "click", "class.activeChange"], ["id", "servicesDropdown", 1, "nav-link", "px-21", "mr-18", 2, "display", "flex", "align-items", "center", 3, "click"], ["id", "companyDropdown", 1, "nav-link", "px-21", 2, "margin-right", "18px", "display", "flex", "align-items", "center", 3, "click"], [1, "btn", "btn-contact-black", 3, "click"], ["class", "serviceNavBar-black", "style", "background: inherit;", 4, "ngIf"], ["class", "row companyNavBar-black", "style", "background-color: inherit;display: flex; flex-direction: row; margin:0px", 4, "ngIf"], ["src", "assets/icons/menu-icon.svg", 1, "logo-size1"], ["src", "assets/icons/close-black.svg", 1, "logo-size2"], [1, "link-underline", "inline-subnav", 2, "font-size", "16px !important", 3, "click"], [1, "serviceNavBar-black", 2, "background", "inherit"], ["style", "cursor: pointer;", "class", "serviceItems-black", 3, "click", 4, "ngFor", "ngForOf"], [1, "serviceItems-black", 2, "cursor", "pointer", 3, "click"], [1, "link-underline", 2, "color", "#747B80 !important"], [1, "row", "companyNavBar-black", 2, "background-color", "inherit", "display", "flex", "flex-direction", "row", "margin", "0px"], [1, "col-md-4", "serviceItems-black", 2, "cursor", "pointer", "padding-left", "0px", "padding-right", "0px", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275template(0, NavbarComponent_div_0_Template, 31, 19, "div", 2)(1, NavbarComponent_div_1_Template, 31, 19, "div", 3);
     }
     if (rf & 2) {
       \u0275\u0275property("ngIf", ctx.pageName === "home" && !ctx.isSecondPage);
@@ -64416,7 +64456,7 @@ var NavbarComponent = class _NavbarComponent {
 /*# sourceMappingURL=navbar.component.css.map */`] });
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(NavbarComponent, { className: "NavbarComponent", filePath: "src/app/pages/navbar/navbar.component.ts", lineNumber: 19 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(NavbarComponent, { className: "NavbarComponent", filePath: "src/app/pages/navbar/navbar.component.ts", lineNumber: 18 });
 })();
 
 // src/shared/footer/footer.component.ts
@@ -64583,6 +64623,7 @@ var AppComponent = class _AppComponent {
   touchPoint = 300;
   touchEndY = 0;
   touchStartY = 0;
+  scrollLock = false;
   constructor(route, titleService) {
     this.route = route;
     this.titleService = titleService;
@@ -64593,6 +64634,11 @@ var AppComponent = class _AppComponent {
       this.title = params.get("page") == null ? "D2D" : "D2D - " + params.get("page");
       this.titleService.setTitle(this.title.toUpperCase());
     });
+  }
+  preventScroll(event) {
+    if (event.deltaY > 0) {
+      event.preventDefault();
+    }
   }
   top() {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -64627,6 +64673,30 @@ var AppComponent = class _AppComponent {
       }
     }
   }
+  preventKeyScroll(event) {
+    const scrollKeys = [
+      "ArrowDown",
+      "PageDown",
+      "Space",
+      "End"
+    ];
+    if (scrollKeys.includes(event.key)) {
+      event.preventDefault();
+    }
+  }
+  scrollControl(event) {
+    if (event.height >= this.pageHeight - 10 && event.bottomReached) {
+      window.addEventListener("wheel", this.preventScroll, { passive: false });
+      window.addEventListener("touchmove", this.preventScroll, { passive: false });
+      window.addEventListener("keydown", this.preventKeyScroll, false);
+      window.addEventListener("scroll", this.preventScroll, { passive: false });
+    } else {
+      window.removeEventListener("wheel", this.preventScroll);
+      window.removeEventListener("touchmove", this.preventScroll);
+      window.removeEventListener("keydown", this.preventKeyScroll);
+      window.removeEventListener("scroll", this.preventScroll);
+    }
+  }
   static \u0275fac = function AppComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AppComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(Title));
   };
@@ -64644,10 +64714,14 @@ var AppComponent = class _AppComponent {
         return ctx.onWindowScroll();
       }, false, \u0275\u0275resolveWindow);
     }
-  }, standalone: false, decls: 5, vars: 2, consts: [[2, "width", "100vw", "overflow-x", "hidden"], [3, "mouseTop", "isSecondPage"], [1, "m-0"], [1, "m-0", 2, "bottom", "0"]], template: function AppComponent_Template(rf, ctx) {
+  }, standalone: false, decls: 5, vars: 2, consts: [[2, "width", "100vw", "overflow-x", "hidden"], [3, "navHeightChanged", "mouseTop", "isSecondPage"], [1, "m-0"], [1, "m-0", 2, "bottom", "0"]], template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0);
-      \u0275\u0275element(1, "app-navbar", 1)(2, "router-outlet")(3, "app-getintouch", 2)(4, "app-footer", 3);
+      \u0275\u0275elementStart(0, "div", 0)(1, "app-navbar", 1);
+      \u0275\u0275listener("navHeightChanged", function AppComponent_Template_app_navbar_navHeightChanged_1_listener($event) {
+        return ctx.scrollControl($event);
+      });
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(2, "router-outlet")(3, "app-getintouch", 2)(4, "app-footer", 3);
       \u0275\u0275elementEnd();
     }
     if (rf & 2) {
@@ -65677,8 +65751,8 @@ var SharedResizeObserver = class _SharedResizeObserver {
 
 // node_modules/@angular/material/fesm2022/form-field.mjs
 var _c010 = ["notch"];
-var _c16 = ["matFormFieldNotchedOutline", ""];
-var _c24 = ["*"];
+var _c17 = ["matFormFieldNotchedOutline", ""];
+var _c25 = ["*"];
 var _c33 = ["textField"];
 var _c43 = ["iconPrefixContainer"];
 var _c53 = ["textPrefixContainer"];
@@ -66244,8 +66318,8 @@ var MatFormFieldNotchedOutline = class _MatFormFieldNotchedOutline {
     inputs: {
       open: [0, "matFormFieldNotchedOutlineOpen", "open"]
     },
-    attrs: _c16,
-    ngContentSelectors: _c24,
+    attrs: _c17,
+    ngContentSelectors: _c25,
     decls: 5,
     vars: 0,
     consts: [["notch", ""], [1, "mat-mdc-notch-piece", "mdc-notched-outline__leading"], [1, "mat-mdc-notch-piece", "mdc-notched-outline__notch"], [1, "mat-mdc-notch-piece", "mdc-notched-outline__trailing"]],
