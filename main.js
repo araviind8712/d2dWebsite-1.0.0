@@ -64685,7 +64685,7 @@ var AppComponent = class _AppComponent {
     }
   }
   scrollControl(event) {
-    if (event.height >= this.pageHeight - 50 && event.bottomReached) {
+    if (event.height >= this.pageHeight - 10 && event.bottomReached) {
       window.addEventListener("wheel", this.preventScroll, { passive: false });
       window.addEventListener("touchmove", this.preventScroll, { passive: false });
       window.addEventListener("keydown", this.preventKeyScroll, false);
