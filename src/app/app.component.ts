@@ -19,22 +19,22 @@ export class AppComponent {
   touchEndY: number = 0;
   touchStartY: number = 0;
   scrollLock: boolean = false;
-  navbarHeight : number = 0;
-  
-  constructor(private route: ActivatedRoute,private titleService: Title) {
+  navbarHeight: number = 0;
+
+  constructor(private route: ActivatedRoute, private titleService: Title) {
     if (typeof window !== 'undefined') {
       this.pageHeight = window.innerHeight;
     }
 
-    this.route.queryParamMap.subscribe((params)=>{
-      this.title = params.get('page')==null ? 'D2D' : 'D2D - '+params.get('page');
+    this.route.queryParamMap.subscribe((params) => {
+      this.title = params.get('page') == null ? 'D2D' : 'D2D - ' + params.get('page');
       this.titleService.setTitle(this.title.toUpperCase());
     })
   }
 
   preventScroll(event: any): void {
-    if (event.deltaY > 0) { 
-      event.preventDefault(); 
+    if (event.deltaY > 0) {
+      event.preventDefault();
     }
   }
 
@@ -57,18 +57,20 @@ export class AppComponent {
 
   @HostListener('touchmove', ['$event'])
   onTouchMove(event: TouchEvent) {
-    if(this.touchStartY < this.navbarHeight && this.navbarHeight < window.innerHeight){
-      event.preventDefault();
+    if (typeof window !== 'undefined') {
+      if (this.touchStartY < this.navbarHeight && this.navbarHeight < window.innerHeight) {
+        event.preventDefault();
+      }
+      this.touchEndY = event.touches[0].clientY;
     }
-    this.touchEndY = event.touches[0].clientY;
   }
 
   @HostListener('touchend', ['$event'])
   onTouchEnd(event: TouchEvent) {
     if (this.touchEndY - this.touchStartY > 50 && this.touchStartY < 100) {
-      this.isCursorAtTop=true;
-    }else if(this.touchStartY - this.touchEndY > 50 ){
-      this.isCursorAtTop=false;
+      this.isCursorAtTop = true;
+    } else if (this.touchStartY - this.touchEndY > 50) {
+      this.isCursorAtTop = false;
     }
   }
 
@@ -77,10 +79,10 @@ export class AppComponent {
   onWindowScroll(): void {
     if (typeof window !== 'undefined') {
       const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-      if (scrollPosition >= this.pageHeight-30) {
+      if (scrollPosition >= this.pageHeight - 30) {
         this.isSecondPage = true;
       }
-      else if (scrollPosition < this.pageHeight-30) {
+      else if (scrollPosition < this.pageHeight - 30) {
         this.isSecondPage = false;
       }
     }
@@ -88,26 +90,28 @@ export class AppComponent {
 
   preventKeyScroll(event: KeyboardEvent): void {
     const scrollKeys = [
-     'ArrowDown','PageDown', 'Space', 'End'
+      'ArrowDown', 'PageDown', 'Space', 'End'
     ];
-    
+
     if (scrollKeys.includes(event.key)) {
       event.preventDefault();
     }
   }
 
-  scrollControl(event : any){
-    this.navbarHeight=event.height;
-    if(event.height>=(this.pageHeight-10) && event.bottomReached){
-      window.addEventListener('wheel', this.preventScroll, { passive: false });
-      window.addEventListener('touchmove', this.preventScroll, { passive: false });
-      window.addEventListener('keydown', this.preventKeyScroll, false);
-      window.addEventListener('scroll', this.preventScroll, { passive: false });
-    }else{
-      window.removeEventListener('wheel', this.preventScroll);
-      window.removeEventListener('touchmove', this.preventScroll);
-      window.removeEventListener('keydown', this.preventKeyScroll);
-      window.removeEventListener('scroll', this.preventScroll);
+  scrollControl(event: any) {
+    this.navbarHeight = event.height;
+    if (typeof window !== 'undefined') {
+      if (event.height >= (this.pageHeight - 10) && event.bottomReached) {
+        window.addEventListener('wheel', this.preventScroll, { passive: false });
+        window.addEventListener('touchmove', this.preventScroll, { passive: false });
+        window.addEventListener('keydown', this.preventKeyScroll, false);
+        window.addEventListener('scroll', this.preventScroll, { passive: false });
+      } else {
+        window.removeEventListener('wheel', this.preventScroll);
+        window.removeEventListener('touchmove', this.preventScroll);
+        window.removeEventListener('keydown', this.preventKeyScroll);
+        window.removeEventListener('scroll', this.preventScroll);
+      }
     }
   }
 }
