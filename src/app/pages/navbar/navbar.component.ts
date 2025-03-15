@@ -4,51 +4,55 @@ import { ServicesComponent } from '../services/services.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import serviceMenu from '../../../assets/serviceMenu.json'
 import { ActivatedRoute } from '@angular/router';
-import {CONFIG} from '../../../assets/urlConfig';
+import { CONFIG } from '../../../assets/urlConfig';
 
 
 
 @Component({
   selector: 'app-navbar',
   standalone: false,
-  
+
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit,OnChanges{
+export class NavbarComponent implements OnInit, OnChanges {
   @Input() mouseTop: boolean = false;
   @Input() isSecondPage: boolean = false;
-  @Output() navHeightChanged: EventEmitter<{height:number,bottomReached:boolean}> = new EventEmitter<{height:number,bottomReached:boolean}>();
+  @Output() navHeightChanged: EventEmitter<{ height: number, bottomReached: boolean }> = new EventEmitter<{ height: number, bottomReached: boolean }>();
   @ViewChild('navbarwhite', { static: false }) navbarwhite!: ElementRef;
   @ViewChild('navbarblack', { static: false }) navbarblack!: ElementRef;
 
-  
+
   secondPage: boolean = true;
-  isFixed : boolean = false;
+  isFixed: boolean = false;
   serviceMenu: any;
   isServiceVisible = false;
   isHome = false;
   isCompany = false;
   isCompDropdown = false;
   serviceVisible = false;
-  pageName:any;
-  isCollapsed : boolean = true;
-  config:any;
+  pageName: any;
+  isCollapsed: boolean = true;
+  config: any;
 
-  constructor(private dialog: MatDialog, private route:ActivatedRoute,private renderer: Renderer2) { 
+  constructor(private dialog: MatDialog, private route: ActivatedRoute, private renderer: Renderer2) {
     this.serviceMenu = serviceMenu;
     this.config = CONFIG;
-    
+
   }
 
   ngOnInit() {
-    this.route.queryParamMap.subscribe((data)=>{
-      this.pageName =data.get('page');
+    this.route.queryParamMap.subscribe((data) => {
+      this.pageName = data.get('page');
       this.isHome = data.get('page') === "home";
       this.isServiceVisible = data.get('page') === 'service';
       this.isCompany = data.get('page') === 'company';
     })
-    this.onScroll();
+    if (this.pageName === 'home' && !this.isSecondPage) {
+      this.onScrollWhite();
+    } else {
+      this.onScrollBlack();
+    }
   }
 
   toggleSecondaryNavbar(): void {
@@ -65,20 +69,24 @@ export class NavbarComponent implements OnInit,OnChanges{
     });
   }
 
-  service(service:boolean): void {
+  service(service: boolean): void {
     this.isServiceVisible = true;
     this.serviceVisible = !service;
     this.isCompany = false;
     this.isHome = false;
-    this.isCompDropdown=false;
-    this.onScroll();
+    this.isCompDropdown = false;
+    if (this.pageName === 'home' && !this.isSecondPage) {
+      this.onScrollWhite();
+    } else {
+      this.onScrollBlack();
+    }
   }
 
-  company(route:any): void {
+  company(route: any): void {
     this.isServiceVisible = false;
     this.isCompany = true;
     this.isHome = false;
-    window.location.replace(this.config.baseUrl+route+'?page='+route);
+    window.location.replace(this.config.baseUrl + route + '?page=' + route);
   }
 
   home(): void {
@@ -104,22 +112,32 @@ export class NavbarComponent implements OnInit,OnChanges{
     if (changes['mouseTop']) {
       this.isFixed = changes['mouseTop'].currentValue;
     }
-    if(changes['isSecondPage']){
+    if (changes['isSecondPage']) {
       this.secondPage = changes['isSecondPage'].currentValue;
     }
   }
 
-  onScroll(event?: any) {
+  onScrollBlack(event?: any) {
+    console.log('scrolling')
     const element = event?.target;
-    const isAtBottom : boolean = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
+    const isAtBottom: boolean = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
     setTimeout(() => {
-      if(this.pageName==='home' && !this.isSecondPage){
-        const rect : number = this.navbarwhite.nativeElement.getBoundingClientRect().height;
-        this.navHeightChanged.emit({height: rect, bottomReached: isAtBottom});
-      }else{
+      if (this.navbarblack && this.navbarblack.nativeElement) {
         const rect = this.navbarblack.nativeElement.getBoundingClientRect().height;
-        this.navHeightChanged.emit({height: rect, bottomReached: isAtBottom});
+        this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
       }
-    },500);
+    }, 500);
+
+  }
+  onScrollWhite(event?: any) {
+    console.log('scrolling')
+    const element = event?.target;
+    const isAtBottom: boolean = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
+    setTimeout(() => {
+      if (this.navbarwhite && this.navbarwhite.nativeElement) {
+        const rect: number = this.navbarwhite.nativeElement.getBoundingClientRect().height;
+        this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
+      }
+    }, 500);
   }
 }

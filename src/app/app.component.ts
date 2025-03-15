@@ -78,10 +78,10 @@ export class AppComponent {
     if (typeof window !== 'undefined') {
       const scrollPosition = window.scrollY || document.documentElement.scrollTop;
       console.log(this.pageHeight)
-      if (scrollPosition >= this.pageHeight-20) {
+      if (scrollPosition >= this.pageHeight-30) {
         this.isSecondPage = true;
       }
-      else if (scrollPosition < this.pageHeight) {
+      else if (scrollPosition < this.pageHeight-30) {
         this.isSecondPage = false;
       }
     }
