@@ -63926,7 +63926,7 @@ var NavbarComponent = class _NavbarComponent {
     const isAtBottom = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
     setTimeout(() => {
       if (this.navbarblack && this.navbarblack?.nativeElement instanceof HTMLElement) {
-        const rect = this.navbarblack?.nativeElement.getBoundingClientRect().height;
+        const rect = this.navbarblack?.nativeElement.offsetHeight;
         this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
       }
     }, 500);
@@ -63936,7 +63936,7 @@ var NavbarComponent = class _NavbarComponent {
     const isAtBottom = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
     setTimeout(() => {
       if (this.navbarwhite && this.navbarwhite?.nativeElement instanceof HTMLElement) {
-        const rect = this.navbarwhite?.nativeElement.getBoundingClientRect().height;
+        const rect = this.navbarwhite?.nativeElement.offsetHeight;
         this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
       }
     }, 500);
