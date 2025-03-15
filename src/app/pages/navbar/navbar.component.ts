@@ -121,8 +121,8 @@ export class NavbarComponent implements OnInit, OnChanges {
     const element = event?.target;
     const isAtBottom: boolean = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
     setTimeout(() => {
-      if (this.navbarblack && this.navbarblack.nativeElement) {
-        const rect = this.navbarblack.nativeElement.getBoundingClientRect().height;
+      if (this.navbarblack && this.navbarblack?.nativeElement instanceof HTMLElement) {
+        const rect = this.navbarblack?.nativeElement.offsetHeight;
         this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
       }
     }, 500);
@@ -132,8 +132,8 @@ export class NavbarComponent implements OnInit, OnChanges {
     const element = event?.target;
     const isAtBottom: boolean = element?.scrollHeight === element?.scrollTop + element?.clientHeight;
     setTimeout(() => {
-      if (this.navbarwhite && this.navbarwhite.nativeElement) {
-        const rect: number = this.navbarwhite.nativeElement.getBoundingClientRect().height;
+      if (this.navbarwhite && this.navbarwhite?.nativeElement instanceof HTMLElement) {
+        const rect: number =  this.navbarwhite?.nativeElement.offsetHeight;
         this.navHeightChanged.emit({ height: rect, bottomReached: isAtBottom });
       }
     }, 500);
