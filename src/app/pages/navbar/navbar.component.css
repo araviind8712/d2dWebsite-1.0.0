@@ -592,3 +592,16 @@
         display: none;
     }
 }
+
+@media only screen and (min-width: 1600px) {
+    .logo-size{
+        width:165px;
+        height:65px;
+    }
+    .serviceNavBar-black{
+        gap: 16px;
+    }
+    .serviceNavBar{
+        gap: 16px;
+    }
+}

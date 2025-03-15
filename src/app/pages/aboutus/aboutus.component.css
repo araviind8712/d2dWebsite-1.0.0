@@ -2,6 +2,12 @@
     color: #121214 !important;
 }
 
+.bgcolor-light-white{
+    background-color: #FBFBFB !important;
+}
+
+
+
 @media (max-width: 767px) {
     .aboutus-gallery .col-8:nth-child(odd) {
         margin-left: auto;
@@ -14,5 +20,14 @@
     .txt-black{
         color: #747B80 !important;
         
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .section-wrap {
+        width: 100vw;
+        height: max-content !important;
+        display: flex;
+        justify-content: center;
     }
 }

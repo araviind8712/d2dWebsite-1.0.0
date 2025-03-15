@@ -1,34 +1,54 @@
 .marquee {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    /* position: relative; */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  /* position: relative; */
+}
+
+.marquee p {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  /* position: absolute; */
+  animation: marqueeAnimation 12s linear infinite;
+}
+
+@keyframes marqueeAnimation {
+  from {
+    transform: translateX(100vw);
   }
 
-.marquee p{
-    display: inline-block;
-    white-space: nowrap;
-    will-change: transform;
-    /* position: absolute; */
-    animation: marqueeAnimation 12s linear infinite;
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.p-80 {
+  padding: calc(5.55vw + 0.08px) 0px;
+}
+
+.p-80-service {
+  padding: calc(5.55vw + 0.08px) 0px;
+  padding-top: calc(11.10vw + 0.16px);
+}
+
+@media only screen and (max-width: 768px) {
+  .p-80 {
+    padding: calc(15.53vw + 0.0164px) 0px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .p-80 {
+    padding: 80px 0px;
   }
 
-  @keyframes marqueeAnimation {
-    from {
-      transform: translateX(100vw);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+  .p-80-service {
+    padding: 80px 0px !important;
   }
 
-  .p-80{
-    padding: calc(5.55vw + 0.08px) 0px;
+  .section-wrap {
+    padding-left: calc((100vw - 1600px) / 2);
+    padding-right: calc((100vw - 1600px) / 2);
   }
-
-  @media only screen and (max-width: 768px) {
-    .p-80{
-      padding: calc(15.53vw + 0.0164px) 0px;
-    }
-  }
-
+}

@@ -3,6 +3,10 @@
     color: black;
 }
 
+.top-90 {
+    top: 90px !important;
+}
+
 .section1,
 .section4 {
     padding: calc(5.55vw + 0.08px) calc(3.33vw + 0.048px);
@@ -122,6 +126,10 @@ h5 {
         line-height: 22.4px;
     }
 
+    .top-90 {
+        top: 90px !important;
+    }
+
     h5 {
         font-size: 16px;
         line-height: 29.4px;
@@ -178,7 +186,7 @@ h5 {
     }
 
     .width-50 {
-        flex:1 1 100%;
+        flex: 1 1 100%;
         max-width: 100% !important;
     }
 
@@ -212,17 +220,83 @@ h5 {
     }
 }
 
-@media only screen and (min-width: 1440px) {
-    .section1, .section2, .section3, .section4 {
-        padding: calc(5.55 * 14.4px) calc(3.33 * 14.4px);
+@media only screen and (min-width: 1600px) {
+
+    .top-90 {
+        top: 110px !important;
     }
 
-    .pic {
-        width: calc(61.45 * 14.4px);
+    .section-wrap {
+        width: 100vw;
+        height: max-content !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-wrap1 {
+        width: 100vw;
+        height: max-content !important;
+        margin-bottom: 110px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section1,
+    .section2,
+    .section3,
+    .section4 {
+        padding: 80px 48px;
+        max-width: 1600px;
     }
 
     .width-50 {
-        flex: 1 1 684px;
+        flex: 1 45.5% !important;
         max-width: 696px;
     }
+
+    .pic {
+        width: 900px;
+    }
+
+    .bgcolor-light-white {
+        background-color: #FBFBFB !important;
+    }
+
+    .per32 {
+        margin-left: 460px;
+    }
+
+    .pb-48 {
+        padding-bottom: 48px;
+    }
+
+    .pt-80 {
+        padding-top: 80px;
+    }
+
+    .mr-0 {
+        margin-right: 0px;
+    }
+
+    .pb-80 {
+        padding-bottom: 80px;
+        margin: 0px;
+    }
+
+    .ml-32 {
+        margin-left: 32px;
+    }
+
+    .mr-32 {
+        margin-right: 32px;
+    }
+
+    .padding-default {
+        padding-bottom: 48px !important;
+    }
+
+    .pb-8 {
+        padding-bottom: 8px;
+    }
+
 }

@@ -76,3 +76,20 @@ ul {
 .col-xl-auto {
   position: inherit;
 }
+
+.top-90{
+  top: 90px !important;
+}
+
+@media only screen and (min-width: 1600px) {
+  .section-wrap {
+      width: 100vw;
+      height: max-content !important;
+      display: flex;
+      justify-content: center;
+  }
+
+  .top-90{
+    top: 110px !important;
+  }
+}

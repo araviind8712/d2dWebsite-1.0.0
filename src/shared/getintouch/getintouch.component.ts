@@ -12,10 +12,14 @@ import { ActivatedRoute } from '@angular/router';
 export class GetintouchComponent {
   @Output() scrollToTopEvent = new EventEmitter<void>();
   isAboutUs: boolean = false;
+  isServices : boolean = false;
+  isResources: boolean = false;
   
   constructor(private dialog: MatDialog,private route: ActivatedRoute) {
     this.route.queryParamMap.subscribe((data)=>{
-      this.isAboutUs =data.get('page')=='aboutus';
+      this.isAboutUs = data.get('page')=='aboutus';
+      this.isServices = data.get('page')=='services';
+      this.isResources = data.get('page')=='resources';
     })
    }
   openDialog(): void {
