@@ -123,6 +123,11 @@
     font-weight: 400;
 }
 
+.logo-size{
+    width:calc(23.45vw + 0.12px);
+}
+
+
 @media only screen and (max-width: 767px) {
     .pr-8 {
         padding-right: calc(5.41vw + 0.0108px) !important;
@@ -131,6 +136,10 @@
     .mt-43 {
         margin-top: calc(7.76vw + 0.0288px);
         margin-bottom: calc(3.88vw + 0.0144px);
+    }
+
+    .logo-size{
+        width: 60vw;
     }
 
     .fsr-16 {
@@ -177,5 +186,8 @@
         padding-left: calc((100vw - 1600px) / 2);
         padding-right: calc((100vw - 1600px) / 2);
         background-color: #012323;
+    }
+    .logo-size{
+        width:340px;
     }
 }
