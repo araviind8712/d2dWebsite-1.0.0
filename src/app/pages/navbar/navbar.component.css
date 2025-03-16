@@ -351,7 +351,7 @@
 
 
 .logo-size{
-    width:calc(11.45vw + 0.12px);
+    width:calc(23.45vw + 0.12px);
     height:calc(4.51vw + 0.056px);
 }
 
@@ -487,7 +487,7 @@
     }
 
     .logo-size{
-        width:23.7vw;
+        width: 60vw;
         height:calc(10.08vw + 0.0104px);;
     }
 
@@ -595,7 +595,7 @@
 
 @media only screen and (min-width: 1600px) {
     .logo-size{
-        width:165px;
+        width:340px;
         height:65px;
     }
     .serviceNavBar-black{
