@@ -64380,12 +64380,12 @@ var NavbarComponent = class _NavbarComponent {
     justify-content: space-between !important;
   }
   .logo-size1[_ngcontent-%COMP%] {
-    width: calc(7.76vw + 0.0288px);
-    height: calc(7.76vw + 0.0288px);
+    width: calc(6.79vw + 0.0252px);
+    height: calc(6.79vw + 0.0252px);
   }
   .logo-size2[_ngcontent-%COMP%] {
-    width: calc(7.76vw + 0.0288px);
-    height: calc(7.76vw + 0.0288px);
+    width: calc(6.79vw + 0.0252px);
+    height: calc(6.79vw + 0.0252px);
     padding: 4px;
   }
   .logo-size[_ngcontent-%COMP%] {
