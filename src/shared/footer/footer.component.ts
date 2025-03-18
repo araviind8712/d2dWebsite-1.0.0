@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CONFIG} from '../../assets/urlConfig';
+import {CONFIG} from '../../../urlConfig';
 
 @Component({
   selector: 'app-footer',

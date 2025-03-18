@@ -241,6 +241,9 @@
     }
 }
 
+#tailored{
+    padding-bottom: calc(5.55vw + 0.08px) !important;
+}
 
 .videoText {
     padding-bottom: calc(3.33vw + 0.048px);
@@ -273,6 +276,11 @@
     .section5 {
         padding: calc(15.53vw + 0.0164px) calc(3.88vw + 0.0144px);
     }
+
+    #tailored{
+        padding-bottom: calc(15.53vw + 0.0164px) !important;
+    }
+    
 
     .section3 p,
     .section2 p,
@@ -344,6 +352,10 @@
         max-width: 1660px !important;
     }
 
+    #tailored{
+        padding-bottom: 80px !important;
+    }
+
     .section1{
         min-height: 900px !important;
     }
@@ -361,9 +373,7 @@
     }
 
     .videoText {
-        padding-bottom: 10vw;
-        padding-left: 10vw ;
-        width: 60vw;
+        max-width: 1600px;
         overflow: hidden;
     }
 

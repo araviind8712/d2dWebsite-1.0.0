@@ -4,7 +4,7 @@ import { ServicesComponent } from '../services/services.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import serviceMenu from '../../../assets/serviceMenu.json'
 import { ActivatedRoute } from '@angular/router';
-import { CONFIG } from '../../../assets/urlConfig';
+import { CONFIG } from '../../../../urlConfig';
 
 
 

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import serviceMenu from '../../../assets/serviceMenu.json'
 import { MatIconModule } from '@angular/material/icon';
-import {CONFIG} from '../../../assets/urlConfig';
+import {CONFIG} from '../../../../urlConfig';
 
 
 @Component({

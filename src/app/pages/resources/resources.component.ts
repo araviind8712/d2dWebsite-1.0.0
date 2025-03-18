@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { GetintouchComponent } from '../../../shared/getintouch/getintouch.component';
 import { ResourceCardComponent } from '../../../shared/resource-card/resource-card.component';
 import { trigger,state,style,transition,animate } from '@angular/animations';
-import {CONFIG} from '../../../assets/urlConfig'
+import {CONFIG} from '../../../../urlConfig'
 
 
 @Component({
