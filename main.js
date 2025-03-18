@@ -62235,14 +62235,15 @@ var serviceMenu_default = [
   }
 ];
 
-// src/assets/urlConfig.ts
+// urlConfig.ts
+var baseUrl = "/d2dWebsite-1.0.0/";
 var CONFIG = {
-  baseUrl: "/d2dWebsite-1.0.0/",
-  home: "/d2dWebsite-1.0.0/home?page=home",
-  services: "/d2dWebsite-1.0.0/services?page=services",
-  resources: "/d2dWebsite-1.0.0/resources?page=resources",
-  aboutUs: "/d2dWebsite-1.0.0/aboutus?page=aboutus",
-  singleResource: "/d2dWebsite-1.0.0/resource?page=resources"
+  baseUrl,
+  home: baseUrl + "home?page=home",
+  services: baseUrl + "services?page=services",
+  resources: baseUrl + "resources?page=resources",
+  aboutUs: baseUrl + "aboutus?page=aboutus",
+  singleResource: baseUrl + "resource?page=resources"
 };
 
 // src/app/pages/service-menu/service-menu.component.ts
@@ -64575,7 +64576,7 @@ var FooterComponent = class _FooterComponent {
       \u0275\u0275advance(34);
       \u0275\u0275property("href", ctx.config.home, \u0275\u0275sanitizeUrl);
       \u0275\u0275advance(2);
-      \u0275\u0275property("href", ctx.config.aboutus, \u0275\u0275sanitizeUrl);
+      \u0275\u0275property("href", ctx.config.aboutUs, \u0275\u0275sanitizeUrl);
       \u0275\u0275advance(2);
       \u0275\u0275property("href", ctx.config.resources, \u0275\u0275sanitizeUrl);
       \u0275\u0275advance(6);
